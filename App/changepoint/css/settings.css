@@ -1,0 +1,24 @@
+.ser_set-main{padding-top: 101px;
+    width: 100%;
+   background: #fff;}
+.ser_set-main>div{height: 68px;
+            line-height: 68px;
+           position: relative;
+           background-size: 7px 13px;
+           background: url(../img/arrow4.svg) no-repeat 95% 28px;}
+.ser_set-main>div:after{content: "";
+                 display: block;
+                 position: absolute;
+                 width: 96%;
+                 height: 1px;
+                 left: 4%;
+                 bottom: 0;
+                 background-color: #d8d8d8;}
+
+.ser_set-main a{display: block;
+      width: 91.11%;
+      margin: 0 auto;
+      font-size: 16px;
+      font-family: 'NanumSquareRoundB';
+      }
+.ser_set-main>div:last-of-type:after{display: none;} 

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/jquery-1.12.4.min.js"></script>
+    <script defer src="js/header.js"></script>
+    <script defer src="js/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="header_body">
+    <input type="number" value="1" id="page">
+
+    <div>
+        <header class="nav">
+            <div class="head_inner">
+                <a href="#">
+                    <img src="img/logo2.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/ic_notice.png" alt="">
+                </a>
+            </div>
+        </header>
+        <!-- <? include "header.html"; ?> -->
+
+
+        
+    <div class="weather_wrap">
+       <div class="weather_wrap_inner">
+            <a href="weather.html" class="bottom"> 
+                <div class="left">
+                    <h2 class="temp_txt">28</h2>
+                    <ul>
+                        <li>Cloudy</li>
+                        <li><span>Seoul</span>, <span>Korea</span></li>
+                    </ul>
+                </div>
+                <!-- //left -->
+                <div class="right">
+                    <img src="img/home/ic_weather5.svg" alt="">
+                </div>
+            </a>
+            <!-- //bottom -->
+       </div> 
+       <!-- //weather_wrap_inner -->
+    </div>
+    <!-- //weather_wrap -->
+
+    <div class="currency_wrap home_item">
+        <div class="underline">
+            <div class="top">
+            <div class="left">
+                <h3>Currency</h3>
+            </div>
+            <!-- //left -->
+            <a href="exchange_rates.html" class="right">
+                <div>
+                    <img class="countr_flag" src="img/home/country/ic_lak.svg" alt="">
+                    <p><span>LAK</span> <span>(₭)</span></p>
+                </div>
+                <div class="curr_btn">
+                    <span><img src="img/home/ic_arrow.svg" alt=""></span>
+                </div>
+            </a>
+            <!-- //right -->
+        </div>
+        <!-- //top -->
+        </div>
+        <div class="bottom">
+            <div class="coun_list">
+                <div class="left">
+                    <img class="countr_flag" src="img/home/country/ic_usd.svg" alt=""><p></p>
+                    <p>USD</p>
+                </div>
+                <div class="right">
+                    <p>8,900</p>
+                    <p><span>1 USD</span> / <span>LAK</span></p>
+                </div>
+            </div>
+            <div class="coun_list">
+                <div class="left">
+                    <img class="countr_flag" src="img/home/country/ic_thb.svg" alt=""><p></p>
+                    <p>THB</p>
+                </div>
+                <div class="right">
+                    <p>284</p>
+                    <p><span>1 USD</span> / <span>LAK</span></p>
+                </div>
+            </div>
+            <div class="coun_list">
+                <div class="left">
+                    <img class="countr_flag" src="img/home/country/ic_krw.svg" alt=""><p></p>
+                    <p>KRW</p>
+                </div>
+                <div class="right">
+                    <p>284</p>
+                    <p><span>1 USD</span> / <span>LAK</span></p>
+                </div>
+            </div>
+            <div class="coun_list">
+                <div class="left">
+                    <img class="countr_flag" src="img/home/country/ic_eur.svg" alt=""><p></p>
+                    <p>EUR</p>
+                </div>
+                <div class="right">
+                    <p>284</p>
+                    <p><span>1 USD</span> / <span>LAK</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- //bottom -->
+    </div>
+    <!-- //currency_wrap -->
+
+    <div class="today_info_wrap home_item">
+        <div class="underline">
+            <div class="top">
+                <h3>Today's income</h3>
+                <p class="date">10.08.2020</p>
+            </div>
+        <!-- //top -->
+        </div>
+        <div class="bottom">
+            <p><span>₭</span> <span>1,560,000</span></p>
+            <p><span>/</span> <span>305</span></p>
+        </div>
+        <!-- //bottom -->
+    </div>
+    <!-- //today_info -->
+
+    <div class="day_income_wrap home_item">
+        <div class="underline">
+            <div class="top">
+            <h3>7 day's income</h3>
+            </div>
+            <!-- //top -->
+        </div>
+        <div class="bottom">
+            <canvas id="myChart" width="100vw" style="padding: 30px 0 0;"></canvas>
+                        <script>
+                        
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var background_1 = ctx.createLinearGradient(0, 0, 0, 600);
+                        background_1.addColorStop(0, '#79daa1');
+                        background_1.addColorStop(1, '#00D1FF')
+                        ;
+                        var myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Mon', 'Tue', 'Wen', 'Thr', 'Fri', 'Sat', 'Sun'],
+                                datasets: [{
+                                    data: [12, 15, 10, 5, 13, 3, 16],
+                                    backgroundColor: 
+                                        ['#77D066',
+                                        '#77D066',
+                                        '#77D066',
+                                        '#77D066',
+                                        '#77D066',
+                                        '#77D066',
+                                        '#B753B6']
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: false
+                                },
+                                scales: {
+                                    yAxes: [{
+                                    ticks: {
+                                        stepSize:5,
+                                    },
+                                        gridLines: {
+                                             display:false
+                                        }  
+                                    }],
+                                    xAxes: [{
+                                        gridLines: {
+                                            display:false
+                                        }      
+                                    }]
+                                }
+                            }
+                        });
+                        </script>
+        </div>
+        <!-- //bottom -->
+    </div>
+    <!-- //day_income_wrap -->
+
+    <div class="branches_wrap home_item">
+        <div class="underline">
+            <div class="top">
+            <h3>Branches</h3>
+            </div>
+            <!-- //top -->
+            </div>
+            
+            <div class="bottom">
+                <a href="branches_detail.html" class="bra_list">
+                    <div class="left">
+                        <h4>MEBON Restaurant</h4>
+                        <p><img src="img/home/ic_bra1.svg" alt="">POS10000402</p>
+                    </div>
+                    <div class="right">
+                        <img src="img/home/ic_wf_on.svg" alt="">
+                        <div>
+                            <p><span>₭</span> <span>60,000</span></p>
+                            <p><span>/</span> <span>99</span></p>
+                        </div>
+                    </div>
+                </a>
+                <!-- //bra_list -->
+                <a href="branches_detail.html" class="bra_list">
+                    <div class="left">
+                        <h4>MEBON Mart</h4>
+                        <p><img src="img/home/ic_bra2.svg" alt="">POS10000402</p>
+                    </div>
+                    <div class="right">
+                        <img src="img/home/ic_wf_off.svg" alt="">
+                        <div>
+                            <p><span>₭</span> <span>60,000</span></p>
+                            <p><span>/</span> <span>99</span></p>
+                        </div>
+                    </div>
+                </a>
+                <!-- //bra_list -->
+             </div>
+            <!-- //bottom -->
+    </div>
+    <!-- //branches_wrap -->
+   
+    </div>
+    
+    
+    <!-- <? include "footer.html"; ?> -->
+    <footer>
+        <ul>
+            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="setting.html"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

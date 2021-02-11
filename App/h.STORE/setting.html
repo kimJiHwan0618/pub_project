@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script defer src="js/detail-page_header.js"></script>
+    <script defer src="js/page.js"></script>
+    <script defer src="js/login_signup.js"></script>
+    <script defer src="js/setting.js"></script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+   </style>
+</head>
+<body class="detail_page">
+    <input type="number" value="4" id="page">
+    <div>
+    <header class="det_page_header">
+        <div class="header_inner">
+            <a class="back" href="#" style="visibility: hidden;"><img src="img/back.svg" alt=""></a>
+            <h1>Setting</h1>
+        </div>
+    </header>
+
+    <div class="setting_wrap">
+        <div class="store-info_tit"><h2>Store info</h2><a href="#">Modify</a></div>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>ID</dt>
+                        <dd>JASON@GAMAIL</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Name</dt>
+                        <dd>Jason Kang</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Store</dt>
+                        <dd>Mebon Restaurant</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Address</dt>
+                        <dd>
+                            <ul>
+                                <li class="address1">address1 address1 address1</li>
+                                <li class="address2">address2 address2 address2</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Phone</dt>
+                        <dd>070-0000-0000</dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl class="change_pass">
+                            <dt>Change Password</dt>
+                            <dd><img src="img/home/ic_arrow.svg" alt=""></dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl class="lang_cho">
+                            <dt>Language</dt>
+                            <dd>English</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+    </div>
+    
+    <div class="logout-box">
+        <form action="">
+            <ul>
+                <li class="logout-btn">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="dark_bg"></div>
+
+
+
+    <div class="password_change_box">
+        <form action="">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+                        <g id="마스크_그룹_30" data-name="마스크 그룹 30" transform="translate(-2892 1698)" clip-path="url(#clip-path)">
+                          <path id="key" d="M73.288,9.936a34.543,34.543,0,0,0-48.513,0,33.7,33.7,0,0,0-2.54,45.2L.516,76.645,5.9,81.98l2.7-2.667L19.383,89.986l5.387-5.339L13.988,73.977l5.391-5.339L30.166,79.312l5.387-5.335L24.771,63.3l2.855-2.829a34.541,34.541,0,0,0,45.662-2.51,33.722,33.722,0,0,0,0-48.029ZM67.9,52.63a26.867,26.867,0,0,1-37.712.015l-.041-.038a26.228,26.228,0,0,1,.019-37.337,26.876,26.876,0,0,1,37.735,0,26.233,26.233,0,0,1,0,37.36Z" transform="translate(2897.739 -1694.986)" fill="#c7c7c7" fill-rule="evenodd"/>
+                        </g>
+                    </svg>
+                    <input type="password" placeholder="Curret password" id="Curret_Password"></li>
+                <!-- 기존 비밀번호 -->
+                <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+                            <g id="마스크_그룹_30" data-name="마스크 그룹 30" transform="translate(-2892 1698)" clip-path="url(#clip-path)">
+                            <path id="key" d="M73.288,9.936a34.543,34.543,0,0,0-48.513,0,33.7,33.7,0,0,0-2.54,45.2L.516,76.645,5.9,81.98l2.7-2.667L19.383,89.986l5.387-5.339L13.988,73.977l5.391-5.339L30.166,79.312l5.387-5.335L24.771,63.3l2.855-2.829a34.541,34.541,0,0,0,45.662-2.51,33.722,33.722,0,0,0,0-48.029ZM67.9,52.63a26.867,26.867,0,0,1-37.712.015l-.041-.038a26.228,26.228,0,0,1,.019-37.337,26.876,26.876,0,0,1,37.735,0,26.233,26.233,0,0,1,0,37.36Z" transform="translate(2897.739 -1694.986)" fill="#c7c7c7" fill-rule="evenodd"/>
+                            </g>
+                        </svg>
+                    <input type="password" placeholder="New password" id="New_Password"></li>
+                <!-- 새로운 비밀번호 -->
+                <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+                            <g id="마스크_그룹_30" data-name="마스크 그룹 30" transform="translate(-2892 1698)" clip-path="url(#clip-path)">
+                            <path id="key" d="M73.288,9.936a34.543,34.543,0,0,0-48.513,0,33.7,33.7,0,0,0-2.54,45.2L.516,76.645,5.9,81.98l2.7-2.667L19.383,89.986l5.387-5.339L13.988,73.977l5.391-5.339L30.166,79.312l5.387-5.335L24.771,63.3l2.855-2.829a34.541,34.541,0,0,0,45.662-2.51,33.722,33.722,0,0,0,0-48.029ZM67.9,52.63a26.867,26.867,0,0,1-37.712.015l-.041-.038a26.228,26.228,0,0,1,.019-37.337,26.876,26.876,0,0,1,37.735,0,26.233,26.233,0,0,1,0,37.36Z" transform="translate(2897.739 -1694.986)" fill="#c7c7c7" fill-rule="evenodd"/>
+                            </g>
+                        </svg>
+                    <input type="password" placeholder="Confirm password" id="Confirm_Password"></li>
+                <!-- 비밀번호 확인 -->
+                <li class="pass_notice">Please enter the password to change</li>
+            </ul>
+            <input type="submit" class="save_btn">
+        </form>
+    </div>
+    <!-- //password_change_box -->
+  
+  
+    <div class="language_box">
+        <form action="">
+            <ul>
+                <li><label for="">English</label><input type="radio" name="choice_language" class="English"></li>
+                <li><label for=""><span class="lang">ລາວ</span> -Lao</label><input type="radio" name="choice_language" class="Lao"></li>
+                <li><label for=""><span class="lang">ไทย</span> -Tai</label><input type="radio" name="choice_language" class="Tai"></li>
+                <li><label for=""><span class="lang">한국어</span> -Korean</label><input type="radio" name="choice_language" class="Korean"></li>
+            </ul>
+           <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!-- //password_change_box -->
+
+    
+
+    </div>
+    <!-- <? include "footer.html"; ?> -->
+    <footer>
+        <ul>
+            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="#"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

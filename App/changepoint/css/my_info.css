@@ -1,0 +1,39 @@
+.my_info-main{position: fixed;
+    top: 103px;
+    width: 100%;
+    background: #fff;
+    }
+.my_info-main>a{width: 91.11%;
+      display: block;
+       margin: 28px auto 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;}
+.my_info-main a div h2{margin-bottom: 9px;
+             font-size: 16px;
+             font-family: 'NanumSquareRoundEB';}
+.my_info-main a div p{font-size: 12px;}
+
+.my_info-main ul{width: 100%;
+       margin-top: 26.5px;
+       display: flex;
+       justify-content: space-between;
+       border-top: 1px solid rgb(243, 243, 243);}
+.my_info-main ul li{text-align: center;
+          width: 25%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border-right: 1px solid rgb(243, 243, 243);}
+.my_info-main ul li a{font-size: 12px;
+            display: inline-block;
+            padding-top: 40px;
+            }
+
+.my_info-main ul li:nth-of-type(1) a{background: url(../img/mypage-ic-1.svg) no-repeat 50% 0;
+                           background-size: 26px 27px;}
+.my_info-main ul li:nth-of-type(2) a{background: url(../img/mypage-ic-2.svg) no-repeat 50% 0;
+                           background-size: 23px 27px;}
+.my_info-main ul li:nth-of-type(3) a{background: url(../img/mypage-ic-3.svg) no-repeat 50% 0;
+                           background-size: 22px 28px;}
+.my_info-main ul li:nth-of-type(4) a{background: url(../img/mypage-ic-4.svg) no-repeat 50% 0;
+                           background-size: 27px 21px;}

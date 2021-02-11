@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".questions-main .que_item").click(function(){
+                $(this).toggleClass("on");
+            });
+            $('a[href="#"]').click(function(ignore){
+               ignore.preventDefault(); 
+            });
+        });
+    </script>
+
+
+    <style type="text/css">
+        body{background-color: #f6f6f6;}
+
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="4" id="page">
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>자주 묻는 질문</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+   <div class="questions-main">
+       <div>
+        <div class="que_item">
+         <a href="#">
+            <h3>어디에 설치되어있나요?</h3>
+            <p>현재 인천국제공항 스타트업 홍보관에 시범 설치되어있으며, 연내에 정식 서비스가 시작됩니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>24시간 사용 가능한가요?</h3> 
+            <p>체인지포인트 키오스크는 무인환전기기로, 24시간 사용 가능합니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#"> 
+            <h3>적용 환율은 어느 정도인가요?<br />은행보다 저렴한가요?</h3> 
+            <p>은행에서는 대부분 동전환전이 불가능하고, 환전시에는 50%의 수수료가 적용됩니다.<br />
+                체인지포인트 키오스크를 이용하시면 은행보다 저렴한 30~40%의 수수료로 환전하실 수 있습니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>어떤 통화를 환전할 수 있나요??</h3>
+            <p>취급하는 통화는 대한민국, 일본, 중국(위안,짜오), 미국, 베트남, 대만, 태국(바트), 필리핀(페소), 홍콩, 마카오(파타카), 싱가폴, 영국, 유럽연합, 호주, 캐나다, 스위스 총 16개국 입니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>지폐도 환전할 수 있나요?</h3>
+            <p>아쉽게도 현재로서는 지폐는 환전하실 수 없고, 동전만 가능합니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>원화 동전도 환전할 수 있나요?</h3>
+            <p>체인지포인트에서는 현재 외국동전을 원화로 환전하는 서비스만을 제공하고 있습니다.<br />
+                키오스크에 원화 동전을 넣으시면 그대로 반환됩니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>투입 금액에 제한이 있나요?</h3>
+            <p>같은 날 동일한 주민번호로 미화 기준 2,000달러 이상 환전하실 수 없습니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>어떤 형태로 환전받을 수 있나요?</h3>
+            <p>고객님의 계좌로 입금하시거나, 원하는 단체에 기부하실 수 있습니다.</p>
+        </a>
+        </div>
+        <div class="que_item">
+         <a href="#">
+            <h3>어디에 기부할 수 있나요?</h3>
+            <p>초록우산어린이재단, 굿네이버스, 세계자연기금(WWF)에 기부하실 수 있습니다.</p>
+        </a>
+        </div>
+   </div>
+    </div>
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

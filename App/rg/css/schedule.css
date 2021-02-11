@@ -1,0 +1,322 @@
+/* container */
+::-webkit-scrollbar {
+  display:none;
+  }        
+
+
+.container{position: fixed;
+    left: 0%;top: 0;
+    width: 200%;
+    }
+div.main{
+ position: absolute;
+ z-index: -1;
+ width: 50%;
+ left: 0%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+  box-sizing: border-box;
+  }
+
+.main .time_alram{
+                     display: flex;
+                     justify-content: space-between;
+                     box-sizing: border-box;
+                     padding: 16px 20px 0;}
+
+.main .alram_all{
+         width: 100%;
+         padding-left: 10%;
+         box-sizing: border-box;} 
+.main .alram_all>div{position: relative;
+              top: 20px;
+              opacity: 0;
+              border-radius: 22px;
+              margin-bottom: 20px;
+              box-shadow: 1px 2px 6px rgb(197, 196, 196);
+              box-sizing: border-box;
+              width: 100%;
+              height: 117px;                           
+             padding: 15px 0 0 20px;}
+
+
+.main .alram_all>div:nth-child(1){margin-bottom: 35px;}
+                    header:after{content: "";
+                                 width: 82%;
+                                 height: 2px;
+                                 position: absolute;
+                                 top: 305px;
+                                 left: 65px;
+                                 background: #999;
+                                 opacity: 0.1;}
+.main .alram_all>div h3{font-size: 14px;
+                  font-weight: 400;
+                  color: #606060;}
+.main .alram_all>div>div{display: flex;
+                  color: #3A3939;
+                  margin-top: 15px;
+                  font-size: 12px;}
+.main .alram_all>div>div>span.watch{display: block;
+                       position: relative;
+                       transition: all 0.1s linear 0s;
+                       width: 13px;height: 13px;
+                       background: #BBBBBB;
+                       border-radius: 50%;
+                       transform: translatey(30%);
+                       margin-right: 5px;}
+.main .alram_all>div>div>span.watch:after{content: "";
+                              position: absolute;
+                              left: 50%;transform: translateX(-50%);
+                             top: 2px;
+                             width: 1px;
+                             height: 5px;
+                             background: #fff;}
+.main .alram_all>div>div>span.watch:before{content: "";
+                              position: absolute;
+                              left: 7.2px;
+                              transform: rotate(90deg);
+                             top: 5px;
+                             width: 1px;
+                             height: 3.5px;
+                             background: #fff;}
+.main .alram_all>div>div>span.button{display: block;
+                              position: absolute;
+                              left: 135px;
+                              top: 52px;
+                              transition: all 0.1s linear 0s;
+                              margin-top: 3px;
+                              width: 30px;
+                              height: 8px;
+                              cursor: pointer;
+                              background: #dfdfdf;
+                              border-radius: 50px;}
+.main .alram_all>div>div>span.button:after{content: "";
+                                    position: absolute;
+                                    transition: all 0.1s linear 0s;
+                                    left: 0px;
+                                    top:  -4px;
+                                    background: white;
+                                    box-shadow: 1px 1px 5px #999;
+                                    width: 14px;
+                                    height: 14px;
+                                    border-radius: 50%;}
+
+.main .alram_all>div>div.on>span.button{background: #67B6FB;}
+.main .alram_all>div>div.on>span.watch{background: #67B6FB;}
+.main .alram_all>div>div.on>span.button:after{left: 20px;}
+
+.main .alram_all>div>span{display: block;
+                   font-size: 12px;
+                   margin-top: 18px;
+                   margin-left: 18px;
+                   position: relative;}
+.main .alram_all>div>span:after{content: "";
+                         position: absolute;
+                         left: -40px;top: 0;
+                         width: 58px;height: 51px;
+                         background: url(../images/index_img/map.png) no-repeat 0 0;}
+
+.main .alram_all div.green{animation: open 0.5s linear 0s forwards;}
+.main .alram_all div.blue{animation: open 0.5s linear .3s forwards;}
+.main .alram_all div.red{animation: open 0.5s linear .6s forwards;}
+.main .alram_all div.orange{animation: open 0.5s linear .9s forwards;}
+
+@keyframes open{
+  from{top: 20px;opacity: 0;}
+  to{top: 0;opacity: 1;}
+}
+
+.main .alram_all div.green:after{content: "";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                                background: url(../images/index_img/green.png) no-repeat 0 0;
+                                width: 28px;height: 127px;
+                                }
+.main .alram_all div.green:before{content: "";
+                                position: absolute;
+                                right: 0px;
+                                top: 50%;transform: translateY(-50%) scale(0.8);
+                                background: url(../images/index_img/green_circle.png) no-repeat 0 0;
+                                width: 98px;height: 98px;
+                                }
+.main .alram_all div.blue:after{content: "";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                                background: url(../images/index_img/blue.png) no-repeat 0 0;
+                                width: 28px;height: 127px;
+                                }
+.main .alram_all div.blue:before{content: "";
+                                position: absolute;
+                                right: 0px;
+                                top: 55%;transform: translateY(-50%) scale(0.8);
+                                background: url(../images/index_img/blue_circle.png) no-repeat 0 0;
+                                width: 98px;height: 112px;
+                                }
+.main .alram_all div.red:after{content: "";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                                background: url(../images/index_img/red.png) no-repeat 0 0;
+                                width: 28px;height: 127px;
+                                }
+.main .alram_all div.red:before{content: "";
+                                position: absolute;
+                                right: 0px;
+                                top: 55%;transform: translateY(-50%) scale(0.8);
+                                background: url(../images/index_img/red_circle.png) no-repeat 0 0;
+                                width: 79px;height: 118px;
+                                }
+.main .alram_all div.orange:after{content: "";
+                                position: absolute;
+                                left: -10px;
+                                top: -1px;
+                                background: url(../images/index_img/orange.png) no-repeat 0 0;
+                                width: 28px;height: 127px;
+                                }
+.main .alram_all div.orange:before{content: "";
+                                position: absolute;
+                                right: 0px;
+                                top: 55%;transform: translateY(-50%) scale(0.8);
+                                background: url(../images/index_img/orange_circle.png) no-repeat 0 0;
+                                width: 76px;height: 108px;
+                                }
+
+.main .time_alram > ul > li{margin-bottom: 27px;
+         font-size: 12px;
+         font-weight: bold;
+         font-family: 'Segoe UI';
+         color: #DFDFDF;}
+.main .time_alram > ul > li:nth-child(1){color:#0FD609;}
+.main .time_alram > ul > li:nth-child(2){margin-bottom: 30px;}
+.main .time_alram > ul > li:nth-child(3){margin-bottom: 27px;}
+.main .time_alram > ul > li:nth-child(4){margin-bottom: 5px;}
+.main .time_alram > ul > li:nth-child(5){color: #48BCFF;
+                       margin-bottom: 40px;}
+.main .time_alram > ul > li:nth-child(6){margin-bottom: 35px;}
+.main .time_alram > ul > li:nth-child(7){margin-bottom: 10px;}
+.main .time_alram > ul > li:nth-child(8){color: #FF3939;margin-bottom: 60px;}
+.main .time_alram > ul > li:nth-child(9){margin-bottom: 45px;}
+.main .time_alram > ul > li:nth-child(10){color: #FF7B4A;margin-bottom: 50px;}
+
+/* //container */
+
+
+
+/* calender */
+
+div.calender{position: absolute;
+  padding-top: 58px;
+  box-sizing: border-box;
+  width: 50%;
+  left: -50%;
+  z-index: 5;
+  box-sizing: border-box;
+  }
+
+  .calender .Now_Year{color: #8ec0ec;
+                      font-size: 12px;
+                      position: absolute;
+                      left: 50%;transform: translateX(-50%);
+                      opacity: 1;
+                      top: -60px;}
+
+.calender table{display: flex;width: 100%;text-align: center;
+                }
+.calender table th{color: white;}
+.calender table td{color: white;}
+
+.calender table th:nth-of-type(1){color: rgb(252, 157, 157);}
+
+
+.calender table tbody {width: 100%;}
+
+.calender table tr{
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.calender table tr:last-of-type{
+  margin-bottom: 0px;
+}
+
+.calender table tr th {flex:1;text-align: center;
+                      margin-top: 20px;}
+.calender table tr td {flex:1;}
+
+
+.calender_title{text-align: center;
+                }
+#NowMon2 {position: absolute;
+          left: 50%;transform: translateX(-50%);
+          top: -55px;
+                   font-family: 'Segoe UI';
+                   font-weight: 700;
+                   font-size: 27px;
+                   margin-bottom: 25px;
+                   color: #1991F8;}
+
+.calender_title .prev{content: "";
+                        display: block;
+                         position: absolute;
+                         right: 30px;
+                         top: 62px;
+                        background: url(../images/calender_img/right.png);
+                        width: 24px;height: 24px;
+                        cursor: pointer;
+                        }
+.calender_title .next{content: "";
+                        display: block;
+                        position: absolute;
+                        left: 30px;
+                        top: 62px;
+                      background: url(../images/calender_img/left.png);
+                      width: 24px;height: 24px;
+                      cursor: pointer;}
+
+.calender_box{position: relative;
+              box-sizing: border-box;
+              background: linear-gradient(to bottom,#0072FF,#33B1F0);
+              border-radius: 28px;
+              padding: 10px 15px;
+              width: 97.3%;
+              margin: 50px auto 0;
+              height: 403px;}
+.calender_box_bg1{position: absolute;
+  border-radius: 28px;
+  opacity: 0.7;
+  background: linear-gradient(to bottom,#0072FF,#33B1F0);
+  z-index: -1;
+                  width: 93.3%;
+                  height: 389px;
+                  top: 139px;
+                  left: 50%;transform: translateX(-50%);
+            }
+.calender_box_bg2{position: absolute;
+  border-radius: 28px;
+  opacity: 0.6;
+  background: linear-gradient(to bottom,#0072FF,#33B1F0);
+  z-index: -2;
+                width: 87.3%;
+                height: 374px;
+                top: 170px;
+                left: 50%;transform: translateX(-50%);
+              }
+.calender_box_bg3{position: absolute;
+  border-radius: 28px;
+  opacity: 0.3;
+  background: linear-gradient(to bottom,#0072FF,#33B1F0);
+  z-index: -3;
+                width: 82.3%;
+                height: 360px;
+                top: 2190px;
+                left: 50%;transform: translateX(-50%);      
+              }
+
+
+
+
+
+  

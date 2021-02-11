@@ -1,0 +1,60 @@
+.photo_btn{width: 91.11%;
+    height: 50px;
+    z-index: 1;
+    border-radius: 10px;
+    background: #ff8200;
+    display: block;
+    position: fixed;
+    left: 50%;-webkit-transform: translateX(-50%);
+    bottom: 80px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'NanumSquareRoundEB';}
+.offline_wrap{padding-top: 98px;
+              display: block;
+              width: 83.888%;
+              margin: 0 auto;}
+.offline_wrap>a{color: #a0a0a0;
+                font-size: 12px;
+                text-decoration: underline;
+                margin-bottom: 28px;
+                display: block;}
+.offline_wrap>h1{ font-family: 'NanumSquareRoundEB';
+                 line-height: 1.63;}
+.offline_application_body{background: url(../img/illust1.svg) no-repeat 50% 53%;
+                          background-size: 66.66666% 28.75%;}
+
+
+.offline_popup{width: 328px;
+                   height: 150px;
+                   background: white;
+                   border-radius: 10px;
+                   position: fixed;
+                   z-index: 10;
+                   left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+                   top: 50%;
+                   display: none;}
+.offline_popup.on{display: block;}
+.offline_popup p{text-align: center;
+                     font-size: 14px;
+                     font-family: 'NanumSquareRoundR';
+                     line-height: 1.79;
+                     margin-top: 25px;}
+.offline_popup a{width: 50%;
+                     float: left;
+                     text-align: center;
+                     height: 48px;
+                     line-height: 48px;
+                     box-sizing: border-box;
+                     font-family: 'NanumSquareRoundB';}
+.offline_popup a:nth-of-type(1){border-right: 1px solid rgb(240, 240, 240);
+                                    color: #787878;}
+.offline_popup a:nth-of-type(2){
+                                     color: #f76800;}
+.offline_popup>div{position: absolute;
+                       left: 0;
+                       bottom: 0;
+                       width: 100%;
+                       border-top: 1px solid rgb(240, 240, 240)}

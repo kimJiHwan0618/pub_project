@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>envelope_registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/header.js"></script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        header h1{opacity: 0;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>입금 정보 등록</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="dep_infor_reg-main">
+        <h2>사전 신청이 완료되었습니다</h2>
+        <h2>동전환전소에 방문하여<br />나머지 투입 절차를 꼭 진행해주세요</h2>
+        <a href="cashbox_location.html">동전환전소 위치 검색</a>
+
+       <div>
+           <span class="img"></span>
+           <p>동전환전소의 봉투를 뽑아 QR 촬영을 해주세요</p>
+           <span class="img"></span>
+           <P>QR 촬영한 봉투에 환전할 현금을 넣고<br />
+              밀봉 후 동전환전소에 투입해주세요</P>
+       </div>
+        
+    </div>    
+    
+    <div class="btn_wrap8">
+    <div class="btn_wrap">
+        <a href="home_modify.html">확인</a>
+    </div>
+    </div>
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+</body>
+</html>

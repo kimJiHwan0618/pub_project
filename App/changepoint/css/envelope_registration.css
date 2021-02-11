@@ -1,0 +1,120 @@
+.env-reg_main{width: 100%;
+    position: fixed;
+    left: 0;
+    top: 24%;
+    }
+.env-reg_main>div.qr-del{width: 91.11%;
+               margin: 0 auto;
+               display: flex;
+               box-sizing: border-box;
+               justify-content: space-between;}
+.env-reg_main>div.qr-del>div{width: 47%;
+                   text-align: center;
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;}
+.env-reg_main>div.qr-del>div.qr span{display: inline-block;
+                           width: 56px;
+                           height: 57px;
+                           margin-top: 5.5px;
+                           background: url(../img/qr.svg) no-repeat 0 0;}
+.env-reg_main>div.qr-del>div.del span{display: inline-block;
+                            width: 60px;
+                            height: 68px;
+                            background: url(../img/del.svg) no-repeat 0 0;}
+
+.env-reg_main>div.qr-del>div a{display: inline-block;
+                      width: 156px;
+                      height: 41px;
+                      border-radius: 5px;
+                      background: #ff8200;
+                      line-height: 41px;
+                      color: white;
+                      font-family: 'NanumSquareRoundEB';
+                      font-size: 14px;}
+
+.env-reg_main>div.qr-del>div.qr a{margin-top: 35.5px;}
+.env-reg_main>div.qr-del>div.del a{margin-top: 30px;}
+
+.env-reg_main .txt_box{background: #f5f5f5;
+             margin-top: 15.466%;
+             height: 176px;
+             box-sizing: border-box;
+             line-height: 176px;
+             padding: 30px 0;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             align-items: center;
+             text-align: left;}
+.env-reg_main .txt_box p{font-size: 14px;
+               font-family:'NanumSquareRoundR';
+               line-height: 1.63;
+               width: 265px;}
+.env-reg_main .txt_box p span{font-family:'NanumSquareRoundB';}
+.env-reg_popup2{width: 328px;
+                height: 150px;
+                background: white;
+                border-radius: 10px;
+                position: fixed;
+                z-index: 10;
+                left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+                top: 50%;
+                display: none;}
+          .env-reg_popup2 p{text-align: center;
+                    font-size: 14px;
+                    font-family: 'NanumSquareRoundR';
+                    line-height: 1.79;
+                    margin-top: 25px;}
+         .env-reg_popup2 p span{font-family: 'NanumSquareRoundEB';}
+         .env-reg_popup2 a{width: 50%;
+                    float: left;
+                    text-align: center;
+                    height: 46px;
+                    line-height: 46px;
+                    box-sizing: border-box;
+                    font-family: 'NanumSquareRoundB';}
+         .env-reg_popup2 a:nth-of-type(1){border-right: 1px solid rgb(240, 240, 240);
+                                   color: #787878;}
+         .env-reg_popup2 a:nth-of-type(2){
+                                    color: #f76800;}
+         .env-reg_popup2>div{position: absolute;
+                      left: 0;
+                      bottom: 0;
+                      width: 100%;
+                      border-top: 1px solid rgb(240, 240, 240)}
+
+.env-reg_popup2.on{display: block;}
+.env-reg_popup{width: 328px;
+         height: 242px;
+         background: white;
+         border-radius: 10px;
+         position: fixed;
+         z-index: 10;
+         left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+         top: 50%;
+         display: none;}
+
+.env-reg_popup.on{display: block;}
+.env-reg_popup p{text-align: center;
+           font-size: 14px;
+           font-family: 'NanumSquareRoundR';
+           line-height: 1.79;
+           margin-top: 33px;}
+.env-reg_popup p span{font-family: 'NanumSquareRoundEB';}
+.env-reg_popup a{width: 50%;
+           float: left;
+           text-align: center;
+           height: 46px;
+           line-height: 46px;
+           box-sizing: border-box;
+           font-family: 'NanumSquareRoundB';}
+.env-reg_popup a:nth-of-type(1){border-right: 1px solid rgb(240, 240, 240);
+                          color: #787878;}
+.env-reg_popup a:nth-of-type(2){
+                           color: #f76800;}
+.env-reg_popup>div{position: absolute;
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             border-top: 1px solid rgb(240, 240, 240)}

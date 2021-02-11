@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>알지-스플래시</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      $(function(){
+   // 워크쓰루 클래스 붙히기
+   $(".walk_one .skip_button").click(function(){
+     $(".walk_two").css({"z-index":"1"})
+     $(".walk_all>ul>li").eq(1).addClass("on")
+     $(".walk_all>ul>li").eq(0).removeClass("on")
+   });
+
+   $(".walk_all>ul>li").eq(1).click(function(){
+    $(".walk_two").css({"z-index":"1"})
+     $(".walk_all>ul>li").eq(1).addClass("on")
+     $(".walk_all>ul>li").eq(0).removeClass("on")
+   });
+   
+   $(".walk_all>ul>li").eq(0).click(function(){
+    $(".walk_two").css({"z-index":"-1"})
+     $(".walk_all>ul>li").eq(0).addClass("on")
+     $(".walk_all>ul>li").eq(1).removeClass("on")
+   });
+
+    // // 워크쓰루 클래스 붙히기
+      });
+    </script>
+</head>
+<body>
+    <div class="splash">
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="139.249" height="139.249" viewbox="0 0 139.249 139.249">
+            <defs>
+              <lineargradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientnits="objectBoundingBox">
+                <stop offset="0" stop-color="#33b1f0"/>
+                <stop offset="1" stop-color="#0072ff"/>
+              </lineargradient>
+            </defs>
+            <path id="path" class="path" data-name="path" 
+            d="M486.67,339.279a26.178,26.178,0,0,0-14.986-7.424c4.2-5.633,6.865-12.629,4.005-19.722l-9.98,4.021c1.891,4.691-3.233,10.6-7.185,14.076a14.657,14.657,0,0,1-5.643-5.977,25.226,25.226,0,0,0-16.556-31.585c-2.171-3.2-1.13-9.326-.495-11.491l-5.157-1.533-5.151-1.555a30.423,30.423,0,0,0-.807,13.8,25.2,25.2,0,1,0,22.122,42.452,24.62,24.62,0,0,0,3.951,3.7c-.465.4-.931.8-1.372,1.24a26.342,26.342,0,1,0,37.253,0ZM428.807,331.2a14.461,14.461,0,1,1,2.294-28.685c.032.024.059.054.094.078l.043-.062a14.436,14.436,0,0,1-2.432,28.669Zm50.256,37.726a15.577,15.577,0,1,1,0-22.038A15.6,15.6,0,0,1,479.063,368.925Z" transform="translate(-13.687 -482.019) rotate(45)" fill="url(#linear-gradient)" mask="url('#writing')"/>
+          </svg>
+          <h1>알지</h1>
+    </div>
+    </div>
+    <!-- //스플래시화면 -->
+   
+    <!-- 워크쓰루 -->
+    <div class="walk_all">
+    <ul>
+      <li class="on"><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+      
+    <!-- 1 -->
+    <div class="walk_one">
+        <span class="skip_button">Skip</span>
+    <!-- 2 -->
+    </div>
+    <div class="walk_two">
+        <a href="login.html" class="skip_button">Skip</a>
+    </div>
+    </div>
+    <!-- //워크쓰루화면 -->    
+
+</body>
+</html>

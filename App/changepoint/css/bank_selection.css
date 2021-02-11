@@ -1,0 +1,30 @@
+.bank_selection_title{
+    width: 100%;
+    margin-bottom: 34px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'NanumSquareRoundEB';}
+.bank_wrap{width: 91.11%;
+           padding-top: 111px;
+           margin: 0 auto;
+            }
+.bank_wrap ul{width: 100%;
+              padding-bottom: 57px;}
+.bank_wrap ul:after{content: "";
+                    clear: both;
+                    display: block;}
+.bank_wrap ul li{margin-bottom: 26px;
+                 width: 50%;}
+.bank_wrap ul li:nth-child(odd){float: left;}
+.bank_wrap ul li:nth-child(2n){float: right;}
+
+.bank_wrap ul li a span.txt{font-size: 12px;
+         font-family: 'NanumSquareRoundR';}
+.bank_wrap ul li img{
+       width: 44px;
+       height: 44px;
+       margin-right: 18px;}
+.bank_wrap  ul li a{display: flex;
+ align-items: center;}
+
+

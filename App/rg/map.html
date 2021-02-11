@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title> 알지 </title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="statusbar">
+        <div class="statusbar_left" id="statusbar">
+            <span class="now_time"><span id="now_hour">8</span>:<span id="now_min">40</span></span>
+        </div>
+        <div class="statusbar_right">
+            <div class="data"><span></span><span></span></div>
+            <div><i class="fa fa-wifi"></i></div>
+            <div class="header__battery"><i class="fa fa-battery-full"></i></div>
+        </div>
+    </div>
+
+    <section>
+    <!--구글맵-->
+    <input type="search" class="map_search" placeholder="장소를 입력하세요!">
+
+    <div id="map">
+    </div>
+    <script>
+        
+        
+        function initMap() {
+         var pinLocation = {lat: 37.497915, lng: 127.027203} 
+
+         var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 37.498, lng: 127.027},
+            zoom: 18
+          });
+
+          var marker = new google.maps.Marker({
+              position: pinLocation,
+              map: map,
+              title:"강남역"
+          });
+
+          var infowindow = new google.maps.infowindow({
+              content:"서울시 강남구 강남역"
+          });
+          infowindow.open(map,marker);
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=initMap"
+      async defer>
+    </script>
+</section>
+        
+<!-- footer -->
+        <footer>
+            <a href="#" class="drow">
+                <img src="images/index_img/_menu.png" alt="">
+            </a>
+            <a href="index.html">
+                <img src="images/index_img/_schedule.png" alt="">
+            </a>
+            <a href="addschedule.html">
+                <img src="images/index_img/_add_schedule.png" alt="">
+            </a>
+            <a href="#" class="selected">
+                <img src="images/map_img/map.png" alt="">
+            </a>
+            <a href="mypage.html">
+                <img src="images/index_img/_mypage.png" alt="">
+            </a>
+        </footer>
+        <!-- //footer -->
+</body>
+</html>

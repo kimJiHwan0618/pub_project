@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receipt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/jquery-1.12.4.min.js"></script>
+    <script defer src="js/detail-page_header.js"></script>
+    <script defer src="js/page.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+  
+        
+    </script>
+</head>
+<body class="detail_page none-footer_wrap">
+    <input type="number" value="1" id="page">
+    <div>
+    <header class="det_page_header">
+        <div class="header_inner">
+            <a class="back" href="#"><img src="img/back.svg" alt=""></a>
+            <h1>Receipt</h1>
+        </div>
+    </header>
+
+    <div class="receipt_wrap">
+      <div class="recipt_wrap_inner">
+        <div class=border_dash>
+            <dl class="receipt-list_1">
+                <dt>Payment notice</dt>
+                <dd>
+                    <ul>
+                        <li><span class="date">27-02-2020</span> <span class="time">13:35:00</span></li>
+                        <li><span>Items</span> <span>4</span></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <div class=border_dash>
+            <ul class="receipt-list_2">
+            <li>
+                <dl>
+                    <dt>Ticket</dt><span>:</span>
+                    <dd>495</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Cashier</dt><span>:</span>
+                    <dd>Jason(0001)</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Table</dt><span>:</span>
+                    <dd>T0-1/Hall1</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Sale type</dt><span>:</span>
+                    <dd>Onepay</dd>
+                </dl>
+            </li>
+            </ul>
+        </div>
+
+        <div class=border_dash>
+            <ul class="receipt-list_3">
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <ul>
+                            <li class="tit_list"><span class="num">1.</span> <span class="tit">Beer Lao</span></li>
+                            <li><span class="price">15,000</span> <span class="amount">x2</span></li>
+                        </ul>
+                    </dt>
+                    <dd class="price">30,000</dd>
+                </dl>
+            </li>
+
+
+            </ul>
+        </div>
+
+        <div class=border_dash>
+            <ul class="receipt-list_4">
+            <li>
+                <dl>
+                    <dt>Price</dt>
+                    <dd>120,000</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Tax</dt>
+                    <dd>0</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Discount</dt>
+                    <dd>0</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Total</dt>
+                    <dd><span>₭</span><span>120,000</span></dd>
+                </dl>
+            </li>
+            </ul>
+        </div>
+      </div>
+      <!-- //recipt_wrap_inner -->
+    </div>
+    <!-- // receipt_wrap -->
+
+    </div>
+    
+    
+</body>
+</html>

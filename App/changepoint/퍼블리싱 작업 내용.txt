@@ -1,0 +1,23 @@
+*인트로
+
+1. 사용약관 동의 및 비밀번호 설정 페이지
+splash.html >  terms_of_use.html > password_setting.html > exchange.html >   취소 > home.html
+							           >   입금하기 > resident_registration_number.html
+--------------------------------------------------------------------------------------------------------------------
+
+*메인화면
+
+1. 입금정보등록
+home.html > resident_registration_number.html > country_selection.html > account_management.html > bank_selection.html >
+
+account_number.html > account_complet.html > deposit_information_registration.html > envelope_registration.html > qr_complet.html
+
+
+2. 환율정보
+exchange-rate_information.html
+
+3. 신청내역
+my_info.html > application_details.html > application_confirmation.html > list-of-application_contents.html
+
+4.화폐 선택
+country_selection.html > currency_selection.html

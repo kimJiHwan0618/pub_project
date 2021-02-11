@@ -1,0 +1,200 @@
+
+.graph_wap .top {
+  line-height: 43px;
+  width: 88%;
+  margin: 0 auto;
+}
+.header_body .home_item:first-of-type {
+  margin-top: 0;
+}
+.graph_wap {
+  background-color: #fff;
+  width: 100%;
+}
+
+.graph_wap .bottom {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 0;
+  box-shadow: -5px 5px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.tit_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.weekly_graph h4 {
+  font-size: 1.9rem;
+}
+.weekly_graph h5 {
+  font-size: 2.6rem;
+  color: #4267b2;
+  font-family: 'NotoSansKR-Bold';
+}
+.bottom_inner {
+  width: 88%;
+  margin: 0 auto;
+}
+.weekly_graph .tit_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.more-wrap{
+  align-items: center;
+}
+.paymentTotal{
+  margin: 0 auto;
+}
+
+.weekly_graph .tit_wrap:nth-of-type(1) {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+.weekly_graph .tit_wrap li {
+  font-family: 'NotoSansKR-Bold';
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  width: 70px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.weekly_graph .tit_wrap li:nth-of-type(1) {
+  background-color: #F3F2FF;
+  color: #333;
+  margin-bottom: 10px;
+}
+.weekly_graph .tit_wrap li:nth-of-type(2) {
+  background-color: rgb(85, 85, 85);
+  margin-top: 10px;
+}
+
+.graph_wap .bottom:last-of-type .tit_wrap:nth-of-type(2) {
+  display: block;
+  text-align: center;
+}
+
+.bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid #4267b2;
+  font-size: 1.2rem;
+  color: #4267b2;
+  opacity: 0.5;
+  outline: none;
+  -webkit-transition: all 0.07s linear 0s;
+}
+.bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button.button{
+  -webkit-animation-name: button;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: foword;
+}   
+@keyframes button{
+  0%{left: 0;top: 0;}
+  50%{left: 1.5px;top: 1.5px;}
+  100%{left: 0;top: 0;}
+}
+.bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button {
+  margin-left: 10px;
+}
+.bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button.on {
+  opacity: 1;
+}
+
+.sales-ranking-wrap{
+  width: 100%;
+}
+
+.sales-ranking-wrap:after{
+  width: 100%;
+  content: "";
+  display: block;
+  clear: both;
+}
+.sales-ranking-wrap button{
+  position: relative;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid #4267b2;
+  font-size: 1.2rem;
+  color: #4267b2;
+  opacity: 0.5;
+  outline: none;
+  float: left;
+  margin-right: 10px;
+  -webkit-transition: all 0.07s linear 0s;
+}
+.sales-ranking-wrap button.button{
+  -webkit-animation-name: button;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: foword;
+}
+
+.sales-ranking-wrap button.on{
+  opacity: 1;
+}
+.bottom_inner table.on{
+  display: table;
+}
+
+.bottom_inner table{
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+}
+.bottom_inner table th, .bottom_inner table td{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.bottom_inner table tbody tr{
+  height: 40px;
+}
+.bottom_inner table thead tr{
+  height: 45px;
+  background-color: #F8FAFF;
+}
+.bottom_inner table tbody tr td:nth-child(2n){
+  background-color: #F8FAFF;
+}
+.bottom_inner table tbody tr{
+  border-bottom: 1px solid #edf2ff;
+}
+.bottom_inner table tbody tr:last-of-type{
+  border-bottom: none;
+}
+
+@media screen and (max-width:380px) {
+  .weekly_graph h5 {
+      font-size: 2.4rem;
+  }
+  .weekly_graph h4 {
+      font-size: 1.5rem;
+  }
+  .bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button {
+      padding: 3px 8px;
+  }
+  .bottom:nth-of-type(4) .weekly_graph .tit_wrap .payment-btn-wrap button {
+      margin-left: 7px;
+  }
+  .sales-ranking-wrap button{
+      padding: 3px 8px;   
+      margin-right: 7px;
+  }
+  .bottom_inner table th, .bottom_inner table td{
+      font-size: 1rem;
+  }
+  .weekly_graph .tit_wrap li {
+      padding: 5px 8px;
+      font-size: 1rem;
+      width: 60px;
+  }
+}

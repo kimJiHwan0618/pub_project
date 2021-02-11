@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offline_application</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script text="text/javascript">
+        $(function(){
+           $(".photo_btn").click(function(){
+               $(".offline_popup").addClass("on")
+               $(".dark_bg").addClass("on")
+           })
+           //   사전신청 하지 않았을시에, 팝업 창 알림
+           $(".offline_popup .cancel").click(function(){
+               $(".offline_popup").removeClass("on")
+               $(".dark_bg").removeClass("on")
+           })
+        
+        });
+    </script>
+    <style>
+   #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+    header h1{opacity: 0;}                              
+    </style>
+</head>
+<body class="offline_application_body">
+    <input type="number" value="3" id="page">
+    
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#".html" class="back_arrow">back</a>
+        <h1>국가 선택</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="offline_wrap">
+        <a href="cashbox_location.html">동전환전소가 어디있는지 모르겠어요</a>
+        <h1>동전환전소에 비치되어 있는 봉투의<br />QR을 촬영해주세요</h1>
+    </div>
+
+    <a href="#" class="photo_btn">촬영하기</a>
+
+    <div class="dark_bg"></div>
+    <div class="offline_popup">
+        <p>사전 신청한 이력이 없습니다.<br />
+           사전 신청을 먼저 진행해주세요.</p>
+        <div>
+            <a href="#" class="cancel">확인</a>
+            <a href="country_selection.html">사전 신청</a>
+        </div>
+    </div>
+    <!-- 사전신청 하지 않았을시에, 팝업 창 알림 -->
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+</body>
+</html>

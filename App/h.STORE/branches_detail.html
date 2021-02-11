@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>branches_detail</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/jquery-1.12.4.min.js"></script>
+    <script defer src="js/detail-page_header.js"></script>
+    <script defer src="js/page.js"></script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+   </style>
+</head>
+<body class="detail_page">
+    <input type="number" value="1" id="page">
+    <div>
+    <header class="det_page_header">
+        <div class="header_inner">
+            <a class="back" href="#"><img src="img/back.svg" alt=""></a>
+            <h1>데몬이네</h1>
+        </div>
+    </header>
+
+        <div class="branches_datail_wrap">
+                <dl class="today_income">
+                    <dt>
+                        <h2>
+                            <p>Today's income</p>
+                            <p class="date">2020.03.26</p>
+                        </h2></dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <p>Total</p>
+                                        <p><span>₭</span> <span>1,530,000</span></p>    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><span>Sales</span> <span>158</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl class="device_info">
+                    <dt><h2>Device info</h2></dt>
+                    <dd>
+                        <dl>
+                            <dt>Name</dt>
+                            <dd>데몬이네</dd>
+                        </dl>
+                        <dl>
+                            <dt>ID</dt>
+                            <dd>qw1231231213asdas</dd>
+                        </dl>
+                        <dl>
+                            <dt>Device</dt>
+                            <dd>POS</dd>
+                        </dl>
+                        <dl>
+                            <dt>POS S/W</dt>
+                            <dd>Version 1.3.0.8</dd>
+                        </dl>
+                        <dl>
+                            <dt>License</dt>
+                            <dd>Small business</dd>
+                        </dl>
+                        <dl>
+                            <dt>Status</dt>
+                            <dd class="status_wifi"><span class="ic_wifi"><img src="img/home/ic_wf_on.svg" alt=""></span> <span>Online</span></dd>
+                        </dl>
+                        <dl>
+                            <dt>Startup</dt>
+                            <dd>27-02-2020 12:54:33</dd>
+                        </dl>
+                        <dl>
+                            <dt>Shutdown</dt>
+                            <dd>27-02-2020 12:54:33</dd>
+                        </dl>
+                    </dd>
+                </dl>
+
+        </div>
+        <!-- //branches_datail_wrap -->
+    </div>
+    <!-- <? include "footer.html"; ?> -->
+    <footer>
+        <ul>
+            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="#"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

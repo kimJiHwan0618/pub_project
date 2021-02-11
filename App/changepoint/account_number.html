@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account_number</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- <script src="js/page.js"></script> -->
+    <script src="js/menu.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".confirm").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".acc-num_popup").removeClass("on")
+                // 계좌번호 오류 팝업창. 확인을 누르면 팝업 사라짐
+            })
+
+       
+        })
+    </script>
+    <style text="text/css">
+         #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        input[type="number"]::-webkit-outer-spin-button{-webkit-appearance: none;}   
+        input[type="number"]::-webkit-inner-spin-button{-webkit-appearance: none;}   
+    </style>
+</head>
+<body>
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>계좌번호&nbsp;입력</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+<!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  --> 
+
+
+    <h2 class="acc_num-title"><span>ㅇㅇ</span>은행&nbsp;계좌번호를 입력해주세요.</h2>
+
+    <form action="" style="width:91.11%;position: fixed;left: 50%;-webkit-transform: translateX(-50%);top: 197px;">
+        <label for="acc-num" style="display: block;font-family: 'NanumSquareRoundR';color: #ff8200;">계좌번호</label>
+        <input type="number" id="acc-num" style="width:100%;border: none;border-bottom: 1px solid #ff8200;margin-top: 15px;outline: none;padding-bottom: 10px;">
+        <a href="resident_registration_number_modify.html" style="height:50px;width:100%;text-align: center;display: block;line-height: 50px;background: #ff8200;border-radius: 10px;color: white;font-family: 'NanumSquareRoundEB';font-size: 16px;margin-top: 57px;">확인</a>
+    </form>
+    
+   
+
+    
+    <div class="dark_bg"></div>
+    <div class="acc-num_popup">
+        <p>유효하지&nbsp;않는&nbsp;계좌입니다.<br />
+           계좌정보를&nbsp;다시&nbsp;확인해주세요.</p>
+            <a href="#" class="confirm">확인</a>
+    </div>
+    <!-- 확인을 눌렀을 때, 계좌번호가 다를 시에 dark_bg와 acc-num_popup에 on 클래스 추가-->
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+
+   
+
+   
+</body>
+</html>

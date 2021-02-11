@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application_for_return_detail</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    </script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        body{background: #f6f6f6;}
+        
+        .add_detail{outline: none;
+                    border: none;}
+        .add_detail::placeholder{font-size: 14px;
+                                 color: #a0a0a0;
+                                 }
+        .search_detail{display: block;
+                       width: 100%;}
+        .search_detail a{display: block;
+                         width: 100%;
+                         text-align: center;
+                         height: 38px;
+                         line-height: 38px;
+                         margin: 29px 0 29px;
+                         background-color: #ff8200;
+                         border-radius: 10px;
+                         color: #fff;
+                         font-family: 'NanumSquareRoundEB';
+                         font-size: 13px;}
+
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>반환받을 주소</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="app-for_main">
+        <div>
+        <ul>
+            <li>
+                <ul>
+                    <li>강북구 번동 산28-7 북서울꿈의숲 북서울꿈의숲</li>
+                    <li>북서울꿈의숲 문화센터주차장(서문) GS25 앞</li>
+                    <li><span>도로명</span>강북구 번동 23길 10</li>
+                    <input type="search" class="add_detail" placeholder="상세 주소를 입력하세요(건물명,동/호수 등)" style="width:91%;margin: 10px auto 0;">
+                </ul>
+            </li>
+            <li class="search_detail"><a href="application_confirmation.html">완료</a></li>
+        </ul>
+        </div>
+    </div>
+    <!-- //app-for_main -->
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

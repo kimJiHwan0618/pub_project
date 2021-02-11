@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exchange_rate_information</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+   
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        .exd-rat_main{width: 100%;
+                      height: 100%;
+                      padding-top: 97px;
+                     }
+        .exd-rat_main>div{width: 67.222%;
+                          margin: 0 auto;
+                          padding-bottom: 84px;}
+        .exd-rat_main>div:after{content: "";
+                                display: block;
+                                clear: both;}
+        .exd-rat_main dl{width: 50%;}
+        .exd-rat_main dl:nth-of-type(1){float: left;
+                                        text-align: left;}
+        .exd-rat_main dl:nth-of-type(2){float: right;
+                                        text-align: right;}
+        .exd-rat_main dt{margin-bottom: 30px;
+                         color: #6a6a6a;
+                         font-family: 'NanumSquareRoundR';
+                         font-size: 13px;}
+        .exd-rat_main dd{margin: 30px 0;
+                         height: 20px;}
+
+
+        .exd-rat_main dl:nth-of-type(1) dd{font-size: 14px;
+                                           font-family: 'NanumSquareRoundR';}
+        .exd-rat_main dl:nth-of-type(2) dd{font-size: 15px;
+                                           font-family: 'NanumSquareRoundB';}
+        .exd-rat_main dl:nth-of-type(1) dd{display: flex;
+                                           align-items: center;}
+        .exd-rat_main dl dd  img{display: inline-block;
+                                 width: 20px;
+                                 height: 20px;
+                                 border: 0.8px solid #dadada;
+                                 margin-right: 9px;
+                                 border-radius: 50%;}
+        .exd-rat_main dl dd .img{border: none;}
+
+        
+
+    </style>
+</head>
+<body>
+
+    <input type="number" value="1" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#".html" class="back_arrow">back</a>
+        <h1>환율 정보</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    
+    <!-- margintop 97 -->
+    <div class="exd-rat_main">
+        <div>
+            <dl>
+                <dt>통화율</dt>
+                <dd><img src="img/country/usd.png" alt=""><span>미국 USD</span></dd>
+                <dd><img src="img/country/eur.png" alt=""><span>유럽연합 EUR</span></dd>
+                <dd><img src="img/country/jpy.png" alt=""><span>일본 JPY</span></dd>
+                <dd><img src="img/country/cad.png" alt=""><span>중국 CNY</span></dd>
+                <dd><img src="img/country/gbp.png" alt=""><span>영국 GBP</span></dd>
+                <dd><img src="img/country/aud.png" alt=""><span>호주 AUD</span></dd>
+                <dd><img src="img/country/cad.png" alt=""><span>캐나다 CAD</span></dd>
+                <dd><img src="img/country/chf.png" alt=""><span>스위스 CHF</span></dd>
+                <dd><img src="img/country/sgd.png" alt=""><span>싱가포르 SGD</span></dd>
+                <dd><img src="img/country/thb.png" alt=""><span>태국 THB</span></dd>
+                <dd><img src="img/country/hkd.png" alt=""><span>홍콩 HKD</span></dd>
+                <dd><img src="img/country/vnd.png" alt=""><span>베트남 VND</span></dd>
+                <dd><img src="img/country/twd.png" alt=""><span>대만 TWD</span></dd>
+                <dd><img src="img/country/php.png" alt=""><span>필리핀 PHP</span></dd>
+                <dd><img src="img/country/mop.png" alt=""><span>마카오 MOP</span></dd>
+            </dl>
+            
+            <dl>
+                <dt>매매기준율</dt>
+                <dd>1,164.20</dd>
+                <dd>1,369.04</dd>
+                <dd>1,111.89</dd>
+                <dd>171.38</dd>
+                <dd>1,490.43</dd>
+                <dd>839.03</dd>
+                <dd>873.81</dd>
+                <dd>1,271.13</dd>
+                <dd>853.78</dd>
+                <dd>37.09</dd>
+                <dd>150.09</dd>
+                <dd>5.05</dd>
+                <dd>40.15</dd>
+                <dd>24.01</dd>
+                <dd>145.63</dd>
+            </dl>
+        </div>
+    </div>
+    <? include "menu.html"; ?>
+
+  
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

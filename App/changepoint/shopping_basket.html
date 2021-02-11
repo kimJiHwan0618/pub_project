@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping_basket</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+   <script type="text/javascript"> 
+     $(function(){
+     
+
+        var none = $(".sho-bas_item").length
+
+        console.log(none)
+
+        if(none == 0){
+            $("body>a").css("background-color","#a0a0a0")
+            $(".sho_main-none").css("display","block")
+        }
+        // 장바구니 리스트 없을시 장바구니 확인버튼 색깔변경, 문구 설명 객체 생성 
+        if($(".sho-bas_item").length==0){
+            $(".sho_main-none").addClass("on")
+            $(".sho-bas_main").removeClass("on")
+        }
+
+        if($(".sho_main-none").hasClass("on")){
+            $(".btn_wrap7").removeClass("on")
+            $(".btn_wrap7 div a").css("pointer-events","none")
+        }else{
+            $(".btn_wrap7").addClass("on")
+            $(".btn_wrap7 div a").css("pointer-events","auto")
+        }
+        // 장바구니 리스트 있을시 없을시, 버튼 활성화, 비활성화
+
+
+        $(".delete_popup .delete").click(function(){
+            $(".delete_popup").removeClass("on")
+        })
+        // 로딩 다 될시에 .dark_bg와 .loading_wrap 클래스 on 제거
+
+
+
+    
+
+    $(".choice_wrap div .cho_del").click(function(){
+        $(".dark_bg").addClass("on")
+        $(".delete_popup").addClass("on")
+        $(".delete_popup p").text("삭제하시겠습니까?")
+    });
+    
+    
+    $(".ic_close3 img").click(function(){
+        $(".dark_bg").addClass("on")
+        $(".delete_popup").addClass("on")
+        $(".delete_popup p").text("선택된 화폐를 삭제하시겠습니까?")
+    })
+
+    $(".delete_popup .cancel").click(function(){
+        $(".dark_bg").removeClass("on")
+        $(".delete_popup").removeClass("on")
+    })
+
+    // 삭제버튼 누를시, 팝업 생성
+
+$(".sho-bas_main .check3").click(function(){
+    $(this).toggleClass("on")
+    var all_check = $(".sho-bas_main .check3.on").length
+    
+    if( 1 < all_check ){
+        $('.choice_wrap .check3').addClass("on")
+    }else{
+        $(".choice_wrap .check3").removeClass("on")
+    }
+    
+})
+$(".choice_wrap .check3").click(function(){
+    var all_check = $(".sho-bas_main .check3.on").length
+    $(this).addClass("on")
+    
+    if( 2 == all_check ){
+        $('.choice_wrap .check3').removeClass("on")
+        $('.sho-bas_main .check3').removeClass("on")
+    }else{
+        $(".sho-bas_main .check3").addClass("on")
+    }
+});
+    // 선택버튼
+if($(".sho_main-none").hasClass("on")){
+    $(".btn_wrap7").removeClass("on")
+}
+// 버튼 비활성화
+});
+
+  </script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        body{background: #f6f6f6;}
+    </style>
+</head>
+<body>
+    <div class="dark_bg on"></div>
+    <div class="loading_wrap on">
+	    <lottie-player src="./img/loading.json" speed="1" loop autoplay>
+	    </lottie-player>
+	</div>
+    <!-- 삭제후 전체목록 새로고침 로딩화면 -->
+
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#".html" class="back_arrow">back</a>
+        <h1>장바구니</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="choice_wrap">
+        <div>
+        <div><span class="check3"></span><span>전체선택</span></div>
+        <span class="cho_del">선택삭제</span>
+        </div>
+    </div>
+
+    <div class="sho_main-none" style="width: 100%;height: 429px;background: white;box-sizing: border-box;padding-top: 265px;text-align: center;">
+        <p style="font-size: 14px;">장바구니에 담긴 화폐가 없습니다</p>
+    </div>
+    <!-- sho_main-none에 class on 붙을시 장바구니에 담긴 화폐가 없습니다  생성-->
+
+    <!-- sho_bas-main에 class on 붙을시 장바구니에 담리스트 생성-->
+    <div class="sho-bas_main on">
+
+
+        <div><!-- << 장바구니 국가 리스트 국가가 늘어나면 이디브로 생성  -->
+        <div class="sho-bas_main_inner">
+            <h2><img src="img/country/eur.png" width="20" height="20" alt=""><span>유럽연합</span></h2>
+                <div class="sho-bas_item">
+
+                    <div class="item_middle">
+                        <div>
+                        <span class="check3"></span>
+                        <p><img src="img/eur_money/eur_won.svg" class="won" alt=""><span>2</span></p>
+                        <span><span>￦ </span>1,200</span>
+                        </div>
+                        <a class="ic_close3"><img src="img/ic_close3.svg" width="9" height="9" alt=""></a>
+                    </div>
+                    <!-- //item_middle -->
+            
+                    <div class="item_bottom">
+                        <div>
+                        <img src="img/eur_money/2_dollor.jpg" class="money" alt="">
+                        </div>
+            
+                        <div>
+                            <div><span title="마이너스"></span><span class="num">12</span><span title="플러스"></span></div>
+                            <div>합계<span><span>￦ </span>14,000</span></div>
+                        </div>
+                    </div>
+                    <!-- //item_bottom -->
+                    </div>
+                    <!-- //sho-bas_item -->
+                    
+    </div>
+    <!-- //sho-bas_main_inner -->
+    </div>
+    <!-- //국가 리스트 국가가 늘어나면 이디브로 생성 -->
+    
+
+    </div>
+    <!-- //sho-bas_main -->
+
+                    
+                    <!-- btn_wrap7에 class on 제거시, 버튼 비활성화 css -->
+                    <div class="btn_wrap7 shop">
+                        <div>
+                            <a href="country_selection.html">국가 목록</a>
+                            <a href="check_amount.html">확인</a>
+                        </div>
+                    </div>
+    
+                    <div class="delete_popup">
+                        <p>선택한 화폐를 삭제하시겠습니까?</p>
+                        <div>
+                            <a href="#" class="cancel">취소</a>
+                            <a href="#" class="delete">삭제</a>
+                        </div>
+                    </div>
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <script src="js/loading.js"></script>
+</body>
+</html>

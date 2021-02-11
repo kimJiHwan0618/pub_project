@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account_management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+            $(".acc_item a").click(function(){
+                $(".acc_item dt span").removeClass("on");
+                $(this).prev().children("dl").children("dt").children("span").addClass("on");
+                // 선택 클릭시, 기본계좌 문구 생성
+
+                var this_bank = $(this).prev().children("dl").children("dt").children("span").eq(0).html() 
+                $(".account_setting-notice span").html(this_bank)
+                    var click_bank = $(".account_setting-notice span").html()
+                // 중복 선택시 문구 수정필요 >> 이미 기본계좌가 'ㅇㅇ은행' 계좌로 설정되어 있습니다. 
+                  
+
+                    $(".account_setting-notice").removeClass("on")
+                    setTimeout(function(){
+                        $(".account_setting-notice").addClass("on")
+                    },200)
+                // 하단에 선택 알림 문구 생성
+            })
+
+            let acc_item = $(".acc_item").length
+            console.log(acc_item)
+            if(acc_item == 0){
+                $(".add_acc-none").addClass("on")
+                $(".add_acc-main").removeClass("on")
+            }else if(acc_item > 0){
+                $(".add_acc-none").removeClass("on")
+                $(".add_acc-main").addClass("on")
+            }
+            // 등록된 계좌가 없을경우 기본계좌 생성안내 박스 생성
+
+           $(".acc_item a img").click(function(){
+                $(".acc_item a img").attr({"src":"img/check_off.svg"})
+                $(this).attr({"src":"img/check_on.svg"})
+           })
+        });
+
+   </script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}   
+    </style>
+</head>
+<body class="add_acc_body">
+   <div>
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>계좌&nbsp;관리</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="add_acc-none">
+        <p>등록되어&nbsp;있는&nbsp;계좌가&nbsp;없으니<br />
+           밑에&nbsp;계좌&nbsp;추가하기&nbsp;버튼을&nbsp;눌러&nbsp;추가해보세요!</p>
+        <span class="img"></span>
+    </div>
+
+    <!-- 계좌가 없는경우 add_acc-main에 on 클래스 추가 -->
+    <!-- 계좌가 있는경우 add_acc-main2에 on 클래스 추가 -->
+
+    <div class="add_acc-main">
+        <div class="acc_item">
+            <div>
+                <img src="img/bank/kb_bank.svg" alt="">
+                <dl>
+                    <dt><span>국민은행</span><span>기본계좌</span>
+                    </dt>
+                    <dd>000000-000000</dd>
+                </dl>
+            </div>
+            <a href="#"><img src="img/check_off.svg" alt=""></a>
+        </div>
+
+        <div class="acc_item">
+            <div>
+                <img src="img/bank/nonghyub_bank.svg" alt="">
+                <dl>
+                    <dt><span>농협은행</span><span>기본계좌</span></dt>
+                    <dd>000000-000000</dd>
+                </dl>
+            </div>
+            <a href="#"><img src="img/check_off.svg" alt=""></a>
+        </div>
+
+        <div class="acc_item">
+            <div>
+                <img src="img/bank/kakao__bank.svg" alt="">
+                <dl>
+                    <dt><span>카카오은행</span><span class="on">기본계좌</span></dt><!--기본계좌 객체에 on 클래스 추가시, 기본계좌 문구 샹성-->
+                    <dd>000000-000000</dd>
+                </dl>
+            </div>
+            <a href="#"><img src="img/check_off.svg" alt=""></a>
+        </div>
+    </div>
+    
+    <a href="bank_selection.html">+ 계좌&nbsp;추가하기</a>
+
+    <p class="account_setting-notice">
+        기본계좌가 <span>국민은행</span> 계좌로 설정되었습니다.
+    </p>
+</div>
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+
+    
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list_of_application_details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/header.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){             
+            $(".list-item_title").click(function(){
+                $(this).children("div").children(".arrow6").toggleClass("on")
+                $(this).next().toggleClass("on")
+                // 클릭 시,신청 상세 내역 확인
+            })
+
+            $(".dep_app1").click(function(){
+                $(".dark_bg").addClass("on")
+                $(".dep_app-popup").addClass("on")
+
+                $(".cen-del").css("display","block")
+                $(".dep_app2").css("width","50%")
+                $(".dep_app2").text("입금 신청")
+                $(".dep_not").text("입금 신청하시겠습니까?")
+            })
+
+            $(".cen-del").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".dep_app-popup").removeClass("on")
+            })
+
+            $(".dep_app2").click(function(){
+                var text = $(this).text();
+                if(text === "확인"){
+                    $(".dark_bg").removeClass("on")
+                    $(".dep_app-popup").removeClass("on")
+                }else{
+                    $(this).css("width","100%")
+                    $(".cen-del").css("display","none")
+                    $(this).text("확인")
+                    $(".dep_not").text("입금 완료되었습니다.")
+                }
+                 // 입금신청 안내 팝업
+                 
+            })
+
+            $(".dep_app-popup2 div a").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".dep_app-popup2").removeClass("on")
+            })
+            $(".dep_app3").click(function(){
+                $(".dark_bg").addClass("on")
+                $(".dep_app-popup2").addClass("on")
+            })
+            // 신청 취소 팝업
+        });
+    </script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+
+.app_con-main2{padding-bottom: 75px;}
+
+    </style>
+</head>
+<body>
+
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>신청 내역</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="app_con-main app_con-main2">
+        <div>
+        <div class="txt"><div><span class="color: #606060;">No.&nbsp;</span><span class="num" style="margin-right: 24px;color: #606060;">00000000</span><span style="color: #a0a0a0;">2020.07.21</span></div></div>
+        <ul class="notice_wrap">
+            <li><span class="title">나의&nbsp;계수&nbsp;금액</span><br /><span class="won"><span>₩&nbsp;</span>2,812</span></li>
+            <li><span class="title">체인지포인트&nbsp;계수&nbsp;금액</span><br /><span class="won"><span>₩&nbsp;</span>4,226</span><br /><span class="color add">+1,414</span></li>
+        </ul>
+        </div>
+
+       <div class="list-item_wrap">
+           <div>
+               <div class="item-wrap sgd">
+               <div class="list-item_title">
+                   <div><span><img src="img/country/sgd.png" alt=""><span class="txt">싱가포르</span></span><span class="arrow6"></span></div>
+                   <p><img src="img/sgd_money/sgd_won.svg" class="won_margin" alt="">
+                   60</p>
+                   <p class="on"><img src="img/sgd_money/sgd_won.svg" class="won_margin" alt="">50</p>
+                   <p><span></span><span>₩ </span>1,812</p><p class="on"><span></span><span>₩ </span>2,123</p>
+                   <p><span>적용환율</span><span><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""></span><span>100</span><span>&nbsp;=&nbsp;</span><span> ₩&nbsp;</span><span>867.02</span><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""><span>100</span><span>&nbsp;=&nbsp;</span><span>₩&nbsp;</span><span>786.60</span></p>
+               </div>
+               <div class="list-item_content">
+                   <span class="img"></span><br />
+                   <dl>
+                       <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt="">5</dt>
+                       <dd>2<span> 장</span></dd>
+                       <dd>2<span> 장</span></dd>
+                   </dl>
+                   <dl>
+                        <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt="">5</dt>
+                        <dd>3<span> 장</span></dd>
+                        <dd class="on">2<span> 장</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt="">200</dt>
+                        <dd>100<span> 장</span></dd>
+                        <dd class="on">90<span> 장</span></dd>
+                    </dl>
+                   <span class="img"></span><br />
+                   <dl>
+                       <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt="">5</dt>
+                       <dd>2<span> 개</span></dd>
+                       <dd>2<span> 개</span></dd>
+                   </dl>
+                   <dl>
+                        <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt="">10</dt>
+                        <dd>3<span> 개</span></dd>
+                        <dd class="on">4<span> 개</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt="">200</dt>
+                        <dd>100<span> 개</span></dd>
+                        <dd>100<span> 개</span></dd>
+                    </dl>
+               </div>
+                </div>
+
+               <div class="item-wrap usd">
+               <div class="list-item_title">
+                   <div><span><img src="img/country/usd.png" alt=""><span class="txt">미국</span></span><span class="arrow6"></span></div>
+                   <p><img src="img/usd_money/usd_won.svg" class="won_margin" alt="">12</p><p><img src="img/usd_money/usd_won.svg" class="won_margin" alt="">12</p>
+                   <p><span></span><span>₩ </span>1,812</p><p><span></span><span>₩ </span>1,812</p>
+                   <p><span>적용환율</span><span><img src="img/usd_money/usd_won2.svg" class="won_margin" alt=""></span><span>100</span><span>&nbsp;=&nbsp;</span><span> ₩&nbsp;</span><span>867.02</span><img src="img/usd_money/usd_won2.svg" class="won_margin" alt=""><span>100</span><span>&nbsp;=&nbsp;</span><span>₩&nbsp;</span><span>786.60</span></p>
+               </div>
+               <div class="list-item_content">
+                <span class="img"></span><br />
+                <dl>
+                    <dt><img src="img/usd_money/usd_won2.svg" class="won_margin" alt="">5</dt>
+                    <dd><span>2</span><span> 장</span></dd>
+                    <dd><span>2</span><span>장</span></dd>
+                </dl>
+                <dl>
+                     <dt><img src="img/usd_money/usd_won2.svg" class="won_margin" alt="">5</dt>
+                     <dd><span>3</span><span>장</span></dd>
+                     <dd><span>2</span><span>장</span></dd>
+                 </dl>
+                <span class="img"></span><br />
+                <dl>
+                    <dt><img src="img/usd_money/usd_won2.svg" class="won_margin" alt="">5</dt>
+                    <dd><span>2</span><span> 개</span></dd>
+                    <dd><span>2</span><span> 개</span></dd>
+                </dl>
+                <dl>
+                     <dt><img src="img/usd_money/usd_won2.svg" class="won_margin" alt="">10</dt>
+                     <dd><span>3</span><span> 개</span></dd>
+                     <dd><span>3</span><span> 개</span></dd>
+                 </dl>
+               </div>
+                </div>
+
+           </div>
+           
+       </div>
+
+        
+
+    </div>    
+    
+    <!-- 입금신청 팝업 -->
+    <div class="btn_wrap2 page2">
+        <div>
+        <a href="#" class="dep_app1"><span>₩&nbsp;</span>4,226<span>&nbsp;입금&nbsp;신청</span></a>
+        <a href="#" class="dep_app3">신청&nbsp;취소</a>
+        </div>
+    </div>
+    <div class="dark_bg"></div>
+
+    <div class="dep_app-popup">
+        <p><span>₩ </span>4,226</p>
+        <p class="dep_not">입금 신청하시겠습니까?</p>
+        <div>
+            <a href="#" class="cen-del">취소</a>
+            <a href="#" class="dep_app2">입금 신청</a>
+        </div>
+    </div>
+
+
+    <!-- 신청 취소 팝업 -->
+    <div class="dep_app-popup2">
+        <p class="dep_not2">입금 취소시 반환 절차가 진행되며,<br />
+                           봉투를 캐시박스에 투입한 이후에<br />
+                           취소하는 경우 봉투가 착불로 반송됩니다.<br />
+                           취소를 계속 진행할까요?</p>
+        <div>
+            <a href="#" class="cen-del2">취소</a>
+            <a href="application_for_return.html" class="dep_app">신청 취소 진행</a>
+        </div>
+    </div>
+    
+</body>
+</html>

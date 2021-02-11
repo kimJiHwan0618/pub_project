@@ -1,0 +1,54 @@
+@import url('reset.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('header.css');
+@import url('common.css');
+@import url('country_selection.css');
+@import url('bank_selection.css');
+@import url('account_management.css');
+@import url('account_number.css');
+@import url('account_complet.css');
+@import url('deposit_information_registration.css');
+@import url('envelope_registration.css');
+@import url('application_confirmation.css');
+@import url('my_info.css');
+@import url('terms_of_use.css');
+@import url('application_details.css');
+@import url('list_of_application_details.css');
+@import url('shopping_basket.css');
+@import url('currency_selection.css');
+@import url('check_amount.css');
+@import url('all_notifications.css');
+@import url('procedure_guide.css');
+@import url('settings.css');
+@import url('personal_setting.css');
+@import url('service_settings.css');
+@import url('questions.css');
+@import url('notice.css');
+@import url('application_for_return.css');
+@import url('offline_application.css');
+@import url('onboarding.css');
+@import url('resident_registration_number_modify.css');
+@import url('home_modify.css');
+/* @import url('resident_registration_number.css'); */
+
+body{font-family: 'NanumSquareRoundR';}
+
+a{
+   -webkit-tap-highlight-color: transparent;
+}
+a:active{
+   -webkit-animation: tab_motion 0.5s ease 0s forwards;
+}
+@keyframes tab_motion{
+   0%{opacity: 0;}
+   100%{opacity: 1;}
+}
+
+body{-ms-overflow-style:none;
+     scrollbar-width: none;
+  height: 100%;
+  width: 100%;}
+  body::-webkit-scrollbar{display: none;}
+

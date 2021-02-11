@@ -1,0 +1,83 @@
+header.hdshare{width: 100%;
+               height: 91px;
+               background: #fff;
+               position: fixed;
+               z-index: 3;
+               left: 50%;-webkit-transform: translateX(-50%);
+               top: 0;}
+header .hdshare_inner{width: 91.11%;
+                margin: 0 auto;
+                height: 91px;
+                padding-bottom: 20px;
+                box-sizing: border-box;
+                background: #fff;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;}
+
+header h1{font-size: 14px;
+          font-family: 'NanumSquareRoundR';}
+
+.hdshare_inner a{text-indent: -9999px;}
+
+.hdshare_inner a.back_arrow{width: 40px;
+                       height: 35px;
+                       display: inline-block;
+                       background: url(../img/arrow2.svg) no-repeat 0 100%;
+                       background-size: 10px 16.9px;}
+.basket{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    text-align: right;
+}
+.basket a{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 40px;
+    height: 35px;
+}
+
+
+.basket a img{
+    display: block;
+}
+/* .basket.on>p{}
+.basket.on>span{} */
+
+.basket.on>p{display: inline-block;}
+.basket.on>span{display: inline-block;
+                -webkit-animation: basket 4s linear 0s forwards;}
+
+.basket>p{position: absolute;
+          display: none;
+          width: 150px;
+          left: -133px;
+          bottom: 0px;
+          font-size: 10px;
+          color: #a0a0a0;
+         white-space: nowrap;}
+
+
+@keyframes basket{
+    0%{opacity: 1;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.basket>span{position: absolute;
+             text-align: center;
+             box-sizing: border-box;
+             padding-top: 17px;
+             height: 46.8px;
+             width: 64.8px;
+             color: white;
+             background: url(../img/basket_notice.png) no-repeat 0 0;
+             background-size: cover;
+             right: -9px;
+             bottom: -45px;
+             font-size: 10px;
+             display: none;
+             -webkit-transform: scale(0.8);}

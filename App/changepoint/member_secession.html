@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member_secession</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/header.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".mem_sec-chek ul li").click(function(){
+                $(".mem_sec-chek ul li").removeClass("on")
+                $(this).addClass("on")
+            })
+        })
+    </script>
+
+
+    <style type="text/css">
+       
+
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+       .mem_sec-not{width: 100%;
+                    height: 123px;
+                    padding-top: 91px;
+                    background-color: #f6f6f6;
+                   }
+        .mem_sec-not>div{width: 91.11%;
+                        margin: 0 auto;
+                        box-sizing: border-box;
+                        padding: 30px 0 0 52px;
+                        background: url(img/ic-door.svg) no-repeat 0 45px;}
+        .mem_sec-not>div p:nth-of-type(1){font-size: 12px;
+                                          color: #808080;
+                                          margin-bottom: 17px;
+                                          line-height: 1.5;}
+        .mem_sec-not>div p:nth-of-type(2){font-size: 14px;}
+        
+        .mem_sec-chek{width: 91.11%;
+                      margin: 21px auto 0;}
+        .mem_sec-chek h2{font-size: 14px;
+                         font-family: 'NanumSquareRoundB';
+                         margin-bottom: 25px;}
+        .mem_sec-chek ul li{display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+                           font-size: 14px;
+                           opacity: 0.7;}
+        .mem_sec-chek ul li.on{opacity: 1;}
+        .mem_sec-chek ul .img{display: inline-block;
+                              width: 20px;
+                              height: 20px;
+                              border: 1px solid #dbdbdb;
+                              border-radius: 50%;
+                              margin-right: 9px;
+                              background: #fff url(img/check_img.svg) no-repeat 50% 50%;
+                              background-size: 13px 9px;}
+        .mem_sec-chek ul li.on .img{background: #ff8200 url(img/check_img.svg) no-repeat 50% 50%;
+                                     border: 1px solid #ff8200;}
+
+        .sec_btn{position: fixed;
+                 width: 91.11%;
+                 height: 50px;
+                 color: #fff;
+                 line-height: 50px;
+                 border-radius: 10px;
+                 left: 50%;-webkit-transform: translateX(-50%);
+                 bottom: 26px;
+                 text-align: center;
+                 font-family: 'NanumSquareRoundEB';
+                 background-color: #ff8200;}
+        .mem_sec-chek form{width: 100%;}
+        .mem_sec-chek input{margin-left: 32px;
+                            margin-top: -15px;
+                            font-size: 12px;
+                            display: block;
+                            border: none;
+                            width: 80%;
+                            outline: none;}
+        .mem_sec-chek input::placeholder{color: #cecece;}
+
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>회원탈퇴</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="mem_sec-not">
+        <div>
+            <p>탈퇴 시 등록했던 환전 및 입금내역 및 계좌정보가<br />삭제됩니다.</p>
+            <p>정말 탈퇴하시겠습니까?</p>
+        </div>
+    </div>
+
+    <div class="mem_sec-chek">
+    <h2>체인지포인트를 떠나는 이유를 알려주세요.</h2>
+    <ul>
+        <li class="on"><span class="img"></span><span>오류가 너무 많습니다.</span></li>
+        <li><span class="img"></span><span>필요한 기능이 없습니다.</span></li>
+        <li><span class="img"></span><span>보안이 걱정됩니다.</span></li>
+        <li><span class="img"></span><span>기타</span></li>
+    </ul>
+        <form action="">
+            <input type="text" placeholder="직접입력">
+        </form>
+    </div>
+    
+    <a href="#" class="sec_btn">탈퇴</a>
+</body>
+</html>

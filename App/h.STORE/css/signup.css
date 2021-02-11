@@ -1,0 +1,111 @@
+.signup_wrap{
+    width: 88%;
+    margin: 20px auto 0;
+}
+.signup_body{
+    background-color: #fff;
+}
+
+.signup_wrap li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0 12px 38px ;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #aaaaaa;
+}
+.signup_wrap li input{
+    width: 90%;
+    font-size:1.6rem;
+    border: none;
+}
+.signup_wrap li input::placeholder{
+    color: #aaaaaa;
+    font-family: "NotoSansKR-Light";
+}
+.signup_wrap form li.on{
+    width: 100%;
+    border-bottom: 1px solid #2C5290;
+}
+
+
+.signup_wrap form ul li:first-of-type{
+    background: url(../img/login/ic_envelope_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(2){
+    background: url(../img/login/ic_name_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(3){
+    background: url(../img/login/ic_password_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(4){
+    background: url(../img/login/ic_password_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(5){
+    background: url(../img/login/ic_restaurant_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(6){
+    background: url(../img/login/ic_address_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+
+.signup_wrap form ul li:nth-of-type(8){
+    background: url(../img/login/ic_phone_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(9){
+    background: url(../img/login/ic_note_off.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+
+.signup_wrap form ul li:first-of-type.on{
+    background: url(../img/login/ic_envelope_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(2).on{
+    background: url(../img/login/ic_name_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(3).on{
+    background: url(../img/login/ic_password_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(4).on{
+    background: url(../img/login/ic_password_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(5).on{
+    background: url(../img/login/ic_restaurant_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(6).on{
+    background: url(../img/login/ic_address_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+
+.signup_wrap form ul li:nth-of-type(8).on{
+    background: url(../img/login/ic_phone_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+.signup_wrap form ul li:nth-of-type(9).on{
+    background: url(../img/login/ic_note_on.svg) no-repeat 0 50%;
+    background-size: 25px 25px;
+}
+
+
+.signup_wrap>a{
+    display: block;
+    margin: 30px auto 0;
+    height: 56px;
+    line-height: 56px;
+    font-size:1.4rem;
+    width: 100%;
+    color: #fff;
+    background-color: #2C5290;
+    text-align: center;
+    border-radius: 5px;
+}

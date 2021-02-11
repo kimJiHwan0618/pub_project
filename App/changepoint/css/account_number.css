@@ -1,0 +1,39 @@
+h2.acc_num-title{
+    position: fixed;
+    top: 111px;
+    left: 50%;-webkit-transform: translateX(-50%);
+    width: 91.11%;
+    font-size: 18px;
+    font-family: 'NanumSquareRoundEB';
+    line-height: 1.63;}
+.acc-num_popup{width: 328px;
+height: 148px;
+background: white;
+border-radius: 10px;
+position: fixed;
+z-index: 10;
+left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+top: 50%;
+display: none;}
+
+
+.acc-num_popup.on{display: block;}
+
+.acc-num_popup p{font-size: 14px;
+   font-family: 'NanumSquareRoundR';
+   text-align: center;
+   line-height: 1.79;
+   margin-top: 23px;
+   margin-bottom: 23px;}
+.acc-num_popup a{display: block;
+   width: 100%;
+   box-sizing: border-box;
+   padding-top: 14px;
+   margin-top: 11px;
+   text-align: center;
+   color: #ff8200;
+   font-size: 16px;
+   line-height: 1.5;
+   font-family: 'NanumSquareRoundB';
+   border-top: 1px solid rgb(240, 240, 240);
+   }

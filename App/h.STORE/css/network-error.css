@@ -1,0 +1,36 @@
+.error-wrap{
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+.error-wrap img{
+    width: 75px;
+    opacity: 0.9;
+}
+.error-wrap p{
+    margin-top: 20px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    line-height: 1.62;
+    font-size: 1.4rem;
+}
+.error-wrap .retry-btn{
+    position: relative;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    background-color: #aaaaaa;
+    color: white;
+    font-size: 1.4rem;
+    padding: 8px 25px;
+    border-radius: 5px;
+    -webkit-transition: all 0.02s linear 0s;
+}
+.error-wrap .retry-btn:active{
+    left: 1px;
+    top: 1px;
+    opacity: 0.7;
+}

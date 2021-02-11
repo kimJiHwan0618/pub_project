@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home_modify</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+   
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+    </style>
+</head>
+<body class="home_modify_body">
+
+    <input type="number" value="1" id="page">
+
+    <div class="logo_modify_wrap">
+        <img src="img/home_logo_w.svg" width="115" height="26" alt="">
+    </div>
+
+    <div class="ho_mo_wrap">
+        <a href="country_selection.html " class="home_main_list">
+            <h2><span><span class="num">01</span><span class="txt">환전 신청하기</span></span><span class="go">GO!</span></h2>
+            <p>
+                <span class="icon"></span><span>서비스가 처음이시거나 재신청 하고싶으신 분</span></p>
+        </a>
+
+        <a href="offline_application.html" class="home_main_list">
+            <h2><span><span class="num">02</span><span class="txt">동전 보내기</span></span><span class="go">GO!</span></h2>
+            <p>
+                <span class="icon"></span><span>환전 신청 완료하신 분</span></p>
+        </a>
+
+        <div class="guide_txt_wrap">
+            <a href="procedure_guide.html">이용방법 자세히 보기</a>
+        </div>
+    </div>
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+
+</body>
+</html>
+  

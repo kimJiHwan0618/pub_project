@@ -1,0 +1,260 @@
+.cur-sel_main{width: 100%;
+    padding-top: 98px;
+    padding-bottom: 70px;}
+.cur-sel_main h2{margin-left: 24px;
+       margin-bottom: 14px;
+      display: flex;
+      align-items: center;}
+
+.cou-title .img{background: url(../img/gbp.png) no-repeat 0 0;
+      display: inline-block;
+      border:  0.5px solid #dadada;
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: 10px;}
+.cou-title .txt{font-size: 14px;
+      font-family: 'NanumSquareRoundB';}
+
+.all-money_wrap{width: 91.11%;
+      margin: 0 auto;}
+.all-money_wrap:after{content: "";
+            display: block;
+            clear: both;}
+.coin-item{width: 48%;
+ height: 152px;
+ border: 1px solid #f4f4f4;
+ border-radius: 8px;
+ margin-bottom: 14px;
+ position: relative;}
+
+.coin-item:nth-of-type(1n){float: left;}
+.coin-item:nth-of-type(2n){float: right;}
+
+.coin-item>div{width: 130px;
+     margin: 0 auto;
+     height: 140px;
+     text-align: center;}
+.coin-item>div .coin{display: block;
+           position: relative;
+           width: 130px;
+           height: 59.1px;
+           margin-top: 15px;
+           margin-bottom: 12.9px;}
+.coin-item>div .coin img{width: 130px;
+                         height: 59.1px;}
+
+
+
+.coin-item dt{margin-bottom: 8px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'NanumSquareRoundB';}
+.coin-item dt span.img{display: inline-block;
+         width: 17px;
+         height: 21px;
+         background-size: cover;
+         background: url(../img/gbp_won.svg) no-repeat 0 0;}
+
+.coin-item dd{font-size: 14px;
+    color: #878787;
+    font-family: 'NanumSquareRoundB';}
+
+.coin-item>span{display: inline-block;
+          width: 15px;
+          height: 19px;
+          position: absolute;
+          right: 11.645%;
+          bottom: 12.894%;
+          }
+
+.btn_wrap7{position: fixed;
+ bottom: 0;
+ width: 100%;
+ padding-bottom: 31px;
+ padding-top: 10px;
+ background: rgb(255, 255, 255,0.9);}
+ .btn_wrap7.shop{bottom: 50px;
+                padding:46px 0;
+                 background: linear-gradient(to top, #fff,rgba(255,255,255,0));}
+
+.btn_wrap7>div{width: 91.11%;
+     display: block;
+     margin: 0 auto;}
+.btn_wrap7>div a{display: inline-block;
+       width: 48.780%
+       ;background: #fbfbfb;
+       height: 41px;
+       line-height: 41px;
+       text-align: center;
+       color: #e3e3e3;
+       font-family: 'NanumSquareRoundEB';
+       font-size: 14px;
+       border-radius: 5px;}
+
+.btn_wrap7.on>div a:nth-of-type(1){float: left;}
+.btn_wrap7.on>div a:nth-of-type(2){float: right;}
+
+.btn_wrap7.on>div a:nth-of-type(1){float: left;
+                                   background: #878787;
+                                   color: white;}
+.btn_wrap7.on>div a:nth-of-type(2){float: right;
+                                   background: #ff8200;
+                                   color: white;}
+
+
+
+
+.coin-item_popup{position: fixed;
+      -webkit-transition: all 0.1s ease-in-out 0s;
+      left: 0;
+      bottom: -286px;
+      height: 286px;
+      width: 100%;
+      background-color: #fff;
+      padding: 0 55px;
+      box-sizing: border-box;
+      border-radius: 10px 10px 0 0;
+      z-index: 5;}
+.coin-item_popup.on{bottom: 0;}
+
+.coin-item_popup:after{content: "";
+              position: absolute;
+              top: 15px;
+              left: 50%;-webkit-transform: translateX(-50%);
+              display: block;
+              width: 18.888%;
+             height: 4px;
+             border-radius: 5px;
+             background-color: #eaebf1;}
+
+.coin-f_b{
+margin: 46px auto 0;}
+.coin-f_b>div>div:after{content: "";
+      display: block;
+      clear: both;}
+.coin-f_b>div:nth-of-type(1){width: 220px;
+                   margin: 0 auto;
+                   text-align: center;
+                   overflow: hidden;}
+.coin-f_b>div:nth-of-type(1)>div{width: 440px;
+                                 position: relative;
+                                 left: 0;
+                                 top: 0;}
+.coin-f_b>div img{float: left;
+                  }
+.coin-f_b>div img.coin{width: 220px;
+                  height: 100px;}
+.coin-f_b>div img.won{width: 17px;
+                  height: 21px;}
+                  
+.coin-f_b>div:nth-of-type(1) ul {margin-top: 12px;
+                       display: inline-block;}
+.coin-f_b>div:nth-of-type(1) ul li{width: 6px;
+                         height: 6px;
+                         border-radius: 50%;
+                         background-color: #c4c4c4;
+                        display: inline-block;
+                          margin: 0 3px;}
+.coin-f_b>div:nth-of-type(1) ul li.on{background-color: black;}
+
+.coin-f_b>div:nth-of-type(2){
+                   margin-top: 15px;
+                   margin-bottom: 13px;
+                  display: flex;
+                   justify-content: space-between;}
+
+
+.coin-f_b>div:nth-of-type(2) p:nth-of-type(1){font-size: 20px;
+                                   font-family: 'NanumSquareRoundB';
+                                    }
+.coin-f_b>div:nth-of-type(2) p:nth-of-type(1) span:nth-of-type(2){font-size: 13px;
+                                                       color: #858585;
+                                                       margin-left: 9.4px;}
+.coin-f_b>div:nth-of-type(2) p:nth-of-type(1) span:nth-of-type(1){margin-right: 2.5px;}                                             
+.coin-f_b>div:nth-of-type(2) p:nth-of-type(2){font-size: 18px;
+                                    font-family: 'NanumSquareRoundB';
+                                    }
+.coin-f_b>div:nth-of-type(2) p:nth-of-type(2) span{font-size: 15px;
+                                          color: #858585;}
+
+
+.coin-f_b>div:nth-of-type(3){display: flex;
+                  align-items: center;
+                  justify-content: space-between;}
+.coin-f_b>div:nth-of-type(3) div{display: flex;
+                       align-items: center;}
+.coin-f_b>div:nth-of-type(3) div span{display: inline-block;
+                            width: 27px;
+                            height: 33px;
+                            background-color: #f4f4f4;
+                            box-sizing: border-box;}
+.coin-f_b>div:nth-of-type(3) div span:nth-of-type(1){border-radius: 5px 0 0 5px;
+                                                    padding-left: 7px;
+                                                    padding-top: 10px;}
+.coin-f_b>div:nth-of-type(3) div span:nth-of-type(2){font-size: 14px;
+                                          text-align: center;
+                                          line-height: 33px;
+                                          font-family: 'NanumSquareRoundB';
+                                          background-color: #fff;
+                                          width: 40px;}
+.coin-f_b>div:nth-of-type(3) div span:nth-of-type(3){border-radius: 0 5px 5px 0;
+                                                    padding-left: 7px;
+                                                    padding-top: 10px}
+
+
+.coin-f_b>div:nth-of-type(3)>span{width: 163px;
+                        height: 41px;
+                        display: inline-block;
+                        line-height: 41px;
+                        text-align: center;
+                        color: white;
+                        font-family: 'NanumSquareRoundEB';
+                        font-size: 14px;
+                        background-color: #ff8200;
+                        border-radius: 5px;}
+
+.notice_btn{
+      font-size: 14px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      display: inline-block;
+      font-family: 'NanumSquareRoundB';
+      text-decoration: underline;
+}
+
+.notice_popup{
+      position: fixed;
+      width: 91%;
+      left: 50%;
+      top: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+      display: none;
+      background-color: white;
+      z-index: 10;
+      border-radius: 10px;
+}
+.notice_popup p{
+      line-height: 1.79;
+      font-size: 14px;
+      text-align: left;
+      width: 80%;
+      margin: 27px auto;
+}
+.notice_popup a{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      margin: 0 auto;
+      font-size: 16px;
+      font-family: 'NanumSquareRoundB';
+      border-top: 1px solid rgb(240, 240, 240);
+      color: #ff8200;
+}
+.notice_popup.on{
+      display: block;
+}

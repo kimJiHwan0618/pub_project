@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country_selection</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script text="text/javascript">
+            $(function(){
+                    $(".next_btn").click(function(){
+                        $(".dark_bg").addClass("on")
+                        $(".country_selection_popup").addClass("on")
+                })
+
+                $(".cancel").click(function(){
+                    $(".dark_bg").removeClass("on")
+                    $(".country_selection_popup").removeClass("on")
+                    $(".notice_popup6").removeClass("on")
+                })
+              // 단계건너뛰기 팝업
+
+                $(".country_none").click(function(){
+                    $(".notice_popup6").addClass("on")
+                    $(".dark_bg").addClass("on")
+                });
+            });
+    </script>
+    <style>
+        header h1{opacity: 0;}
+    </style>
+</head>
+<body>
+    
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>국가 선택</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="shopping_basket.html"><img src="img/ic-cart.svg" width="15.4" height="20" alt=""></a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="coun_tit_wrap">
+        <h1>어느 나라의 돈을 가지고 계신가요?</h1>
+    </div>
+
+    <div class="exchange_wrap">
+        <ul>
+        <li><a href="currency_selection.html"><img src="img/country/krw.png" alt=""><span class="txt">대한민국&nbsp;KRW</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/eur.png" alt=""><span class="txt">유럽연합&nbsp;EUR</span></a></li>    
+        <li><a href="currency_selection.html"><img src="img/country/usd.png" alt=""><span class="txt">미국&nbsp;USD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/jpy.png" alt=""><span class="txt">일본&nbsp;JPY</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/cad.png" alt=""><span class="txt">캐니디&nbsp;CAD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/sgd.png" alt=""><span class="txt">싱가포르&nbsp;SGD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/gbp.png" alt=""><span class="txt">영국&nbsp;GBP</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/chf.png" alt=""><span class="txt">스위스&nbsp;CHF</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/thb.png" alt=""><span class="txt">태국&nbsp;THB</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/twd.png" alt=""><span class="txt">대만&nbsp;TWD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/hkd.png" alt=""><span class="txt">홍콩&nbsp;HKD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/aud.png" alt=""><span class="txt">호주&nbsp;AUD</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/cny.png" alt=""><span class="txt">중국&nbsp;CNY</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/php.png" alt=""><span class="txt">필리핀&nbsp;PHP</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/vnd.png" alt=""><span class="txt">베트남&nbsp;VND</span></a></li>
+        <li><a href="currency_selection.html"><img src="img/country/mop.png" alt=""><span class="txt">마카오&nbsp;MOP</span></a></li>
+        </ul>
+        <p class="country_none">취급하지 않는 통화는요?</p>
+    </div>
+
+    <a href="#" class="next_btn">어느 나라 돈인지 모르겠어요</a>
+    <div class="bg_white_two"></div>
+
+    <div class="dark_bg"></div>
+    <div class="country_selection_popup">
+        <p>어느 나라 돈인지 모르셔도 됩니다.<br />
+            바로 신청하셔도 저희가 알아서 확인해드릴게요</p>
+        <div>
+            <a href="#" class="cancel">취소</a>
+            <a href="bank_selection.html">바로 신청하기</a>
+        </div>
+    </div>
+    <!-- 건너뛰기 팝업. country_selection_popup, dark_bg class on 추가시 생성 -->
+
+    <div class="notice_popup6">
+        <p>체인지포인트에서 <span>취급하지 않는 통화를<br />
+            투입하는 경우 제휴된 기부기관에 기부처리</span>되오니<br />
+            취급 통화 목록을 꼭 확인해주세요!</p>
+        <div>
+        <dl>
+            <dt>모든 통화 취급</dt>
+            <dd>한국, 미국, 일본, 유럽, 대만, 홍콩<br />
+                베트남, 싱가폴, 영국, 스위스, 캐나다, 호주</dd>
+        </dl>
+        <dl>
+        <dt>부분 통화 취급</dt>
+            <dd>중국 - <span>위안, 지아오 취급</span></dd>
+            <dd>마카오 - <span>파타카 취급</span></dd>
+            <dd>태국 - <span>바트 취급</span></dd>
+            <dd>필리핀 - <span>페소 취급</span></dd>
+        </dl>
+        </div>
+        <a class="cancel" href="#">확인</a>
+    </div>
+    <!-- dark_bg, notice_popup6 class on 추가 시, 취급통화 안내 팝업 -->
+</body>
+</html>

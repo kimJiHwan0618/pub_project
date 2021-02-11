@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cashbox_location</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script> -->
+
+
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        
+
+        .cas_loc-main{width: 100%;
+                     margin: 0 auto;
+                     padding-top: 106px;
+                     padding-bottom: 75px;
+                     }
+        .cas_loc-main>div{background-color: #fff;}
+
+        .cas_loc-item h2{display: inline-block;
+                         margin-right: 15px;
+                         font-family: 'NanumSquareRoundEB';
+                         color: #ff8200;}
+        .cas_loc-item dl{display: inline-block;}
+        .cas_loc-item{width: 91.11%;
+                      margin: 0 auto;
+                      display: flex;
+                      padding: 16px 0 16px;
+                      align-items: center;
+                      border-top: 1px solid rgb(243, 243, 243);
+                     }
+        .cas_loc-item dt{font-size: 14px;
+                         margin-bottom: 8px;
+                         font-family: 'NanumSquareRoundB';}
+        .cas_loc-item dd{font-size: 12px;
+                         color: #606060;}
+     
+        /* #map{margin: 0 auto;
+             width: 89.444%;
+             height: 210px;} */
+    </style>
+</head>
+<body>
+
+    <input type="number" value="4" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>동전환전소 위치</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+    
+    <div class="cas_loc-main">
+        <div>
+        <!-- <div id="map">
+        
+        </div> -->
+        <a href="cashbox_location_modify.html" class="cas_loc-item">
+            <h2>1</h2>
+            <dl>
+                <dt>NH디지털혁신캠퍼스</dt>
+                <dd>서울 서초구 매현로 24 (양재동)</dd>
+            </dl>
+        </a>
+
+        <a href="cashbox_location_modify.html" class="cas_loc-item">
+            <h2>2</h2>
+            <dl>
+                <dt>NH디지털혁신캠퍼스</dt>
+                <dd>서울 서초구 매현로 24 (양재동)</dd>
+            </dl>
+        </a>
+
+        <a href="cashbox_location_modify.html" class="cas_loc-item">
+            <h2>3</h2>
+            <dl>
+                <dt>NH디지털혁신캠퍼스</dt>
+                <dd>서울 서초구 매현로 24 (양재동)</dd>
+            </dl>
+        </a>
+        </div>
+    </div>
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

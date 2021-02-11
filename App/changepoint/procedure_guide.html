@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>procedure_guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="4" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>이용방법</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="procedure_guide__wrap">
+        <!-- 1 -->
+        <div class="guide_item">
+            <span class="img"></span>
+            <h2>먼저 <span>앱에서 환전 신청</span>하기</h2>
+            <p>'동전환전소' 앱의 홈에서<br />
+                '01 환전 신청하기'를 눌러주세요<br />
+                순차적으로 과정을 진행해주시고<br />
+                환전 신청을 완료해주세요</p>
+        </div>
+        <!-- 2 -->
+        <div class="guide_item">
+            <span class="img"></span>
+            <h2>환전할 돈을 지참하여<br />
+                <span>동전환전소 방문</span>하기</h2>
+            <p>환전할 돈을 지참하시고<br />
+                동전환전소에 방문해주세요<br />
+                <a href="cashbox_location.html">동전환전소 위치 검색</a></p>
+        </div>
+        <!-- 3 -->
+        <div class="guide_item">
+            <span class="img"></span>
+            <h2>동전환전소 봉투에 있는<br />
+                <span>QR 촬영(등록)</span>하기</h2>
+            <p>동전환전소에 방문해주시고<br />
+               앞면에 보이는 봉투를 뽑아주세요<br />
+                '동전환전소'앱의 홈에서<br />
+                '02 동전 보내기'를 눌러주시고<br />
+                봉투에 있는 QR을 촬영해주세요</p>
+        </div>
+        <!-- 4 -->
+        <div class="guide_item">
+            <span class="img"></span>
+            <h2>QR 촬영을 마친 봉투에<br />
+                지참한 <span>돈을 넣고 밀봉</span>하기</h2>
+            <p>※ 봉투에 돈을 많이 넣으면<br />
+                봉투가 터질 수 있습니다<br />
+                반드시 안내선까지만 넣어주세요</p>
+        </div>
+        <!-- 5 -->
+        <div class="guide_item">
+            <span class="img"></span>
+            <h2>밀봉한 봉투를<br />
+                <span>동전환전소에 넣으면</span> 끝!</h2>
+            <p>모든 과정을 마치셨다면<br />
+                5 영업일 이내로<br />
+                신청하신 금액이 입금됩니다</p>
+        </div>
+    </div>
+
+       
+    <? include "menu.html"; ?>
+    <footer>
+        <ul>
+            <li><a href="home_modify.html"><img class="one" src="img/home.svg" alt="" width="15" height="31"></a></li>
+            <li class="notice_num"><a href="all_notifications.html"><img class="two" src="img/notification.svg" alt="" width="17" height="31"></a><span class="num" style="position:absolute;right: -5px;top: 5px;display: inline-block;width: 15.6px;height: 15.6px;border-radius: 50%;color: white;line-height: 15.6px;text-align: center;background-color: #ff8200;-webkit-transform: scale(0.8);font-size: 10px;">2</span></li>
+            <li><a href="my_info.html"><img class="three" src="img/my-information.svg" alt="" width="27" height="31"></a></li>
+            <li><a href="#" class="menu_btn"><img class="four" src="img/all-menu.svg" alt="" width="17" height="29.1"></a></li>
+        </ul>
+    </footer>
+   
+    
+    
+</body>
+</html>

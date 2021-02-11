@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/calender.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading_bg on"></div>
+    <div class="loading_wrap on">
+	    <lottie-player src="img/loading.json" speed="1.3" loop autoplay>
+	    </lottie-player>
+	</div>
+    <div class="dark_bg"></div>
+    <input type="number" value="3" id="page">
+
+    <div>        
+        <div class="search_all">
+            <div class="search_all_inner">
+               <div>     
+                    <dl class="branch_wrap">
+                        <dt>Branch</dt>
+                        <dd>
+                            <div class="branch_btn">
+                                <a href="#" class="on">All Branchs</a>
+                                <a href="#">Branch A</a>
+                                <a href="#">Branch B</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <!-- //branch_wrap -->
+                </div>
+                <div>
+                    <dl class="term_wrap">
+                        <dt>Term</dt>
+                        <dd class="term_btn">
+                            <div class="term_btn_wrap">
+                                <a href="#" class="on">Today</a>
+                                <a href="#">Last day</a>
+                                <a href="#">Last week</a>
+                                <a href="#">Last month</a>
+                            </div>
+                        </dd>
+
+                        <dd class="calender_btn">
+                            <form action="">
+                                <input type="text" id="testDatepicker1" autocomplete="off" readonly>
+                                <span>~</span>
+                                <input type="text" id="testDatepicker2" autocomplete="off" readonly>
+                            </form>
+                        </dd>
+                    </dl>
+                    <!-- term_wrap -->
+                </div>
+                <h3><span class="list_tit2">Results</span class="num"><span>(6)</span></h3>
+            </div>
+            <!-- //search_all:inner -->
+
+            
+            <ul class="list_wrap">
+                <li class="results_all">
+                     <dl>
+                         <dt>
+                             <span class="img"><img src="img/search/ic_retail.svg" alt=""></span>
+                             <ul>
+                                <li>Sales</li>
+                                <li>158</li>
+                             </ul>
+                         </dt>
+                         <dd>
+                             <span class="img"><img src="img/search/ic_money.svg" alt=""></span>
+                             <ul>
+                                 <li>Ordered</li>
+                                 <li><span>₭</span> <span>180,000</span></li>
+                             </ul>
+                         </dd>
+                     </dl>
+                </li>
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_card.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="date">27-02-2020 13:35:00</li>
+                                    <li class="item"><span>Item</span> <span>4</span></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                 <!-- //list_item -->
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_card.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="date">27-02-2020 13:35:00</li>
+                                    <li class="item"><span>Item</span> <span>4</span></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                 <!-- //list_item -->
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_card.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="date">27-02-2020 13:35:00</li>
+                                    <li class="item"><span>Item</span> <span>4</span></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                 <!-- //list_item -->
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_card.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="date">27-02-2020 13:35:00</li>
+                                    <li class="item"><span>Item</span> <span>4</span></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                 <!-- //list_item -->
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_free.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="date">27-02-2020 13:35:00</li>
+                                    <li class="item"><span>Item</span> <span>4</span></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                <!-- //list_item -->
+                <li class="list_item">
+                    <a href="receipt.html">
+                        <dl>
+                            <dt>
+                                <span class="img"><img src="img/search/ic_dis.svg" alt=""></span>
+                                <p><span>₭</span> <span>50,000</span></p>
+                            </dt>
+                            <dd>
+                             <ul>
+                                 <li class="date">27-02-2020 13:35:00</li>
+                                 <li class="item"><span>Item</span> <span>4</span></li>
+                             </ul>
+                            </dd>
+                        </dl>
+                    </a>
+                </li>
+                 <!-- //list_item -->
+             </ul>
+             <!-- //list_wrap -->
+        </div>
+        <!-- //search_all -->
+
+   
+    </div>
+    <!-- <? include "footer.html"; ?> -->
+    <footer>
+        <ul>
+            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="setting.html"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    <script>
+        function loading(){
+                $(".loading_bg").removeClass("on")
+                $(".loading_wrap").removeClass("on")
+            }
+        setTimeout(loading,1000)
+    </script>
+</body>
+</html>

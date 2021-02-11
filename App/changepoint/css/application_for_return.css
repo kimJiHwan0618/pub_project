@@ -1,0 +1,100 @@
+.app-for_main{padding-top: 91px;
+    width: 100%;
+    }
+.app-for_main>div{margin-bottom: 10px;
+                        width: 100%;
+                        background-color: #fff;}
+.app-for_main>div:nth-of-type(1){border-bottom: 0.5px solid #d8d8d8;}
+.app-for_main>div:nth-of-type(2){border-top: 0.5px solid #d8d8d8;
+                        }
+.search_list{display: none;}
+.search_list.on{display: block;}
+
+.app-for_main form{width: 85.5%;
+          margin: 0 auto;
+          box-sizing: border-box;
+          padding-bottom: 18px;}
+.app-for_main form:after{content: "";
+               clear: both;
+               display: block;}                   
+.app-for_main form input[type=search]{float: left;
+                             height: 30px;
+                             border: none;
+                             width: 80%;
+                             outline: none;}
+.app-for_main form input[type=search]::placeholder{color: #a0a0a0;
+                                          font-size: 14px;}
+.app-for_main form input[type=submit]{float: right;
+                            display: block;
+                            border-radius: 50%;
+                            width: 30px;
+                            height: 30px;
+                            border: none;
+                            text-indent: -9999px;
+                            background: url(../img/search7.svg) no-repeat 0 0;
+                            background-size: cover;}
+
+.app-for_main>div>ul{width: 85.5%;
+           margin: 0 auto;}
+.app-for_main>div>ul li ul{padding-bottom: 15px;
+                  padding-top: 21px;
+                  font-size: 14px;
+                  position: relative;
+                  border-bottom: 1px solid rgb(240, 240, 240);}
+.app-for_main>div>ul li ul li:first-of-type{width: 90%;
+                                            line-height: 1.79;}
+
+
+.app-for_main>div>ul li ul>span{position: absolute;
+                                right: 0;
+                                top: 26px;
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;}
+.app-for_main>div>ul li ul>span span{position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        display: inline-block;}
+.app-for_main>div>ul li ul>span span.check{width: 14px;
+                                           height: 11px;
+                                           background: url(../img/check2.svg) no-repeat 0 0;
+                                           background-size: cover;
+                                           display: none;}
+.app-for_main>div>ul li ul>span span.close{width: 9px;
+                                           height: 9px;
+                                           background: url(../img/ic_close_4.svg) no-repeat 0 0;
+                                           background-size: cover;
+                                           display: none;}
+.app-for_main>div>ul li ul>span .check.on{display: inline-block;}
+.app-for_main>div>ul li ul>span .close.on{display: inline-block;}
+
+
+.app-for_main>div>ul li ul li span{display: inline-block;
+                          margin-right: 7px;
+                          width: 41px;
+                          height: 21px;
+                         border-radius: 4px;
+                         border: 0.5px solid #d8d8d8;
+                         line-height: 21px;
+                         text-align: center;
+                         font-size: 12px;
+                         color: #606060;}
+.app-for_main>div>ul li ul li:last-of-type{margin-top: 15px;}
+
+.search_none{width: 85%;
+             display: none;
+             margin: 22px auto 0;
+             line-height: 2.36;
+             font-size: 14px;
+             color: #606060;}
+.search_none.on{display: block;}
+
+.search_list>h3{width: 85.5%;
+                margin: 21px auto 0;
+                font-size: 15px;
+                font-family: 'NanumSquareRoundB';}
+
+@media screen and (max-width: 375px){
+.app-for_main form input[type=search]::placeholder{color: #a0a0a0;
+                                                    font-size: 12px;}    
+}

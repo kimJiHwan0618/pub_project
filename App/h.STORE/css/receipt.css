@@ -1,0 +1,143 @@
+
+body.none-footer_wrap > div {
+    padding: 50px 0 100px;
+}
+
+.receipt_wrap {
+    width: 320px;
+    margin: 75px auto 0;
+    background-color: white;
+    position: relative;
+}
+.receipt_wrap:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -32px;
+    width: 100%;
+    z-index: -1;
+    height: 64px;
+    background: url(../img/receipt-bg.png) no-repeat 0 0;
+}
+.receipt_wrap::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -56px;
+    width: 100%;
+    z-index: -1;
+    height: 64px;
+    background: url(../img/receipt-bg.png) no-repeat 0 0;
+    -webkit-transform: rotate(180deg);
+}
+.recipt_wrap_inner {
+    margin: 0 auto;
+}
+
+.receipt_wrap > div > div > dl dd ul {
+    display: flex;
+    justify-content: space-between;
+}
+.receipt-list_2 li dl {
+    display: flex;
+}
+
+.border_dash {
+    border-bottom: 1px dashed rgb(148, 148, 148);
+}
+.receipt-list_1 {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.receipt-list_2,
+.receipt-list_3,
+.receipt-list_4,
+.receipt-list_5 {
+    padding: 13px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 1 */
+.receipt-list_1 {
+    padding-bottom: 20px;
+    padding-top: 12px;
+}
+.receipt-list_1 dt {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+.receipt-list_1 dd {
+    font-size: 1.2rem;
+    color: #999999;
+}
+
+/* 2 */
+.receipt-list_2 dl {
+    display: flex;
+    align-items: flex-end;
+}
+.receipt-list_2 dl span {
+    font-family: 'NotoSansKR-Bold';
+}
+.receipt-list_2 li {
+    margin-bottom: 7px;
+}
+.receipt-list_2 dl dd,
+.receipt-list_2 dl dt {
+    font-size: 1.4rem;
+    margin-right: 5px;
+}
+.receipt-list_2 dl dd {
+    margin-left: 3px;
+}
+
+/* 3 */
+.receipt-list_3 > li > dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.4rem;
+}
+.receipt-list_3 > li {
+    margin-bottom: 10px;
+}
+.receipt-list_3 > li > dl > dt li:nth-of-type(2) {
+    color: #999999;
+    margin-top: 3px;
+    font-size: 1.2rem;
+}
+.receipt-list_3 > li > dl > dt li:nth-of-type(2) .amount {
+    margin-left: 5px;
+}
+
+/* 4 */
+.receipt-list_4 > li {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+}
+.receipt-list_4 > li > dl {
+    display: flex;
+    justify-content: space-between;
+}
+.receipt-list_4 > li:last-of-type {
+    font-family: 'NotoSansKR-Black';
+    font-size: 1.8rem;
+    margin: 10px 0 0;
+    color: #2c5290;
+}
+/* 5 */
+.receipt-list_5 > li {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+}
+.receipt-list_5 > li:last-of-type {
+    margin-bottom: 0;
+}
+.receipt-list_5 > li > dl {
+    display: flex;
+    justify-content: space-between;
+}

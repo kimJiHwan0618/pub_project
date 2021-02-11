@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exchange_rates</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/detail-page_header.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+        $(function(){
+            $('.select-head').click(function(){
+                $('.select-body').toggleClass('on');
+                $('.selectbox').toggleClass('on');
+            })
+            $('.select-body button').click(function(){
+              $('.select-body').removeClass('on');
+              $('.selectbox').removeClass('on');
+
+              let thisImg = $(this).children('img').attr('src')
+              let thisTxt = $(this).children('.txt').html()
+              let headImg = $('.select-head').children('img').attr('src')
+              let headTxt = $('.select-head').children('.txt').html()
+
+              $(this).children('.txt').html(headTxt)
+              $('.select-head').children('.txt').html(thisTxt)
+              $(this).children('img').attr('src',headImg)
+              $('.select-head').children('img').attr('src',thisImg)
+            })
+        })
+    </script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="detail_page exchange_rates">
+    <input type="number" value="1" id="page">
+    <div>
+        <header class="det_page_header">
+            <div class="header_inner">
+                <a class="back" href="#"><img src="img/back.svg" alt=""></a>
+                <h1>Exchange Rates</h1>
+            </div>
+        </header>
+
+        <div class="exchange_rates_wrap">
+            <div class="selectbox">
+                <div class="select-head"><img src="img/home/country/ic_lak.svg" alt=""><span class="txt">LAK</span></div>
+                <ul class="select-body">
+                  <li><button><img src="img/home/country/ic_usd.svg" alt=""><span class="txt"">USD</span></button></li>
+                  <li><button><img src="img/home/country/ic_krw.svg" alt=""><span class="txt"">KRW</span></button></li>
+                  <li><button><img src="img/home/country/ic_thb.svg" alt=""><span class="txt"">THB</span></button></li>   
+                </ul>
+              </div>
+            <table>
+                <tr class="t_head">
+                    <th>Currency</th>
+                    <th class="buy">Buy</th>
+                    <th class="sell">Sell</th>
+                </tr>
+                <tr class="check_click">
+                    <td class="currency"><span class="img"><img src="img/home/country/ic_krw.svg" alt=""></span><span class="name">KRW</span></td>
+                    <td class="buy">9,293.00</td>
+                    <td class="sell">9,313.00</td>
+                    <td class="select_btn"></td>
+                </tr>
+                <tr class="check_click">
+                    <td class="currency"><span class="img"><img src="img/home/country/ic_usd.svg" alt=""></span><span class="name">USD</span></td>
+                    <td class="buy">9,293.00</td>
+                    <td class="sell">9,313.00</td>
+                    <td class="select_btn"></td>
+                </tr>
+                <tr class="check_click">
+                    <td class="currency"><span class="img"><img src="img/home/country/ic_thb.svg" alt=""></span><span class="name">THB</span></td>
+                    <td class="buy">9,293.00</td>
+                    <td class="sell">9,313.00</td>
+                    <td class="select_btn"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    
+
+    <footer>
+        <ul>
+            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="setting.html"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

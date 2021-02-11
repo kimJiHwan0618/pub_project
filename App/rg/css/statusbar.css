@@ -1,0 +1,39 @@
+.statusbar{display: flex;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 19px;
+    }
+
+.statusbar_left{font-size: 15px;
+         font-weight: bold;
+         margin-left:33px;}
+
+.statusbar_right{display: flex;
+          margin-right: 15px;}
+.statusbar_right>div{margin-left: 7px;}
+.statusbar_right .data span{display: inline-block;
+                     background: #000;
+                     width: 3px;
+                     height: 12px;
+                     border-radius: 1000px;
+                     margin-left: 3px;}
+.statusbar_right .data span:nth-child(1){position: relative;
+                                  height: 10px;}
+.statusbar_right .data span:nth-child(1):after{content: "";
+                                        position: absolute;
+                                        left: -6px;
+                                        bottom: 0;
+                                        width: 3px;
+                                        height: 8px;
+                                        border-radius: 1000px;
+                                        background: #000;}
+.statusbar_right .data span:nth-child(1)::before{content: "";
+                                        position: absolute;
+                                        left: -12px;
+                                        bottom: 0;
+                                        width: 3px;
+                                        height: 6px;
+                                        border-radius: 100px;
+                                        background: #000;}

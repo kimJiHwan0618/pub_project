@@ -1,0 +1,83 @@
+.procedure_guide__wrap{
+    padding-top: 136px;
+    padding-bottom: 87px;
+    text-align: center;
+}
+.procedure_guide__wrap .guide_item{
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.procedure_guide__wrap .guide_item p{
+    line-height: 2;
+    font-size: 14px;
+    color: #555555;
+}
+.procedure_guide__wrap .guide_item p a{
+    font-family: 'NanumSquareRoundEB';
+    text-decoration: underline;
+}
+.procedure_guide__wrap .guide_item h2{
+    font-size: 18px;
+    line-height: 1.67;
+    font-family: 'NanumSquareRoundEB';
+    margin-bottom: 10px;
+}
+.procedure_guide__wrap .guide_item h2 span{
+    display: inline-block;
+    position: relative;
+}
+
+.procedure_guide__wrap .guide_item h2 span:after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: rgba(255, 184, 28, 0.4);
+    height: 9px;
+    width: 100%;
+    left: 0;
+    bottom: 9px;
+    display: block;
+}
+
+.procedure_guide__wrap .guide_item .img{
+    margin: 0 auto 25px;
+    display: block;
+    background-size: cover;
+}
+
+.procedure_guide__wrap .guide_item:nth-of-type(1) .img{
+    width: 130px;
+    height: 130px;
+    background: url(../img/step1-illust.svg) no-repeat 0 0;
+    background-size: cover;
+    -webkit-transform: translateX(13px);
+}
+.procedure_guide__wrap .guide_item:nth-of-type(2) .img{
+    width: 180px;
+    height: 107px;
+    background: url(../img/step2-illust.svg) no-repeat 0 0;
+    background-size: cover;
+}
+.procedure_guide__wrap .guide_item:nth-of-type(3) .img{
+    width: 236px;
+    height: 180px;
+    background: url(../img/step3-illust.svg) no-repeat 0 0;
+    background-size: cover;
+    -webkit-transform: translateX(4px);
+}
+.procedure_guide__wrap .guide_item:nth-of-type(4) .img{
+    width: 265px;
+    height: 111px;
+    background: url(../img/step4-illust.svg) no-repeat 0 0;
+    background-size: cover;
+    -webkit-transform: translateX(-10px);
+}
+.procedure_guide__wrap .guide_item:nth-of-type(5) .img{
+    width: 116px;
+    height: 173px;
+    background: url(../img/step5-illust.svg) no-repeat 0 0;
+    background-size: cover;
+    -webkit-transform: translateX(9px);
+}

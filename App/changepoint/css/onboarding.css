@@ -1,0 +1,77 @@
+.onboarding_wrap{position: fixed;
+    top: 26.562%;
+    left: 13.055%;
+    width: 76.111%;
+    height: 66.25%;}
+.onboarding_wrap>h1{font-size: 25px;
+       margin-bottom: 9%;
+       font-family: 'NanumSquareRoundEB';}
+.onboarding_wrap>h1 span{position: relative;}
+.onboarding_wrap>h1 span:after{content: "";
+                  position: absolute;
+                  display: block;
+                  bottom: 0;
+                  left: 0;
+                  height: 13px;
+                  width: 100%;
+                  background-color: #ffedcc;
+                  z-index: -1;}
+.onboarding_wrap .on_list{position: relative;
+            width: 100%;}
+.onboarding_item{position: absolute;
+    width: 102%;
+    -webkit-transition: all 0.2s linear 0s;
+   left: 0;
+   top: 0;}
+.onboarding_item.on{opacity: 1;}
+.onboarding_item{opacity: 0;}
+
+.onboarding_item h2{font-size: 30px;
+       line-height: 1.67;
+       color: #ff8200;
+       font-family: 'NanumSquareRoundEB';
+       margin-bottom: 8.6%;}
+.onboarding_item span{color: #a0a0a0;
+         font-size: 14px;
+         font-family: 'NanumSquareRoundB';
+         line-height: 2;}
+
+.onboarding_wrap .num_wrap{position: absolute;
+              width: 100%;
+              left: 0;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;}
+.num_wrap ul li{display: inline-block;
+   width: 9px;
+   height: 9px;
+   margin-right: 12px;
+   background-color: #c4c4c4;
+   border-radius: 50%;}
+.num_wrap ul li.on{background-color: #ff8200;}
+
+.num_wrap div a{width: 47px;
+   height: 47px;
+   display: inline-block;
+  background-color: #ff8200;
+  border-radius: 27px;
+  text-align: center;
+  line-height: 47px;
+  color: white;
+  font-size: 18px;
+  -webkit-transition: all 0.1s linear 0s;
+  font-family: 'NanumSquareRoundEB';
+  position: relative;}
+.num_wrap div a.on{border-radius: 27px;
+      width: 122px;
+      height: 48.3px;
+      }
+.num_wrap div a span{position: absolute;
+        display: inline-block;
+        left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        white-space: nowrap;}
+.num_wrap div a span{opacity: 0;
+        -webkit-transition: all 0.2s linear 0s;}
+.num_wrap div a span.on{opacity: 1;}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>envelope_registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript">
+      $(function(){
+            $(".qr_btn").click(function(){
+                $(".dark_bg").addClass("on")
+                $(".env-reg_popup").addClass("on")
+            })
+
+            $(".cancel").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".env-reg_popup").removeClass("on")
+            })
+        });
+    </script>
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;} 
+    </style>
+</head>
+<body>
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>봉투&nbsp;등록</h1>
+        
+        <div class="basket">
+            <p><span>￦ </span>100,000</p>
+            <span>장바구니에<br />담겼습니다.</span>
+            <a href="shopping_basket.html"><img src="img/ic-cart.svg" width="15.4" height="20" alt=""></a>
+            </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="env-reg_main">
+        <div class="qr-del">
+        <div class="qr">
+            <span></span>
+            <a href="#" class="qr_btn">QR&nbsp;등록</a>
+        </div>
+        <div class="del">
+            <span></span>
+            <a href="#">택배&nbsp;등록</a>
+        </div>
+        </div>
+
+        <div class="txt_box">
+            <p class="txt"><span>등록해둔 장바구니 정보를 기준</span>으로<br />
+                     체인지포인트가&nbsp;<span>계수&nbsp;결과를&nbsp;비교</span>해&nbsp;드립니다.</p>
+            <p class="txt"><span>장바구니&nbsp;정보를&nbsp;등록하지&nbsp;않은&nbsp;경우<br /></span>
+                     체인지포인트&nbsp;<span>계수&nbsp;결과대로&nbsp;입금</span>됩니다.</p>
+        </div>
+
+    </div>
+    <!-- popup -->
+
+    <!-- 봉투 등록>등록된 입금정보 없을 시 팝업
+          env-reg_popup2 class on 추가 dark_bg class on 추가 -->
+    <div class="env-reg_popup2">
+        <p>등록된&nbsp;입금&nbsp;정보가&nbsp;없습니다.<br />
+           입금&nbsp;정보&nbsp;등록을&nbsp;먼저&nbsp;진행해주세요.<br />
+        </p>
+        <div>
+            <a href="#">이전</a>
+            <a href="#">입금&nbsp;정보&nbsp;등록</a>
+        </div>
+    </div>
+
+    <!-- QR 등록 버튼 누를시 팝업 -->
+    <div class="dark_bg"></div>
+    <div class="env-reg_popup">
+        <p>QR&nbsp;등록한&nbsp;당일에<br />
+            <span>봉투를&nbsp;수령한&nbsp;지점에&nbsp;투입</span>해야<br />
+           5&nbsp;영업일&nbsp;이내&nbsp;입금이&nbsp;보장됩니다.</p>
+           <p>계속&nbsp;진행하시겠습니까?</p>
+        <div>
+            <a href="#" class="cancel">아니오</a>
+            <a href="qr_registration.html">예</a>
+        </div>
+    </div>
+
+    <!-- //popup -->
+
+
+
+    <? include "menu.html"; ?>
+
+    <? include "footer.html"; ?>
+  
+    
+    
+</body>
+</html>

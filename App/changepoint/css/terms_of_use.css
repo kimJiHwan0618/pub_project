@@ -1,0 +1,127 @@
+.title_wrap1{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 13px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 72px;
+    background: #fff;
+    }
+.title_wrap2{
+    width: 91.11%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    }
+.title_wrap2 h1{font-size: 18px;
+       font-family: 'NanumSquareRoundEB';
+       margin-bottom: 24px;}
+.title_wrap2 p{background: #fafafa;
+      padding: 17px 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: 'NanumSquareRoundB';}
+.title_wrap2 .check_img{display: inline-block;
+               border: 1px solid #dbdbdb;
+               width: 20px;
+               height: 20px;
+               margin-right: 9px;
+               border-radius: 100px;
+               background: url(../img/check_img.svg) no-repeat 50% 50%;
+               background-size: 13px 9px;}
+
+.ter-use_main{margin: 0 auto;
+    width: 91.11%;
+    padding-bottom: 100px;
+    padding-top: 182px;}
+.ter-use_main .check_img{display: inline-block;
+               border: 1px solid #dbdbdb;
+               width: 20px;
+               height: 20px;
+               margin-right: 9px;
+               border-radius: 100px;
+               background: url(../img/check_img.svg) no-repeat 50% 50%;
+               background-size: 13px 9px;}
+.ter-use_main .check_img.on{background-color: #ff8200;
+                   border: 1px solid #ff8200;
+                   }
+.title_wrap2 .check_img.on{background-color: #ff8200;
+                   border: 1px solid #ff8200;
+                   }
+.ter-use_main dt{
+      padding: 12px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      }
+.ter-use_main dt span:nth-of-type(1){display: flex;
+                            align-items: center;}
+.ter-use_main dt span.arrow5{background: url(../img/arrow3.svg) no-repeat 0 0;
+                          display: inline-block;
+                          width: 7px;
+                          height: 13px;
+                          -webkit-transform: translateY(-2px) /*rotate(90deg)*/;
+                         }
+.ter-use_main .arrow5.on{-webkit-transform: translateY(-2px) rotate(90deg);}
+
+.ter-use_main dd{font-size: 12px;
+        color: #606060;
+        line-height: 1.67;
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 20px;
+        display: none;}
+.ter-use_main dd table{margin: 15px 0;
+  border: 1px solid black;width: 100%;}
+
+.ter-use_main dd table tr td{padding: 10px 0;
+                             font-size: 11px;
+                              }
+.ter-use_main dd table tr td:nth-of-type(1){font-family: 'NanumSquareRoundB';;
+                                            
+                                            width: 25%;
+                                            box-sizing: border-box;
+                                            padding: 0 10px;}
+.ter-use_main dd table tr td:nth-of-type(2){box-sizing: border-box;
+                                            padding-left: 10px;
+                                            padding-right: 10px;}
+
+.ter-use_main dd span{display: inline-block;
+                      margin: 8px 0px;
+                      font-size: 14px;
+                      font-family: 'NanumSquareRoundB';
+                      color: rgb(45, 45, 45);}
+.ter-use_main dd span.bold{display: inline-block;
+                      margin: 0px;
+                      font-size: 12px;
+                      font-family: 'NanumSquareRoundB';
+                      color: black}
+.ter-use_main dd span.first_title{margin: 0 0 8px 0;
+                                     }
+
+.ter-use_main dd.on{display: block;}
+
+.next_btn3{width: 91.11%;
+  display: block;
+  margin: 10px auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #fbfbfb;
+  color: #e3e3e3;
+  border-radius: 10px;
+  font-family: 'NanumSquareRoundEB';}
+
+.next_btn3.on{background-color: #ff8200;
+              color: #fff;}
+.btn_wrap5{position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  padding-bottom: 8px;
+
+  background: rgb(255, 255, 255,0.9);
+  line-height: 70px;}

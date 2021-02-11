@@ -1,0 +1,77 @@
+.logo_modify_wrap{display: block;
+                  width: 115px;
+                  height: 26px;
+                  margin: 54px auto 41px;}
+
+.home_modify_body{width: 100%;
+                  height: 186px;
+                  background: #f6f6f6 url(../img/hd_bg.png) no-repeat 0 0;
+                  background-size: 100% 186px;
+                  }
+.ho_mo_wrap{width: 88.888%;
+            margin: 0 auto }
+.ho_mo_wrap>a.home_main_list:nth-of-type(1){margin-bottom: 32px;}
+.ho_mo_wrap>a.home_main_list:nth-of-type(2){margin-bottom: 37px;
+                              height: 157px;}
+.ho_mo_wrap>a.home_main_list{box-sizing: border-box;
+                display: block;
+                padding-top: 33px;
+                width: 100%;
+                height: 157px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 10, 0.1);}
+.ho_mo_wrap>a.home_main_list h2{
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   margin-left: 9.0625%;
+                   font-size: 19px;
+                   font-family: 'NanumSquareRoundEB';
+                   }
+.ho_mo_wrap>a.home_main_list h2 .go{display: inline-block;
+                                    width: 41px;
+                                    height: 25px;
+                                    border-radius: 12.5px;
+                                    margin-right: 6.40625%;
+                                    font-family: 'NanumSquareRoundEB';
+                                    color: #ff8200;
+                                    font-size: 14px;
+                                    background-color: #fff3e6;
+                                   text-align: center;
+                                   line-height: 25px;}
+.ho_mo_wrap>a.home_main_list h2 .txt{display: inline-block;
+                                    line-height: 1.88;}
+.ho_mo_wrap>a.home_main_list h2 span.num{margin-right: 14px;
+                        font-size: 22px;
+                        display: inline-block;
+                        color: #ff8200;
+                        line-height: 1.6;}
+
+                   
+.ho_mo_wrap>a.home_main_list p{text-align: right;
+                  display: flex;
+                  align-items: center;
+                  margin-top: 54px;
+                  margin-right: 6.40625%;
+                  font-size: 12px;
+                  box-sizing: border-box;
+                  background-size: 8px 13px;
+                  justify-content: flex-end;
+                  color: #878787;
+                  font-family: 'NanumSquareRoundB';}
+.ho_mo_wrap>a.home_main_list p span.icon{display: inline-block;
+                                      width: 11px;
+                                      height: 13px;
+                                      margin-right: 8px;
+                                      background-size: cover;
+                                      background: url(../img/ic_people.svg) no-repeat 0 0;}
+
+.guide_txt_wrap{margin: 0 auto;
+                display: block;
+                text-align: center;}
+.ho_mo_wrap .guide_txt_wrap a{font-size: 14px;
+              color: #878787;
+              font-family: 'NanumSquareRoundB';
+              text-decoration: underline;}
+        

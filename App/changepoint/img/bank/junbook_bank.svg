@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" viewBox="0 0 44 44">
+    <rect width="43" height="43" x=".5" y=".5" stroke="#E0E0E0" rx="15.5"/>
+    <path fill="#008CCE" d="M34.998 9H9v26h25.998V9z"/>
+    <path fill="#008CCE" d="M9 9l6.498 6.502L22 9H9z"/>
+    <path fill="#0098D6" d="M9 9v13l6.498-6.498L9 9z"/>
+    <path fill="#008CCE" d="M22 22l-6.498-6.502L9 22h13z"/>
+    <path fill="#007AC5" d="M22 22V9l-6.498 6.498L22 22z"/>
+    <path fill="#0067B5" d="M22 9v13l6.495-6.498L22 9z"/>
+    <path fill="#004293" d="M34.998 22l-6.496-6.502L22 22h12.998z"/>
+    <path fill="#007AC5" d="M9 22l6.498 6.5L22 22H9z"/>
+    <path fill="#0067B5" d="M9 22v13l6.498-6.5L9 22z"/>
+    <path fill="#0054A6" d="M22 35l-6.498-6.503L9 35h13z"/>
+    <path fill="#004898" d="M22 35V22l-6.498 6.498L22 35z"/>
+    <path fill="#0B2C85" d="M22 22l6.495 6.5 6.503-6.5H22z"/>
+    <path fill="#004293" d="M22 22v13l6.495-6.5L22 22z"/>
+    <path fill="#0B2C85" d="M34.998 35l-6.496-6.503L22 35h12.998zM34.998 35V22l-6.495 6.498L34.998 35z"/>
+    <path fill="#0054A6" d="M22 9l6.495 6.502L34.998 9H22z"/>
+    <path fill="#004898" d="M34.998 22V9l-6.495 6.498L34.998 22z"/>
+    <path fill="#fff" d="M34.997 25.252l-8.322-7.928-12.633 12.662 4.61 4.607 8.023-7.9 8.322 8.277v-9.718z"/>
+</svg>

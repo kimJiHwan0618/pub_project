@@ -1,0 +1,81 @@
+body.addschedule header:after{content: none;}
+
+body.addschedule main{position: relative;
+                       box-sizing: border-box;
+                        padding: 13px 17px 0;}
+body.addschedule main h2,body.addschedule main label{font-size: 16px;
+                                                   color: #667085;
+                                                    font-family: 'Noto Sans CJK KR DemiLight';}
+
+body.addschedule main .time_box{height: 138px;width: 100%;
+                                border-top: 1px solid #E6E6E6;
+                                border-bottom: 1px solid #E6E6E6;
+                                margin: 15px 0 0;}
+
+body.addschedule .name_box{display: flex;
+                            flex-direction: column;}
+body.addschedule .memo_box{display: flex;
+                            flex-direction: column;}
+body.addschedule .search_box{display: flex;
+                            flex-direction: column;}
+
+body.addschedule input{height: 32px;
+                       border-radius: 9px;
+                       border: 1px solid #DFDFDF;
+                       box-sizing: border-box;
+                       padding-left: 10px;
+                       outline: none;
+                       }
+body.addschedule label{margin: 24px 0 11px;}
+
+body.addschedule .setting_box{display: flex;
+                              justify-content: space-between;
+                              margin-top: 11px;}
+.setting_box h3{font-family: 'Segoe UI';
+                color: #667085;}
+.setting_box>div{width: 50%;}
+    
+.setting_box>div:nth-child(1){
+                              box-sizing: border-box;
+                              padding-right: 15px;}
+.setting_box>div:nth-child(2){
+                               box-sizing: border-box;
+                               padding-left: 15px;}
+.setting_box>div:nth-child(2)>div{margin-top: 15px;
+                                  color: #9a9a9a;
+                                  font-size: 12px;
+                                  box-sizing: border-box;
+                                  padding: 0 0 5px 25px;
+                                  background: url(../images/addschedule_img/bell.png) no-repeat 0 0;
+                                  border-bottom: 1px solid rgba(130, 130, 130, 0.6);}
+
+
+.color_box{display: flex;
+            justify-content: space-between;
+            margin-top: 15px;}
+.color_box>span{display: inline-block;
+                cursor: pointer;
+                                    width:27px;height: 27px;
+                                    border-radius: 50%;
+                                    }
+.color_box>span:nth-of-type(1){background: #FF3939 url(../images/addschedule_img/check.png) no-repeat 50% 50%;}
+.color_box>span:nth-of-type(2){background: #FF7B4A;}
+.color_box>span:nth-of-type(3){background: #48D539;}
+.color_box>span:nth-of-type(4){background: #48BCFF}
+
+
+
+a.end{position: absolute;
+            text-align: center;
+            line-height: 42px;
+            right: 17px;
+            bottom: -50px;
+            width: 94px;
+            height: 42px;
+            background: #1991F8;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'HYHeadLine';
+            outline: none;}

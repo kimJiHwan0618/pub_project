@@ -1,0 +1,85 @@
+dl{
+    width: 91.11%;
+    margin: 0 auto;
+    padding: 91px 0 56px;
+    }
+ dl dt{font-size: 16px;
+       font-family: 'NanumSquareRoundEB';
+       margin-bottom: 34px;}
+ dl dd{font-size: 10px;
+       color: #a0a0a0;
+       font-family: 'NanumSquareRoundR';}
+
+ .resident_registration_number form{width: 91.11%;
+                                    margin: 0 auto;
+     }
+ form .jumin2{margin-bottom: 11px;
+            width: 100%;
+            display: block;
+            font-family: 'NanumSquareRoundB';
+            color: #ff8200;}
+ #jumin1,#jumin2{width: 120px;
+                 border: none;}
+ #jumin1:focus,#jumin2:focus{outline: none;}
+ form span{color: #ff8200;
+           font-family: 'NanumSquareRoundR';
+           margin-right: 10px;
+           display: inline-block;}
+ #jumin1{background: white;
+         letter-spacing: 6px;
+         font-size: 26px ;
+         color: #a0a0a0;
+         font-family: 'NanumSquareRoundR';
+         box-sizing: border-box;
+         padding-top: 10px;}
+ #jumin2{letter-spacing: 10px;
+         border-bottom: 1px solid #ff8200;
+         padding: 0 0 5px 7px;
+         width: 45%;
+         color: #ff8200;
+         font-size: 24px;
+         cursor: default;
+         text-shadow: 0 0 0 #ff8200;}
+form div{display: flex;
+        }
+
+form ul.jumin_area2{display: inline-block;
+                       height: 30px;
+                       width: 130px;}
+form ul.jumin_area2 li{display: inline-block;
+                          font-size: 26px;
+                          letter-spacing: 5px;
+                          color: #a0a0a0;}
+
+ .password_area{display: inline-block;
+                padding-left: 11px;
+             padding-bottom: 8px;
+               width:145px;
+               white-space: nowrap;
+              -webkit-transform: translateY(-2px);
+               border-bottom: 1px solid #ff8200;}
+ .password{display: inline-block;
+           width: 6px;
+           height: 6px;
+           background: #a0a0a0;
+           border-radius: 50%;
+           margin-right: 6px;}
+ .password_input{display: inline-block;
+                 width: 6px;
+                 height: 6px;
+                 background: #ff8200;
+                 border-radius: 50%;
+                 margin-right: 6px;}
+ .button{width: 100%;
+         display: block;
+         height: 50px;
+         text-align: center;
+         line-height: 50px;
+         margin-top: 34px;
+         border-radius: 10px;
+         border: none;
+         background: #ff8200;
+         color: white;
+         font-family: 'NanumSquareRoundEB';
+         font-size: 16px;
+         outline: none;}

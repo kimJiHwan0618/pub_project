@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cashbox_location_modify</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <style>
+        .cas_loc-main{width: 100%;
+        margin: 0 auto;
+        padding-top: 106px;
+        padding-bottom: 75px;
+        }
+        .map_list_wrap{
+         box-sizing: border-box;
+         width: 91.11%;
+         margin: 20px auto 0;}
+    
+        .map_list_wrap dl{display: inline-block;}
+    
+    
+        .map_list_wrap dt{font-size: 14px;
+            margin-bottom: 8px;
+            font-family: 'NanumSquareRoundB';}
+        .map_list_wrap dd{font-size: 12px;
+            color: #606060;}
+    
+        .map_box{
+            position: relative;
+            width: 91.11%;
+            margin: 0 auto;
+            height: 210px;
+            border: 0.5px solid rgb(236, 236, 236);
+            box-sizing: border-box;
+        }
+    
+    
+        .map_box .map_notice{width: 100%;
+                height: 38px;
+                line-height: 38px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,.5);
+                text-align: center;}
+        .map_box .map_notice p{text-align: center;
+                font-size: 10px;
+                -webkit-transform: scale(0.9);
+                white-space: nowrap;
+                color: white;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="4" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>동전환전소 위치</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+    
+    
+
+    <div class="cas_loc-main">
+        <div>
+        
+        <div class="map_box">
+            <!-- id map 지도 넣을 공간 -->
+            <div id="map">
+                
+            </div>
+              <!-- //id map 지도 넣을 공간 -->
+            <div class="map_notice">
+                <p>지도를 선택하시면 동전환전소 위치에 대해 더 많은 정보를 확인하실 수 있습니다.</p>
+            </div>
+        </div>
+      
+
+        <div class="map_list_wrap"> 
+            <dl>
+                <dt>NH디지털혁신캠퍼스</dt>
+                <dd>서울 서초구 매현로 24 (양재동)</dd>
+            </dl>
+        </div>
+    </div>
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

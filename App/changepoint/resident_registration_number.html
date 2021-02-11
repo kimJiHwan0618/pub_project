@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resident_registration_number</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/resident_registration_number.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script type="text/javascript">
+        $(function(){
+             $(".password_area").unbind("click").bind("click",function(){
+            $("#jumin2").focus();
+        });
+
+            $("#jumin2").unbind("keyup").bind("keyup",function(){
+            var pass = $(this).val();
+
+            // if(pass.length>6){
+            //     $(this).val(pass.substring(0,6));
+            // }
+
+            $(".password_area li").removeClass("password_input").addClass("password");
+
+            for(var i=0;i<pass.length;i++){
+                $(".password_area li").eq(i).addClass("password_input").removeClass("password");
+            }
+       
+        });
+    });
+    </script>
+</head>
+<body class="resident_registration_number">
+
+    
+    <dl>
+        <dt>주민등록번호 뒤 7자리를 입력해주세요.</dt>
+        <dd>환전 신청 시 처음 한번만 입력하시면 이후부터는 생략됩니다.</dd>
+    </dl>
+    
+
+    <form>
+        <label class="jumin2" for="jumin2">주민등록번호</label>
+        <div>
+        <ul class="jumin_area2">
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+        </ul>
+        <span>-</span>
+        <ul class="password_area">
+            <li class="password"></li>
+            <li class="password"></li>
+            <li class="password"></li>
+            <li class="password"></li>
+            <li class="password"></li>
+            <li class="password"></li>
+            <li class="password"></li>
+        </ul>
+        </div>
+        <input type="number" id="jumin1" maxlength="6" style="position: absolute;left: -5000px;top: -5000px;">
+        <input type="number" id="jumin2" maxlength="7" style="position: absolute;left: -5000px;top: -5000px;">
+        <a href="country_selection.html" class="button">확인</a>
+    </form>
+
+    <? include "menu.html"; ?>
+
+    <? include "footer.html"; ?>
+</body>
+</html>

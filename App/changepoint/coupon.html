@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coupon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+
+    <style type="text/css">
+        body{background-color: #f6f6f6;}
+
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+
+.not-cou_img{position: absolute;
+            left: 50%;-webkit-transform: translateX(-50%);
+            top: 162.6px;
+            display: none;
+            align-items: center;
+            flex-direction: column;}
+.not-cou_img.on{display: flex;}
+.not-cou_img span{display: inline-block;
+                 background: url(img/ic-coupon-box.svg) no-repeat 0 0;
+                 width: 61px;
+                 background-size: 61px 48px;
+                 height: 48px;}
+.not-cou_img p{text-align: center;
+              font-size: 12px;
+              color: #808080;
+              margin-top: 30px;}
+    </style>
+</head>
+<body>
+<!-- ic-notification -->
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>쿠폰함</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="not-cou_img on">
+        <span></span>
+        <p>보유쿠폰이 없습니다.</p>
+    </div>
+    <!-- 알림 없을 시 , 안내 팝업 not-non_img에 class on 추가 -->
+
+    
+    
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+    
+    
+</body>
+</html>

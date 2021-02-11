@@ -1,0 +1,63 @@
+.exd-rat_main{width: 100%;
+    height: 100%;
+    padding-top: 97px;
+}
+.exd-rat_main>div{width: 67.222%;
+    margin: 0 auto;}
+.exd-rat_main dl{width: 50%;}
+.exd-rat_main dl:nth-of-type(1){float: left;
+    text-align: left;}
+.exd-rat_main dl:nth-of-type(2){float: right;
+    text-align: right;}
+.exd-rat_main dt{margin-bottom: 30px;
+    color: #6a6a6a;
+    font-family: 'NanumSquareRoundR';
+    font-size: 13px;}
+.exd-rat_main dd{margin: 30px 0;
+    height: 20px;}
+
+
+.exd-rat_main dl:nth-of-type(1) dd{font-size: 14px;
+    font-family: 'NanumSquareRoundR';}
+.exd-rat_main dl:nth-of-type(2) dd{font-size: 15px;
+    font-family: 'NanumSquareRoundB';}
+.exd-rat_main dl:nth-of-type(1) dd{display: flex;
+    align-items: center;}
+.exd-rat_main dl dd .img{display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 0.8px solid #dadada;
+    margin-right: 9px;
+    border-radius: 50%;}
+.exd-rat_main dl dd .img{border: none;}
+
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(1) .img{background: url(../img/usd.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(2) .img{background: url(../img/eur.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(3) .img{background: url(../img/jpy.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(4) .img{background: url(../img/cny.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(5) .img{background: url(../img/gbp.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(6) .img{background: url(../img/aud.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(7) .img{background: url(../img/cad.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(8) .img{background: url(../img/chf.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(9) .img{background: url(../img/sgd.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(10) .img{background: url(../img/thb.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(11) .img{background: url(../img/hkd.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(12) .img{background: url(../img/vnd.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(13) .img{background: url(../img/twd.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(14) .img{background: url(../img/php.png) no-repeat 0 0;
+    background-size: cover;}
+.exd-rat_main dl:nth-of-type(1) dd:nth-of-type(15) .img{background: url(../img/mop.png) no-repeat 0 0;
+    background-size: cover;}

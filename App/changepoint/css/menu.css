@@ -1,0 +1,110 @@
+.menu{position: fixed;
+      right: -244px;
+      top: 0;
+      height: 100%;
+      width: 244px;
+      box-sizing: border-box;
+      background: white;
+      padding: 45px 0 0 29px;
+      border-radius: 40px 0px 0px 0px;
+      z-index: 13;
+      -webkit-transition: all 0.1s linear 0s;
+      }
+.menu.on{right: 0px;}
+.menu_dark.on{opacity: 1;
+              z-index: 4;}
+ .menu_dark{
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            -webkit-transition: all 0.1s linear 0s;
+            opacity: 0;
+
+}
+
+.close{position: absolute;
+       top: 41px;
+       right: 20px;
+       display: inline-block;
+       width: 36px;
+       height: 36px;
+       text-align: center;
+       line-height: 36px;}
+.myname_wrap{line-height: 26px;
+            }
+.myname_wrap li:nth-of-type(1){color: #ff8200;
+                               font-family: 'NanumSquareRoundB';
+                               font-size: 20px;}
+.myname_wrap li:nth-of-type(2){font-family: 'NanumSquareRoundR';
+                               font-size: 16px;
+                               color: #000;
+                               display: flex;
+                               align-items: center;
+                               box-sizing: border-box;
+                               }
+.myname_wrap li:nth-of-type(2) span{font-family: 'NanumSquareRoundR';}
+.myname_wrap li:nth-of-type(2) a{padding: 0 14px 0 14px;
+                                display: inline-block;
+                                 -webkit-transform: translateY(-2px);}
+
+.menu dl:nth-of-type(1){margin-top: 42px;}
+.menu dl dt{margin-bottom: 6px;
+                           color: #b4b4b4;
+                           font-family: 'NanumSquareRoundB' ;
+                           font-size: 15px;}
+.menu dl dd{height: 39px;
+            font-family: 'NanumSquareRoundB';
+            font-size: 14px;
+            padding-left: 6.7px;
+                           }
+
+.menu dl dd a{font-family: 'NanumSquareRoundB';
+              display: flex;
+              align-items: center;
+              height: 100%;
+             }
+.menu dl dd:last-of-type{margin-bottom: 0px;}
+
+.menu dl:nth-of-type(2){margin-top: 44.1px;}
+
+
+.menu dl dd a .icon{display: inline-block;
+                    width: 35.3px;
+                    }
+.menu dl:nth-of-type(1) dd:nth-of-type(1) .icon{background: url(../img/ic-procedure.svg) no-repeat 2.5px 0;
+                                                height: 17px;
+                                                background-size: contain;      
+                                                }
+.menu dl:nth-of-type(1) dd:nth-of-type(2) .icon{background: url(../img/ic-location.svg) no-repeat 4px 0;
+                                                height: 17.2px;
+                                                background-size: contain;      
+                                                }
+.menu dl:nth-of-type(1) dd:nth-of-type(3) .icon{background: url(../img/ic-exchange-rate.svg) no-repeat 1.5px 0;
+                                                height: 14.7px;
+                                                background-size: contain;      
+                                                }
+.menu dl:nth-of-type(1) dd:nth-of-type(4) .icon{background: url(../img/ic-notification.svg) no-repeat 2.6px 0;
+                                                height: 16.2px;
+                                                background-size: contain;      
+                                                }
+.menu dl:nth-of-type(1) dd:nth-of-type(5) .icon{background: url(../img/ic-my-information.svg) no-repeat 2.5px 0;
+                                                height: 15.9px;
+                                                background-size: contain;      
+                                                }
+
+
+
+.menu dl:nth-of-type(2) dd:nth-of-type(1) .icon{background: url(../img/ic-customer-service.svg) no-repeat 5px 0;
+                                          height: 16.5px;
+                                          background-size: contain;      
+                                          }
+.menu dl:nth-of-type(2) dd:nth-of-type(2) .icon{background: url(../img/ic-policy-guide.svg) no-repeat 5px 0;
+                                          height: 17px;
+                                          background-size: contain;      
+                                          }
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application_confirmation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".dep_app1").click(function(){
+                $(".dark_bg").addClass("on")
+                $(".dep_app-popup").addClass("on")
+
+                $(".cen-del").css("display","block")
+                $(".dep_app2").css("width","50%")
+                $(".dep_app2").text("입금 신청")
+                $(".dep_not").text("입금 신청하시겠습니까?")
+            })
+
+            $(".cen-del").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".dep_app-popup").removeClass("on")
+            })
+
+            $(".dep_app2").click(function(){
+                var text = $(this).text();
+                if(text === "확인"){
+                    $(".dark_bg").removeClass("on")
+                    $(".dep_app-popup").removeClass("on")
+                }else{
+                    $(this).css("width","100%")
+                    $(".cen-del").css("display","none")
+                    $(this).text("확인")
+                    $(".dep_not").text("입금 완료되었습니다.")
+                }
+                 // 입금신청 안내 팝업
+            })
+
+            $(".dep_app-popup2 div a").click(function(){
+                $(".dark_bg").removeClass("on")
+                $(".dep_app-popup2").removeClass("on")
+            })
+            $(".dep_app3").click(function(){
+                $(".dark_bg").addClass("on")
+                $(".dep_app-popup2").addClass("on")
+            })
+            // 신청 취소 팝업
+
+        })
+    </script>
+
+
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>신청&nbsp;내역</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+    <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="app_con-main">
+        <div>
+        <a href="list_of_application_details.html">
+        <div class="txt"><div><span class="color: #606060;">No.&nbsp;</span><span class="num" style="margin-right: 24px;color: #606060;">00000000</span><span style="color: #a0a0a0;">2020.07.21</span></div><img src="img/arrow3.svg" width="7" height="13" alt=""></div>
+        <div class="bank_name-wrap" style="font-size: 12px;display: flex;align-items: center;color: #606060;"><span class="img" style="width: 17px;height: 17px;margin-right: 6px;"><img src="img/kb_bank.svg" style="width: 17px;height: 17px;-webkit-transform: translateY(-2px);" alt=""></span><span class="bank_name" style="margin-right: 5px;">국민은행</span><span class="bank_num">65120022154632</span></div>
+        <ul class="notice_wrap">
+            <li><span class="title">나의&nbsp;계수&nbsp;금액</span><br /><span class="won"><span>₩&nbsp;</span>2,812</span></li>
+            <li><span class="title">체인지포인트&nbsp;계수&nbsp;금액</span><br /><span class="won"><span>₩&nbsp;</span>4,226</span></li>
+        </ul>
+        </a>
+        <p class="notice3">계수된&nbsp;금액에&nbsp;차이가&nbsp;있으니&nbsp;계수&nbsp;금액을&nbsp;늘러&nbsp;확인해주세요.<br />
+                           </p>
+        </div>
+
+        <div class="line">
+
+        </div>
+
+        <div>
+            <ul>
+                <li><span class="check-img"></span><span class="title">반환봉투 발송</span><span class="date_wrap"><span class="date">2020.07.01</span><span class="time">15:32</span></span><br />
+                    <span class="notice">송장번호<span>123456781234</span></span></li>
+                <li><span class="check-img"></span><span class="title">반환신청</span><span class="date_wrap"><span class="date">2020.07.01</span><span class="time">15:32</span></span><br />
+                    <span class="notice"><a href="application_for_return.html">서울시 서초구 양재동 214 NH디지털혁신캠퍼스 5층</a></span></li>
+                <li><span class="check-img"></span><span class="title">입금대기</span><span class="date_wrap"><span class="date">2020.07.01</span><span class="time">15:32</span></span><br />
+                    <span class="notice">고객신청금액과&nbsp;체인지포인트&nbsp;계수금액&nbsp;간에&nbsp;차이발생</span></li>
+                <li><span class="check-img"></span><span class="title">수거완료</span><span class="date_wrap"><span class="date">2020.07.01</span><span class="time">15:32</span></span><br />
+                    <span class="notice">투입된&nbsp;봉투&nbsp;수거&nbsp;완료</span></li>
+                <li><span class="check-img"></span><span class="title">수거대기</span><span class="date_wrap"><span class="date">2020.07.01</span><span class="time">15:32</span></span><br />
+                    <span class="notice">QR&nbsp;등록&nbsp;후&nbsp;캐시박스&nbsp;투입&nbsp;완료</span></li>
+            </ul>
+        </div>
+
+    </div>    
+    
+    <div class="btn_wrap2">
+        <div>
+        <a href="#" class="dep_app1"><span>₩&nbsp;</span>4,226<span>&nbsp;입금&nbsp;신청</span></a>
+        <a href="#" class="dep_app3">신청&nbsp;취소</a>
+        </div>
+    </div>
+
+    <!-- 입금 신청 안내  팝업,dark_bg와 adp_app-popup 팝업 class on 추가 -->
+    <div class="dark_bg"></div>
+    <div class="dep_app-popup">
+        <p><span>₩ </span>4,226</p>
+        <p class="dep_not">입금 신청하시겠습니까?</p>
+        <div>
+            <a href="#" class="cen-del">취소</a>
+            <a href="#" class="dep_app2">입금 신청</a>
+        </div>
+    </div>
+
+    <!-- 신청 취소 팝업 -->
+    <div class="dep_app-popup2">
+        <p class="dep_not2">입금 취소시 반환 절차가 진행되며,<br />
+                           봉투를 캐시박스에 투입한 이후에<br />
+                           취소하는 경우 봉투가 착불로 반송됩니다.<br />
+                           취소를 계속 진행할까요?</p>
+        <div>
+            <a href="#" class="cen-del2">취소</a>
+            <a href="application_for_return.html" class="dep_app">신청 취소 진행</a>
+        </div>
+    </div>
+
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+    
+</body>
+</html>

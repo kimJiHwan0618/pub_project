@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>network_error</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style type="text/css">
+    .net_err-wrap{position: fixed;
+                  top: 28.593%;
+                  left: 50%;-webkit-transform: translateX(-50%);
+                  text-align: center;
+                  white-space: nowrap;}
+    .net_err-wrap .img{display: inline-block;
+                        background: url(img/error.svg) no-repeat 0 0;
+                        width: 59px;
+                        height: 59px;
+                        background-size: cover;}
+    .net_err-wrap p{line-height: 2.14;
+                    margin-top: 16px;
+                    font-size: 14px;
+                    margin-bottom: 29px;}
+    .net_err-wrap a{display: block;
+                    margin: 0 auto;
+                    width: 106px;
+                    height: 42px;
+                    background-color: #ff8200;
+                    color: white;
+                    border-radius: 24px;
+                    text-align: center;
+                    line-height: 42px;
+                    font-size: 14px;
+                    font-family: 'NanumSquareRoundEB';}
+
+    </style>
+</head>
+<body>
+    <div class="net_err-wrap">
+        <span class="img"></span>
+        <p>
+            네트워크 상태가 원할하지 않습니다.<br />
+            네트워크 상태를 확인해주세요.
+        </p>
+        <a href="#">재시도</a>
+    </div>
+</body>
+</html>

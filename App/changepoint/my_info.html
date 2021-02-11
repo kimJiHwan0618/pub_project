@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_info</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+   
+    <style type="text/css">
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        body{background: #f6f6f6;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare addacc-hd">
+        <div class="hdshare_inner">
+        <a href="#" class="back_arrow">back</a>
+        <h1>내 정보</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+
+    <div class="my_info-main">
+        <a href="settings.html">
+            <div>
+                <h2>홍길동</h2>
+                <p>개인&nbsp;설정,&nbsp;서비스&nbsp;설정</p>
+            </div>
+            <img src="img/arrow4.svg" width="8" height="13" alt="">  
+        </a>
+        
+        <div>
+            <ul>
+                <li><a href="account_management.html">계좌&nbsp;관리</a></li>
+                <li><a href="application_details.html">신청&nbsp;내역</a></li>
+                <li><a href="shopping_basket.html">장바구니</a></li>
+                <li><a href="coupon.html">쿠폰함</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check_amount</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+   <script type="text/javascript"> 
+      $(function(){             
+            $(".list-item_title2").click(function(){
+                $(this).children("div").children(".arrow6").toggleClass("on")
+                $(this).next().toggleClass("on")
+                // 클릭 시, 상세 금액 내역       
+            })
+        });
+
+  </script>
+    <style type="text/css">
+            body{background: #f6f6f6;}
+            
+        #page{position: absolute;
+              left: -9999px;
+              top: -9999px;}
+        header h1{opacity: 0;}
+    </style>
+</head>
+<body>
+
+    <input type="number" value="3" id="page">
+
+    <header class="hdshare">
+        <div class="hdshare_inner">
+        <a href="#".html" class="back_arrow">back</a>
+        <h1>장바구니</h1>
+        
+        <div class="basket">
+        <p><span>￦ </span>100,000</p>
+        <span>장바구니에<br />담겼습니다.</span>
+        <a href="#" style="opacity: 0;">ㅇ</a>
+        </div>
+        </div>
+    </header>
+        <!-- .basket에 on 클래스 추가스 금액문구 안내문구 생성  -->
+
+    <div class="che-amo_main">
+        <div>
+        <div>
+            <h2 class="title">현재 환율로 이만큼 받으실 수 있어요</h2>
+            <p>￦ <span>14,400</span></p>
+            <div class="notice">
+                <span>금액은 실시간 환율에 따라 달라질 수 있습니다.</span>
+            </div>
+        </div>
+        
+        <div class="list-item_wrap"><!--<<<리스트 div 리스트 추가시 이 div로 추가-->
+            <div>
+            <div class="item-wrap sgd">
+            <div class="list-item_title2">
+                <div><span><img src="img/country/sgd.png" alt=""><span class="txt">싱가포르</span></span><span class="arrow6"></span></div>
+                <p><img src="img/sgd_money/sgd_won.svg" class="won_margin" alt=""><span class="before">60</span><img src="img/arrow8.svg" alt=""><span class="after"><span>₩ </span>14,400</span></p>
+                <p><span>적용환율</span><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""><span>100</span><span> = </span><span> ₩&nbsp;</span><span>867.02</span><span><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""></span><span>100</span><span>&nbsp;=&nbsp;</span><span>₩ </span><span>786.60</span></p>
+            </div>
+
+
+            
+            <div class="list-item_content none">
+                <span class="img"></span><br />
+                <dl>
+                    <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""><span>5</span></dt>
+                    <dd><span>2</span><span> 장</span></dd>
+                </dl>
+                <dl>
+                     <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt=""><span>5</span></dt>
+                     <dd><span>3</span><span> 장</span></dd>
+                 </dl>
+                 <dl>
+                     <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin" alt=""><span>200</span></dt>
+                     <dd><span>100</span><span> 장</span></dd>
+                 </dl>
+                <span class="img"></span><br />
+                <dl>
+                    <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt=""><span>5</span></dt>
+                    <dd><span>2</span><span> 개</span></dd>
+                </dl>
+                <dl>
+                     <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt=""><span>10</span></dt>
+                     <dd><span>3</span><span> 개</span></dd>
+                 </dl>
+                 <dl>
+                     <dt><img src="img/sgd_money/sgd_won2.svg" class="won_margin"" alt=""><span>200</span></dt>
+                     <dd><span>100</span><span> 개</span></dd>
+                 </dl>
+            </div>
+        
+    </div>
+    <!-- //list_item_wrap -->
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- //che-amo_main -->
+
+
+                    <div class="acc_enr_btn_wrap">
+                        <a href="bank_selection.html" class="acc_enr_btn">다음</a>
+                    </div>
+    
+                    
+                  
+    <? include "menu.html"; ?>
+    <? include "footer.html"; ?>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+.exchange_rates_wrap{
+    width: 88%;
+    margin: 0 auto;
+}
+
+.exchange_rates_wrap table{
+    border-collapse: unset;
+    width: 100%;
+}
+
+.t_head{
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.t_head th{
+    font-size: 1.5rem;
+}
+
+.exchange_rates_wrap .buy{
+    text-align: right;
+}
+.exchange_rates_wrap .sell{
+    text-align: right;
+}
+
+body.exchange_rates{
+    background-color: #fff;
+}
+
+.exchange_rates_wrap table tr:nth-child(n){
+    width: 100%;
+    height: 50px;
+}
+.exchange_rates_wrap table tr:first-of-type{
+    margin: 0;
+    height: 50px;
+}
+
+.exchange_rates_wrap td.buy{
+    font-size: 1.4rem;
+    font-family: 'NotoSansKR-Regular';
+}
+.exchange_rates_wrap td.sell{
+    font-size: 1.4rem;
+    font-family: 'NotoSansKR-Regular';
+}
+.exchange_rates_wrap td.currency{
+    font-size: 1.4rem;
+    font-family: 'NotoSansKR-Regular';
+}
+
+/* 국가별 국기 이미지 */
+.select_btn{
+    text-align: right;
+    position: relative;
+}
+
+.select_btn input{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+}
+
+
+.currency img{
+    width: 40px;
+    height: 25px;
+}
+
+.currency .name{
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+
+.selectbox{
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    border-radius: 6px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.selectbox.on{
+    border: none;
+    box-shadow: 1px 1px 5px rgb(219, 219, 219);
+}
+
+
+.selectbox>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.selectbox>div:after{
+    position: absolute;
+    right: 0;
+    top: 50%;-webkit-transform: translateY(-50%);
+    background: url(../img/home/select-arrow.svg) no-repeat 100% 50%;
+    background-size: 12px 8px;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 8px;
+}
+
+.selectbox.on>div:after{
+    -webkit-transform: rotate(180deg) translateY(50%);
+}
+
+.selectbox .txt{
+    font-size: 1.4rem;
+    font-family: 'NotoSansKR-Regular';
+    margin-left: 12px;
+}
+
+.selectbox ul{
+    display: none;
+}
+
+.selectbox ul.on{
+   display: block;
+}
+
+.selectbox ul button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 0px;
+    text-align: left;
+    padding: 8px 0;
+    outline: none;
+}
+
+/* 40px 25px */
