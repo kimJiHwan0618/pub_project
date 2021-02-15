@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성전기 | 문의하기</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sub1.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+             // 점핑요소삭제
+             $("#spot a,#container a,#footer a").click(function(e){
+                e.preventDefault();
+            })
+
+
+            $(window).scroll(function(){
+    
+            var NowScrollTop = $(this).scrollTop();
+            var windowH = $(window).height()-800;
+            
+
+            if(NowScrollTop>windowH){
+                $(".quick_btn").addClass("on")
+            }else{
+                $(".quick_btn").removeClass("on")
+            }
+
+            });
+
+
+            
+            $("p.quick_btn").children().click(function(){
+                $("html,body").stop().animate({"scrollTop":0},1000,"swing");
+            });
+
+            $("nav>ul>li>ul").css("display","none")
+
+            $("nav>ul>li>a").bind("mouseover focus",function(){
+
+                $("nav>ul>li>ul").css("display","none");
+                $(this).next().css("display","block");
+
+                $("nav>ul>li").removeClass("on");
+                $(this).parents().addClass("on");
+            });
+            
+            $("nav>ul>li:nth-child(1)>a").bind("mouseover focus",function(){
+                $(".header_wrap").stop().animate({"height":"420px"},300,"linear");
+            });
+            $("nav>ul>li:nth-child(2)>a").bind("mouseover focus",function(){
+                $(".header_wrap").stop().animate({"height":"280px"},300,"linear");
+            });
+            $("nav>ul>li:nth-child(3)>a").bind("mouseover focus",function(){
+                $(".header_wrap").stop().animate({"height":"280px"},300,"linear");
+            });
+            $("nav>ul>li:nth-child(4)>a").bind("mouseover focus",function(){
+                $(".header_wrap").stop().animate({"height":"480px"},300,"linear");
+            });
+            $("nav>ul>li:nth-child(5)>a").bind("mouseover focus",function(){
+                $(".header_wrap").stop().animate({"height":"350px"},300,"linear");
+            });
+
+
+            $("nav").bind("mouseleave blur",function(){
+                $(".header_wrap").animate({"height":"70px"},300,"linear");
+                $("nav>ul>li>ul").css("display","none");
+                $("nav>ul>li").removeClass("on")
+
+            });
+
+            $("dl.topMenu_sns>dt").bind("mouseover focus",function(){
+                $("dl.topMenu_sns>dd>ul").css("display","block")
+            });
+            $("dl.topMenu_sns").bind("mouseleave blur",function(){
+                $("dl.topMenu_sns>dd>ul").css("display","none")
+            });
+
+            $("dl.topMenu_lang>dt").bind("mouseover focus",function(){
+                $("dl.topMenu_lang>dd>ul").css("display","block")
+            });
+            $("dl.topMenu_lang").bind("mouseleave blur",function(){
+                $("dl.topMenu_lang>dd>ul").css("display","none")
+            });    
+       
+            
+            
+            $("p.search_click>a").click(function(){
+                $("div.search").css({"display":"block"})
+                $("p.search_clo_btn").css({"display":"block"})
+                $("p.search_click").css({"display":"none"});
+                $("div.srch_dim").addClass("on")
+            });
+            $("p.search_clo_btn>a").click(function(){
+                $("div.srch_dim").removeClass("on")
+                $("div.search").css({"display":"none"})
+                $("p.search_clo_btn").css({"display":"none"})
+                $("p.search_click").css({"display":"block"});
+            });
+        });
+           
+       
+    </script>
+</head>
+<body>
+    <!-- skip_Navi -->
+    <div class="skip_Navi blind">
+        <ul>
+            <li><a href="#">본문바로가기</a></li>
+        </ul>
+        <!-- //본문바로가기 -->
+    </div>
+    <hr />
+    <!-- wrap -->
+    <div id="wrap">
+         <!-- header -->
+         <? include "header.html"; ?>
+            <!-- spot -->
+            <div id="spot">
+                <!-- spot_inner -->
+                <div class="spot_inner">
+                    <h2>문의하기</h2>
+                    <p>삼성전기는 고객님의 말씀에 귀를 기울이며<br />
+                        언제나 편안한 서비스를 제공하기 위하여 최선을 다하겠습니다.</p>
+                    <p class="path">홈 &gt; 고객지원 &gt; 고객문의 &gt; 문의하기</p>
+                    </div>
+                <!-- //spot_inner -->
+                <hr />
+            </div>
+            <!-- //spot -->
+            <hr />
+            <!-- container -->
+            <div id="container">
+            <!-- QNA_quick -->
+            <div class="qna_quick">
+                <p>자주 문의하시는 질문들은 FAQ에서 빠르게 확인 가능합니다.</p>
+                <p><a href="#">FAQ 바로가기</a></p>
+            </div>
+            <!-- //QNA_quick -->
+            <!-- question_select -->
+            <div class="question_select">
+                    <h3>Step 1.문의유형 선택</h3>
+                    <ul>
+                        <li class="tab1"><a href="#">제품문의</a></li>
+                        <li class="tab2"><a href="#">기술문의</a></li>
+                        <li class="tab3"><a href="#">인증서</a></li>
+                        <li class="tab4"><a href="#">채용문의</a></li>
+                        <li class="tab5"><a href="#">기업정보</a></li>
+                        <li class="tab6"><a href="#">IR</a></li>
+                        <li class="tab7"><a href="#">제휴문의</a></li>
+                    </ul>
+            </div>    
+            <!-- //question_select -->
+            <!-- content -->
+            <div id="content">                
+                <!-- content_tit -->
+                <div class="content_tit">
+                <h3>Step 2.문의하기</h3>
+                <p>삼성전기 고객 문의 시 문의 제품/구분을 정확하게 선택해주시면 보다 신속한 답변을 받으실 수 있습니다.<br />
+                    문의 유형이 내용과 다를 경우, 답변을 받으시는데 시간이 소요될 수 있음을 안내 드립니다.</p>
+                <span>*필수 입력 항목입니다.</span>    
+                 </div>
+                 <!-- //content_tit -->
+                 <!-- info_form -->
+                 <div class="info_form">
+                    <ul class="info_form_list">
+                        <form action="" method="POST">
+                            <fieldset>
+                                <legend class="blind">제품 선택/구분 선택 문의하기</legend>
+                                <li>
+                                    <label for="divide"><span>*</span>구분</label><br />
+                                    <select name="divide" id="divide">
+                                        <option value="select">제품선택</option>
+                                        <option value="buy">구입문의</option>
+                                        <option value="sample">샘플요청</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="product" class="a"><span>*</span>제품</label><br />
+                                    <select id="product">
+                                        <option value="PRODUCT">PRODUCT</option>
+                                        <option value="PassiveComponent">Passive Component</option>
+                                        <option value="Automotive">Automotive</option>
+                                    </select>
+                                    <select id="">
+                                        <option value="">SELECT</option>
+                                    </select>
+                                    <select id="">
+                                        <option value="">SELECT</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="PartNumber">PartNumber</label><br />
+                                    <input type="text" id="PartNumber">
+                                </li>
+                                <li class="line">
+                                    <label for="samsung_trade">삼성전기 거래여부</label><br />
+                                    <select id="samsung_trade">
+                                        <option value="select">SELECT</option>
+                                        <option value="trading">삼성전기 거래중</option>
+                                        <option value="Sales_trading">삼성전기 Sales Partners 거래중</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="Country"><span>*</span>국가</label><br />
+                                    <select id="Country">
+                                        <option value="Korea">Korea, RepublickOf</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="China">China</option>
+                                        <option value="India">India</option>
+                                    </select>
+                                </li>
+                                <li class="line">
+                                    <label for="last_Name"><span>*</span>이름</label><label for="first_Name"><span>*</span>성</label><br />
+                                    <input type="text" id="last_Name"><input type="text" id="first_Name">
+                                </li>
+                                <li>
+                                    <label for="company"><span>*</span>회사/조직</label><br />
+                                    <input type="text" id="company">
+                                </li>
+                                <li>
+                                    <label for="division"><span>*</span>부서</label><br />
+                                    <input type="text" id="division">
+                                </li>
+                                <li>
+                                    <label for="Phone_Num">전화번호</label><br />
+                                    <input type="tel" value="+82" disabled="disabled"> &nbsp; - &nbsp; <input type="tel" >
+                                    <p class="comment">Ex) +82 31-1234-1234, +82 03112341234</p>
+                                </li>
+                                <li class="line">
+                                    <label for="e-mail"><span>*</span>이메일</label><br />
+                                    <input type="email" id="e-mail">
+                                </li>
+                                <li>
+                                    <label for="txt_area"><span>*</span>내용</label><br />
+                                    <input type="text" id="txt_area">
+                                </li>
+                                <li>
+                                    <label for="file">첨부파일</label>
+                                    <div class="custom_file">
+                                    <input type="text"  id="file" value="파일선택"  disabled="disabled">
+                                    <label for="attachFile" class="file_btn">찾아보기</label>
+                                    <input type="file" id="attachFile">
+                                    </div>
+                                    <div class="about_file">
+                                        <p>※ jpg,jpeg,gif,png,bmp,doc,docx,hwp,xls,xlsx,zip,pdf,ppt,pptx 형식만 지원<br />
+                                           ※ 파일 사이즈 5MB까지 업로드 가능합니다.<br />
+                                           ※ 파일 첨부 시 개인정보에 주의하시기 바랍니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="agree_area">
+                                    <p>뉴스레터구독</p>
+                                    <span class="agree">
+                                    <input type="radio" name="news y_n" id="agree_yes">
+                                    <label for="agree_yes">동의</label>
+                                    </span>
+                                    <span class="agree">
+                                    <input type="radio" name="news y_n" id="agree_no">
+                                    <label for="agree_no">동의하지않음 </label>
+                                    </span>
+                                    </div>
+                                    <div class="about_news">
+                                        <p>※ 동의하신 회원님께 신제품 출시, 전시회 개최, 신기술 세미나 등 삼성전기의 소식을 정기적으로 보내드립니다.</p>
+                                    </div>
+                                </li>
+                            </fieldset>
+                        </form>
+                    </ul>
+                 </div>
+                 <!-- //info_form -->
+                 <!-- infor_agree -->
+                <div class="infor_agree">
+                    <!-- infor_agree_area -->
+                    <div class="infor_agree_area">
+                    <h4>개인정보 수집,이용동의</h4>
+                    <h5>1. 개인정보의 수집 및 이용 목적</h5>
+                    <p>문의 및 요청사항에 대한 서비스를 지원하기 위해 개인정보를 수집하고 있으며, 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될
+                         경우 사전에 알리고 동의를 받을 예정입니다.</p>
+                    <h5>2. 개인정보의 보유 및 이용기간</h5>
+                    <p>원칙적으로 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다. 다만 발송내역의 자료를 확인하기 위해 1년간 보유
+                        합니다. 다른 법령에 따라 보존하여야 하는 경우에는 보유 및 이용기간이 경과한 개인정보를 파기하지 아니하고 보유할 수 있습니다.</p>
+                    <h5>3. 수집하는 개인정보의 항복</h5>
+                    <!-- left_agree -->
+                    <div class="left_agree">    
+                    <strong>[필수항목]</strong>
+                        <ul>
+                            <li class="list_dot">항목 : 국가, 이름, 이메일, 회사/조직</li>
+                            <li class="list_dot">보유기간 : 1년간 보관 후 파기</li>
+                            <li class="list_dot">보유목적 : 제품 관련 문의 및 요청사항에 대한 서비스 지원</li>
+                            <li class="list_dot">자동수집항목 : IP, 쿠키(Cookie)</li>
+                            <li class="margin_a">※ 귀하께서는 개인정보 수집 동의를 거부할 권리가 있으나 거부 시에는 요청하신 서비스가 제한될 수 있습니다.</li>
+                            <li>
+                                <span>상기 내용을 읽고 수집 및 이용에 동의합니다. <input type="radio" name="agree" id="agree_a"><label for="agree_a">동의</label>
+                                    <input type="radio" name="agree" id="agree_b"><label for="agree_b">동의하지 않음</label></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //left_agree -->
+                    <!-- right_agree -->
+                    <div class="right_agree">
+                        <strong>[선택항목]</strong>
+                        <ul>
+                            <li class="list_dot">항목 : 부서, 전화번호</li>
+                            <li class="list_dot">보유기간 : 1년간 보관 후 파기</li>
+                            <li class="list_dot">보유목적 : 제품 관련 문의 및 요청사항에 대한 서비스 지원</li>
+                            <li class="margin_b">※ 귀하께서는 선택정보 동의를 거부하시더라도 서비스를 이용하실 수 있습니다.</li>
+                            <li>
+                                <span>상기 내용을 읽고 수집 및 이용에 동의합니다. <input type="radio" name="agree" id="agree_c"><label for="agree_a">동의</label>
+                                    <input type="radio" name="agree" id="agree_d"><label for="agree_b">동의하지 않음</label></span>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- //right_agree -->
+            </div>
+                    <!--//infor_agree_area  -->
+                    <p class="infor_btn"><a href="#">접수하기</a></p>
+                </div>
+                <!-- //infor_agree -->
+                </div>
+            <!-- //content -->
+            <hr />
+            </div>
+            <!-- //container -->
+            <hr />
+                   <!-- footer -->
+                   <? include "footer.html"; ?>
+                    <p class="quick_btn"><a href="#">TOP</a></p>
+                </div>
+                <hr />
+                <!-- //wrap -->
+            </body>
+            </html>

@@ -1,0 +1,13 @@
+body{font-family: NotoSans-Regular, sans-serif, Helvetica;font-size: 12px;}
+a{text-decoration: none;}
+strong{font-size: 30px;}
+@font-face{font-family: NotoSans-Bold;
+			src: url(../fonts/Noto_Sans/NotoSans-Bold.ttf);}
+@font-face{font-family: NotoSans-BoldItali;
+			src: url(../fonts/Noto_Sans/NotoSans-BoldItalic.ttf);}
+@font-face{font-family: NotoSans-Italic;
+			src: url(../fonts/Noto_Sans/NotoSans-Italic.ttf);}
+@font-face{font-family: NotoSans-Regular;
+			src: url(../fonts/Noto_Sans/NotoSans-Regular.ttf);}
+@font-face{font-family: NotoSansKR-Black;
+			src: url(../fonts/Noto_Sans_KR/NotoSansKR-Black.otf);}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Odibee Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gothic A1&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto Sans KR&display=swap");
+
+@import url("hamburger.css");
+@import url("scroll.css");
+@import url("balleffect.css");
+@import url("main.css");
+@import url("intro.css");
+@import url("glitch.css");
+@import url("glitch-image.css");
+@import url("purecss.css");
+@keyframes yayy{
+    25%{transform: rotate(-15deg);}
+    75%{transform: rotate(15deg);}
+   }
+

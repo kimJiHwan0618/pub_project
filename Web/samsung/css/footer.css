@@ -1,0 +1,37 @@
+/* footer */
+#footer ul.footer_list1{float: left;font-size: 14px;}
+#footer ul.footer_list1 li{float: left;margin-right: 10px;border-right: 1px solid gray;padding-right: 20px;}
+                    #footer ul.footer_list1 li.border_none{border: none;}
+#footer ul.footer_list1 a{color: #fff;}
+#footer ul.footer_sns_list{float: right;display: flex;justify-content: space-between;flex: 1;}
+#footer ul.footer_sns_list a{text-indent: -9999px;overflow: hidden;}
+#footer ul.footer_sns_list li{margin-right: 10px;}
+			#footer ul.footer_sns_list li.foot_sns1 a{display: block;background: url(../images/sns_link_ico.png) no-repeat -30px 0;
+									width: 30px;height: 30px;margin: 0 10px 15px 0;}
+			#footer ul.footer_sns_list li.foot_sns2 a{display: block;background: url(../images/sns_link_ico.png) no-repeat 0 0;
+									width: 30px;height: 30px;}
+			#footer ul.footer_sns_list li.foot_sns3 a{display: block;background: url(../images/sns_link_ico.png) no-repeat -59px 0;
+									width: 30px;height: 30px;}
+			#footer ul.footer_sns_list li.foot_sns4 a{display: block;background: url(../images/sns_link_ico.png) no-repeat -90px 0;
+									width: 30px;height: 30px;}
+			
+			
+			
+			#wrap #footer ul.footer_sns_list li.foot_mark a{display: block;background: url(../images/footer_mark1.png) no-repeat 0 0px;
+															width: 32px;height: 32px; margin-top: -5px;}
+
+			
+#footer ul.footer_sns_list li{float: left;}
+#footer ul.footer_list2{float: left;margin-top: 25px;}
+#footer ul.footer_list2 li{float: left;margin-right: 33px;}
+#footer ul.footer_list2 a{color: #fff;}
+#footer p.Copyright{float: left;color: #ccc;margin-top: 20px;margin-left: 180px;}
+#footer .footer_bottom .blue a{color: #00ccff;}
+.footer_top{border-bottom:1px solid #6c6f73;height: 40px;width: 1200px;}
+/* quick_btn */
+#wrap .quick_btn a{font-size: 15px;color: #666;opacity: 0;transition: all 1s ease-in-out 0s;
+							display: block;position: fixed;top: 80%;right: 1%;
+							background:white url(../images/top_btn_ico.png)no-repeat 50% 12px ; width: 60px;height: 35px;
+							text-align: center;padding-top: 30px;border: 1px solid #333;}
+
+#wrap .quick_btn.on a {opacity: 1;}

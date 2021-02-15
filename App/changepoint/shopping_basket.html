@@ -118,7 +118,7 @@ if($(".sho_main-none").hasClass("on")){
 
     <header class="hdshare">
         <div class="hdshare_inner">
-        <a href="#".html" class="back_arrow">back</a>
+        <a href="#" class="back_arrow">back</a>
         <h1>장바구니</h1>
         
         <div class="basket">
@@ -164,18 +164,75 @@ if($(".sho_main-none").hasClass("on")){
             
                     <div class="item_bottom">
                         <div>
-                        <img src="img/eur_money/2_dollor.jpg" class="money" alt="">
+                            <img src="img/eur_money/5-euro-paper-money-obverse.png" class="money" alt="">
                         </div>
             
                         <div>
                             <div><span title="마이너스"></span><span class="num">12</span><span title="플러스"></span></div>
-                            <div>합계<span><span>￦ </span>14,000</span></div>
+                            <div>합계<span><span>￦ </span>14,400</span></div>
+                        </div>
+                    </div>
+                    <!-- //item_bottom -->
+                    </div>
+                    <!-- //sho-bas_item -->
+                <div class="sho-bas_item">
+
+                    <div class="item_middle">
+                        <div>
+                        <span class="check3"></span>
+                        <p><img src="img/eur_money/eur_won.svg" class="won" alt=""><span>4</span></p>
+                        <span><span>￦ </span>500</span>
+                        </div>
+                        <a class="ic_close3"><img src="img/ic_close3.svg" width="9" height="9" alt=""></a>
+                    </div>
+                    <!-- //item_middle -->
+            
+                    <div class="item_bottom">
+                        <div>
+                            <img src="img/eur_money/5-cents-coin-obverse.jpg" class="money" alt="">
+                        </div>
+            
+                        <div>
+                            <div><span title="마이너스"></span><span class="num">4</span><span title="플러스"></span></div>
+                            <div>합계<span><span>￦ </span>2,000</span></div>
                         </div>
                     </div>
                     <!-- //item_bottom -->
                     </div>
                     <!-- //sho-bas_item -->
                     
+    </div>
+    <!-- //sho-bas_main_inner -->
+    </div>
+    <!-- //국가 리스트 국가가 늘어나면 이디브로 생성 -->
+    <div><!-- << 장바구니 국가 리스트 국가가 늘어나면 이디브로 생성  -->
+        <div class="sho-bas_main_inner">
+            <h2><img src="img/country/krw.png" width="20" height="20" alt=""><span>대한민국</span></h2>
+                <div class="sho-bas_item">
+
+                    <div class="item_middle">
+                        <div>
+                        <span class="check3"></span>
+                        <p><img src="img/krw_money/krw_won.svg" class="won" alt=""><span>2</span></p>
+                        <span><span>￦ </span>1,000</span>
+                        </div>
+                        <a class="ic_close3"><img src="img/ic_close3.svg" width="9" height="9" alt=""></a>
+                    </div>
+                    <!-- //item_middle -->
+            
+                    <div class="item_bottom">
+                        <div>
+                            <img src="img/krw_money/1000-won-paper-money-obverse.png" class="money" alt="">
+                        </div>
+            
+                        <div>
+                            <div><span title="마이너스"></span><span class="num">2</span><span title="플러스"></span></div>
+                            <div>합계<span><span>￦ </span>2,000</span></div>
+                        </div>
+                    </div>
+                    <!-- //item_bottom -->
+                    </div>
+                    <!-- //sho-bas_item -->
     </div>
     <!-- //sho-bas_main_inner -->
     </div>
@@ -201,8 +258,37 @@ if($(".sho_main-none").hasClass("on")){
                             <a href="#" class="delete">삭제</a>
                         </div>
                     </div>
-    <? include "menu.html"; ?>
-    <? include "footer.html"; ?>
+                    <div class="menu">
+                        <a href="#" class="close"><img src="img/ic-close.svg" width="14" height="14" alt=""></a>
+                        <ul class="myname_wrap">
+                            <li>홍길동<span>님,</span></li>
+                            <li><span>안녕하세요</span><a href="settings.html"><img src="img/ic-setting.svg" width="17" height="17" alt=""></a></li>
+                        </ul>
+                        <dl>
+                            <dt>서비스</dt>
+                            <dd><a href="procedure_guide.html"><span class="icon"></span><span>이용&nbsp;방법</span></a></dd>
+                            <dd><a href="cashbox_location.html"><span class="icon"></span><span>동전환전소&nbsp;위치</span></a></dd>
+                            <dd><a href="exchange_rate_information.html"><span class="icon"></span><span>환율정보</span></a></dd>
+                            <dd><a href="all_notifications.html"><span class="icon"></span><span>알림</span></a></dd>
+                            <dd><a href="my_info.html"><span class="icon"></span><span>내&nbsp;정보</span></a></dd>
+                        </dl>
+                        <dl>
+                            <dt>시스템</dt>
+                            <dd><a href="service_center.html"><span class="icon"></span><span>고객센터</span></a></dd>
+                            <dd><a href="policy_guide.html"><span class="icon"></span><span>정책안내</span></a></dd>
+                        </dl>
+                    </div>
+                
+                    <div class="menu_dark"></div>
+                
+                    <footer>
+                        <ul>
+                            <li><a href="home_modify.html"><img class="one" src="img/home.svg" alt="" width="15" height="31"></a></li>
+                            <li class="notice_num"><a href="all_notifications.html"><img class="two" src="img/notification.svg" alt="" width="17" height="31"></a><span class="num" style="position:absolute;right: -5px;top: 5px;display: inline-block;width: 15.6px;height: 15.6px;border-radius: 50%;color: white;line-height: 15.6px;text-align: center;background-color: #ff8200;-webkit-transform: scale(0.8);font-size: 10px;">2</span></li>
+                            <li><a href="my_info.html"><img class="three" src="img/my-information.svg" alt="" width="27" height="31"></a></li>
+                            <li><a href="#" class="menu_btn"><img class="four" src="img/all-menu.svg" alt="" width="17" height="29.1"></a></li>
+                        </ul>
+                    </footer>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
      <script src="js/loading.js"></script>
