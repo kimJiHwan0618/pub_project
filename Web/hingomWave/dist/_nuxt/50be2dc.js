@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{250:function(n,t,e){"use strict";e.r(t);var c=e(54),o=e.n(c),r={name:"Index",fetch:function(n){var t=n.redirect;o.a.get("/api/boot/opt/ipstack").then((function(n){t("/".concat((n.data.country_code||"KR").toLowerCase()))})).catch((function(n){console.log(n),t("/en")}))}},l=e(37),component=Object(l.a)(r,(function(){var n=this.$createElement;return(this._self._c||n)("div")}),[],!1,null,null,null);t.default=component.exports}}]);
-//# sourceMappingURL=50be2dc.js.map

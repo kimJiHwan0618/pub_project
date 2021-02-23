@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{239:function(t,n,e){"use strict";e.r(n);var o=e(54),c=e.n(o),r={name:"Login",fetch:function(t){var n=t.redirect;c.a.get("/api/boot/opt/ipstack").then((function(t){n("/".concat((t.data.country_code||"EN").toLowerCase(),"/login"))}))}},l=e(37),component=Object(l.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div")}),[],!1,null,null,null);n.default=component.exports}}]);
-//# sourceMappingURL=225be93.js.map
