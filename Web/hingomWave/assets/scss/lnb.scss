@@ -1,0 +1,22 @@
+.lnb{
+    padding: 0 0 25px;
+}
+.lnb li{
+    display: inline-block;
+}
+.lnb li span{
+    margin-right: 10px;
+}
+.lnb a{
+    font-size: 1.3rem;
+    font-family: $global-font-Regular;
+    margin-right: 10px;
+}
+.lnb li:last-of-type a{
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.lnb a:hover{
+    text-decoration: underline;
+}
