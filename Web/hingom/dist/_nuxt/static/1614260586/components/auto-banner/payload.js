@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/auto-banner", {data:[{}],fetch:[],mutations:[]});

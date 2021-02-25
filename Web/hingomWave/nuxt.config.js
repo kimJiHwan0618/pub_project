@@ -1,130 +1,48 @@
 export default {
-  mode: 'spa',
-  subdirectory: '/',
-  /**
-   * Headers of the page
-   */
+  target : 'static',
+  ssr: true,
+  router : {
+    base : "/project/Web/hingom/"
+  },
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'h.WAVE Official Website',
+    title: "h.WAVE Official Website",
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width-device-width, initial-scale-1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '@/assets/scss/style.scss' }
     ],
-    script: [
-      { src: 'https://unpkg.com/ionicons/dist/ionicons.js', body: true},
+    script:[
       { src: 'https://kit.fontawesome.com/ccff4d584f.js'}
     ]
   },
 
-  router: {
-    base: '/',
-    mode: 'history'
-  },
-
-  /**
-   * Customize the process-bar color
-   */
-  loading: { color: '#2F528F', throttle: 200, height: '3px', css: true },
-
-  /**
-   * Global CSS
-   */
+  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/scss/style.scss'
+     '@/assets/scss/style.scss' 
   ],
 
-  /**
-   * Plugins to load before mounting the App
-   */
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/swiper.js', ssr: false },
-    { src: '~/plugins/axios.js', ssr: false }
   ],
 
-  /**
-   * Nuxt.js modules
-   */
+  // Auto import components (https://go.nuxtjs.dev/config-components)
+  components: true,
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+  buildModules: [
+  ],
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/auth',
-    'vue-scrollto/nuxt',
-    ['vue-currency-filter/nuxt', [
-      { // default name 'currency'
-        symbol: '$',
-        thousandsSeparator: ',',
-        fractionCount: 2,
-        fractionSeparator: '.',
-        symbolPosition: 'front',
-        symbolSpacing: true
-      },
-      { // default name 'lak'
-        name: 'lak',
-        symbol: '₭',
-        thousandsSeparator: ',',
-        fractionCount: 0,
-        fractionSeparator: '.',
-        symbolPosition: 'front',
-        symbolSpacing: true
-      }
-    ]]
+    // https://go.nuxtjs.dev/bootstrap
   ],
 
-  /**
-   * Axios module configuration
-   */
-  axios: {
-    baseURL: '/'
-  },
-
-  auth: {
-    redirect: {
-      home: '/',
-      callback: '/callback'
-    },
-    strategies: {
-      local: {
-        endpoints: {
-          login: { url: '/api/auth/login', method: 'post', propertyName: 'access_token' }
-        },
-        tokenRequired: true,
-        tokenType: 'JWT',
-        autoFetchUser: false
-      },
-      facebook: {
-        client_id: '1932108973595546',
-        userinfo_endpoint: 'https://graph.facebook.com/v3.1/me?fields=about,name,picture{url},email',
-        scope: ['public_profile', 'email']
-      },
-      google: {
-        client_id: '396214276651-86vj88bkeidjdlkgv49nip3lf1bftifq.apps.googleusercontent.com'
-      }
-    }
-  },
-
-  generate: {
-    fallback: true
-  },
-
-  /**
-   * Build configuration
-   */
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: [
-      'vee-validate/dist/rules'
-    ],
-    /**
-     * Extend webpack configuration
-     */
-    extend (config, ct) {
-      if (ct) {
-        config.devtool = '#source-map'
-      }
-    }
   }
 }

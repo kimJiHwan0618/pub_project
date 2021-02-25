@@ -1,23 +1,37 @@
 <template>
   <div>
+    <Header/>
+    <main>
+      <AutoBanner />
+      <KeyFeatures />
+      <Products />
+      <ServiceWrap />
+      <SearchFollowWrap />
+    </main>
+    <!-- //main -->
+    <Footer/>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import Header from './layout/header'
+import Footer from './layout/footer'
+import ServiceWrap from './layout/service_wrap'
+import AutoBanner from './components/auto-banner'
+import KeyFeatures from './components/key-features'
+import Products from './components/products'
+import SearchFollowWrap from './components/search-follow-wrap'
 
 export default {
-  name: 'Index',
-
-  fetch ({ redirect }) {
-    axios.get('/api/boot/opt/ipstack')
-      .then(res => {
-        redirect(`/${(res.data.country_code || 'EN').toLowerCase()}`)
-      })
-      .catch(e => {
-        console.log(e)
-        redirect('/kr')
-      })
+  name : 'Index',
+  components: {
+    Header,
+    Footer,
+    ServiceWrap,
+    AutoBanner,
+    KeyFeatures,
+    Products,
+    SearchFollowWrap
   }
 }
 </script>
