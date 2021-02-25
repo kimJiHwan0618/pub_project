@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/layout/service_wrap", {data:[{}],fetch:[],mutations:[]});

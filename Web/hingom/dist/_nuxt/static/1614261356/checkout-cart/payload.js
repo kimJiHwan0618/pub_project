@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/checkout-cart", {data:[{}],fetch:[],mutations:[]});

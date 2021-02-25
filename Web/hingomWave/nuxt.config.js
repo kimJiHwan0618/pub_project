@@ -2,7 +2,7 @@ export default {
   target : 'static',
   ssr: true,
   router : {
-    base : "/project/"
+    base : "/hingom/"
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
