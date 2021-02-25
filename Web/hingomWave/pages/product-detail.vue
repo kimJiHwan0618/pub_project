@@ -22,7 +22,7 @@
 <script>
 import Header from './layout/header'
 import Footer from './layout/footer'
-import ProductDetailMain from './components/product-detail-main'
+import ProductDetailMain from './components/product-detailMain'
 import OtherProducts from './components/other-products'
 
 export default {
