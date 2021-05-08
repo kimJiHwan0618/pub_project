@@ -1,0 +1,3554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard-detail</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard-detail.js"></script>
+</head>
+<body>
+    <input type="number" id="page" value="1">
+    <header class="shadow-bold f-midium">
+        <div class="header-inner">
+            <h1 class="logo">ONIONEV BATTERY CMS</h1>
+            <nav>
+                <div class="bg-line"></div>
+                <div class="nav-inner">
+                    <ul class="text-box">
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>대시보드</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-power-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 전원 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="charging-schedule-management.html">
+                              <span class="img"></span>
+                              <p>충전 스케줄 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="user-registration.html">
+                              <span class="img"></span>
+                              <p>사용자 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>환경설정</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <form action="">
+                <ul class="user-box">
+                    <li class="user-img"><img src="img/ic-user.png" alt=""></li>
+                    <li class="user-name f-midium">홍길동</li>
+                    <li><input type="submit" value="LOGOUT"></li>
+                </ul>
+            </form>
+        </div>
+    </header>
+
+    <div class="main-wrap">
+        <h1 class="main-title f-bold">스테이션별 상세화면</h1>
+        <div class="wrap-title-inner dashboard-detail">
+            <a href="dashboard.html" class="back-btn f-midium">
+                <img src="img/arrow-back.svg" alt="">
+                <span>Back</span>
+            </a>
+            <div class="station-box-wrap">
+                <div class="station-box-wrap-inner max25">
+                    <span class="station f-midium">1</span>
+                    <span class="station f-midium red">2</span>
+                    <span class="station f-midium red">3</span>
+                    <span class="station f-midium">4</span>
+                    <span class="station f-midium">5</span>
+                    <span class="station f-midium">6</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                    <span class="station f-midium">25</span>
+                </div>
+            </div>
+        </div>
+        <!-- //station-box-wrap -->
+        <div class="station-info-wrap">
+            <div class="station-info-wrap-inner">
+                <div class="all-station-wrap">
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-1</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station1 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-2</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station2 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-3</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station3 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-4</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station4 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-5</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station5 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-6</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station6 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-27</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station7 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-8</h5>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station8 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-9</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station9 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION10</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station10 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-11</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station11 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-12</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station12 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-13</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station13 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-14</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station14 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-15</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station15 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-16</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station16 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-17</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station17 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-18</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station18 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-19</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station19 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-20</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station20 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-21</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station21 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-22</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station22 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-23</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station23 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-24</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station24 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-25</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station25 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-26</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station26 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-27</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station27 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-28</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station28 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-29</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station29 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-30</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station30 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-31</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station31 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-32</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station32 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-33</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station33 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-34</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station34 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-35</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station35 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-36</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station36 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-37</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station37 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-38</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station38 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-39</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station39 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-40</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station40 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-41</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station41 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-42</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station42 -->
+                    <div class="station shadow-midium">
+                        <h5 class="station-title f-midium">STATION-43</h5>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter red"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter blue"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery blue"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery green"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                        <div class="item">
+                            <span class="battery red"></span>
+                            <span class="adapter green"></span>
+                        </div>
+                    </div>
+                    <!-- // station43 -->
+                    <span class="arrow-left shadow-midium"></span>
+                    <span class="arrow-right shadow-midium"></span>
+                </div>
+                <!-- //all-station-wrap -->
+                <div class="station-info-tab-wrap shadow-midium">
+                    <div class="tab-title on">
+                        <h6 class="f-midium on">배터리 정보</h6>
+                        <h6 class="f-midium">충전기 정보</h6>
+                    </div>
+                    <!-- //tab-title -->
+                    <div class="battery-info-box on">
+                        <div class="info-box-inner">
+                            <div class="left">
+                                <dl>
+                                    <dt>배터리 ID</dt>
+                                    <dd class="f-midium">1048576</dd>
+                                </dl>
+                                <dl>
+                                    <dt>충전상태(SOC)</dt>
+                                    <dd class="status red f-midium">Fault</dd>
+                                </dl>
+                                <dl>
+                                    <dt>충전상태(SOC)</dt>
+                                    <dd class="f-midium">10%</dd>
+                                </dl>
+                                <dl>
+                                    <dt>SOH</dt>
+                                    <dd class="f-midium">20%</dd>
+                                </dl>
+                                <dl>
+                                    <dt>총 용량</dt>
+                                    <dd class="f-midium">2250Wh</dd>
+                                </dl>
+                                <dl>
+                                    <dt>충전 완료 여부</dt>
+                                    <dd class="f-midium">NO</dd>
+                                </dl>
+                                <dl>
+                                    <dt>평균 배터리 온도</dt>
+                                    <dd class="f-midium">50℃</dd>
+                                </dl>
+                                <dl>
+                                    <dt>누적 충전 전류량</dt>
+                                    <dd class="f-midium">65535 Ah</dd>
+                                </dl>
+                                <dl>
+                                    <dt>누적 충전 전력량</dt>
+                                    <dd class="f-midium">4480 kWh</dd>
+                                </dl>
+                                <dl>
+                                    <dt>누적 방전 전류량</dt>
+                                    <dd class="f-midium">65535 Ah</dd>
+                                </dl>
+                                <dl>
+                                    <dt>누적 방전 전력량</dt>
+                                    <dd class="f-midium">4480 kWh</dd>
+                                </dl>
+                                <dl>
+                                    <dt>BMS S/W 버전</dt>
+                                    <dd class="f-midium">V 1.2332</dd>
+                                </dl>
+                               
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    <dt>배터리팩 저전압 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리팩 과전압 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리셀 저전압 오류</dt>
+                                    <dd class="red f-midium">Fault</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리셀 과전압 오류</dt>
+                                    <dd class="red f-midium">Fault</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 저온 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 텔타 온도 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 과전류 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 과열 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 텔타 온도 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>배터리 온도센서 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                                <dl>
+                                    <dt>BMS 12V 전압 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>    
+                                <dl>
+                                    <dt>배터리 BMS 오류</dt>
+                                    <dd class="f-midium">Normal</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //battery-info-box -->
+                    <div class="adapter-info-box">
+                        <dl>
+                            <dt>충전기 ID</dt>
+                            <dd class="f-midium">223412</dd>
+                        </dl>
+                        <dl>
+                            <dt>상태</dt>
+                            <dd class="red f-midium">Fault</dd>
+                        </dl>
+                        <dl>
+                            <dt>B(+) Status</dt>
+                            <dd class="f-midium">BMS WAKE-UP ON</dd>
+                        </dl>
+                        <dl>
+                            <dt>CHG_ON Status</dt>
+                            <dd class="f-midium">BMS ACTIVE ON</dd>
+                        </dl>
+                        <dl>
+                            <dt>충전기 모드</dt>
+                            <dd class="f-midium">Standby</dd>
+                        </dl>
+                        <dl>
+                            <dt>충전기 전압</dt>
+                            <dd class="f-midium">60 V</dd>
+                        </dl>
+                        <dl>
+                            <dt>충전기 전류</dt>
+                            <dd class="f-midium">20 A</dd>
+                        </dl>
+                        <dl>
+                            <dt>프리 차지 릴레이</dt>
+                            <dd class="f-midium">ON</dd>
+                        </dl>
+                        <dl>
+                            <dt>메인 릴레이</dt>
+                            <dd class="f-midium">ON</dd>
+                        </dl>
+                        <dl>
+                            <dt>충전 경과 시간</dt>
+                            <dd class="f-midium">30 Min</dd>
+                        </dl>
+                        <dl>
+                            <dt>어댑터 펌웨어 버전 / 최신버전</dt>
+                            <dd class="f-midium">V1.233 / V1.33</dd>
+                        </dl>
+                    </div>
+                    <!-- //adapter-info-box -->
+                </div>
+            </div>
+        </div>
+        <!-- //station-info-wrap -->
+    </div>
+    <!-- //main-wrap -->
+</body>
+</html>

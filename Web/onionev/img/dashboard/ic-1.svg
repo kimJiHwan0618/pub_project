@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97" height="97" viewBox="0 0 97 97">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_355" data-name="사각형 355" width="97" height="97" transform="translate(15248.5 4959.458)" fill="#fff" opacity="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_17" data-name="마스크 그룹 17" transform="translate(-15248.5 -4959.458)" clip-path="url(#clip-path)">
+    <g id="그룹_97" data-name="그룹 97" transform="translate(453.154 1616.027)">
+      <rect id="사각형_343" data-name="사각형 343" width="21.334" height="21.334" transform="translate(14809.482 3349.534)" fill="#434343"/>
+      <rect id="사각형_344" data-name="사각형 344" width="21.334" height="21.334" transform="translate(14809.482 3376.964)" fill="#434343"/>
+      <rect id="사각형_345" data-name="사각형 345" width="21.334" height="21.334" transform="translate(14809.482 3404.394)" fill="#434343"/>
+      <rect id="사각형_346" data-name="사각형 346" width="21.334" height="21.334" transform="translate(14833.102 3349.534)" fill="#434343"/>
+      <rect id="사각형_347" data-name="사각형 347" width="21.334" height="21.334" transform="translate(14833.102 3376.964)" fill="#434343"/>
+      <rect id="사각형_348" data-name="사각형 348" width="21.334" height="21.334" transform="translate(14833.102 3404.394)" fill="#434343"/>
+      <rect id="사각형_349" data-name="사각형 349" width="21.334" height="21.334" transform="translate(14856.722 3349.534)" fill="#434343"/>
+      <rect id="사각형_350" data-name="사각형 350" width="21.334" height="21.334" transform="translate(14856.722 3376.964)" fill="#434343"/>
+      <rect id="사각형_351" data-name="사각형 351" width="21.334" height="21.334" transform="translate(14856.722 3404.394)" fill="#434343"/>
+      <rect id="사각형_352" data-name="사각형 352" width="77.869" height="3.048" rx="1.524" transform="translate(14804.911 3372.392)" fill="#434343"/>
+      <rect id="사각형_353" data-name="사각형 353" width="77.87" height="3.048" rx="1.524" transform="translate(14804.911 3399.822)" fill="#434343"/>
+      <rect id="사각형_354" data-name="사각형 354" width="77.869" height="3.048" rx="1.524" transform="translate(14804.911 3427.252)" fill="#434343"/>
+      <path id="패스_68" data-name="패스 68" d="M14805.935,3435.88V3431.7a3.169,3.169,0,0,1-2.691-3.286s-.3-2.391,2.691-2.541v-21.114a3.606,3.606,0,0,1-2.691-3.448,2.9,2.9,0,0,1,2.691-2.988v-21.032a3.808,3.808,0,0,1-2.691-3.563,3.546,3.546,0,0,1,2.691-3.448v-22.3h-3.672v87.9Z" transform="translate(0 0)" fill="#434343"/>
+      <path id="패스_69" data-name="패스 69" d="M14802.263,3435.88V3431.7a3.168,3.168,0,0,0,2.689-3.286s.3-2.391-2.689-2.541v-21.114a3.605,3.605,0,0,0,2.689-3.448,2.9,2.9,0,0,0-2.689-2.988v-21.032a3.807,3.807,0,0,0,2.689-3.563,3.543,3.543,0,0,0-2.689-3.448v-22.3h3.672v87.9Z" transform="translate(79.494 0)" fill="#434343"/>
+    </g>
+  </g>
+</svg>

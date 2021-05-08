@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body class="dashboard">
+    <input type="number" id="page" value="6">
+    <header class="shadow-bold f-midium">
+        <div class="header-inner">
+            <h1 class="logo">ONIONEV BATTERY CMS</h1>
+            <nav>
+                <div class="bg-line"></div>
+                <div class="nav-inner">
+                    <ul class="text-box">
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>대시보드</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-power-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 전원 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="charging-schedule-management.html">
+                              <span class="img"></span>
+                              <p>충전 스케줄 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="user-registration.html">
+                              <span class="img"></span>
+                              <p>사용자 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="setting.html">
+                              <span class="img"></span>
+                              <p>환경설정</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <form action="">
+                <ul class="user-box">
+                    <li class="user-img"><img src="img/ic-user.png" alt=""></li>
+                    <li class="user-name f-midium">홍길동</li>
+                    <li><input type="submit" value="LOGOUT"></li>
+                </ul>
+            </form>
+        </div>
+    </header>
+    
+    <div class="main-wrap">
+        <h1 class="main-title">환경설정</h1>
+        <div class="wrap-title-inner">
+          <ul class="setting setting_button_wrap">
+            <li class="f-midium">
+              <span class="icon"></span>
+              <span class="text">최소화</span>
+            </li>
+            <li class="f-midium">
+              <span class="icon"></span>
+              <span class="text">프로그램 종료</span>
+            </li>
+            <li class="f-midium">
+              <span class="icon"></span>
+              <span class="text">시스템 종료</span>
+            </li>
+          </ul>
+        </div>
+        <!-- //wrap-title-inner -->
+    </div>
+    <!-- //main-wrap -->
+</body>
+</html>

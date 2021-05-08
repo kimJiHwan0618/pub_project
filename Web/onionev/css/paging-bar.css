@@ -1,0 +1,55 @@
+.paging-bar{
+    width: 96%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+.paging-bar ul{
+    display: flex;
+    height: 100%;
+    line-height: 35px;
+}
+.paging-bar ul li{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+.paging-bar ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    border-left: 1px solid rgb(25, 25, 25);
+    font-size: 1.4rem;
+}
+.paging-bar ul li.on a{
+    background-color: #FFC001;
+    color: #1d1d1d;
+}
+.paging-bar>a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
+
+.paging-bar>a.arrow-next{
+    border-left: 1px solid rgb(25, 25, 25);
+    background: #222222 url(../img/next-btn.svg) no-repeat 50% 50%;
+}
+.paging-bar>a.arrow-next-double{
+    border-radius: 0 4px 4px 0;
+    width: 37px;
+    border-left: 1px solid rgb(25, 25, 25);
+    background: #222222 url(../img/next-btn-double.svg) no-repeat 50% 50%;
+}
+.paging-bar>a.arrow-prev{
+    background: #222222 url(../img/prev-btn.svg) no-repeat 50% 50%;
+}
+.paging-bar>a.arrow-prev-double{
+    border-radius: 4px 0 0 4px;
+    width: 37px;
+    border-right: 1px solid rgb(25, 25, 25);
+    background: #222222 url(../img/prev-btn-double.svg) no-repeat 50% 50%;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97" height="97" viewBox="0 0 97 97">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_356" data-name="사각형 356" width="97" height="97" transform="translate(14822 3325)" fill="#fff" opacity="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_18" data-name="마스크 그룹 18" transform="translate(-14822 -3325)" clip-path="url(#clip-path)">
+    <g id="battery-status-full" transform="translate(14845.006 3325)">
+      <path id="패스_70" data-name="패스 70" d="M154.5,5.6H147V0H127.416V5.6H120.3a8.4,8.4,0,0,0-8.394,8.394V88.606A8.4,8.4,0,0,0,120.3,97h34.2a8.4,8.4,0,0,0,8.394-8.394V13.99A8.4,8.4,0,0,0,154.5,5.6Zm2.8,83.01a2.8,2.8,0,0,1-2.8,2.8H120.3a2.8,2.8,0,0,1-2.8-2.8V13.99a2.8,2.8,0,0,1,2.8-2.8h34.2a2.8,2.8,0,0,1,2.8,2.8Zm-3.051-.514H120.554V75.815h33.693V88.092Zm0-15.3H120.554V60.514h33.693V72.791Zm0-15.3H120.554V45.212h33.693V57.489Zm0-15.267H120.554V29.945h33.693V42.222h0Zm0-15.3H120.554V14.642h33.693V26.92Z" transform="translate(-111.908)" fill="#434343"/>
+    </g>
+  </g>
+</svg>

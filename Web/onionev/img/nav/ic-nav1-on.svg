@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_137" data-name="사각형 137" width="38" height="38" transform="translate(18436 2530)" fill="#1d1d1d" opacity="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_14" data-name="마스크 그룹 14" transform="translate(-18436 -2530)" clip-path="url(#clip-path)">
+    <g id="dashboard" transform="translate(18436 2502.131)">
+      <path id="XMLID_864_" d="M88.054,154.073a3.048,3.048,0,1,0,3.953,3.953H88.054Z" transform="translate(-79.707 -114.46)" fill="#1d1d1d"/>
+      <path id="XMLID_865_" d="M189.989,106.118v1.718h1.718A3.065,3.065,0,0,0,189.989,106.118Z" transform="translate(-175.834 -70.078)" fill="#1d1d1d"/>
+      <path id="XMLID_877_" d="M38,331.663v-5.028H20.119V328.1H17.884v-1.465H0v5.028Z" transform="translate(0 -274.165)" fill="#1d1d1d"/>
+      <path id="XMLID_884_" d="M38,50.235V30.4H0V50.235ZM30.624,35.977v-1.6h2.235v1.6Zm2.235,1.852v3.133H30.624V37.83Zm-6.705-1.852v-1.6h2.235v1.6Zm2.235,1.852v3.133H26.154V37.83Zm-4.47-3.452v1.6H21.683v-1.6Zm-9.171,8.071a5.283,5.283,0,1,1-5.283-5.283h1.118v4.166h4.166Zm3.573-2.455h-6.4v-6.4h1.118a5.289,5.289,0,0,1,5.283,5.283Zm3.363-2.164h2.235v3.133H21.683Zm7.4,9.409-2.736-1.558-2.966,1.786-1.153-1.915,4.087-2.461,2.628,1.5,3.154-2.263,1.3,1.816Z" fill="#1d1d1d"/>
+      <path id="XMLID_894_" d="M100.183,424.115v1.9H89.014v2.235H113.75v-2.235H102.418v-1.9Z" transform="translate(-82.382 -364.382)" fill="#1d1d1d"/>
+    </g>
+  </g>
+</svg>

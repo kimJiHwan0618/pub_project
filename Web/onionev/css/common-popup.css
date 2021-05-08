@@ -1,0 +1,89 @@
+.notice-common-popup{
+    position: fixed;
+    width: 550px;
+    padding: 20px 20px 30px;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-45%);
+    z-index: 0;
+    background-color: #414141;
+    border-radius: 5px;
+    opacity: 0;
+    -webkit-transition: all 0.12s linear 0s;
+}
+.notice-common-popup.on{
+    opacity: 1;
+    z-index: 25;
+    -webkit-transform: translateX(-50%) translateY(-50%)
+}
+.popup-notice-text{
+    color: white;
+    opacity: 0.9;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.notice-common-popup button{
+    outline: none;
+    border: none;
+    display: block;
+    border-radius: 3px;
+    height: 50px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}   
+.notice-check-btn{
+    background-color: rgb(180, 180, 180);
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(51, 51, 51);
+}
+.notice-popup-button-wrap{
+    width: 100%;
+}
+.notice-popup-button-wrap:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.notice-popup-button-wrap button{
+    width: 48%;
+}
+.notice-popup-button-wrap .notice-cancel-btn{
+    float: left;
+    color: rgb(51, 51, 51);   
+    background-color: rgb(180, 180, 180);
+}
+.notice-popup-button-wrap .notice-modify-btn{
+    float: right;
+    color: white;
+    background-color: #2ea44f;
+}
+/* 에러 텍스트 */
+.popup ul li.popup-error-txt{
+    width:fit-content;
+    max-width: 80%;
+    padding: 5px 2%;
+    height: auto;
+    margin-bottom: 6px;
+    color: white;
+    font-size: 1.2rem;
+    display: none;
+    background: none;
+    text-align: center;
+    background-color: #D51210;
+}
+.popup ul li.popup-error-txt.on{
+    display: block;
+}
+/* 에러 border */
+.popup ul li.error-line{
+    border: 4px solid #D51210;
+    margin-bottom: 6px;
+}
+/* 포커스가 notice-common-popup에 갔을때 */
+.popup.focus-out{
+    z-index: 19;
+    filter: blur(4px);
+}

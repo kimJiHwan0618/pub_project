@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>station-management</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/station-bar.js"></script>
+    <script src="js/station-management.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="notice-common-popup shadow-bold">
+        <p class="popup-notice-text f-bold">스테이션이 추가되었습니다</p>
+        <button class="notice-check-btn f-midium">확인</button>
+        <div class="notice-popup-button-wrap">
+            <button class="notice-cancel-btn f-midium">취소</button>
+            <button class="notice-modify-btn f-midium">수정</button>
+        </div>
+    </div>
+
+    <div class="modal-bg"></div>
+    <div class="popup shadow-midium">
+        <h1 class="popup-title f-bold"></h1>
+            <ul class="input-list">
+                <label for="">Rack Name</label>
+                <li class="shadow-light error-line"><input type="text" placeholder="name" class="rack-name"></li>
+                <li class="popup-error-txt f-midium on">Rack Name 에러메세지 입니다.</li>
+                <label for="">Rack iP</label>
+                <li class="shadow-light error-line"><input type="text" placeholder="ex) 10.20.30.40" class="rack-ip"></li>
+                <li class="popup-error-txt f-midium on">Rack Ip 에러메세지 입니다.</li>
+            </ul>
+            <button class="popup-btn f-midium shadow-light"></button>
+        <span class="close"></span>
+    </div>
+
+    <input type="number" id="page" value="2">
+    <header class="shadow-bold f-midium">
+        <div class="header-inner">
+            <h1 class="logo">ONIONEV BATTERY CMS</h1>
+            <nav>
+                <div class="bg-line"></div>
+                <div class="nav-inner">
+                    <ul class="text-box">
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>대시보드</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-power-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 전원 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="charging-schedule-management.html">
+                              <span class="img"></span>
+                              <p>충전 스케줄 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="user-registration.html">
+                              <span class="img"></span>
+                              <p>사용자 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>설정</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <form action="">
+                <ul class="user-box">
+                    <li class="user-img"><img src="img/ic-user.png" alt=""></li>
+                    <li class="user-name f-midium">홍길동</li>
+                    <li><input type="submit" value="LOGOUT"></li>
+                </ul>
+            </form>
+        </div>
+    </header>
+
+    <div class="main-wrap">
+        <h1 class="main-title f-bold">스테이션 관리</h1>
+        <div class="wrap-title-inner">
+            <a href="javascript:history.go(-1);" class="back-btn f-midium">
+                <img src="img/arrow-back.svg" alt="">
+                <span>Back</span>
+            </a>
+            <div class="station-bar">
+                <ul>
+                    <li class="station-title-btn">
+                        <span class="text">전체</span>
+                        <span class="number f-regular">7</span>
+                    </li>
+                    <li class="station-title-btn">
+                        <span class="text">등록완료</span>
+                        <span class="number f-regular">4</span>
+                    </li>
+                    <li class="station-title-btn">
+                        <span class="text">신규</span>
+                        <span class="number f-regular">1</span>
+                    </li>
+                    <li class="station-title-btn">
+                        <span class="text">연결대기</span>
+                        <span class="number f-regular">1</span>
+                    </li>
+                    <li class="station-title-btn">
+                        <span class="text">연결실패</span>
+                        <span class="number f-regular">1</span>
+                    </li>
+                    <input type="text" class="station-bar-search" placeholder="Rack name...">
+                </ul>
+                <div class="add-btn-wrap">
+                    <select name="paging" class="page-view"></select>
+                    <button class="add-btn f-midium">추가</button>
+                </div>
+            </div>
+        </div>
+        <!-- station-bar -->
+        <div class="management-table-wrap">
+            <table>
+                <thead> 
+                    <tr class="t-head f-bold">
+                        <th>Status</th>
+                        <th>Rack name</th>
+                        <th>Rack IP</th>
+                        <th>Rack ID</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="stationWrap">
+                    <tr>
+                        <td class="status">등록완료</td>
+                        <td class="rack-name"><input type="text" class="rack-name-input" value="STATION1"  readonly></td>
+                        <td class="rack-ip"><input type="text" class="rack-ip-input" value="10.20.30.1" readonly></td>
+                        <td class="rack-id">BSKHA001000001</td>
+                        <td>
+                            <button class="modify f-midium">수정</button>
+                            <button class="delete f-midium">삭제</button>
+                            <button class="connect f-midium">연결</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="status">등록완료</td>
+                        <td class="rack-name"><input type="text" class="rack-name-input" value="STATION2"  readonly></td>
+                        <td class="rack-ip"><input type="text" class="rack-ip-input" value="10.20.30.2" readonly></td>
+                        <td class="rack-id">BSKHA001000002</td>
+                        <td>
+                            <button class="modify f-midium off">수정</button>
+                            <button class="delete f-midium off">삭제</button>
+                            <button class="connect f-midium disConnect">연결해제</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- management-table-wrap -->
+        <div class="paging-bar">
+            <a href="#" class="arrow-prev-double"></a>
+            <a href="#" class="arrow-prev"></a>
+            <ul>
+                <li class="on">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+            </ul>
+            <a href="#" class="arrow-next"></a>
+            <a href="#" class="arrow-next-double"></a>
+        </div>
+        <!-- paging-bar -->
+    </div>
+    <!-- main-wrap -->
+</body>
+</html>

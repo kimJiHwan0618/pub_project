@@ -1,0 +1,269 @@
+.batch-btn-wrap button{
+    border: none;
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    background-color: #2ea44f;
+    color: white;
+    -webkit-transition: all 0.1s linear 0s;
+    -webkit-transform: scale(0.99);
+    opacity: 0.95;
+    cursor: pointer;
+    outline: none;
+}
+.batch-btn-wrap button:hover{
+    -webkit-transform: scale(1);
+    opacity: 1;
+}
+.batch-btn-wrap button:nth-of-type(2){
+    margin-left: 10px;
+}
+.actions.save-release-btn button{
+    cursor: pointer;
+    background-color: #2ea44f;
+}
+table .day ul{
+    display: flex;
+    justify-content: center;
+}
+table .day ul li{
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    margin: 0 4px;
+}
+table .day ul li.on{
+    background-color: #2ea44f;
+    color: white;
+}
+.management-table-wrap table>tbody>tr td.time input{
+    width: 30px;
+    text-align: center;
+    font-family: 'NotoSansKR-Midium';
+    color: white;
+    opacity: 0.9;
+}
+.management-table-wrap table>tbody>tr td.time input::-webkit-outer-spin-button,
+.management-table-wrap table>tbody>tr td.time input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 충전 스케쥴 팝업 */
+.charging-schedule-popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    z-index: 21;
+    width: 650px;
+    padding: 30px 0 50px;
+    border-radius: 5px;
+    background-color: #414141;
+    display: none;
+}
+.charging-schedule-popup.on{
+    display: block;
+}
+.charging-schedule-popup .popup-title{
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 15px; 
+}
+.charging-schedule-popup span.close{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/ic-close.svg) no-repeat 0 0;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.charging-schedule-popup  .popup-btn{
+    background-color: rgb(51, 51, 51);
+    display: block;
+    width: 80%;
+    margin: 30px auto 0;
+    height: 50px;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    border: none;
+}
+.charging-schedule-popup .day-of-week{
+    display: flex;
+    justify-content: center;
+}
+.charging-schedule-popup .day-of-week li{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 1.5rem;
+    position: relative;
+}
+.charging-schedule-popup .day-of-week li span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(136, 136, 136);
+    color: white;
+    font-size: 1.2rem;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+}
+.charging-schedule-popup .day-of-week li input[type="checkbox"]:checked + input + span{
+    background-color: #2ea44f;;
+}
+
+.charging-schedule-popup .day-of-week li input{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   cursor: pointer;
+}
+
+.charging-schedule-popup .batch-setting-list .title{
+    font-size: 1.7rem;
+}
+
+.charging-schedule-popup .batch-setting-list{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(90, 90, 90);
+}
+.charging-schedule-popup .batch-setting-list:last-of-type{
+    padding: 20px 0;
+}
+.charging-schedule-popup .batch-setting-list .left{
+    width: 15%;
+    margin: 0 auto;
+    text-align: center;
+}
+.charging-schedule-popup .batch-setting-list .right{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.charging-schedule-popup .batch-setting-list .station{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.charging-schedule-popup .batch-setting-list .right select{
+    text-align-last: center;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 60px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+.charging-schedule-popup .batch-setting-list .right .txt{
+    margin: 0 5px;
+    font-size: 1.6rem;
+    color: rgb(199, 199, 199);
+}
+.charging-schedule-popup .batch-setting-list .station .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.charging-schedule-popup .batch-setting-list .station .left span{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background-color: #2ea44f; 
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 1.4rem;
+}
+.charging-schedule-popup .station-check-box{
+    height: 180px;
+    position: relative;
+    overflow-y: auto;
+}
+.charging-schedule-popup .station-check-box{
+    overflow-y: auto;
+}
+.charging-schedule-popup .station-check-box::-webkit-scrollbar{
+	width: 5px;
+}
+.charging-schedule-popup .station-check-box::-webkit-scrollbar-thumb{
+	background-color: gray;
+    width: 1px;
+    border-radius: 26px;
+}
+.charging-schedule-popup .station-check-box::-webkit-scrollbar-track{
+	background-color: #4e4e4e;
+}
+.charging-schedule-popup .station-check-box:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.charging-schedule-popup .station-check-box .check-box{
+    float: left;
+    margin-left: 8px;
+    width: 28px;
+    height: 28px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    position: relative;
+}
+.charging-schedule-popup .station-check-box .check-box:nth-child(10n-9){
+    margin-left: 48px;
+}
+.charging-schedule-popup .station-check-box .check-box .station-num{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 26px;
+    text-align: center;
+    background-color: rgb(136, 136, 136);
+    color: white;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    z-index: -1;
+}
+.charging-schedule-popup .station-check-box .check-box .station-check{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+.charging-schedule-popup .station-check-box .check-box .station-check:checked + input + p{
+    background-color: #2ea44f;
+}
+@media screen and (max-width:1000px){
+    table .day ul li{
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        margin: 0 2px;
+    }
+}

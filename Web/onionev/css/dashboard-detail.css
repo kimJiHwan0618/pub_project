@@ -1,0 +1,336 @@
+.station-box-wrap{
+    width: 100%;
+    padding: 4px 0 0;
+    overflow-y: auto;
+    height: 116px;
+}
+.station-box-wrap::-webkit-scrollbar{
+	width: 3px;
+}
+.station-box-wrap::-webkit-scrollbar-thumb{
+	background-color: gray;
+    width: 1px;
+    border-radius: 26px;
+}
+.station-box-wrap::-webkit-scrollbar-track{
+	background-color: #4e4e4e;
+}
+.wrap-title-inner.dashboard-detail{
+    padding: 12px 20px 0px;
+}
+.station-box-wrap .station-box-wrap-inner{
+    width: 99%;
+    margin: 0 0 0 auto;
+}
+.station-box-wrap .station-box-wrap-inner:first-of-type{
+    margin-top: 0px;
+}
+.station-box-wrap .station{
+    position: relative;
+    margin-bottom: 12px;
+    width: 46px;
+    height: 46px;
+    margin-right: 0.7%;
+    display: inline-block;
+    text-align: center;
+    line-height: 46px;
+    background-color: #1fb958;;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 5;
+}
+.station-box-wrap .station.red{
+    background-color: #D51210;
+}
+.station-box-wrap .station.red.select:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #D51210;
+    display: block;
+    content: "";
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    border-radius: 4px;
+    border: 3px solid #FFC001;
+}
+.station-box-wrap .station.select:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1fb958;;
+    display: block;
+    content: "";
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    border-radius: 4px;
+    border: 3px solid #FFC001;
+}
+.station-info-wrap{
+    width: 96%;
+    margin: 20px auto 0;
+}
+.station-info-wrap .station-info-wrap-inner{
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.station-info-wrap .station-info-wrap-inner>div{
+    width: 50%;
+}
+.station-info-wrap .station-info-wrap-inner>div.station-info-tab-wrap{
+    background-color: rgb(44, 44, 44);
+    border: 2.7px solid #545454;
+    min-height: 644px;
+}
+.station-info-wrap .station-info-wrap-inner .station{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #222;
+    border: 2.7px solid #545454;
+    padding: 2px 14px 6px;
+    border-radius: 8px;
+    display: none;
+}
+.station-info-wrap .station-info-wrap-inner .station.on{
+    display: block;
+}
+.station-info-wrap .station-info-wrap-inner .station h5{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: white;
+}
+.station-info-wrap .station-info-wrap-inner .station:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.station-info-wrap .station-info-wrap-inner .station .item{
+    width: 30%;
+    height: 86px;
+    margin-right: 5%;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    -webkit-transition: all 0.03s linear 0s;
+}
+.station-info-wrap .station-info-wrap-inner .station .item.select{
+    border: 4px solid #FFC001;
+}
+.station-info-wrap .station-info-wrap-inner .station .item:active{
+    opacity: 0.7;
+}
+.station-info-wrap .station-info-wrap-inner .all-station-wrap{
+    position: relative;
+}
+.station-info-wrap .station-info-wrap-inner .all-station-wrap>span{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -webkit-transition: all 0.03s linear 0s;
+    width: 39px;
+    height: 39px;
+    display: inline-block;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.station-info-wrap .station-info-wrap-inner .all-station-wrap>span:active{
+    opacity: 0.7;
+}
+.station-info-wrap .station-info-wrap-inner .all-station-wrap>span.arrow-left{
+    left: 7%;
+    background: url(../img/b-arrow-left.svg) no-repeat 0 0;
+    background-size: cover;
+}
+.station-info-wrap .station-info-wrap-inner .all-station-wrap>span.arrow-right{
+    right: 7%;
+    background: url(../img/b-arrow-right.svg) no-repeat 0 0;
+    background-size: cover;
+}
+.station-info-wrap .station-info-wrap-inner .station .item:nth-of-type(3n){
+    margin-right: 0px;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span{
+    display: block;
+    width: 100%;
+    border: 3px solid #d3d3d3;
+    box-sizing: border-box;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span:first-of-type{
+    border: none;
+    border-left: 3px solid #d3d3d3;
+    border-top: 3px solid #d3d3d3;
+    border-right: 3px solid #d3d3d3;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.red{
+    background-color: #D51210;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.green{
+    background-color: #29CC65;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.blue{
+    background-color: #46A0E9;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.gray{
+    background-color: #aaaaa5;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.battery{
+    height: 66%;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter{
+    height: 34%;
+    position: relative;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.red:after{
+    background-color: #D51210;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.red::before{
+    background-color: #D51210;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.blue:after{
+    background-color: #46A0E9;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.blue::before{
+    background-color: #46A0E9;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.green:after{
+    background-color: #29CC65;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter.green::before{
+    background-color: #29CC65;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter:after{
+    position: absolute;
+    left: 10%;
+    top: -10px;
+    content: "";
+    width: 25%;
+    height: 7px;
+    border-top: 3px solid #d3d3d3;
+    border-left: 3px solid #d3d3d3;
+    border-right: 3px solid #d3d3d3;
+    display: block;
+}
+.station-info-wrap .station-info-wrap-inner .station .item>span.adapter::before{
+    position: absolute;
+    right: 10%;
+    top: -10px;
+    content: "";
+    width: 25%;
+    height: 7px;
+    border-top: 3px solid #d3d3d3;
+    border-left: 3px solid #d3d3d3;
+    border-right: 3px solid #d3d3d3;
+    display: block;
+}
+.station-info-tab-wrap>.battery-info-box{
+    display: none;
+}
+.station-info-tab-wrap>.adapter-info-box{
+    display: none;
+}
+.station-info-tab-wrap>.battery-info-box.on{
+    display: block;
+}
+.station-info-tab-wrap>.adapter-info-box.on{
+    display: block;
+}
+.station-info-tab-wrap .tab-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2.7px solid #545454;
+}
+.station-info-tab-wrap .tab-title h6{
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.station-info-tab-wrap .tab-title h6.on{
+    background-color: #FFC001;
+    color: #1d1d1d;
+}
+.station-info-tab-wrap .battery-info-box{
+    padding: 12px 0;
+}
+.station-info-tab-wrap .info-box-inner{
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+}
+.station-info-tab-wrap .info-box-inner>div{
+    width: 50%;
+}
+.station-info-tab-wrap .info-box-inner>div dl{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+.station-info-tab-wrap .info-box-inner>div dl:last-of-type{
+    margin-bottom: 0px;
+}
+.station-info-tab-wrap .info-box-inner>div dl dt{
+    width: 60%;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 16px;
+    font-size: 1.4rem;
+}
+.station-info-tab-wrap .info-box-inner>div dl dd{
+    width: 40%;
+    font-size: 1.6rem;
+    color: white;
+}
+.station-info-tab-wrap .info-box-inner>div dl dd.red{
+    color: red;
+}
+.station-info-tab-wrap .adapter-info-box dl dd.red{
+    color: red;
+}
+.station-info-tab-wrap .adapter-info-box{
+    padding: 12px 0;
+}
+.station-info-tab-wrap .adapter-info-box dl{
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.station-info-tab-wrap .adapter-info-box dl:last-of-type{
+    margin-bottom: 0px;
+}
+.station-info-tab-wrap .adapter-info-box dl dt{
+    width: 50%;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 8px;
+    font-size: 1.4rem;
+}
+.station-info-tab-wrap .adapter-info-box dl dd{
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    font-size: 1.6rem;
+    color: white;
+}

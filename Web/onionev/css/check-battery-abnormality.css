@@ -1,0 +1,145 @@
+.check-battery-box{
+    padding-top: 113px;
+    box-sizing: border-box;
+    padding-bottom: 52px;
+}
+.check-battery-box h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 62px;
+    color: rgb(236, 236, 236);
+}
+.check-battery-wrap{
+    display: flex;
+    align-items: center;
+    width: 94.47%;
+    margin: 0 auto;
+}
+.check-battery-wrap .slot-wrap{
+    width: 50%;
+    text-align: center;
+}
+.check-battery-wrap .slot-wrap .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.check-battery-wrap .slot-wrap .item{
+    width: 195px;
+    height: 220px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.check-battery-wrap .slot-wrap .item span{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.check-battery-wrap .slot-wrap .item span.adapter{
+    height: 37%;
+    background-color: #828282;
+    border: 5px solid #C5C5C5;
+}
+.check-battery-wrap .slot-wrap .item span.battery{
+    height: 63%;
+    border-top: 5px solid #C5C5C5;
+    border-left: 5px solid #C5C5C5;
+    border-right: 5px solid #C5C5C5;
+    background-color: #828282;
+}
+.check-battery-wrap .slot-wrap .item span.adapter:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 13%;
+    top: -26.5px;
+    background-color: #828282;
+    width: 23%;
+    height: 30%;
+    border-top: 5px solid #C5C5C5;
+    border-right: 5px solid #C5C5C5;
+    border-left: 5px solid #C5C5C5;
+}
+.check-battery-wrap .slot-wrap .item span.adapter::before{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 13%;
+    top: -26.5px;
+    background-color: #828282;
+    width: 23%;
+    height: 30%;
+    border-top: 5px solid #C5C5C5;
+    border-right: 5px solid #C5C5C5;
+    border-left: 5px solid #C5C5C5;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.blue:after{
+    background-color: #46A0E9;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.red:after{
+    background-color: #D51210
+}
+.check-battery-wrap .slot-wrap .item span.adapter.green:after{
+    background-color: #29CC65;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.blue:before{
+    background-color: #46A0E9;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.red:before{
+    background-color: #D51210
+}
+.check-battery-wrap .slot-wrap .item span.adapter.green:before{
+    background-color: #29CC65;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.green{
+    background-color: #29CC65;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.blue{
+    background-color: #46A0E9;
+}
+.check-battery-wrap .slot-wrap .item span.adapter.red{
+    background-color: #D51210
+}
+.check-battery-wrap .slot-wrap .item span.battery.green{
+    background-color: #29CC65;
+}
+.check-battery-wrap .slot-wrap .item span.battery.blue{
+    background-color: #46A0E9;
+}
+.check-battery-wrap .slot-wrap .item span.battery.red{
+    background-color: #D51210
+}
+.check-battery-wrap .slot-wrap .title{
+    font-size: 3.8rem;
+    color: white;
+    margin-bottom: 24px;
+}
+.slot-wrap .bottom{
+    margin-top: 47px;
+}
+.slot-wrap .bottom dl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.slot-wrap .bottom dl:last-of-type{
+    margin-bottom: 0px;
+}
+.slot-wrap .bottom dl dt{
+    width: 50%;
+    text-align: right;
+    font-size: 2rem;
+    box-sizing: border-box;
+    padding-right: 1.5%;
+}
+.slot-wrap .bottom dl dd{
+    width: 50%;
+    text-align: left;
+    font-size: 2rem;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 1.5%;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-registration</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/station-bar.js"></script>
+    <script src="js/user-registration.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="modal-bg"></div>
+    <div class="popup user shadow-bold">
+        <form action="">
+            <h1 class="popup-title f-bold"></h1>
+                <ul class="input-list">
+                    <label for="">User ID</label>
+                    <li class="shadow-light"><input type="text" placeholder="ID" class="user-id"></li>
+                    <label for="">Name</label>
+                    <li class="shadow-light"><input type="text" placeholder="Name" class="user-name"></li>
+                    <label for="" class="u-password">Password</label>
+                    <li class="shadow-light u-password"><input type="password" placeholder="**********" class="user-password"></li>
+                    <label for="" class="u-password">Confirm Password</label>
+                    <li class="shadow-light u-password"><input type="password" placeholder="**********" class="user-confirm-password"></li>
+                </ul>
+                <button class="popup-btn f-midium shadow-light">SUBMIT</button>
+            <span class="close"></span>
+        </form>
+    </div>
+
+    <input type="number" id="page" value="5">
+    <header class="shadow-bold f-midium">
+        <div class="header-inner">
+            <h1 class="logo">ONIONEV BATTERY CMS</h1>
+            <nav>
+                <div class="bg-line"></div>
+                <div class="nav-inner">
+                    <ul class="text-box">
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>대시보드</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="station-power-management.html">
+                              <span class="img"></span>
+                              <p>스테이션 전원 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="charging-schedule-management.html">
+                              <span class="img"></span>
+                              <p>충전 스케줄 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="user-registration.html">
+                              <span class="img"></span>
+                              <p>사용자 관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="f-midium" href="dashboard.html">
+                              <span class="img"></span>
+                              <p>설정</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <form action="">
+                <ul class="user-box">
+                    <li class="user-img"><img src="img/ic-user.png" alt=""></li>
+                    <li class="user-name f-midium">홍길동</li>
+                    <li><input type="submit" value="LOGOUT"></li>
+                </ul>
+            </form>
+        </div>
+    </header>
+
+    <div class="main-wrap">
+        <h1 class="main-title f-bold">사용자 관리</h1>
+        <div class="wrap-title-inner">
+            <a href="javascript:history.go(-1);" class="back-btn f-midium">
+                <img src="img/arrow-back.svg" alt="">
+                <span>Back</span>
+            </a>
+            <div class="station-bar">
+                <ul>
+                    <li class="station-title-btn">
+                        <span class="text">전체</span>
+                        <span class="number f-regular">7</span>
+                    </li>
+                    <input type="text" class="station-bar-search" placeholder="Rack name...">
+                </ul>
+                <div class="add-btn-wrap">
+                    <select name="paging" class="page-view"></select>
+                    <button class="user-add-btn f-midium">추가</button>
+                </div>
+            </div>
+        </div>
+        <!-- station-bar -->
+        <div class="management-table-wrap">
+            <table>
+                <thead> 
+                    <tr class="t-head f-bold">
+                        <th>Status</th>
+                        <th>User ID</th>
+                        <th>User name</th>
+                        <th>Last Login</th>
+                        <th>Login fail</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="stationWrap user">
+                    <tr>
+                        <td class="status">활성</td>
+                        <td class="user-id"><input type="text" class="user-id-input" value="user1" readonly></td>
+                        <td class="user-name"><input type="text" class="user-name-input" value="userName1" readonly></td>
+                        <td class="rack-id">2021-03-05 09:03:02</td>
+                        <td class="login-fail">0</td>
+                        <td>
+                            <button class="modify f-midium">수정</button>
+                            <button class="delete f-midium">삭제</button>
+                            <button class="password-reset f-midium">비밀번호 초기화</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- management-table-wrap -->
+        <div class="paging-bar">
+            <a href="#" class="arrow-prev-double"></a>
+            <a href="#" class="arrow-prev"></a>
+            <ul>
+                <li class="on">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+            </ul>
+            <a href="#" class="arrow-next"></a>
+            <a href="#" class="arrow-next-double"></a>
+        </div>
+        <!-- paging-bar -->
+    </div>
+    <!-- main-wrap -->
+</body>
+</html>

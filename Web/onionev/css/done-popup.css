@@ -1,0 +1,48 @@
+.done_popup{
+  position: fixed;
+  max-width: 400px;
+  left: 2%;
+  bottom: -2%;
+  opacity: 0;
+  background-color: #202124;
+  padding: 14px 26px;
+  border-radius: 6px;
+}
+@keyframes popupAni{
+  0%{opacity: 0;bottom: -2%;}
+  10%{opacity: 1;bottom: 4%;}
+  90%{opacity: 1;bottom: 4%;}
+  100%{opacity: 0;bottom: -2%;}
+}
+.done_popup h1{
+  font-size: 1.8rem;
+  color: white;
+}
+.done_popup.on{
+  opacity: 1;
+  bottom: 2%;
+  -webkit-animation: popupAni 3s ease-in-out forwards 0s;
+                         /* ↑↑↑↑ 팝업 나오는 시간 */
+}
+
+.load_popup{
+  position: fixed;
+  max-width: 400px;
+  left: 2%;
+  bottom: -2%;
+  opacity: 0;
+  background-color: #202124;
+  padding: 14px 26px;
+  border-radius: 6px;
+}
+
+.load_popup h1{
+  font-size: 1.8rem;
+  color: white;
+}
+.load_popup.on{
+  opacity: 1;
+  bottom: 2%;
+  -webkit-animation: popupAni 10s ease-in-out forwards 0s;
+                         /* ↑↑↑↑ 팝업 나오는 시간 */
+}

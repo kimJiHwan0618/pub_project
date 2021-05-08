@@ -1,0 +1,67 @@
+.user-registration-wrap{
+    margin-left: 2%;
+    width: 100%;
+}
+.user-registration-wrap .user-wrap-inner{
+    width: 70%;
+    margin: 70px auto 0;
+}
+.user-registration-wrap .user-wrap-inner label{
+   width: 70%;
+   margin: 0 auto 15px;
+   display: block;
+   font-size: 2rem;
+}
+.user-registration-wrap .user-wrap-inner li{
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 3.5%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.user-registration-wrap .user-wrap-inner li input{
+    border: none;
+    background: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.user-registration-wrap .user-wrap-inner li:first-of-type{
+    margin-top: 0px;
+}
+.user-registration-wrap .user-wrap-inner li:last-of-type{
+    padding: 0px;
+    background-color: #4e4e4e;
+    margin-top: 40px;
+}
+.user-registration-wrap .user-wrap-inner li:last-of-type input{
+    color: white;
+    cursor: pointer;
+}
+.station-bar .user-add-btn{
+    padding: 7px 16px;
+    font-size: 2rem;
+    background-color: #2ea44f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    opacity: 0.95;
+    -webkit-transition: all 0.1s linear 0s;
+    -webkit-transform: scale(0.99);
+}
+.station-bar .user-add-btn:hover{
+    opacity: 1;
+    -webkit-transform: scale(1);
+}
+@media screen and (max-width:1000px){
+    .station-bar .user-add-btn{
+        padding: 7px 14px;
+        font-size: 1.8rem;
+    }
+}

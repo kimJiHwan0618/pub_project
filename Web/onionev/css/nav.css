@@ -1,0 +1,179 @@
+nav{
+    height: 100%;
+    left: 0;
+    top: 56px;
+}
+nav .nav-inner{
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 5;
+}
+nav .nav-inner ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav .nav-inner ul li{
+    display: flex;
+    align-items: center;
+    margin: 0 9px;
+    opacity: 0.65;
+    position: relative;
+}
+nav .nav-inner ul li  p{
+    display: none;
+    margin-left: 9px;
+}
+nav .nav-inner ul li span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+nav .nav-inner ul li:hover{
+    opacity: 1;
+}
+nav .nav-inner ul li.on{
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    background-color: #FFC001;
+}
+nav .nav-inner ul li a{
+    padding: 0 12px;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+nav .nav-inner ul li.on a{
+    color: #1d1d1d;
+    width: auto;
+}
+nav .nav-inner ul li.on p{
+    display: block;
+    font-family: 'NotoSansKR-Midium';
+}
+nav .nav-inner ul li:first-of-type span{
+    background: url(../img/nav/ic-nav1-off.svg) no-repeat 0 0;
+    background-size: cover;
+}
+nav .nav-inner ul li:nth-of-type(2) span{
+    background: url(../img/nav/ic-nav2-off.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li:nth-of-type(3) span{
+    background: url(../img/nav/ic-nav3-off.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li:nth-of-type(4) span{
+    background: url(../img/nav/ic-nav4-off.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li:nth-of-type(5) span{
+    background: url(../img/nav/ic-nav5-off.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li:nth-of-type(6) span{
+    background: url(../img/nav/ic-nav6-off.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on:first-of-type span{
+    background: url(../img/nav/ic-nav1-on.svg) no-repeat 0 0;
+    background-size: cover;
+}
+nav .nav-inner ul li.on:nth-of-type(2) span{
+    background: url(../img/nav/ic-nav2-on.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on:nth-of-type(3) span{
+    background: url(../img/nav/ic-nav3-on.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on:nth-of-type(4) span{
+    background: url(../img/nav/ic-nav4-on.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on:nth-of-type(5) span{
+    background: url(../img/nav/ic-nav5-on.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on:nth-of-type(6) span{
+    background: url(../img/nav/ic-nav6-on.svg) no-repeat 0 0;
+    background-size: cover
+}
+nav .nav-inner ul li.on a{
+    color: #1d1d1d;
+}
+@media screen and (max-width:1300px){
+    /* nav .nav-inner ul li span{
+        width: 27px;
+        height: 27px;
+        left: 10.5px;
+    }
+    nav .nav-inner ul li a{
+        color: white;
+        font-size: 1.4rem;
+        margin-left: 7px;
+        padding: 0 9px 0 36px;
+    } */
+    
+}
+@media screen and (max-width:1145px){
+    /* nav{
+        position: fixed;
+        left: 0;
+        top: 50px;
+        background-color: #2e2e2e;
+        width: 100%;
+        height: 50px;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    }
+    nav .nav-inner{
+        width: 94.47%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    nav .nav-inner ul{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    nav .nav-inner ul li{
+        padding: 0px;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    nav .nav-inner ul li span{
+        left: 4%;
+        bottom: 0;
+        width: 36px;
+        height: 36px;
+        opacity: 0.15;
+        -webkit-transform: translateY(0px); 
+    }
+    nav .nav-inner ul li a{
+        width: 100%;
+        margin-left: 0px;
+        padding: 0;
+        text-align: center;
+    } */
+}
+@media screen and (max-width:1050px){
+    nav .nav-inner ul li span{
+        width: 28px;
+        height: 28px;
+    }
+    nav .nav-inner ul li a{
+        padding: 0 7px;
+        font-size: 1.4rem;
+    }
+    nav .nav-inner ul li{
+        margin: 0 3px;
+    }
+    nav .nav-inner ul li  p{
+        margin-left: 7px;
+    }
+}
