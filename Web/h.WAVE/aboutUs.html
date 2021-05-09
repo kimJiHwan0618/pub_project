@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aboutUs</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        document.addEventListener('scroll', function() {
+          let _documentY = document.documentElement.scrollTop;
+          let _direction = _documentY - window.__scrollPosition >= 0 ? 1 : -1;
+          
+          window.__scrollPosition = _documentY;
+          
+          if(__scrollPosition >= $('.about1').offset().top-500 && __scrollPosition < $('.about2').offset().top){
+            $('.about1').addClass('on')
+          }
+          if(__scrollPosition >= $('.about2').offset().top-500 && __scrollPosition < $('.about3').offset().top){
+            $('.about2').addClass('on')
+          }
+          if(__scrollPosition >= $('.about3').offset().top-500 && __scrollPosition < $('.map-wrap').offset().top){
+            $('.about3').addClass('on')
+          }
+          // 스크롤 애니메이션
+        });
+      })
+    </script>
+</head>
+<body>
+      <div class="modal-bg"></div>
+      <!-- header -->
+      <header class="logo_white">
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="img/logo-blue.png" alt="">
+              <img src="img/logo-white.png" alt="">
+            </a>
+          </h1>
+          <div class="header-right">
+            <nav>
+              <ul>
+                <li><a href="index.html" class="f-midium">HOME</a></li>
+                <li><a href="aboutUs.html" class="f-midium on">ABOUT US</a></li>
+                <li><a href="products.html" class="f-midium">PRODUCTS</a></li>
+                <li><a href="support.html" class="f-midium">SUPPORT</a></li>
+                <li><a href="contact.html" class="f-midium">CONTACT</a></li>
+              </ul>
+            </nav>
+            <form action="">
+              <a href="signIn.html" class="signin-btn f-midium">Sign in</a>
+            </form>
+          </div>
+          <!-- //header-right-->
+          <!--모바일 메뉴 버튼-->
+          <div id="hamburger" class="hamburglar mobile-menu-btn">
+            <div class="burger-icon">
+              <div class="burger-container">
+                <span class="burger-bun-top"></span>
+                <span class="burger-filling"></span>
+                <span class="burger-bun-bot"></span>
+              </div>
+            </div>
+            <!-- svg ring containter -->
+            <div class="burger-ring">
+              <svg class="svg-ring">
+                <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+              </svg>
+            </div>
+            <!-- the masked path that animates the fill to the ring -->
+            <svg width="0" height="0">
+              <mask id="mask">
+                <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+              </mask>
+            </svg>
+            <div class="path-burger">
+              <div class="animate-path">
+                <div class="path-rotation"></div>
+              </div>
+            </div>
+          </div>
+          <!--//모바일 메뉴 버튼-->
+        </div>
+        <!-- //header-inner-->
+      </header>
+      <!-- //header -->
+
+      <!-- main -->
+      <main>
+        <section class="subpage-title-wrap about">
+          <div class="sub-txt-box">
+            <h2 class="subpage-title f-bold">ABOUT US</h2>
+            <p class="subpage-notice">We are developing innovative store management solutions targeting the Southeast Asian market.</p>
+          </div>
+        </section>
+        <!-- //subpage-title-wrap -->
+        <div class="section-about-box about1">
+            <div class="img-wrap">
+                <img src="img/aboutus/about1.png" alt="">
+            </div>
+            <div class="txt-wrap">
+                <dl>
+                    <dt class="f-bold">Business</dt>
+                    <dd>Our company is a team of developers with more than 10
+                        years of experience, and is working with one goal in
+                        mind: efficient sales management solution. Currently we
+                        are developing payment software and sales analysis
+                        server for SEA countries, and are proceeding
+                        customization to meet the local characteristics.</dd>
+                </dl>
+                <a href="#" class="f-bold">Contact us <span class="arrow">→</span></a>
+            </div>
+        </div>
+        <div class="section-about-box about2">
+            <div class="img-wrap">
+                <img src="img/aboutus/about2.png" alt="">
+            </div>
+            <div class="txt-wrap">
+                <dl>
+                    <dt class="f-bold">Management of All Data that Occurs in the shop</dt>
+                    <dd>"All data gathered in a shop are collected on the cloud server,
+                        and collected data goes through various forms of analysis. It
+                        allows effective stock management, item sales management,
+                        and intellectual sales management for users"</dd>
+                </dl>
+                <a href="#" class="f-bold">Products <span class="arrow">→</span></a>
+            </div>
+        </div>
+        <div class="section-about-box about3">
+            <div class="img-wrap">
+                <img src="img/aboutus/about3.png" alt="">
+            </div>
+            <div class="txt-wrap">
+                <dl>
+                    <dt class="f-bold">Expanding business area with simple payment</dt>
+                    <dd>We are expanding our field of business to mobile simple
+                        payment system development with low commission fee by
+                        direct linkage to banks for SEA countries where payment by
+                        cash is occurred more than payment by cards.</dd>
+                </dl>
+                <a href="#" class="f-bold">Contact us <span class="arrow">→</span></a>
+            </div>
+        </div>
+      </main>
+      <!-- //main -->
+      
+      <div class="map-wrap">
+        <div class="info-wrap">
+          <div class="inner">
+            <dl>
+              <dt class="f-midium">Hingom Corp.</dt>
+              <dd>
+                <span class="icon"></span>
+                10F 1006-1HO
+                184, Gasan digital 2-ro, Geumcheon-gu,
+                Seoul, Republic of Korea
+              </dd>
+              <dd>
+                <span class="icon"></span>
+                    veda@hingom.com
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="map-box">
+          <!-- map -->
+          <div id="map">
+          </div>
+          <!-- //map -->
+          <script>
+             function initMap() {
+                var pinLocation = {lat: 37.48450843175251, lng: 126.87792082510573} 
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: {lat: 37.48450843175251, lng: 126.87792082510573},
+                  zoom: 16
+                });
+
+                var marker = new google.maps.Marker({
+                    position: pinLocation,
+                    map: map,
+                    title:"(주)흰곰 본사",
+                    icon: 'https://kimjihwan0618.github.io/h.WAVE/img/map-marker.png'
+                });
+              }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=&language=en&callback=initMap" async defer></script>
+        </div>
+        <!-- //map-box -->
+      </div>
+      <!-- //mao-wrap -->
+
+      <!--footer-->
+      <footer>
+        <div class="footer-inner">
+          <div class="left">
+            <img src="img/logo-white.png" alt="">
+            <p class="f-thin">
+              Gasan digital2-ro, Geumcheon-gu, Seoul,<br />
+              Republic of Korea 10F 1006-1, 184
+            </p>
+          </div>
+          <div class="right">
+            <div class="contact-us">
+              <h6 class="f-midium">CONTACT</h6>
+              <p class="f-thin">h.WAVE is a cloud platform developed by Hingom Corp.<br>
+                H.WAVE is a solution that collects and analyzes various data in the store using h.POS and h.Store.
+              </p>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>Phone&nbsp;:</dt>
+                    <dd class="f-midium">&nbsp;(856+)20-9966-8844</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Email&nbsp;:</dt>
+                    <dd class="f-midium">&nbsp;neolaosinfo@hingom.com</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>Skype&nbsp;</dt>
+                    <dd class="f-midium">&nbsp;neolaosinfo</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <div class="follow-us">
+              <h6 class="f-midium">FOLLOW US</h6>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/hingomlaos" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                      <path id="facebook-square-brands" d="M35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97H16.528V58.381H10.907v-6.4h5.621V47.11c0-5.545,3.3-8.608,8.357-8.608a34.051,34.051,0,0,1,4.953.432v5.442h-2.79c-2.749,0-3.606,1.706-3.606,3.455v4.153h6.136l-.981,6.4H23.442V71.97H35.687a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                      <path id="twitter-square-brands" d="M35.687,32H4.282A4.284,4.284,0,0,0,0,36.282v31.4A4.284,4.284,0,0,0,4.282,71.97h31.4a4.284,4.284,0,0,0,4.282-4.282v-31.4A4.284,4.284,0,0,0,35.687,32ZM31.325,46.168c.018.25.018.509.018.758,0,7.735-5.888,16.648-16.648,16.648A16.571,16.571,0,0,1,5.71,60.951a12.327,12.327,0,0,0,1.41.071,11.732,11.732,0,0,0,7.262-2.5,5.859,5.859,0,0,1-5.469-4.059,6.306,6.306,0,0,0,2.641-.107A5.852,5.852,0,0,1,6.87,48.612v-.071a5.848,5.848,0,0,0,2.641.741A5.839,5.839,0,0,1,6.905,44.41,5.778,5.778,0,0,1,7.7,41.457a16.615,16.615,0,0,0,12.062,6.12,5.864,5.864,0,0,1,9.984-5.344,11.466,11.466,0,0,0,3.711-1.41,5.836,5.836,0,0,1-2.569,3.221,11.644,11.644,0,0,0,3.372-.91A12.316,12.316,0,0,1,31.325,46.168Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                      <path id="instagram-square-brands" d="M19.985,47.226a4.759,4.759,0,1,0,4.761,4.759A4.759,4.759,0,0,0,19.985,47.226Zm11.126-3.658A4.818,4.818,0,0,0,28.4,40.855c-1.874-.74-6.334-.574-8.413-.574s-6.535-.172-8.414.574a4.818,4.818,0,0,0-2.713,2.713c-.739,1.874-.574,6.339-.574,8.416s-.165,6.537.577,8.417a4.818,4.818,0,0,0,2.713,2.713c1.874.74,6.334.574,8.414.574s6.534.172,8.413-.574A4.818,4.818,0,0,0,31.115,60.4c.745-1.874.574-6.339.574-8.416s.171-6.536-.574-8.416ZM19.985,59.3a7.307,7.307,0,1,1,5.176-2.14,7.316,7.316,0,0,1-5.176,2.14ZM27.6,46.07a1.7,1.7,0,1,1,1.21-.5,1.708,1.708,0,0,1-1.21.5ZM35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97h31.4a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32ZM34.16,57.873a8.489,8.489,0,0,1-2.306,5.978,8.493,8.493,0,0,1-5.978,2.306c-2.356.133-9.421.133-11.777,0a8.5,8.5,0,0,1-5.978-2.306,8.463,8.463,0,0,1-2.306-5.978c-.133-2.357-.133-9.422,0-11.777a8.462,8.462,0,0,1,2.306-5.978,8.509,8.509,0,0,1,5.978-2.3c2.356-.133,9.421-.133,11.777,0a8.494,8.494,0,0,1,5.978,2.306,8.494,8.494,0,0,1,2.306,5.982C34.293,48.455,34.293,55.514,34.16,57.873Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                    </svg>                  
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">Copyright ⓒ 2021 h.WAVE. All rights reserved.</p>
+      </footer>
+</body>
+</html>

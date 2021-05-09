@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header.js"></script>
+    <script type="text/javascript">
+      $(function(){
+
+          let swipeData = { 
+            screenHalfWidth : window.innerWidth/2,
+            screenHalfHeight : window.innerWidth/15,
+            touchStartPosition : 0,
+            activeIndex : 0,
+            beforeActiveIndex : 0,
+            slideActiveMoving : 0
+          }
+          
+          $('.swipe_title_box ul li').click(function(){
+
+            removeAni();
+
+            swipeData.activeIndex = $(this).index()-1
+
+            if((swipeData.activeIndex === swipeData.beforeActiveIndex) === false){
+              swipeAni ();
+              scrollMove ();
+            }else {
+              $('.swipe_info_wrap').addClass('ani')
+              return false;
+            }
+
+          })
+          
+          let swipeBox = document.querySelector('.train-wrap-inner')
+
+          swipeBox.addEventListener("touchstart",handleStart,false);
+          swipeBox.addEventListener("touchmove", handleMove,false);
+          swipeBox.addEventListener("touchend",handlEnd,false);
+
+          function handleStart(evt) {
+            swipeData.touchStartPosition = evt.changedTouches[0].clientX
+          }
+
+          function handleMove(evt) {
+            
+            swipeData.slideActiveMoving = (swipeData.touchStartPosition - evt.changedTouches[0].clientX) / 1.5
+
+          }
+
+          function handlEnd(evt) {
+            let touchEndPosition = evt.changedTouches[0].clientX;
+
+            if(Math.abs(swipeData.slideActiveMoving) > swipeData.screenHalfWidth/2){
+              // 감도 n 이상일때 스와이프 실행
+              removeAni();
+              if(touchEndPosition > swipeData.screenHalfWidth){
+                // 스와이프 right
+                swipeData.activeIndex = swipeData.activeIndex -1;
+                swipeData.beforeActiveIndex = swipeData.activeIndex+1;
+                if(swipeData.activeIndex === -1){
+                  swipeData.activeIndex = 3
+                  swipeData.beforeActiveIndex = 0
+                }
+              }else{
+                // 스와이프 left
+                swipeData.activeIndex = swipeData.activeIndex +1;
+                swipeData.beforeActiveIndex = swipeData.activeIndex-1;
+                if(swipeData.activeIndex === 4){
+                  swipeData.activeIndex = 0
+                  swipeData.beforeActiveIndex = 3
+                }
+              }
+              swipeAni ();
+              scrollMove ();
+            }
+            swipeData.slideActiveMoving = 0
+          }
+
+          function swipeAni () {
+            $('.tab-motion').css('left',(swipeData.activeIndex*25)+'%')
+            $('.swipe_title_box ul li').removeClass('on')
+            $('.swipe_title_box ul li').eq(swipeData.activeIndex).addClass('on')
+            
+            setTimeout(function (){
+              $('.swipe_info_wrap').removeClass('on')
+              $('.swipe_info_wrap').eq(swipeData.activeIndex).addClass('on').addClass('ani')
+            },300)      
+          }
+
+          function removeAni () {
+            $('.swipe_info_wrap').removeClass('ani')
+            
+            swipeData.beforeActiveIndex = $('.swipe_title_box ul li.on').index()-1
+          }
+
+          scrollMove = () => {
+            let screenWidth = window.innerWidth
+
+            if(screenWidth > 1280){
+              window.scrollTo(504,504)
+            }else if(screenWidth > 980 && screenWidth < 1280){
+              window.scrollTo(467,467)
+            }else{
+              window.scrollTo(307,307)
+            }     
+          }
+
+      })
+    </script>
+</head>
+<body>
+    <div class="modal-bg"></div>
+    <!-- header -->
+    <header class="logo_white">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/logo-blue.png" alt="">
+            <img src="img/logo-white.png" alt="">
+          </a>
+        </h1>
+        <div class="header-right">
+          <nav>
+            <ul>
+              <li><a href="index.html" class="f-midium">HOME</a></li>
+              <li><a href="aboutUs.html" class="f-midium">ABOUT US</a></li>
+              <li><a href="products.html" class="f-midium on">PRODUCTS</a></li>
+              <li><a href="support.html" class="f-midium">SUPPORT</a></li>
+              <li><a href="contact.html" class="f-midium">CONTACT</a></li>
+            </ul>
+          </nav>
+          <form action="">
+            <a href="signIn.html" class="signin-btn f-midium">Sign in</a>
+          </form>
+        </div>
+        <!-- //header-right-->
+        <!--모바일 메뉴 버튼-->
+        <div id="hamburger" class="hamburglar mobile-menu-btn">
+          <div class="burger-icon">
+            <div class="burger-container">
+              <span class="burger-bun-top"></span>
+              <span class="burger-filling"></span>
+              <span class="burger-bun-bot"></span>
+            </div>
+          </div>
+          <!-- svg ring containter -->
+          <div class="burger-ring">
+            <svg class="svg-ring">
+              <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+            </svg>
+          </div>
+          <!-- the masked path that animates the fill to the ring -->
+           <svg width="0" height="0">
+             <mask id="mask">
+          <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+             </mask>
+           </svg>
+          <div class="path-burger">
+            <div class="animate-path">
+              <div class="path-rotation"></div>
+            </div>
+          </div>
+        </div>
+        <!--//모바일 메뉴 버튼-->
+      </div>
+      <!-- //header-inner-->
+    </header>
+    <!-- //header -->
+    
+    <main>
+      <section class="subpage-title-wrap products">
+        <div class="sub-txt-box">
+          <h2 class="subpage-title f-bold">PRODUCTS</h2>
+          <p class="subpage-notice">With h.WAVE, all sales data occurred in a shop is collected and analyzed, and with hingomApp you can check the status of shops, at anytime and anywhere.</p>
+        </div>
+      </section>
+     <!-- //subpage-title-wrap -->
+      
+     <!-- swipe_title_box -->
+      <div class="swipe_title_box">
+        <ul>
+            <span class="tab-motion"></span>
+            <li class="on f-midium">h.WAVE</li>
+            <li class="f-midium">h.POS</li>
+            <li class="f-midium">h.STORE</li>
+            <li class="f-midium">h.ORDER</li>
+        </ul>
+      </div>
+      <!-- //swipe_title_box -->
+
+      <div class="train-wrap">
+        <!-- swipe_train -->
+        <div class="swipe_train">
+          <div class="train-wrap-inner">
+            <div class="swipe_info_wrap on ani">
+              <div class="inner">
+                  <div class="title">
+                    <h3>h.WAVE</h3>
+                    <h4>h.Wave collects and analyzes sales data from POS</h4>
+                  </div>
+                  <div class="info-section">
+                    <div class="img-wrap">
+                        <img src="img/products/h-wave4.png" alt="">
+                    </div>
+                    <dl class="txt-wrap">
+                        <dt class="f-midium">Multiple store management</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <span class="num f-midium">1</span>
+                                    <span class="txt">
+                                      You can compare and analyze the performance of each store.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="num f-midium">2</span>
+                                    <span class="txt">
+                                      One account allows you to manage products, employees and customers across multiple stores
+                                    </span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                  </div>
+                  <!-- //info-section -->
+                  <div class="info-section">
+                    <div class="img-wrap">
+                        <img src="img/products/h-wave1.png" alt="">
+                    </div>
+                    <dl class="txt-wrap">
+                        <dt class="f-midium">Sales Trend Analysis</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <span class="num f-midium">1</span>
+                                    <span class="txt">
+                                      You can track grow or drop in sales by comparing it to the
+                                      previous day, week, or month to take necessary reaction to
+                                      the change.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="num f-midium">2</span>
+                                    <span class="txt">
+                                      You can select best seller item using sales analysis by items to
+                                      make right purchase decisions.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="num f-midium">3</span>
+                                    <span class="txt">
+                                      You can monitor each transaction, like sales, refunds, discounts, etc.
+                                      by reviewing receipt history
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="num f-midium">4</span>
+                                    <span class="txt">
+                                      With dashboard, you can check current sales status by stores
+                                      at a glance, and monitor status of each device being operated
+                                      in each stores.
+                                    </span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                  </div>
+                  <!-- //info-section -->
+                  <div class="info-section">
+                    <div class="img-wrap">
+                        <img src="img/products/h-wave3.png" alt="">
+                    </div>
+                    <dl class="txt-wrap">
+                      <dt class="f-midium">Provides various analysis services</dt>
+                      <dd>
+                          <ul>
+                              <li>
+                                  <span class="num f-midium">1</span>
+                                  <span class="txt">
+                                    Collects sales, orders, kitchen order processing patterns, inventory status, etc. generated in stores
+                                  </span>
+                              </li>
+                              <li>
+                                  <span class="num f-midium">2</span>
+                                  <span class="txt">
+                                    Analysis of sales growth and decline factors
+                                  </span>
+                              </li>
+                              <li>
+                                  <span class="num f-midium">3</span>
+                                  <span class="txt">
+                                    Product (material) preparation quantity and inventory exhaustion forecast
+                                  </span>
+                              </li>
+                          </ul>
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- //info-section -->
+              </div>
+              <div class="product-btn-wrap">
+                <div class="btn-wrap-inner">
+                  <dl class="txt">
+                    <dt class="f-midium">Create h.Wave Account</dt>
+                    <dd>You can use h.POS and hingomApp after creating a h.Wave Account</dd>
+                  </dl>
+                  <div class="btn">
+                    <a href="#" class="f-midium">Get account <span class="arrow">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //h.WAVE -->
+            <div class="swipe_info_wrap">
+              <div class="inner">
+                <div class="title">
+                  <h3>h.POS</h3>
+                  <h4>h.POS that can be used on restaurant, retail stores can be linked with h.WAVE, and it is a POS Software for South East Asian countries where payment by cash is the major method of payment.</h4>
+                </div>
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos1.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                      <dt class="f-midium">Simple Use</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                              <span class="num f-midium">1</span>
+                              <span class="txt">
+                                With simple menu and usage, even beginners can easily use it
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">2</span>
+                              <span class="txt">
+                                Supports category, item management, item batch registration features.
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">3</span>
+                              <span class="txt">
+                                Supports credit registration and payment management
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">4</span>
+                              <span class="txt">
+                                Supports refund, receipt reprint feature
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">5</span>
+                              <span class="txt">
+                                Supports easy maintenance with automatic updates.
+                              </span>
+                          </li>
+                        </ul>
+                      </dd>
+                  </dl>
+                </div>
+                  <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos2.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Language Support</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span class="num f-midium">1</span>
+                                <span class="txt">
+                                  We currently support English, Lao, Thai, and Korean.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">2</span>
+                                <span class="txt">
+                                  The application is designed to support easy addition of languages, thus can flexibly react to the demands of different countries.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">3</span>
+                                <span class="txt">
+                                  The language can be set on system settings, and the change is applied at once.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">4</span>
+                                <span class="txt">
+                                  Upon addition of new language, the language can be applied after an automatic update.
+                                </span>
+                            </li>
+                        </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos3.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Supports Various Currencies</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                            <span class="num f-midium">1</span>
+                            <span class="txt">
+                              The POS supports payment by different currencies for the case of tourists who didn’t get to exchange for the local currency.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">2</span>
+                            <span class="txt">
+                              The application is designed to support easy addition of languages, thus can flexibly react to the demands of different countries.
+                            </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos4.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Supports Various Reports</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                            <span class="num f-midium">1</span>
+                            <span class="txt">
+                              Supports sales report by items and categories
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">2</span>
+                            <span class="txt">
+                              Supports chart by month and by year
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">3</span>
+                            <span class="txt">
+                              Shows Top 10 best selling categories as a pie chart.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">4</span>
+                            <span class="txt">
+                              Shows Top 10 best selling items as a pie chart.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">5</span>
+                            <span class="txt">
+                              You can check the staff history who used POS.
+                            </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos5.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Simple Stock Management</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                            <span class="num f-midium">1</span>
+                            <span class="txt">
+                              Low Stock Alert feature is provided, so if the number of items in stock goes below the preset value, the item list is notified as a pop-up, allowing the owner to restock before they are sold out.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">2</span>
+                            <span class="txt">
+                              Stock history can be browsed by various types, including Item purchase/sales, lost, refunded, damaged, etc.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">3</span>
+                            <span class="txt">
+                              Even if the set item is separated into single items, the stock management can be made as single items.
+                            </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.pos6.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Supports Set Item Sales</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                            <span class="num f-midium">1</span>
+                            <span class="txt">
+                              You may register a collection of items sold together as a set item.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">2</span>
+                            <span class="txt">
+                              Custom set items, like set menu or gift package, can be registered.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num f-midium">3</span>
+                            <span class="txt">
+                              The base of stock management is single items, thus even if the set item is rearranged as single items, the number of items in stock are not affected.
+                            </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+              </div>
+              <div class="product-btn-wrap">
+                <div class="btn-wrap-inner">
+                  <dl class="txt">
+                    <dt class="f-midium">Download h.POS software</dt>
+                    <dd>After signing in with an account you created at h.WAVE, you can download h.POS authentication key.</dd>
+                  </dl>
+                  <div class="btn">
+                    <a href="#" class="f-midium">Download <span class="arrow">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //hingomPOS -->
+            <div class="swipe_info_wrap">
+              <div class="inner">
+                <div class="title">
+                  <h3>h.STORE</h3>
+                  <h4>h.STORE is an mobile app for shop owners which allows the users to check sales data, that is occurred by the POS installed at their stores, organized by devices or by stores.</h4>
+                </div>
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.store1.svg" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                      <dt class="f-midium">Check All Sales at A Glance</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                              <span class="num f-midium">1</span>
+                              <span class="txt">
+                                You can check the sales of all stores with one account you created on h.Wave.
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">2</span>
+                              <span class="txt">
+                                All sales and sales statistics can be browsed by day.
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">3</span>
+                              <span class="txt">
+                                You can check the sales progress of last five days as a graph.
+                              </span>
+                          </li>
+                        </ul>
+                      </dd>
+                  </dl>
+                </div>
+                  <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.store2.svg" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Device Status Management by Types</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span class="num f-midium">1</span>
+                                <span class="txt">
+                                  You can check all POS linked with API provided by h.WAVE.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">2</span>
+                                <span class="txt">
+                                  You can check the online status of devices, s/w version, shop status, etc.
+                                </span>
+                            </li>
+                        </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.store3.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Check Payment Record</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span class="num f-midium">1</span>
+                                <span class="txt">
+                                  You can check today’s, yesterday’s, last week’s, or last month’s sales record of each shop.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">2</span>
+                                <span class="txt">
+                                  You can check the sales record by payment method including cash, credit, refund, etc.
+                                </span>
+                            </li>
+                        </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+                <div class="info-section">
+                  <div class="img-wrap">
+                      <img src="img/products/h.store4.png" alt="">
+                  </div>
+                  <dl class="txt-wrap">
+                    <dt class="f-midium">Check Receipt</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span class="num f-midium">1</span>
+                                <span class="txt">
+                                  You can check the payment receipt to see what items are sold.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">2</span>
+                                <span class="txt">
+                                  You can check which one of your staff sold the item on the receipt
+                                </span>
+                            </li>
+                        </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <!-- //info-section -->
+              </div>
+              <div class="product-btn-wrap">
+                <div class="btn-wrap-inner">
+                  <dl class="txt">
+                    <dt class="f-midium">App Download</dt>
+                    <dd>Download application that suits your smartphone platform, and login with hingomWave account</dd>
+                  </dl>
+                  <div class="btn-wrap">
+                    <a href="#">
+                      <ul>
+                        <li class="img">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect id="사각형_188" data-name="사각형 188" width="35" height="35" transform="translate(0 -0.353)" fill="#fff" stroke="#707070" stroke-width="1"/>
+                              </clipPath>
+                              <linearGradient id="linear-gradient" x1="0.953" y1="0.544" x2="-0.074" y2="0.544" gradientUnits="objectBoundingBox">
+                                <stop offset="0" class="gradient1" stop-color="#7c9fdc"/>
+                                <stop offset="1" class="gradient2" stop-color="#143d85"/>
+                              </linearGradient>
+                            </defs>
+                            <g id="마스크_그룹_56" data-name="마스크 그룹 56" transform="translate(0 0.353)" clip-path="url(#clip-path)">
+                              <path id="play-store" d="M39.932,13.823,16.615.5A3.756,3.756,0,0,0,11,3.756V30.413a3.756,3.756,0,0,0,5.62,3.261L39.932,20.345a3.756,3.756,0,0,0,0-6.522Zm-10.1-3.152-3.2,4.459L18.969,4.464ZM14.6,31.878a1.465,1.465,0,0,1-.595-.187,1.483,1.483,0,0,1-.736-1.278V3.756A1.471,1.471,0,0,1,14.6,2.288l10.622,14.8ZM18.969,29.7l7.658-10.667,3.2,4.459ZM38.8,18.368,31.816,22.36l-3.788-5.276,3.788-5.276L38.8,15.8a1.478,1.478,0,0,1,0,2.566Z" transform="translate(-9.325 0)" fill="url(#linear-gradient)"/>
+                            </g>
+                          </svg>
+                        </li>
+                        <li>
+                          <p>ANDROID APP ON</p>
+                          <p class="f-midium">Google play</p>
+                        </li>
+                      </ul>
+                    </a>
+                    <a href="#">
+                      <ul>
+                        <li class="img">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect id="사각형_190" data-name="사각형 190" width="35" height="35" transform="translate(0 -0.402)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0.5"/>
+                              </clipPath>
+                              <linearGradient id="linear-gradient2" x1="0.955" y1="0.557" x2="0" y2="0.568" gradientUnits="objectBoundingBox">
+                                <stop offset="0" class="gradient3" stop-color="#7c9fdc"/>
+                                <stop offset="1" class="gradient4" stop-color="#143d85"/>
+                              </linearGradient>
+                            </defs>
+                            <g id="마스크_그룹_58" data-name="마스크 그룹 58" transform="translate(0 0.402)" clip-path="url(#clip-path)">
+                              <g id="app-store" transform="translate(0 0.018)">
+                                <g id="그룹_320" data-name="그룹 320">
+                                  <path id="패스_170" data-name="패스 170" d="M27.324,0H7.049A7.057,7.057,0,0,0,0,7.049V27.324a7.057,7.057,0,0,0,7.049,7.049H27.324a7.057,7.057,0,0,0,7.049-7.049V7.049A7.057,7.057,0,0,0,27.324,0ZM10.584,26.486a1.678,1.678,0,0,1-2.907-1.678l.33-.572h3.876ZM7.418,22.893a1.678,1.678,0,0,1,0-3.357h3.3l4.529-7.844L14.021,9.567a1.68,1.68,0,0,1,.614-2.293h0a1.68,1.68,0,0,1,2.293.614l.258.447.258-.447a1.678,1.678,0,1,1,2.907,1.678L14.6,19.536h3.631l1.938,3.357Zm19.536,0H25.591L26.7,24.808a1.678,1.678,0,1,1-2.907,1.678L17.962,16.392,19.9,13.035l3.753,6.5h3.3a1.678,1.678,0,1,1,0,3.357Z" fill="url(#linear-gradient2)"/>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </li>
+                        <li>
+                          <p>AVAULABLE ON THIE</p>
+                          <p class="f-midium">App Store</p>
+                        </li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //h.STORE -->
+            <div class="swipe_info_wrap">
+            <div class="inner">
+              <div class="title">
+                <h3>h.ORDER</h3>
+                <h4>h.ORDER is an app that works with h.POS to easily place an order.</h4>
+              </div>
+              <div class="info-section">
+                <div class="img-wrap">
+                    <img src="img/products/h-wave1.png" alt="">
+                </div>
+                <dl class="txt-wrap">
+                    <dt class="f-midium">Instant order through the app</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span class="num f-midium">1</span>
+                                <span class="txt">
+                                  To increase the ability to order food via mobile or tablet, which makes it easy to create order lists.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">2</span>
+                                <span class="txt">
+                                You can download phone and tablet PC versions for free from Google Play Store and App Store.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">3</span>
+                                <span class="txt">
+                                When connecting for the first time, you can connect by scanning the QR code displayed on h.POS, and after that, it is
+                                automatically connected.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="num f-midium">4</span>
+                                <span class="txt">
+                                  The order form is printed to the kitchen printer connected to h.POS as soon as the order is placed
+                                </span>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+              </div>
+              <!-- //info-section -->
+              <div class="info-section">
+                <div class="img-wrap">
+                    <img src="img/products/h-wave2.png" alt="">
+                </div>
+                <dl class="txt-wrap">
+                  <dt class="f-midium">API Interface Support</dt>
+                  <dd>
+                      <ul>
+                          <li>
+                              <span class="num f-midium">1</span>
+                              <span class="txt">
+                                With h.WAVE Interface API, the sales data can be collected from various types of POS, including POS, Cash Register, etc.
+                              </span>
+                          </li>
+                          <li>
+                              <span class="num f-midium">2</span>
+                              <span class="txt">
+                                If you already have sales management computer system, by mapping
+                                DB of Agent S/W, sales data can easily be collected.
+                              </span>
+                          </li>
+                      </ul>
+                  </dd>
+                </dl>
+              </div>
+              <!-- //info-section -->
+              </div>
+              <div class="product-btn-wrap">
+                <div class="btn-wrap-inner">
+                  <dl class="txt">
+                    <dt class="f-midium">App Download</dt>
+                    <dd>Download application that suits your smartphone platform, and login with h.WAVE account</dd>
+                  </dl>
+                  <div class="btn-wrap">
+                    <a href="#">
+                      <ul>
+                        <li class="img">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect id="사각형_188" data-name="사각형 188" width="35" height="35" transform="translate(0 -0.353)" fill="#fff" stroke="#707070" stroke-width="1"/>
+                              </clipPath>
+                              <linearGradient id="linear-gradient3" x1="0.953" y1="0.544" x2="-0.074" y2="0.544" gradientUnits="objectBoundingBox">
+                                <stop offset="0" class="gradient1" stop-color="#7c9fdc"/>
+                                <stop offset="1" class="gradient2" stop-color="#143d85"/>
+                              </linearGradient>
+                            </defs>
+                            <g id="마스크_그룹_56" data-name="마스크 그룹 56" transform="translate(0 0.353)" clip-path="url(#clip-path)">
+                              <path id="play-store" d="M39.932,13.823,16.615.5A3.756,3.756,0,0,0,11,3.756V30.413a3.756,3.756,0,0,0,5.62,3.261L39.932,20.345a3.756,3.756,0,0,0,0-6.522Zm-10.1-3.152-3.2,4.459L18.969,4.464ZM14.6,31.878a1.465,1.465,0,0,1-.595-.187,1.483,1.483,0,0,1-.736-1.278V3.756A1.471,1.471,0,0,1,14.6,2.288l10.622,14.8ZM18.969,29.7l7.658-10.667,3.2,4.459ZM38.8,18.368,31.816,22.36l-3.788-5.276,3.788-5.276L38.8,15.8a1.478,1.478,0,0,1,0,2.566Z" transform="translate(-9.325 0)" fill="url(#linear-gradient3)"/>
+                            </g>
+                          </svg>
+                        </li>
+                        <li>
+                          <p>ANDROID APP ON</p>
+                          <p class="f-midium">Google play</p>
+                        </li>
+                      </ul>
+                    </a>
+                    <a href="#">
+                      <ul>
+                        <li class="img">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect id="사각형_190" data-name="사각형 190" width="35" height="35" transform="translate(0 -0.402)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0.5"/>
+                              </clipPath>
+                              <linearGradient id="linear-gradient4" x1="0.955" y1="0.557" x2="0" y2="0.568" gradientUnits="objectBoundingBox">
+                                <stop offset="0" class="gradient3" stop-color="#7c9fdc"/>
+                                <stop offset="1" class="gradient4" stop-color="#143d85"/>
+                              </linearGradient>
+                            </defs>
+                            <g id="마스크_그룹_58" data-name="마스크 그룹 58" transform="translate(0 0.402)" clip-path="url(#clip-path)">
+                              <g id="app-store" transform="translate(0 0.018)">
+                                <g id="그룹_320" data-name="그룹 320">
+                                  <path id="패스_170" data-name="패스 170" d="M27.324,0H7.049A7.057,7.057,0,0,0,0,7.049V27.324a7.057,7.057,0,0,0,7.049,7.049H27.324a7.057,7.057,0,0,0,7.049-7.049V7.049A7.057,7.057,0,0,0,27.324,0ZM10.584,26.486a1.678,1.678,0,0,1-2.907-1.678l.33-.572h3.876ZM7.418,22.893a1.678,1.678,0,0,1,0-3.357h3.3l4.529-7.844L14.021,9.567a1.68,1.68,0,0,1,.614-2.293h0a1.68,1.68,0,0,1,2.293.614l.258.447.258-.447a1.678,1.678,0,1,1,2.907,1.678L14.6,19.536h3.631l1.938,3.357Zm19.536,0H25.591L26.7,24.808a1.678,1.678,0,1,1-2.907,1.678L17.962,16.392,19.9,13.035l3.753,6.5h3.3a1.678,1.678,0,1,1,0,3.357Z" fill="url(#linear-gradient4)"/>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </li>
+                        <li>
+                          <p>AVAULABLE ON THIE</p>
+                          <p class="f-midium">App Store</p>
+                        </li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //h.ORDER -->
+          </div>
+          <!-- //train-wrap-inner -->
+        </div>
+        <!-- //swipe_train -->
+      </div>
+    </main>
+
+    <div class="map-wrap">
+        <div class="info-wrap">
+          <div class="inner">
+            <dl>
+              <dt class="f-midium">Hingom Corp.</dt>
+              <dd>
+                <span class="icon"></span>
+                10F 1006-1HO
+                184, Gasan digital 2-ro, Geumcheon-gu,
+                Seoul, Republic of Korea
+              </dd>
+              <dd>
+                <span class="icon"></span>
+                    veda@hingom.com
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="map-box">
+          <!-- map -->
+          <div id="map">
+          </div>
+          <!-- //map -->
+          <script>
+             function initMap() {
+                var pinLocation = {lat: 37.48450843175251, lng: 126.87792082510573} 
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: {lat: 37.48450843175251, lng: 126.87792082510573},
+                  zoom: 16
+                });
+
+                var marker = new google.maps.Marker({
+                    position: pinLocation,
+                    map: map,
+                    title:"(주)흰곰 본사",
+                    icon: 'https://kimjihwan0618.github.io/h.WAVE/img/map-marker.png'
+                });
+              }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=&language=en&callback=initMap" async defer></script>
+        </div>
+        <!-- //map-box -->
+    </div>
+    <!-- //mao-wrap -->
+
+    <!--footer-->
+    <footer>
+      <div class="footer-inner">
+        <div class="left">
+          <img src="img/logo-white.png" alt="">
+           <p class="f-thin">
+            Gasan digital2-ro, Geumcheon-gu, Seoul,<br />
+            Republic of Korea 10F 1006-1, 184
+           </p>
+        </div>
+        <div class="right">
+          <div class="contact-us">
+            <h6 class="f-midium">CONTACT</h6>
+            <p class="f-thin">h.WAVE is a cloud platform developed by Hingom Corp.<br>
+              H.WAVE is a solution that collects and analyzes various data in the store using h.POS and h.Store.
+            </p>
+            <ul>
+              <li>
+                <dl>
+                  <dt>Phone&nbsp;:</dt>
+                  <dd class="f-midium">&nbsp;(856+)20-9966-8844</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Email&nbsp;:</dt>
+                  <dd class="f-midium">&nbsp;neolaosinfo@hingom.com</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Skype&nbsp;</dt>
+                  <dd class="f-midium">&nbsp;neolaosinfo</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="follow-us">
+            <h6 class="f-midium">FOLLOW US</h6>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/hingomlaos" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="facebook-square-brands" d="M35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97H16.528V58.381H10.907v-6.4h5.621V47.11c0-5.545,3.3-8.608,8.357-8.608a34.051,34.051,0,0,1,4.953.432v5.442h-2.79c-2.749,0-3.606,1.706-3.606,3.455v4.153h6.136l-.981,6.4H23.442V71.97H35.687a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="twitter-square-brands" d="M35.687,32H4.282A4.284,4.284,0,0,0,0,36.282v31.4A4.284,4.284,0,0,0,4.282,71.97h31.4a4.284,4.284,0,0,0,4.282-4.282v-31.4A4.284,4.284,0,0,0,35.687,32ZM31.325,46.168c.018.25.018.509.018.758,0,7.735-5.888,16.648-16.648,16.648A16.571,16.571,0,0,1,5.71,60.951a12.327,12.327,0,0,0,1.41.071,11.732,11.732,0,0,0,7.262-2.5,5.859,5.859,0,0,1-5.469-4.059,6.306,6.306,0,0,0,2.641-.107A5.852,5.852,0,0,1,6.87,48.612v-.071a5.848,5.848,0,0,0,2.641.741A5.839,5.839,0,0,1,6.905,44.41,5.778,5.778,0,0,1,7.7,41.457a16.615,16.615,0,0,0,12.062,6.12,5.864,5.864,0,0,1,9.984-5.344,11.466,11.466,0,0,0,3.711-1.41,5.836,5.836,0,0,1-2.569,3.221,11.644,11.644,0,0,0,3.372-.91A12.316,12.316,0,0,1,31.325,46.168Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="instagram-square-brands" d="M19.985,47.226a4.759,4.759,0,1,0,4.761,4.759A4.759,4.759,0,0,0,19.985,47.226Zm11.126-3.658A4.818,4.818,0,0,0,28.4,40.855c-1.874-.74-6.334-.574-8.413-.574s-6.535-.172-8.414.574a4.818,4.818,0,0,0-2.713,2.713c-.739,1.874-.574,6.339-.574,8.416s-.165,6.537.577,8.417a4.818,4.818,0,0,0,2.713,2.713c1.874.74,6.334.574,8.414.574s6.534.172,8.413-.574A4.818,4.818,0,0,0,31.115,60.4c.745-1.874.574-6.339.574-8.416s.171-6.536-.574-8.416ZM19.985,59.3a7.307,7.307,0,1,1,5.176-2.14,7.316,7.316,0,0,1-5.176,2.14ZM27.6,46.07a1.7,1.7,0,1,1,1.21-.5,1.708,1.708,0,0,1-1.21.5ZM35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97h31.4a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32ZM34.16,57.873a8.489,8.489,0,0,1-2.306,5.978,8.493,8.493,0,0,1-5.978,2.306c-2.356.133-9.421.133-11.777,0a8.5,8.5,0,0,1-5.978-2.306,8.463,8.463,0,0,1-2.306-5.978c-.133-2.357-.133-9.422,0-11.777a8.462,8.462,0,0,1,2.306-5.978,8.509,8.509,0,0,1,5.978-2.3c2.356-.133,9.421-.133,11.777,0a8.494,8.494,0,0,1,5.978,2.306,8.494,8.494,0,0,1,2.306,5.982C34.293,48.455,34.293,55.514,34.16,57.873Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>                  
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">Copyright ⓒ 2021 h.WAVE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

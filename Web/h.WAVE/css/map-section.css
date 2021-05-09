@@ -1,0 +1,113 @@
+.map-wrap{
+    margin: 79px auto;
+    padding-top: 61px;
+    border-top: 1px solid #F2F2F2;
+    width: 78.85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.map-wrap>div{
+    width: 50%;
+}
+.map-wrap>div.map-box #map{
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+}
+.map-wrap>div.info-wrap .inner{
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+.map-wrap>div.info-wrap .inner dt{
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+.map-wrap>div.info-wrap .inner dd .txt{
+    opacity: 0.6;
+    font-size: 1.6rem;
+}
+.map-wrap>div.info-wrap .inner dd {
+    line-height: 1.62;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.6rem;
+    white-space: normal;
+    color: #aaa;
+}
+.map-wrap>div.info-wrap .inner dd:nth-of-type(1) {
+    margin-bottom: 26px;
+}
+.map-wrap>div.info-wrap .inner dd .icon{ 
+    display: inline-block;
+    margin-bottom: 12px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/ic-map.png) no-repeat 0 0;
+    background-size: cover;
+}
+.map-wrap>div.info-wrap .inner dd:nth-of-type(2) .icon{ 
+    background: url(../img/ic-email.png) no-repeat 0 0;
+    background-size: cover;
+}
+@media screen and (max-width: 1280px){
+    .map-wrap{
+        width: 86%;
+        margin: 70px auto;
+        padding-top: 61px;
+    }
+    .map-wrap>div.map-box #map{
+        height: 350px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .map-wrap>div.info-wrap .inner dt{
+        font-size: 2.6rem;
+    }
+    .map-wrap>div.info-wrap .inner{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 980px){
+    .map-wrap{
+        width: 88%;
+        margin: 50px auto;
+        padding-top: 50px;
+        flex-direction: column-reverse;
+    }
+    .map-wrap>div{
+        width: 100%;
+    }
+    .map-wrap>div.map-box #map{
+        height: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .map-wrap>div.info-wrap .inner{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .map-wrap>div.info-wrap .inner dl:after{
+       content: "";
+       display: block;
+       clear: both;
+    }
+    .map-wrap>div.info-wrap .inner dl dt{
+       text-align: center;
+       font-size: 3rem;
+    }
+    .map-wrap>div.info-wrap .inner dl dd{
+       float: left;
+       width: 50%;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+    }
+}
+@media screen and (max-width: 550px){
+    .map-wrap>div.info-wrap .inner dl dd{
+        width: 100%;
+    }   
+}

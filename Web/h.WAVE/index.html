@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header.js"></script>
+    <title>index</title>
+    <script type="text/javascript">
+    $(function(){
+      // window.__scrollPosition = document.documentElement.scrollTop || 0;
+        document.addEventListener('scroll', function() {
+          let _documentY = document.documentElement.scrollTop;
+          let _direction = _documentY - window.__scrollPosition >= 0 ? 1 : -1;
+          // // console.log(_direction); // 스크롤 방향을 출력
+          window.__scrollPosition = _documentY; // Update scrollY
+          // 헤더 컬러
+          if(__scrollPosition >= $('.sub-section1').offset().top-500 && __scrollPosition < $('.product-wrap').offset().top){
+            $('.sub-section1').addClass('on')
+          }
+          if(__scrollPosition >= $('.sub-section2').offset().top-500 && __scrollPosition < $('.sub-section3').offset().top){
+            $('.sub-section2').addClass('on')
+          }
+          if(__scrollPosition >= $('.sub-section3').offset().top-500 && __scrollPosition < $('.sub-section4').offset().top){
+            $('.sub-section3').addClass('on')
+          }
+          if(__scrollPosition >= $('.sub-section4').offset().top-500 && __scrollPosition < $('.sub-section5').offset().top){
+            $('.sub-section4').addClass('on')
+          }
+          // 스크롤 애니메이션
+        });
+
+        $('.m-table-title-wrap ul li').click(function(){
+          $('.m-table-title-wrap ul li').removeClass('on')
+          $(this).addClass('on')
+          $('.m-table-body-wrap').removeClass('on')
+          $('.m-table-body-wrap').eq($(this).index()).addClass('on')
+        })
+        // 모바일 테이블 타이틀 클릭
+     })
+    </script>
+</head>
+<body>
+    <div class="modal-bg"></div>
+    <header class="logo_white">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/logo-blue.png" alt="">
+            <img src="img/logo-white.png" alt="">
+          </a>
+        </h1>
+        <div class="header-right">
+          <nav>
+            <ul>
+              <li><a href="index.html" class="f-midium on">HOME</a></li>
+              <li><a href="aboutUs.html" class="f-midium">ABOUT US</a></li>
+              <li><a href="products.html" class="f-midium">PRODUCTS</a></li>
+              <li><a href="support.html" class="f-midium">SUPPORT</a></li>
+              <li><a href="contact.html" class="f-midium">CONTACT</a></li>
+            </ul>
+          </nav>
+          <form action="">
+            <a href="signIn.html" class="signin-btn f-midium">Sign in</a>
+          </form>
+        </div>
+        <!-- //header-right-->
+        <!--모바일 메뉴 버튼-->
+        <div id="hamburger" class="hamburglar mobile-menu-btn">
+          <div class="burger-icon">
+            <div class="burger-container">
+              <span class="burger-bun-top"></span>
+              <span class="burger-filling"></span>
+              <span class="burger-bun-bot"></span>
+            </div>
+          </div>
+          <!-- svg ring containter -->
+          <div class="burger-ring">
+            <svg class="svg-ring">
+              <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+            </svg>
+          </div>
+          <!-- the masked path that animates the fill to the ring -->
+          <svg width="0" height="0">
+            <mask id="mask">
+              <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+            </mask>
+          </svg>
+          <div class="path-burger">
+            <div class="animate-path">
+              <div class="path-rotation"></div>
+            </div>
+          </div>
+        </div>
+        <!--//모바일 메뉴 버튼-->
+      </div>
+      <!-- //header-inner-->
+    </header>
+    <!-- //header -->
+
+    <!--main-->
+    <main>
+      <!--main-section-->
+      <section class="main-section">
+        <img src="img/main-bg/to-bottom.png" class="main-bg" alt="">
+        <img src="img/main-bg/top-right.png" class="main-bg" alt="">
+        <img src="img/main-bg/top-right2.png" class="main-bg" alt="">
+        <img src="img/main-bg/bottom-left.png" class="main-bg" alt="">
+        <img src="img/main-bg/bottom-left2.png" class="main-bg" alt="">
+        <div class="main-section-inner">
+          <div class="left">
+            <h2 class="f-bold">Sales Collection And Analysis Solution Via Cloud</h2>
+            <p>With h.WAVE, Experience Efficient Item Sales Management, Stock Management, Customer Management And Intellectual Sales Management</p>
+            <h3 class="f-midium">Get started easily with the free version</h3>
+            <a href="#" class="f-midium">Get free</a>
+          </div>
+          <div class="right">
+            <img src="img/main-img.svg" alt="">
+          </div>
+        </div>
+      </section>
+      <!-- //main-section-->
+      
+      <!--sub-section1-->
+      <section class="sub-section1 section-width">
+        <div class="figure figure1">
+          <span class="f1-1 s pink"></span>
+          <span class="f1-2 t red"></span>
+          <span class="f1-3 l orange"></span>
+          <span class="f1-4 c green"></span>
+          <span class="f1-5 l blue"></span>
+          <span class="f1-6 t skyblue"></span>
+          <span class="f1-7 s pink2"></span>
+        </div>
+        <div class="left">
+          <h3 class="f-bold">h.WAVE is a solution that collects and analyze sales information.</h3>
+          <ul>
+            <li>"h.WAVE links to POS that has sales report feature (h.POS) to collect sales data. Also, via API linkage, it links to various applications that executes sales report to collect and analyze all data occurring in your shop."</li>
+            <!-- <li></li> -->
+          </ul>
+          <a href="#" class="f-midium">Read more</a>
+        </div>
+        <div class="right">
+          <img src="img/section1/bg1.png" alt="">
+          <img src="img/products/h-wave3.png" alt="">
+        </div>
+      </section>
+      <!-- //sub-section1-->
+      
+      <!-- product-wrap -->
+      <div class="product-wrap">
+        <div class="title-wrap">
+          <h3 class="f-bold">Our Products</h3>
+        </div>
+        <!--sub-section2-->
+        <section class="sub-section2 section-width right">
+          <div class="figure figure2">
+            <span class="f2-1 t red"></span>
+            <span class="f2-2 l green"></span>
+            <span class="f2-3 s blue"></span>
+            <span class="f2-4 c pink2"></span>
+            <span class="f2-5 l skyblue"></span>
+            <span class="f2-6 l yellow"></span>
+          </div>
+          <div class="section-inner">
+            <div class="img-wrap">
+              <img src="img/section2/product1.png" alt="">
+            </div>
+            <div class="txt-wrap">
+              <h4 class="f-midium">h.POS</h4>
+              <p>h.POS is a simple POS Software for Small Businesses</p>
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Awesome Design</dt>
+                  <dd>h.POS provides POS features like item sales management, item management, stock management, customer management, etc. to shops like restaurants, retail stores, etc.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Easy Customize</dt>
+                  <dd>h.POS supports English, Lao, Thai, Korean, and it is designed for languages to be easily added with language characteristics in consideration.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Extreme Security</dt>
+                  <dd>It supports payment by different currencies, such as USD, Euro, BATT, KIP, etc.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Built in Browsers</dt>
+                  <dd>Various statistical reports such as Top 10 per customer, per sales by employee, and per product are provided.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Built in Browsers</dt>
+                  <dd>It is easy to install and supports automatic update, so the customers do not need to worry about maintenance of S/W.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+            </div>
+          </div>
+        </section>
+        <!-- //sub-section2-->
+
+        <!--sub-section3-->
+        <section class="sub-section3 section-width left">
+          <div class="figure figure3">
+            <span class="f3-1 l red"></span>
+            <span class="f3-2 l purple"></span>
+            <span class="f3-3 c yellow"></span>
+            <span class="f3-4 c pink"></span>
+            <span class="f3-5 s skyblue"></span>
+            <span class="f3-6 s blue"></span>
+            <span class="f3-7 l green"></span>
+          </div>
+          <div class="section-inner">
+            <div class="img-wrap">
+              <img src="img/section2/product2.png" alt="">
+            </div>
+            <div class="txt-wrap">
+              <h4 class="f-midium">h.STORE</h4>
+              <p>h.STORE is an mobile app that can be linked with h.WAVE to browse all sales information of all stores.</p>
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Awesome Design</dt>
+                  <dd>You may check sales information by stores you own, and check the payment record made by your customers.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Easy Customize</dt>
+                  <dd>On dashboard, you can check the change in sales by day as graph, and check the status of POS.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Extreme Security</dt>
+                  <dd>h.STORE supports Android and iOS.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+            </div>
+          </div>
+        </section>
+        <!-- //sub-section3-->
+
+        <!--sub-section4-->
+        <section class="sub-section4 section-width right">
+          <div class="figure figure4">
+            <span class="f4-1 l yellow"></span>
+            <span class="f4-2 l blue"></span>
+            <span class="f4-3 s green"></span>
+            <span class="f4-4 c pink2"></span>
+            <span class="f4-5 t purple"></span>
+          </div>
+          <div class="section-inner">
+            <div class="img-wrap">
+              <img src="img/section2/product3.svg" alt="">
+            </div>
+            <div class="txt-wrap">
+              <h4 class="f-midium">h.ORDER</h4>
+              <p>h.ORDER is an app that works with h.POS to easily place an order.</p>
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Awesome Design</dt>
+                  <dd>To increase the ability to order food via mobile or tablet, which makes it easy to create order lists.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Easy Customize</dt>
+                  <dd>You can download phone and tablet PC versions for free from Google Play Store and App Store.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Extreme Security</dt>
+                  <dd>When connecting for the first time, you can connect by scanning the QR code displayed on h.POS, and after that, it is
+                  automatically connected.</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+              <div class="info-item">
+                <span class="icon"></span>
+                <dl>
+                  <dt class="f-midium">Built in Browsers</dt>
+                  <dd>The order form is printed to the kitchen printer connected to h.POS as soon as the order is placed</dd>
+                </dl>
+              </div>
+              <!-- //info-item -->
+            </div>
+          </div>
+        </section>
+        <!-- //sub-section4-->
+      </div>
+      <!-- //product-wrap -->
+
+      <!--sub-section5-->
+      <section class="sub-section5 section-width">
+        <div class="title-wrap">
+          <h3 class="f-bold">Price List</h3>
+          <p>Small stores offer a free version with limited functionality. <br>Try it out first and buy additional licenses</p>
+        </div>
+        <!-- pc table -->
+        <div class="table-wrap pc">
+          <table>
+            <thead>
+              <tr>
+                <th class="f-midium">Support function</th>
+                <th class="f-midium">Business type</th>
+                <th>
+                  <dl>
+                    <dt class="title f-midium">Small Business</dt>
+                    <dd class="f-bold">₭0</dd>
+                  </dl>
+                </th>
+                <th>
+                  <dl>
+                    <dt class="title f-midium">Standard Business</dt>
+                    <dd class="f-bold">₭3,000,000</dd>
+                  </dl>
+                </th>
+                <th>
+                  <dl>
+                    <dt class="title f-midium">Large Business</dt>
+                    <dd class="f-bold">₭5,000,000</dd>
+                  </dl>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="f-midium product-maximum" rowspan="3">
+                  Product maximum registration
+                </td>
+                <td class="f-midium">Restaurant</td>
+                <td>500</td>
+                <td class="unlimited">Unlimited</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Mini-Mart</td>
+                <td>100</td>
+                <td>3000</td>
+                <td class="unlimited">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Standard-Retail</td>
+                <td>50</td>
+                <td>3000</td>
+                <td class="unlimited">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Maximum number of employee</td>
+                <td class="all">All</td>
+                <td>1</td>
+                <td>10</td>
+                <td class="unlimited">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Maximum number of reports</td>
+                <td class="all">All</td>
+                <td>3</td>
+                <td>10</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Multi POS operation</td>
+                <td class="all">All</td>
+                <td><img src="img/table/ic-x.svg" alt=""></td>
+                <td><img src="img/table/ic-x.svg" alt=""></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td class="f-midium">h.ORDER Concurrent connection</td>
+                <td>Restaurant</td>
+                <td>1</td>
+                <td>10</td>
+                <td class="unlimited">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Restaurant POS printer registration</td>
+                <td>Restaurant</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td class="f-midium">Kitchen Display App support</td>
+                <td>Restaurant</td>
+                <td><img src="img/table/ic-x.svg" alt=""></td>
+                <td><img src="img/table/ic-x.svg" alt=""></td>
+                <td><img src="img/table/ic-check.svg" alt=""></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="f-midium">Button</td>
+                <td><a class="f-midium" href="#">Choose This</a></td>
+                <td><a class="f-midium" href="#">Choose This</a></td>
+                <td><a class="f-midium" href="#">Choose This</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- // pc table -->
+        <!-- mobile table -->
+        <div class="table-wrap mobile">
+          <div class="m-table-title-wrap">
+            <ul>
+              <li class="on f-bold">Business type</li>
+              <li>
+                <dl>
+                  <dt class="f-midium">Small Business</dt>
+                  <dd class="f-bold">₭0</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt class="f-midium">Standard Business</dt>
+                  <dd class="f-bold">₭3,000,000</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt class="f-midium">Large Business</dt>
+                  <dd class="f-bold">₭5,000,000</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="m-table-body-wrap on">
+            <ul>
+              <li class="f-bold">Restaurant</li>
+              <li class="f-bold">Mini-Mart</li>
+              <li class="f-bold">Standard-Retail</li>
+            </ul>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of employee
+              </dt>
+              <dd class="all">All</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of reports
+              </dt>
+              <dd class="all">All</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Multi POS operation
+              </dt>
+              <dd class="all">All</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                h.ORDER Concurrent connection
+              </dt>
+              <dd>Restaurant</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+               Restaurant POS printer registration
+              </dt>
+              <dd>Restaurant</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Kitchen Display App support
+              </dt>
+              <dd>Restaurant</dd>
+            </dl>
+          </div>
+          <div class="m-table-body-wrap">
+            <dl class="maximum-list">
+              <dt class="f-midium">
+                Product maximum registration
+              </dt>
+              <dd>
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>Restaurant</dt>
+                      <dd>50</dd>
+                    </dl>
+                    <dl>
+                      <dt>Mini-Mart</dt>
+                      <dd>100</dd>
+                    </dl>
+                    <dl>
+                      <dt>Standard-Retail</dt>
+                      <dd>50</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of employee 
+              </dt>
+              <dd>1</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of reports
+              </dt>
+              <dd>3</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Multi POS operation
+              </dt>
+              <dd class="img"><img src="img/table/ic-x.svg" alt=""></dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                h.ORDER Concurrent connection
+              </dt>
+              <dd>1</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Restaurant POS printer registration
+              </dt>
+              <dd>2</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Kitchen Display App support
+              </dt>
+              <dd class="img"><img src="img/table/ic-x.svg" alt=""></dd>
+            </dl>
+          </div>
+          <div class="m-table-body-wrap">
+            <dl class="maximum-list">
+              <dt class="f-midium">
+                Product maximum registration
+              </dt>
+              <dd>
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>Restaurant</dt>
+                      <dd>500</dd>
+                    </dl>
+                    <dl>
+                      <dt>Mini-Mart</dt>
+                      <dd>3000</dd>
+                    </dl>
+                    <dl>
+                      <dt>Standard-Retail</dt>
+                      <dd>3000</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of employee 
+              </dt>
+              <dd>10</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of reports
+              </dt>
+              <dd>10</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Multi POS operation
+              </dt>
+              <dd class="img"><img src="img/table/ic-x.svg" alt=""></dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                h.ORDER Concurrent connection
+              </dt>
+              <dd>10</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Restaurant POS printer registration
+              </dt>
+              <dd>3</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Kitchen Display App support
+              </dt>
+              <dd class="img"><img src="img/table/ic-x.svg" alt=""></dd>
+            </dl>
+          </div>
+          <div class="m-table-body-wrap">
+            <dl class="maximum-list">
+              <dt class="f-midium">
+                Product maximum registration
+              </dt>
+              <dd>
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>Restaurant</dt>
+                      <dd class="unlimited">Unlimited</dd>
+                    </dl>
+                    <dl>
+                      <dt>Mini-Mart</dt>
+                      <dd class="unlimited">Unlimited</dd>
+                    </dl>
+                    <dl>
+                      <dt>Standard-Retail</dt>
+                      <dd class="unlimited">Unlimited</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of employee 
+              </dt>
+              <dd class="unlimited">Unlimited</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Maximum number of reports
+              </dt>
+              <dd class="img">10</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Multi POS operation
+              </dt>
+              <dd>5</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                h.ORDER Concurrent connection
+              </dt>
+              <dd class="unlimited">Unlimited</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Restaurant POS printer registration
+              </dt>
+              <dd>5</dd>
+            </dl>
+            <dl>
+              <dt class="f-midium">
+                Kitchen Display App support
+              </dt>
+              <dd class="img"><img src="img/table/ic-check.svg" alt=""></dd>
+            </dl>
+          </div>
+        </div>
+        <!-- // mobile table -->
+      </section>
+      <!-- //sub-section5-->
+
+      <!--sub-section6-->
+      <section class="sub-section6">
+        <div class="color-bg"></div>
+        <div class="section-width">
+          <div class="service-title">
+            <p class="f-bold">We provide these services</p>
+          </div>
+          <div class="service-wrap">
+            <div class="service-item">
+              <div class="top">
+                <h5 class="f-midium">Remote assistance</h5>
+                <img src="img/service/test1.png" alt="">
+              </div>
+              <div class="bottom">
+                <p>We install remotely if the customer has a PC or POS device.<br>When an error occurs, it solves the error remotely.</p>
+              </div>
+            </div>
+            <!-- //service-item-->
+            <div class="service-item">
+              <div class="top">
+                <h5 class="f-midium">Free mobile services</h5>
+                <img src="img/service/test2.png" alt="">
+              </div>
+              <div class="bottom">
+                <p>If you purchase a POS S/W 1 license, you will receive a free mobile app for store management and ordering.</p>
+              </div>
+            </div>
+            <!-- //service-item-->
+            <div class="service-item">
+              <div class="top">
+                <h5 class="f-midium">Stay Updated</h5>
+                <img src="img/service/updated.png" alt="">
+              </div>
+              <div class="bottom">
+                <p>The POS software always will be
+                   updated by OTA (Over-the-air).</p>
+              </div>
+            </div>
+            <!-- //service-item-->
+          </div>
+        </div>
+      </section>
+      <!-- //sub-section6-->
+    </main>
+    <!-- //main-->
+
+    <!--footer-->
+    <footer>
+      <div class="footer-inner">
+        <div class="left">
+          <img src="img/logo-white.png" alt="">
+           <p class="f-thin">
+            Gasan digital2-ro, Geumcheon-gu, Seoul,<br />
+            Republic of Korea 10F 1006-1, 184
+           </p>
+        </div>
+        <div class="right">
+          <div class="contact-us">
+            <h6 class="f-midium">CONTACT</h6>
+            <p class="f-thin">h.WAVE is a cloud platform developed by Hingom Corp.<br>
+              H.WAVE is a solution that collects and analyzes various data in the store using h.POS and h.Store.
+            </p>
+            <ul>
+              <li>
+                <dl>
+                  <dt>Phone&nbsp;:</dt>
+                  <dd class="f-midium">&nbsp;(856+)20-9966-8844</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Email&nbsp;:</dt>
+                  <dd class="f-midium">&nbsp;neolaosinfo@hingom.com</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Skype&nbsp;</dt>
+                  <dd class="f-midium">&nbsp;neolaosinfo</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="follow-us">
+            <h6 class="f-midium">FOLLOW US</h6>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/hingomlaos" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="facebook-square-brands" d="M35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97H16.528V58.381H10.907v-6.4h5.621V47.11c0-5.545,3.3-8.608,8.357-8.608a34.051,34.051,0,0,1,4.953.432v5.442h-2.79c-2.749,0-3.606,1.706-3.606,3.455v4.153h6.136l-.981,6.4H23.442V71.97H35.687a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="twitter-square-brands" d="M35.687,32H4.282A4.284,4.284,0,0,0,0,36.282v31.4A4.284,4.284,0,0,0,4.282,71.97h31.4a4.284,4.284,0,0,0,4.282-4.282v-31.4A4.284,4.284,0,0,0,35.687,32ZM31.325,46.168c.018.25.018.509.018.758,0,7.735-5.888,16.648-16.648,16.648A16.571,16.571,0,0,1,5.71,60.951a12.327,12.327,0,0,0,1.41.071,11.732,11.732,0,0,0,7.262-2.5,5.859,5.859,0,0,1-5.469-4.059,6.306,6.306,0,0,0,2.641-.107A5.852,5.852,0,0,1,6.87,48.612v-.071a5.848,5.848,0,0,0,2.641.741A5.839,5.839,0,0,1,6.905,44.41,5.778,5.778,0,0,1,7.7,41.457a16.615,16.615,0,0,0,12.062,6.12,5.864,5.864,0,0,1,9.984-5.344,11.466,11.466,0,0,0,3.711-1.41,5.836,5.836,0,0,1-2.569,3.221,11.644,11.644,0,0,0,3.372-.91A12.316,12.316,0,0,1,31.325,46.168Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39.97" height="39.97" viewBox="0 0 39.97 39.97">
+                    <path id="instagram-square-brands" d="M19.985,47.226a4.759,4.759,0,1,0,4.761,4.759A4.759,4.759,0,0,0,19.985,47.226Zm11.126-3.658A4.818,4.818,0,0,0,28.4,40.855c-1.874-.74-6.334-.574-8.413-.574s-6.535-.172-8.414.574a4.818,4.818,0,0,0-2.713,2.713c-.739,1.874-.574,6.339-.574,8.416s-.165,6.537.577,8.417a4.818,4.818,0,0,0,2.713,2.713c1.874.74,6.334.574,8.414.574s6.534.172,8.413-.574A4.818,4.818,0,0,0,31.115,60.4c.745-1.874.574-6.339.574-8.416s.171-6.536-.574-8.416ZM19.985,59.3a7.307,7.307,0,1,1,5.176-2.14,7.316,7.316,0,0,1-5.176,2.14ZM27.6,46.07a1.7,1.7,0,1,1,1.21-.5,1.708,1.708,0,0,1-1.21.5ZM35.687,32H4.282A4.282,4.282,0,0,0,0,36.282v31.4A4.282,4.282,0,0,0,4.282,71.97h31.4a4.282,4.282,0,0,0,4.282-4.282v-31.4A4.282,4.282,0,0,0,35.687,32ZM34.16,57.873a8.489,8.489,0,0,1-2.306,5.978,8.493,8.493,0,0,1-5.978,2.306c-2.356.133-9.421.133-11.777,0a8.5,8.5,0,0,1-5.978-2.306,8.463,8.463,0,0,1-2.306-5.978c-.133-2.357-.133-9.422,0-11.777a8.462,8.462,0,0,1,2.306-5.978,8.509,8.509,0,0,1,5.978-2.3c2.356-.133,9.421-.133,11.777,0a8.494,8.494,0,0,1,5.978,2.306,8.494,8.494,0,0,1,2.306,5.982C34.293,48.455,34.293,55.514,34.16,57.873Z" transform="translate(0 -32)" fill="#74A1F1"/>
+                  </svg>                  
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">Copyright ⓒ 2021 h.WAVE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

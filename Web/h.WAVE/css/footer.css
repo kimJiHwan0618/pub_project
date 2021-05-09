@@ -1,0 +1,199 @@
+footer{
+  background-color: #14397B;
+  margin-top: 60px;
+  padding: 46px 0 36px;
+  position: relative;
+  z-index: 1;
+} 
+.footer-inner{
+    width: 78.85%;
+    margin: 0 auto 46px;
+    display: flex;
+}
+.footer-inner .left{
+    box-sizing: border-box;
+    padding-right: 10%;
+    width: 40%;
+}
+.footer-inner .left img{
+    width: 139px;
+    height: 36px;
+}
+.footer-inner .left p{
+    color: white;
+    margin-top: 17px;
+    opacity: 0.8;
+    line-height: 1.82;
+    font-size: 1.4rem;
+}
+.footer-inner .right{
+    display: flex;
+    width: 60%;
+}
+.footer-inner .right>div{
+    color: white;
+}
+.footer-inner .right>div h6{
+    font-size: 2.4rem;
+    margin-bottom: 17px;
+}
+.footer-inner .right>div.contact-us{
+    box-sizing: border-box;
+    padding-right: 8%;
+    width: 70%;
+}
+.footer-inner .right>div.contact-us p{
+    opacity: 0.8;
+    line-height: 1.82;
+    font-size: 1.4rem;
+}
+.footer-inner .right>div.contact-us ul{
+    margin-top: 16px;
+}
+.footer-inner .right>div.contact-us li {
+    margin-bottom: 12px;
+}
+.footer-inner .right>div.contact-us li:last-of-type{
+    margin-bottom: 0px;
+}
+.footer-inner .right>div.contact-us li dl{
+    display: flex;
+    font-size: 1.4rem;
+}
+.footer-inner .right>div.contact-us li dt{
+    opacity: 0.8;
+}
+.footer-inner .right>div.follow-us{
+    width: 30%;
+}
+.footer-inner .right>div.follow-us li:last-of-type{
+    margin-right: 0px;
+}
+.footer-inner .right>div.follow-us li{
+    float: left;
+    margin-right: 26px;
+}
+.footer-inner .right>div.follow-us ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.footer-inner .right>div.follow-us li a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+}
+.footer-inner .right>div.follow-us li:nth-of-type(1) a:hover path{ 
+    fill: #1773EA;
+}
+.footer-inner .right>div.follow-us li:nth-of-type(2) a:hover path{ 
+    fill: #00A7E6;
+}
+.footer-inner .right>div.follow-us li:nth-of-type(3) a:hover path{ 
+    fill: #EB1A85;
+}
+.footer-inner .right>div.follow-us li svg{
+    width: 30px;
+    height: 30px;
+}
+.footer-inner .right>div.follow-us li svg path{
+    -webkit-transition: all 0.1s ease-in 0s;
+}
+footer .copyright{
+    width: 78.85%;
+    margin: 0 auto;
+    color: white;
+    padding-top: 46px;
+    text-align: right;
+    font-size: 1.5rem;
+    position: relative;
+}
+footer .copyright:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #032765;
+    box-shadow: 0 -3px 6px rgba(255,255,255,0.16), 0 3px 6px rgba(255,255,255,0.16);
+}
+@media screen and (max-width: 1280px){
+    .footer-inner .right > div.contact-us{
+        width: 50%;
+    }
+    .footer-inner .right > div.follow-us{
+        width: 50%;
+    }
+    .footer-inner{
+        width: 86%;
+    }
+    footer .copyright{
+        width: 86%;
+    }
+    .footer-inner .left p{
+        font-size: 1.3rem;
+    }
+    .footer-inner .right>div h6{
+        font-size: 2.2rem;
+    }
+    .footer-inner .right>div.contact-us p{
+        font-size: 1.3rem;
+    }
+    .footer-inner .right>div.follow-us li a{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+    }
+    .footer-inner .right>div.contact-us li dl{
+        font-size: 1.3rem;
+    }
+    footer .copyright{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 980px){
+    .footer-inner{
+        width: 88%;
+    }
+    footer .copyright{
+        width: 88%;
+    }
+}
+@media screen and (max-width: 850px){
+    .footer-inner{
+        display: block;
+    }
+    .footer-inner>div{
+        width: 100%;
+    }
+    .footer-inner>div.right{
+        width: 100%;
+    }
+    .footer-inner .left{
+        padding-right: 0%;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 550px){
+    .footer-inner .right{
+        display: block;
+      }
+      .footer-inner .right>div{
+        width: 100%;
+      }
+      .footer-inner .right>div.contact-us{
+        margin-bottom: 30px;
+        width: 100%;
+      }
+      .footer-inner .right>div.follow-us{
+        width: 100%;
+      }
+      footer .copyright{
+        font-size: 1.1rem;
+      }
+}

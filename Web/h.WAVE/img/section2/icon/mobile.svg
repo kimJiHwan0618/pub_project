@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_200" data-name="사각형 200" width="39" height="39" transform="translate(3131 8720)" fill="#2f528f" stroke="#707070" stroke-width="1" opacity="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_28" data-name="마스크 그룹 28" transform="translate(-3131 -8720)" clip-path="url(#clip-path)">
+    <g id="smartphone" transform="translate(3028.08 8720)">
+      <g id="그룹_308" data-name="그룹 308" transform="translate(110.92)">
+        <g id="그룹_307" data-name="그룹 307" transform="translate(0)">
+          <path id="패스_169" data-name="패스 169" d="M130.672,0h-17.4a2.353,2.353,0,0,0-2.35,2.35V3.9h22.1V2.35A2.353,2.353,0,0,0,130.672,0Zm-5.45,3.25h-6.5a.65.65,0,1,1,0-1.3h6.5a.65.65,0,1,1,0,1.3Zm4.55,0h-.65a.65.65,0,0,1,0-1.3h.65a.65.65,0,1,1,0,1.3Z" transform="translate(-110.92)" fill="#2f528f"/>
+        </g>
+      </g>
+      <g id="그룹_310" data-name="그룹 310" transform="translate(120.671 34.45)">
+        <g id="그룹_309" data-name="그룹 309" transform="translate(0)">
+          <path id="패스_170" data-name="패스 170" d="M241.036,452.267h-1.614a.494.494,0,0,0-.493.493v.314a.493.493,0,0,0,.493.493h1.614a.493.493,0,0,0,.493-.493v-.314A.493.493,0,0,0,241.036,452.267Z" transform="translate(-238.929 -452.267)" fill="#2f528f"/>
+        </g>
+      </g>
+      <g id="그룹_312" data-name="그룹 312" transform="translate(110.921 5.2)">
+        <g id="그룹_311" data-name="그룹 311" transform="translate(0)">
+          <rect id="사각형_199" data-name="사각형 199" width="22.1" height="26" fill="#2f528f"/>
+        </g>
+      </g>
+      <g id="그룹_314" data-name="그룹 314" transform="translate(110.921 32.5)">
+        <g id="그룹_313" data-name="그룹 313" transform="translate(0)">
+          <path id="패스_171" data-name="패스 171" d="M110.938,426.667v4.15a2.353,2.353,0,0,0,2.35,2.35h17.4a2.353,2.353,0,0,0,2.35-2.35v-4.15Zm13.65,2.757a1.8,1.8,0,0,1-1.793,1.793h-1.614a1.8,1.8,0,0,1-1.793-1.793v-.314a1.8,1.8,0,0,1,1.793-1.793H122.8a1.8,1.8,0,0,1,1.793,1.793Z" transform="translate(-110.938 -426.667)" fill="#2f528f"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

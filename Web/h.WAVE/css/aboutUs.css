@@ -1,0 +1,300 @@
+.subpage-title-wrap {
+  width: 100%;
+  height: 597px;
+  position: relative;
+}
+.subpage-title-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #7c9fdc, #143d85);
+  opacity: 0.8;
+}
+.subpage-title-wrap.about:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/aboutus/about-bg.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+.sub-txt-box {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 78.85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+.sub-txt-box h2 {
+  font-size: 5rem;
+}
+.sub-txt-box p {
+  opacity: 0.8;
+  font-size: 2.4rem;
+  line-height: 1.7;
+  margin-top: 20px;
+  width: 80%;
+}
+.subpage-title-wrap.about {
+  margin-bottom: 160px;
+}
+.section-about-box {
+  width: 78.85%;
+  margin: 0 auto 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.section-about-box:last-of-type {
+  margin: 0 auto 0px;
+}
+.section-about-box > div {
+  width: 50%;
+}
+.section-about-box:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+.section-about-box:nth-of-type(2n) .img-wrap {
+  text-align: right;
+}
+.section-about-box > div.img-wrap img {
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.16);
+}
+.section-about-box > div.txt-wrap dt {
+  font-size: 2.8rem;
+  line-height: 1.62;
+}
+.section-about-box > div.txt-wrap dd {
+  font-size: 1.6rem;
+  line-height: 1.92;
+  opacity: 0.8;
+  margin: 20px 0 40px;
+}
+.section-about-box > div.txt-wrap a {
+  font-size: 1.8rem;
+  color: #3a63ab;
+  position: relative;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+}
+.section-about-box > div.txt-wrap a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -12px;
+  width: 0%;
+  height: 2px;
+  left: 0px;
+  background-color: #3a63ab;
+  opacity: 0.7;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+}
+.section-about-box > div.txt-wrap a .arrow {
+  font-size: 1.6rem;
+  display: inline-block;
+  -webkit-transform: translateX(4px);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+}
+.section-about-box > div.txt-wrap a:hover {
+  opacity: 1;
+}
+.section-about-box > div.txt-wrap a:hover .arrow {
+  -webkit-transform: translateX(8px);
+}
+.section-about-box > div.txt-wrap a:hover:after {
+  width: 100%;
+}
+/* 스크롤애니 */
+.section-about-box .img-wrap {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  opacity: 0;
+}
+.about1 .img-wrap {
+  -webkit-transform: translateX(-6px);
+}
+.about2 .img-wrap {
+  -webkit-transform: translateX(6px);
+}
+.about3 .img-wrap {
+  -webkit-transform: translateX(-6px);
+}
+.section-about-box .txt-wrap {
+  -webkit-transition: all 0.3s ease-in-out 0.15s;
+  opacity: 0;
+  -webkit-transform: translateY(6px);
+}
+.section-about-box.on .txt-wrap {
+  -webkit-transform: translateY(0px);
+  opacity: 1;
+}
+.about1.on .img-wrap {
+  -webkit-transform: translateX(0px);
+}
+.about2.on .img-wrap {
+  -webkit-transform: translateX(0px);
+}
+.about3.on .img-wrap {
+  -webkit-transform: translateX(0px);
+}
+.section-about-box.on .img-wrap {
+  opacity: 1;
+}
+@media screen and (max-width: 1280px) {
+  .sub-txt-box h2 {
+    font-size: 4.6rem;
+    width: 100%;
+  }
+  .sub-txt-box {
+    width: 86%;
+  }
+  .sub-txt-box p {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .subpage-title-wrap {
+    height: 560px;
+  }
+  .section-about-box {
+    width: 86%;
+    margin: 0 auto 140px;
+  }
+  .subpage-title-wrap.about {
+    margin-bottom: 120px;
+  }
+  .section-about-box > div.txt-wrap dt {
+    font-size: 2.4rem;
+  }
+  .section-about-box > div.txt-wrap dd {
+    font-size: 1.4rem;
+    margin: 16px 0 26px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sub-txt-box {
+    width: 88%;
+  }
+  .sub-txt-box h2 {
+    font-size: 4.2rem;
+  }
+  .sub-txt-box p {
+    font-size: 1.8rem;
+  }
+  .subpage-title-wrap {
+    height: 400px;
+  }
+  .subpage-title-wrap.about {
+    margin-bottom: 90px;
+  }
+  .section-about-box {
+    width: 88%;
+    margin: 0 auto 110px;
+  }
+  .section-about-box > div.img-wrap img {
+    width: 88%;
+  }
+  .section-about-box > div.txt-wrap dt {
+    font-size: 2rem;
+  }
+  .section-about-box > div.txt-wrap dd {
+    margin: 18px 0 22px;
+  }
+  .section-about-box > div.txt-wrap a {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .section-about-box {
+    width: 80%;
+    flex-direction: column;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0 0 24px;
+    border-radius: 4px;
+    box-shadow: 6px 6px 8px rgb(0 0 0 / 12%), -3px -3px 6px rgb(0 0 0 / 8%);
+  }
+  .section-about-box:nth-of-type(2n) {
+    flex-direction: column;
+  }
+  .section-about-box:nth-of-type(2n) .img-wrap {
+    text-align: center;
+  }
+  .section-about-box > div {
+    width: 100%;
+  }
+  .section-about-box > div.img-wrap img {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    box-shadow: none;
+    border-radius: 4px 4px 0 0;
+  }
+  .section-about-box > div.img-wrap {
+    text-align: center;
+  }
+  .section-about-box {
+    margin: 0 auto 70px;
+  }
+  .section-about-box > div.txt-wrap {
+    text-align: center;
+    width: 90%;
+  }
+  .section-about-box > div.txt-wrap dl {
+    margin-top: 24px;
+  }
+  .section-about-box > div.txt-wrap dt {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .section-about-box > div.txt-wrap dd {
+    text-align: center;
+    margin: 12px 0px 18px;
+    line-height: 1.72;
+  }
+  /* 스크롤 애니메이션 */
+  .section-about-box .img-wrap {
+    -webkit-transform: translateX(0px);
+    opacity: 1;
+  }
+  .section-about-box .txt-wrap {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+  .section-about-box {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+  }
+  .section-about-box.on {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .sub-txt-box h2 {
+    font-size: 3.4rem;
+  }
+  .sub-txt-box p {
+    font-size: 1.6rem;
+  }
+  .section-about-box > div.txt-wrap dt {
+    font-size: 1.8rem;
+  }
+  .section-about-box > div.txt-wrap dd {
+    font-size: 1.2rem;
+  }
+}

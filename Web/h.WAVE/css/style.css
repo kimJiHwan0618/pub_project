@@ -1,0 +1,134 @@
+@import './reset.css';
+@import './contact.css';
+@import './header.css';
+@import './footer.css';
+@import './map-section.css';
+@import './main.css';
+@import './aboutUs.css';
+@import './products.css';
+@import './common-section.css';
+@import './mobile-btn.css';
+@import './figure.css';
+@import './supports.css';
+@import './wating-service.css';
+@import './login.css';
+
+@font-face{font-family: "NotoSansKR-Black";
+    src:url(../font/NotoSansKR-Black.otf)}
+@font-face{font-family: "NotoSansKR-Bold";
+    src:url(../font/NotoSansKR-Bold.otf)}
+@font-face{font-family: "NotoSansKR-Light";
+    src:url(../font/NotoSansKR-Light.otf)}
+@font-face{font-family: "NotoSansKR-Midium";
+    src:url(../font/NotoSansKR-Medium.otf)}
+@font-face{font-family: "NotoSansKR-Regular";
+    src:url(../font/NotoSansKR-Regular.otf)}
+@font-face{font-family: "NotoSansKR-Thin";
+    src:url(../font/NotoSansKR-Thin.otf)}
+
+a{
+  font-size: 10px;
+}
+button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+:root{
+    /* 폰트굵기*/
+  --font-black : "NotoSansKR-Black";
+  --font-bold : "NotoSansKR-Bold";
+  --font-midium : "NotoSansKR-Midium";
+  --font-regular : "NotoSansKR-Regular";
+  --font-light : "NotoSansKR-Light";
+  --font-thin : "NotoSansKR-Thin";
+}    
+/* 폰트굵기 */
+.f-black{
+  font-family: var(--font-black);
+}
+.f-bold{
+  font-family: var(--font-bold);
+}
+.f-midium{
+  font-family: var(--font-midium);
+}
+.f-regular{
+  font-family: var(--font-regular);
+}
+.f-light{
+  font-family: var(--font-light);
+}
+.f-thin{
+  font-family: var(--font-thin);
+}
+body,html{
+  font-size: 10px;
+  color: #333;
+  font-family: var(--font-regular);
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+body.scroll-none{
+  height: 100%;
+  overflow: hidden;
+}
+a,div,span,li{
+  -webkit-tap-highlight-color: transparent;
+}
+.modal-bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  opacity: 0;
+  top: 0px;
+  -webkit-transition: all .3s ease-in-out 0s;
+  background-color: rgba(0,0,0,.7);
+  display: none;
+}
+.modal-bg.on{
+  opacity: 1;
+  z-index: 15;
+}
+.modal-bg.lottie{
+  z-index: 23;
+}
+.lottie{
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  display: none;
+}
+.lottie_bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 25;
+  left: 0;
+  top: 0px;
+  background-color: rgba(0,0,0,.7);
+  display: none;
+}
+.lottie_bg.on{
+  display: block;
+}
+.lottie.on{
+  display: block;
+}
+.header-color-none{
+  margin-top: 93px;
+}
+@media screen and (max-width: 990px){
+  .modal-bg{
+    display: block;
+  }
+}

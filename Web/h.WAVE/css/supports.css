@@ -1,0 +1,11 @@
+.subpage-title-wrap.supports:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/supports/supports_bg.png) no-repeat 50% 50%;
+  background-size: cover;
+}

@@ -1,0 +1,564 @@
+.subpage-title-wrap.contact:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/contact/contact-bg.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+main .service-wrap.contact{
+    width: 78.85%;
+    margin: 110px auto;
+}
+main .service-wrap.contact ul{
+    display: flex;
+    justify-content: space-between;
+}
+main .service-wrap.contact ul li:nth-of-type(2){
+    border-right: 1px solid rgba(43, 80, 142, 0.1);
+    border-left: 1px solid rgba(43, 80, 142, 0.1);
+}
+main .service-wrap.contact ul li{
+    width: 33.33%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+@keyframes icon-ani{
+    0%{-webkit-transform: translateY(8px);opacity: 0;}
+    40%{-webkit-transform: translateY(4px);}
+    100%{-webkit-transform: translateY(0px);opacity: 1;}
+}
+main .service-wrap.contact ul li:nth-of-type(1) dl{
+    -webkit-animation: icon-ani 0.9s ease-in-out forwards 0s;
+}
+main .service-wrap.contact ul li:nth-of-type(2) dl{
+    -webkit-animation: icon-ani 0.9s ease-in-out forwards 0.2s;
+}
+main .service-wrap.contact ul li:nth-of-type(3) dl{
+    -webkit-animation: icon-ani 0.9s ease-in-out forwards 0.4s;
+}
+main .service-wrap.contact ul li dl{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    align-items: center;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+main .service-wrap.contact ul li dl dt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #2A518F;
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+main .service-wrap.contact ul li dl dd .name{
+    color: #595959;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+main .service-wrap.contact ul li dl dd .email{
+    color: #979797;
+    font-size: 1.6rem;
+}
+main .service-wrap.contact ul li dl dd.address{
+    color: #979797;
+    font-size: 1.6rem;
+}
+main .service-wrap.contact ul li dl dt .f-bold{
+    margin-top: 20px;
+}
+main .service-wrap.contact ul li dl dd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .service-wrap.contact ul dl dt span.icon{
+    display: inline-block;
+    width: 73px;
+    height: 73px;
+    background: url(../img/contact/ic-1.png) no-repeat 0 0;
+    background-size: cover;
+}
+main .service-wrap.contact ul li:nth-of-type(2) dl dt span.icon{
+    background: url(../img/contact/ic-2.png) no-repeat 0 0;
+    background-size: cover;
+}
+main .service-wrap.contact ul li:nth-of-type(3) dl dt span.icon{
+    background: url(../img/contact/ic-3.png) no-repeat 0 0;
+    background-size: cover;
+}
+.contact-map-wrap{
+    width: 78.85%;
+    margin: 0 auto;
+}
+.contact-map-wrap #map{
+    height: 340px;
+    width: 100%;
+}
+.contact-form-box{
+    width: 78.85%;
+    margin: 100px auto 0;
+}
+.contact-map-wrap>h3{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+}
+.contact-map-wrap>p{
+    text-align: center;
+    opacity: 0.55;
+    font-size: 1.6rem;
+}
+.contact-form-box>h3{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+}
+.contact-form-box>p{
+    text-align: center;
+    opacity: 0.55;
+    font-size: 1.8rem;
+}
+.form-wrap{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 40px 3.2%;
+}
+.form-wrap input[type=text],
+.form-wrap input[type=email],
+.form-wrap textarea{
+    border: none;
+    width: 100%;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    height: 54px;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 3%;
+    display: block;
+}
+.form-wrap textarea{
+    resize: none;
+    height: 225px;
+    padding: 12px 3%;
+}
+.form-wrap dl{
+    margin-bottom: 30px;
+}
+.form-wrap dl:last-of-type{
+    margin-bottom: 0px;
+}
+.form-wrap dl dt{
+    margin-bottom: 14px;
+}
+.form-wrap dl dt .label{
+    color: #9C9C9C;
+    font-size: 1.6rem;
+}
+.form-wrap dl dt .required{
+    color: #F96565;
+    margin-left: 6px;
+}
+.form-wrap dl:first-of-type dd ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.form-wrap dl:first-of-type dd ul li{
+    width: 48.4%;
+}
+.form-wrap dl:first-of-type dd ul li p{
+    font-size: 1.3rem;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+.form-wrap dl:nth-of-type(2) dd ul li p{
+    font-size: 1.3rem;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+.form-wrap dl:first-of-type dd ul li:nth-of-type(1){
+    float: left;
+}
+.form-wrap dl:first-of-type dd ul li:nth-of-type(2){
+    float: right;
+}
+.form-wrap dl:nth-of-type(3) dd ul{
+    display: flex;
+    align-items: center;
+}
+.form-wrap dl:nth-of-type(3) dd ul li{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+.form-wrap dl:nth-of-type(3) dd ul li label{
+    font-size: 1.4rem;
+    margin-left: 4px;
+}
+.form-wrap+.submit-wrap{
+    text-align: center;
+    margin-top: 30px;
+}
+.form-wrap+.submit-wrap button{
+    border: 2px solid #3a63ab;
+    display: inline-block;
+    width: 120px;
+    height: 51px;
+    line-height: 44px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: #3a63ab;
+    -webkit-transition: all 0.16s linear 0s;
+    background-color: white;
+}
+.form-wrap+.submit-wrap button:hover{
+    background-color: #3a63ab;
+    color: white;
+}
+.contact-map-wrap .tab-button-wrap{
+    display: flex;
+    width: 80%;
+    height: 70px;
+    border-radius: 6px;
+    margin: 20px auto 24px;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 8%);
+}
+.contact-map-wrap .tab-button-wrap li{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.contact-map-wrap .tab-button-wrap li.on{
+    opacity: 1;
+}
+.contact-map-wrap .tab-button-wrap li:hover{
+    opacity: 1;
+}
+.contact-map-wrap .tab-button-wrap .tab-motion{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 25%;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.contact-map-wrap .tab-button-wrap .tab-motion:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    box-shadow: 0px 6px 12px rgb(43 81 143 / 42%);
+    background-color: #2B518F;
+}
+@media screen and (max-width: 1280px){
+    main .service-wrap.contact{
+        width: 86%;
+        margin: 90px auto;
+    }
+    main .service-wrap.contact ul li dl dt .f-bold{
+        font-size: 1.8rem;
+    }
+    main .service-wrap.contact ul li dl dd .name{
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+    main .service-wrap.contact ul li dl dd .email{
+        font-size: 1.4rem;
+    }
+    main .service-wrap.contact ul li dl dd.address{
+        font-size: 1.4rem;
+    }
+    main .service-wrap.contact ul li dl dt{
+        margin-bottom: 10px;
+    }
+    .contact-map-wrap{
+        width: 86%;
+    }
+    .contact-map-wrap #map{
+        height: 330px;
+    }
+    .contact-form-box{
+        width: 86%;
+    }
+    .contact-form-box>h3{
+        font-size: 3.2rem;
+        margin-bottom: 16px;
+    }
+    .contact-form-box>p{
+        font-size: 1.6rem;
+    }
+    .contact-map-wrap>h3{
+        font-size: 3.2rem;
+        margin-bottom: 16px;
+    }
+    .form-wrap{
+        width: 70%;
+        padding: 24px 3.2%;
+        margin-top: 24px;
+    }
+    .form-wrap input[type=text],
+    .form-wrap input[type=email],
+    .form-wrap textarea{
+        height: 47px;
+    }
+    .form-wrap textarea{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 990px){
+    main .service-wrap.contact{
+        width: 100%;
+        margin: 70px auto;
+    }
+    main .service-wrap.contact ul li dl dt .f-bold{
+        font-size: 1.6rem;
+    }
+    main .service-wrap.contact ul li dl dt{
+        margin-bottom: 8px;
+    }
+    main .service-wrap.contact ul li dl dd .name{
+        font-size: 1.3rem;
+        margin-bottom: 2px;
+    }
+    main .service-wrap.contact ul li dl dd .email{
+        font-size: 1.3rem;
+    }
+    main .service-wrap.contact ul li dl dd.address{
+        font-size: 1.3rem;
+    }
+    main .service-wrap.contact ul dl dt span.icon{
+        width: 60px;
+        height: 60px;
+    }
+    .contact-map-wrap{
+        width: 88%;
+    }
+    .contact-map-wrap #map{
+        height: 300px;
+    }
+    .contact-form-box{
+        width: 88%;
+    }
+    .contact-form-box>h3{
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+    }
+    .contact-form-box>p{
+        font-size: 1.5rem;
+    }
+    .contact-map-wrap>h3{
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+    }
+    .contact-map-wrap>p{
+        font-size: 1.4rem;
+    }
+    .form-wrap{
+        width: 100%;
+        margin: 40px auto 0;
+    }
+    .contact-map-wrap .tab-button-wrap li{
+        font-size: 1.4rem;
+    }
+    .contact-map-wrap .wating-service-wrap img{
+        width: 90px;
+        height: 86px;
+    }
+    .contact-map-wrap .wating-service-wrap h4{
+        font-size: 2.2rem;
+    }
+    .contact-map-wrap .wating-service-wrap p{
+        font-size: 1.6rem;
+    }
+    .contact-map-wrap .tab-button-wrap{
+        margin: 40p atuox;
+    }
+}
+@media screen and (max-width: 800px){
+    main .service-wrap.contact{
+        margin: 34px auto;
+    }
+    main .service-wrap.contact ul{
+        flex-direction: column;
+    }
+    main .service-wrap.contact ul li{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 3%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 2px 2px 6px rgb(0 0 0 / 10%)
+    }
+    main .service-wrap.contact ul li:last-of-type{
+        margin-bottom: 0px;
+    }
+    main .service-wrap.contact ul li dl{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main .service-wrap.contact ul li:nth-of-type(2){
+        border-left: none;
+        border-right: none;;
+    }
+    main .service-wrap.contact ul li:nth-of-type(2) dl{
+        flex-direction: row-reverse;
+    }
+    main .service-wrap.contact ul li:nth-of-type(2) dl dt{
+        border-right: none;
+        border-left: 1px solid rgba(43, 80, 142, 0.1);
+    }
+    main .service-wrap.contact ul li dl dt{
+        width: 50%;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        padding: 3%;
+        border-right: 1px solid rgba(43, 80, 142, 0.1);
+    }
+    main .service-wrap.contact ul li dl dd{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 3%;
+    }
+    main .service-wrap.contact ul li dl dt .f-bold{
+        margin-top: 6px;
+    }
+}
+@media screen and (max-width: 550px){
+    main .service-wrap.contact{
+        margin: 34px auto 68px;
+    }
+    main .service-wrap.contact ul dl dt span.icon{
+        width: 50px;
+        height: 50px;
+    }
+    main .service-wrap.contact ul li dl dt .f-bold{
+        margin-top: 4px;
+        font-size: 1.4rem;
+    }
+    main .service-wrap.contact ul li dl dd .name{
+        font-size: 1.2rem;
+    }
+    main .service-wrap.contact ul li dl dd .email{
+        font-size: 1.2rem;
+    }
+    main .service-wrap.contact ul li dl dd.address{
+        font-size: 1.2rem;
+    }
+    .contact-map-wrap #map{
+        height: 280px;
+    }
+    .contact-form-box{
+        width: 100%;
+        margin: 50px auto 0;
+    }
+    .contact-form-box>h3{
+        width: 88%;
+        margin: 0 auto 10px;
+        font-size: 2.2rem;
+    }
+    .contact-form-box>p{
+        font-size: 1.4rem;
+        width: 88%;
+        margin: 0 auto;
+    }
+    .contact-map-wrap>h3{
+        width: 88%;
+        margin: 0 auto 10px;
+        font-size: 2.2rem;
+    }
+    .contact-map-wrap>p{
+        font-size: 1.2rem;
+        width: 88%;
+        margin: 0 auto;
+    }
+    .form-wrap{
+        padding: 24px 6%;
+    }
+    .form-wrap input[type=text],
+    .form-wrap input[type=email],
+    .form-wrap textarea{
+        height: 43px;
+    }
+    .form-wrap dl:nth-of-type(3) dd ul{
+        display: block;
+    }
+    .form-wrap dl:nth-of-type(3) dd ul li{
+        margin-bottom: 9px;
+    }
+    .form-wrap dl:nth-of-type(3) dd ul li:last-of-type{
+        margin-bottom: 0px;
+    }
+    .form-wrap dl dt .label{
+        font-size: 1.5rem;
+    }
+    .contact-map-wrap .tab-button-wrap{
+        width: 100%;
+    }
+    .contact-map-wrap .tab-button-wrap{
+        margin: 30px auto;
+        height: 56px;
+    }
+    .contact-map-wrap .tab-button-wrap li{
+        font-size: 1.3rem;
+    }
+    .contact-map-wrap .tab-button-wrap .tab-motion:after{
+        width: 60%;
+    }
+    .contact-map-wrap .wating-service-wrap{
+        width: 100%;
+    }
+    .contact-map-wrap .wating-service-wrap img{
+        width: 79px;
+        height: 75px;
+    }
+    .contact-map-wrap .wating-service-wrap h4{
+        font-size: 2rem;
+    }
+    .contact-map-wrap .wating-service-wrap p{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 400px){
+    main .service-wrap.contact ul li dl{
+        flex-direction: column;
+    }
+    main .service-wrap.contact ul li:nth-of-type(2) dl{
+        flex-direction: column;
+    }
+    main .service-wrap.contact ul li dl dt{
+        border-right: none;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+    main .service-wrap.contact ul li:nth-of-type(2) dl dt{
+        border-left: none;
+    }
+    main .service-wrap.contact ul li dl dt{
+        width: 88%;
+    }
+    main .service-wrap.contact ul li dl dd {
+        width: 88%;
+    }
+}
