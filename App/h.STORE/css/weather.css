@@ -173,7 +173,7 @@ body.none-footer_wrap > div.weather{
   .hours_info_wrap::-webkit-scrollbar-thumb{
     height: 0px;
     width: 1px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: #2C5290;
     border: 6px solid #2C5290;
     border-radius: 50px;
   }
@@ -224,6 +224,9 @@ body.none-footer_wrap > div.weather{
   .small-tem{
     position: relative;
   }
+  .small-tem{
+    left: -2px;
+  }
   .big-tem:after,
   .mid-tem:after,
   .small-tem:after{
@@ -242,9 +245,4 @@ body.none-footer_wrap > div.weather{
   .small-tem:after{
     right: -8px;
     -webkit-transform: scale(0.85);
-  }
-  @media screen and (max-width:550px){
-    .hours_info_wrap::-webkit-scrollbar-thumb{
-      background-color: #2C5290;
-    }
   }
