@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/jquery-1.12.4.min.js"></script>
-    <script defer src="js/detail-page_header.js"></script>
-    <script defer src="js/page.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/detail-page_header.js"></script>
+    <!-- <script src="js/page.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body class="detail_page weather none-footer_wrap">
-    <div>
+    <div class="weather">
     <header class="det_page_header">
         <div class="header_inner">
             <a class="back" href="#"><img src="img/back.svg" alt=""></a>
@@ -19,7 +22,11 @@
     </header>
 
         <div class="weather_wrap">
-            <div class="today-weather_wrap">
+            <!-- today-weather_wrap -->
+            <div class="wrap_title">
+                <h3>오늘 예보</h3>
+            </div>
+            <div class="today-weather_wrap section">
                 <dl>
                     <dt class="tit"><span class="city">Seoul</span>, <span class="country">Korea</span></dt>
                     <dd class="info">
@@ -34,19 +41,19 @@
                         </ul>
                     </dd>
                 </dl>                
-
+                
                 <div>
                     <ul>
                         <li class="high">
                             <dl>
                                 <dt>High</dt>
-                                <dd>32</dd>
+                                <dd><span class="big-tem">32</span></dd>
                             </dl>
                         </li>
                         <li class="low">
                             <dl>
                                 <dt>Low</dt>
-                                <dd>22</dd>
+                                <dd><span class="big-tem">32</span></dd>
                             </dl>
                         </li>
                         <li class="chance">
@@ -60,7 +67,288 @@
             </div>
             <!-- //today-weather_wrap -->
 
-            <div class="daily-weather_wrap">
+            <!-- 48hours info -->
+            <div class="wrap_title">
+                <h3>시간별 예보</h3>
+            </div>
+            <div class="hours_info_wrap section">
+                <div class="hours_wrap_inner swiper-container mySwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <p class="time">01:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <!-- <li class="tomorrow end-day swiper-slide">
+                            내일
+                        </li> -->
+                        <li class="swiper-slide">
+                            <p class="time">02:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">03:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">04:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">05:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">06:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">07:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">08:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">09:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">10:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">11:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">12:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">13:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">14:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">15:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">16:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">17:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">18:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">19:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">20:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">21:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">22:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">23:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">00:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">01:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <!-- <li class="day-after-tomorrow end-day swiper-slide">
+                            모레
+                        </li> -->
+                        <li class="swiper-slide">
+                            <p class="time">02:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">03:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">04:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">05:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">06:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">07:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">08:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">09:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">10:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">11:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">12:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">13:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">14:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">15:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">16:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">17:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">18:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">19:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">20:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">21:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">22:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">23:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <p class="time">00:00</p>
+                            <img src="img/home/ic_weather5.svg" alt="">
+                            <p class="mid-tem">15</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //48hours info -->
+            <script>
+                $(function(){
+                
+                    let tomorrElIndex = 24-Number($('.swiper-slide')[0].childNodes[1].innerHTML.split(':')[0])
+                    let dayAfterTomorrIndex = tomorrElIndex + 24
+                    
+                    $('.swiper-slide').eq(tomorrElIndex-1).after('<li class="tomorrow end-day swiper-slide">내일</li>')
+                    $('.swiper-slide').eq(dayAfterTomorrIndex).after('<li class="day-after-tomorrow end-day swiper-slide">모레</li>')
+
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 5,
+                        centeredSlides: false,
+                        spaceBetween: 1,
+                        grabCursor: true
+                    });
+
+                })
+
+              </script>
+
+            <!-- daily-weather_wrap -->
+            <div class="wrap_title">
+                <h3>일별 예보</h3>
+            </div>
+            <div class="daily-weather_wrap section">
                 <ul>
                     <li>
                         <dl>
@@ -78,13 +366,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -113,13 +401,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -148,13 +436,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -183,13 +471,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -218,13 +506,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -253,13 +541,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
@@ -288,13 +576,13 @@
                                     <li class="high">
                                         <dl>
                                             <dt>High</dt>
-                                            <dd>32</dd>
+                                            <dd class="small-tem">32</dd>
                                         </dl>
                                     </li>
                                     <li class="low">
                                         <dl>
                                             <dt>Low</dt>
-                                            <dd>22</dd>
+                                            <dd class="small-tem">22</dd>
                                         </dl>
                                     </li>
                                     <li class="chance">
