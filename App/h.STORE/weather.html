@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/detail-page_header.js"></script>
-    <!-- <script src="js/page.js"></script> -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body class="detail_page weather none-footer_wrap">
     <div class="weather">
-    <header class="det_page_header">
+    <header class="det_page_header nav on">
         <div class="header_inner">
             <a class="back" href="#"><img src="img/back.svg" alt=""></a>
             <h1>Weather</h1>
@@ -72,16 +68,13 @@
                 <h3>시간별 예보</h3>
             </div>
             <div class="hours_info_wrap section">
-                <div class="hours_wrap_inner swiper-container mySwiper">
+                <div class="hours_wrap_inner">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
                             <p class="time">01:00</p>
                             <img src="img/home/ic_weather5.svg" alt="">
                             <p class="mid-tem">15</p>
                         </li>
-                        <!-- <li class="tomorrow end-day swiper-slide">
-                            내일
-                        </li> -->
                         <li class="swiper-slide">
                             <p class="time">02:00</p>
                             <img src="img/home/ic_weather5.svg" alt="">
@@ -202,9 +195,6 @@
                             <img src="img/home/ic_weather5.svg" alt="">
                             <p class="mid-tem">15</p>
                         </li>
-                        <!-- <li class="day-after-tomorrow end-day swiper-slide">
-                            모레
-                        </li> -->
                         <li class="swiper-slide">
                             <p class="time">02:00</p>
                             <img src="img/home/ic_weather5.svg" alt="">
@@ -333,12 +323,12 @@
                     $('.swiper-slide').eq(tomorrElIndex-1).after('<li class="tomorrow end-day swiper-slide">내일</li>')
                     $('.swiper-slide').eq(dayAfterTomorrIndex).after('<li class="day-after-tomorrow end-day swiper-slide">모레</li>')
 
-                    var swiper = new Swiper(".mySwiper", {
-                        slidesPerView: 5,
-                        centeredSlides: false,
-                        spaceBetween: 1,
-                        grabCursor: true
-                    });
+                    // var swiper = new Swiper(".mySwiper", {
+                    //     slidesPerView: 5,
+                    //     centeredSlides: false,
+                    //     spaceBetween: 1,
+                    //     grabCursor: true
+                    // });
 
                 })
 
