@@ -154,9 +154,9 @@ body.none-footer_wrap > div.weather{
   .weather_wrap .section{
     margin: 14px auto;
   }
-  .weather_wrap .section.hours_info_wrap{
-    margin: 14px auto 0;
-  }
+  /* .weather_wrap .section.hours_info_wrap{
+    margin: 14px auto 8px;
+  } */
   .weather_wrap .section.today-weather_wrap{
     margin: 40px auto 40px;
   }
