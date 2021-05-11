@@ -1,6 +1,9 @@
 body.none-footer_wrap > div.weather{
   padding: 50px 0 0;
 }
+.detail_page.weather > div{
+  padding-bottom: 0px;
+}
 body.weather{background-color: #2C5290;}        
 .weather_wrap{color: white;}
 
@@ -44,9 +47,10 @@ body.weather{background-color: #2C5290;}
   margin-top: 4px;
 }
 .today-weather_wrap>dl dd .weather_temper ul li span:nth-of-type(1){
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 50px;
   font-family: 'NotoSansKR-Bold';
+  font-weight: bold;
 }
 .today-weather_wrap>dl dd .weather_temper ul li span:nth-of-type(2){
   margin-left: 4px;
@@ -110,6 +114,7 @@ body.weather{background-color: #2C5290;}
   font-size:1.4rem;
   font-family: 'NotoSansKR-Regular';
   box-sizing: border-box;
+  text-align: center;
 }
 .today-weather_wrap>div ul li dl dd{
   font-size:1.8rem;
@@ -220,7 +225,6 @@ body.weather{background-color: #2C5290;}
 }
 .hours_info_wrap .hours_wrap_inner ul.swiper-wrapper{
   position: relative;
-  width: 3186px;
   display: flex;
   align-items: center;
   margin-left: 26px;
@@ -308,15 +312,15 @@ body.weather{background-color: #2C5290;}
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(1){
   font-size: 1.2rem;
-  font-family: 'NotoSans-Regular';
+  font-family: 'NotoSansKR-Regular';
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(2){
   font-size: 1.4rem;
-  font-family: 'NotoSans-Regular';
+  font-family: 'NotoSansKR-Regular';
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(3){
   font-size: 1.4rem;
-  font-family: 'NotoSans-Regular';
+  font-family: 'NotoSansKR-Regular';
   position: relative;
   left: -2px;
 }
@@ -359,4 +363,25 @@ body.weather{background-color: #2C5290;}
 .small-tem:after{
   right: -8px;
   -webkit-transform: scale(0.85);
+}
+@media screen and (max-width:350px){
+  .today-weather_wrap>dl dt{
+    font-size: 2.6rem;
+  }
+  .today-weather_wrap>dl dd .weather{
+    font-size: 2.4rem;
+  }
+  .weather_img{
+    width: 110px;
+    height: 110px;
+  }
+  .today-weather_wrap>dl dd .weather_temper>span{
+    font-size: 4.6rem;
+  }
+  .today-weather_wrap>dl dd .weather_temper ul li{
+    font-size: 1.2rem;
+  }
+  .daily-weather_wrap>ul>li>dl>dd{
+    width: 58%;
+  }
 }
