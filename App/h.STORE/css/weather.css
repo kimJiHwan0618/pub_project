@@ -2,19 +2,19 @@ body.none-footer_wrap > div.weather{
   padding: 50px 0 0;
 }
 .weather_wrap.page{
-  background: linear-gradient(to bottom,#66CAFC,#9CD7F5 50%,#bae0f3 100%);
+  background: linear-gradient(to bottom,#54c4fc,#77c6ee 50%,#9bd5f1 100%);
 }
 /* background: linear-gradient(to bottom,#66CAFC,#9CD7F5 50%,#bae0f3 100%);  낮*/
 /* background: linear-gradient(to bottom,#210E3D,#3D3672 50%,#3E4072 100%);  밤*/
 .weather_wrap.page.day{
-  background: linear-gradient(to bottom,#66CAFC,#9CD7F5 50%,#bae0f3 100%);
+  background: linear-gradient(to bottom,#32b9fc,#54c6ff 50%,#89d8ff 100%);
 }
 .weather_wrap.page.night{
   background: linear-gradient(to bottom,#210E3D,#3D3672 50%,#3E4072 100%);
 }
 .detail_page.weather > div{
-  padding-bottom: 20px
-}      
+  padding-bottom: 0px;
+}     
 .weather_wrap{color: white;}
 
 /* today-weather */
@@ -48,11 +48,11 @@ body.none-footer_wrap > div.weather{
 }
 .today-weather_wrap>dl dd .weather{
   font-size:2.2rem;
-  font-family: "NotoSansKR-Regular";
+  font-family: "NotoSans-Regular";
 }
 .today-weather_wrap>dl dd .weather_temper{
   z-index: 0;
-  font-family: "NotoSansKR-Regular";
+  font-family: "NotoSans-Regular";
   display: flex;
   align-items: center;
 }
@@ -69,7 +69,7 @@ body.none-footer_wrap > div.weather{
 .today-weather_wrap>dl dd .weather_temper ul li span:nth-of-type(1){
   font-size: 1.3rem;
   border-radius: 50px;
-  font-family: 'NotoSansKR-Bold';
+  font-family: 'NotoSans-Bold';
   font-weight: bold;
 }
 .today-weather_wrap>dl dd .weather_temper ul li span:nth-of-type(2){
@@ -94,7 +94,7 @@ body.none-footer_wrap > div.weather{
   font-size: 5.4rem;
   position: relative;
   margin-right: 12px;
-  font-family: 'NotoSansKR-Midium';
+  font-family: 'NotoSans-Midium';
 }
 .today-weather_wrap>dl dd .weather_temper>span:after{
   content: "℃";
@@ -133,15 +133,16 @@ body.none-footer_wrap > div.weather{
 .today-weather_wrap>div ul li dl dt{
   color: white;       
   font-size:1.4rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
   box-sizing: border-box;
   text-align: center;
 }
 .today-weather_wrap>div ul li dl dd{
   font-size:1.8rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
   box-sizing: border-box;
 }
+
 .daily-weather_wrap{
   width: 88%;
 }
@@ -175,11 +176,11 @@ body.none-footer_wrap > div.weather{
 .daily-weather_wrap>ul>li>dl>dt ul li:nth-of-type(1) p:nth-of-type(1){
   color: white;
   font-size:1.2rem;
-  font-family: 'NotoSansKR-Light';
+  font-family: 'NotoSans-Light';
 }
 .daily-weather_wrap>ul>li>dl>dt ul li:nth-of-type(1) p:nth-of-type(2){
   font-size:1.2rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
 }
 .daily-weather_wrap>ul>li>dl>dt ul img{
   width:36px;
@@ -200,11 +201,11 @@ body.none-footer_wrap > div.weather{
 }
 .daily-weather_wrap>ul>li>dl>dd ul li dl dt{
   color: white;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
 }
 .daily-weather_wrap>ul>li>dl>dd ul li dl dd{
   font-size:1.2rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
   display: flex;
 }
 .daily-weather_wrap>ul>li>dl>dd ul li dl dd span:nth-of-type(2){
@@ -262,7 +263,7 @@ body.none-footer_wrap > div.weather{
 }
 .hours_info_all_wrap>ul.title li{
   font-size: 1.25rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
 }
 .hours_info_all_wrap>ul.title li{
   width: 26px;
@@ -364,15 +365,15 @@ body.none-footer_wrap > div.weather{
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(1){
   font-size: 1.2rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(2){
   font-size: 1.4rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
 }
 .hours_info_wrap .hours_wrap_inner ul li p:nth-of-type(3){
   font-size: 1.4rem;
-  font-family: 'NotoSansKR-Regular';
+  font-family: 'NotoSans-Regular';
   position: relative;
   left: -2px;
 }
