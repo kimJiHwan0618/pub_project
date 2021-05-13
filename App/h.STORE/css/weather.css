@@ -13,7 +13,7 @@ body.none-footer_wrap > div.weather{
   background: linear-gradient(to bottom,#210E3D,#3D3672 50%,#3E4072 100%);
 }
 .detail_page.weather > div{
-  padding-bottom: 0px;
+  padding-bottom: 20px
 }      
 .weather_wrap{color: white;}
 
@@ -142,9 +142,9 @@ body.none-footer_wrap > div.weather{
   font-family: 'NotoSansKR-Regular';
   box-sizing: border-box;
 }
-
-.daily-weather_wrap{width: 88%;
-                    margin: 0 auto;}
+.daily-weather_wrap{
+  width: 88%;
+}
 .daily-weather_wrap>ul>li>dl{
   display: flex;
   width: 100%;
@@ -158,10 +158,6 @@ body.none-footer_wrap > div.weather{
 }
 .daily-weather_wrap>ul>li:first-of-type{
   padding: 0 0 12px;
-}
-.daily-weather_wrap>ul>li:last-of-type{
-  padding: 12px 0 0px;
-  border-bottom: none;
 }
 .daily-weather_wrap>ul>li>dl>dt{
   width: 36%;
