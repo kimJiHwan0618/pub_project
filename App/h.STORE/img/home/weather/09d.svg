@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_60" data-name="사각형 60" width="80" height="80" transform="translate(-772 -300)" fill="none" stroke="red" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_12" data-name="마스크 그룹 12" transform="translate(772 300)" clip-path="url(#clip-path)">
+    <g id="그룹_39" data-name="그룹 39">
+      <g id="그룹_26" data-name="그룹 26" transform="translate(-12.97 3.155)">
+        <rect id="사각형_55" data-name="사각형 55" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -729.492, -250.813)" fill="#97cfff"/>
+        <rect id="사각형_56" data-name="사각형 56" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -750.145, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_54" data-name="사각형 54" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -726.314, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_57" data-name="사각형 57" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -702.483, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_58" data-name="사각형 58" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -681.829, -250.813)" fill="#97cfff"/>
+        <rect id="사각형_53" data-name="사각형 53" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -705.661, -250.813)" fill="#97cfff"/>
+      </g>
+      <g id="그룹_25" data-name="그룹 25" transform="translate(0 83.296)">
+        <path id="패스_136" data-name="패스 136" d="M54.114,29.933a10.35,10.35,0,0,0,.47,1.8c6.457.913,11.3,4.688,11.3,11.4A13.319,13.319,0,0,1,52.568,56.449H18.319a13.321,13.321,0,0,1-1.9-26.5,1.623,1.623,0,0,1,.35-.012,19.027,19.027,0,0,1,37.342,0Z" transform="translate(-757.887 -395.367)" fill="#656565" fill-rule="evenodd"/>
+        <path id="패스_137" data-name="패스 137" d="M61.394,36.681a10.125,10.125,0,0,0,.46,1.759c6.318.9,11.059,4.587,11.059,11.154A13.033,13.033,0,0,1,59.882,62.627H26.367a13.033,13.033,0,0,1-1.857-25.935,1.587,1.587,0,0,1,.343-.012,18.623,18.623,0,0,1,36.54,0Z" transform="translate(-785.326 -391.392)" fill="#f3f3f3" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

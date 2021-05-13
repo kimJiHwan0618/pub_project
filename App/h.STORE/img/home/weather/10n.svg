@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_45" data-name="사각형 45" width="80" height="80" transform="translate(-674.633 -206)" fill="none" stroke="red" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.834" x2="0.565" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#373737"/>
+      <stop offset="1" stop-color="#9e9e9e"/>
+    </linearGradient>
+  </defs>
+  <g id="마스크_그룹_14" data-name="마스크 그룹 14" transform="translate(674.633 206)" clip-path="url(#clip-path)">
+    <g id="그룹_41" data-name="그룹 41">
+      <g id="그룹_22" data-name="그룹 22" transform="translate(-3151.744 18.881)">
+        <path id="패스_135" data-name="패스 135" d="M85.231,37.2A21.365,21.365,0,1,1,63.865,15.833,21.365,21.365,0,0,1,85.231,37.2Z" transform="translate(2471 -239.714)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="그룹_37" data-name="그룹 37" transform="translate(84.03 95.155)">
+        <rect id="사각형_55" data-name="사각형 55" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -729.492, -250.813)" fill="#97cfff"/>
+        <rect id="사각형_56" data-name="사각형 56" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -750.145, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_54" data-name="사각형 54" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -726.314, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_57" data-name="사각형 57" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -702.483, -238.103)" fill="#97cfff"/>
+        <rect id="사각형_58" data-name="사각형 58" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -681.829, -250.813)" fill="#97cfff"/>
+        <rect id="사각형_53" data-name="사각형 53" width="3.177" height="15.887" rx="1" transform="matrix(0.829, 0.559, -0.559, 0.829, -705.661, -250.813)" fill="#97cfff"/>
+      </g>
+      <path id="패스_137" data-name="패스 137" d="M59.625,36.128a9.752,9.752,0,0,0,.443,1.695c6.086.868,10.652,4.418,10.652,10.744A12.553,12.553,0,0,1,58.168,61.12H25.887A12.554,12.554,0,0,1,24.1,36.139a1.529,1.529,0,0,1,.33-.012,17.938,17.938,0,0,1,35.195,0Z" transform="translate(-687.597 -217.778)" fill="#f3f3f3" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
