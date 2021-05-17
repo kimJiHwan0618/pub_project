@@ -1,0 +1,113 @@
+.store-length-wrap{
+  text-align: center;
+  margin-bottom: 16px;
+}
+.store-length-wrap>dl.store-length{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 6px;
+}
+.store-length-wrap>dl.store-length dt{
+  opacity: 0.7;
+  color: #2C5290;
+  font-family: 'NotoSansKR-Regular';
+  font-size: 1.8rem;
+}
+.store-length-wrap>dl.store-length dd{
+  color: #2C5290;
+  font-family: 'NotoSansKR-Bold';
+  font-size: 3.8rem;
+}
+.store-length-wrap select{
+  width: 250px;
+  border: 1px solid #E3E3E3;
+  font-size: 1.5rem;
+  padding: 10px 16px;
+  outline: none;
+  border-radius:0;
+  -webkit-appearance:none; 
+  -moz-appearance:none; 
+  appearance:none;
+  background: url(../img/home/select-arrow.svg) no-repeat 222px 50%;
+  background-size: 12px 8px;
+  background-color: white;
+}
+.store-list-wrap{
+  width: 100%;
+}
+.store-list-wrap>.list{
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 0;
+  background-color: white;
+  border: 1px solid #E3E3E3;
+}
+.store-list-wrap>.list{
+  margin-bottom: 10px;
+}
+.store-list-wrap>.list:last-of-type{
+  margin-bottom: 0px;
+}
+.store-list-wrap>.list>ul{
+  width: 88%;
+  margin: 0 auto;
+}
+.store-list-wrap>.list>ul>li:last-of-type,
+.store-list-wrap>.list>ul>li:first-of-type{
+  display: flex;
+  justify-content: space-between;
+}
+.store-list-wrap>.list>ul>li:first-of-type{
+  align-items: center;
+  margin-bottom: 6px;
+}
+.store-list-wrap>.list>ul>li:last-of-type{  
+  align-items: flex-end;
+}
+.store-list-wrap>.list>ul>li:first-of-type p span:nth-of-type(2){
+  margin: 0 1px;
+}
+.store-list-wrap>.list>ul>li:first-of-type>p span{
+  font-size: 1.5rem;
+}
+.store-list-wrap>.list>ul>li:first-of-type>a{
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  border: 1px solid #dfdfdf;
+}
+
+.store-list-wrap>.list>ul>li:first-of-type>p span:nth-of-type(2){
+  color: #8E8E8E;
+}
+.store-list-wrap>.list>ul>li:first-of-type>p span:last-of-type{
+  font-size: 1.4rem;
+}
+.store-list-wrap>.list>ul>li:first-of-type>p .used{
+  color: #30C83A;
+}
+.store-list-wrap>.list>ul>li:first-of-type>p .unused{
+  color: #FB5858;
+}
+.store-list-wrap>.list>ul>li.store-name{
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.store-list-wrap>.list>ul>li:last-of-type p:first-of-type{
+  display: flex;
+  flex-direction: column;
+}
+.store-list-wrap>.list>ul>li:last-of-type p:first-of-type span{
+  font-size: 1.3rem;
+  color: #ACACAC;
+}
+.store-list-wrap>.list>ul>li:last-of-type p:first-of-type span:first-of-type{
+  margin-bottom: 3px;
+}
+.store-list-wrap>.list>ul>li:last-of-type p:nth-of-type(2){
+  font-size: 1.8rem;
+}
+.store-list-wrap>.list>ul>li:last-of-type p:nth-of-type(2) span:nth-of-type(1){
+  font-size: 1.6rem;
+}

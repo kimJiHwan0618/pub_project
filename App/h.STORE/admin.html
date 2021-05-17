@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/jquery-1.12.4.min.js"></script>
+    <script defer src="js/header.js"></script>
+    <script defer src="js/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+        #page{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="header_body">
+    <input type="number" value="1" id="page">
+
+    <header class="nav">
+        <div class="head_inner">
+            <a href="#">
+                <img src="img/logo2.png" alt="">
+            </a>
+            <a href="#">
+                <img src="img/ic_notice.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- <? include "header.html"; ?> -->
+
+    <div class="pull-to-refresh">
+      <div class="store-length-wrap">
+        <dl class="store-length">
+          <dt>전체 가게 수 :&nbsp;</dt>
+          <dd>280</dd>
+        </dl>
+        <select name="" id="">
+          <option value="ALL">ALL</option>
+          <option value="LAK">LAK</option>
+          <option value="THR">THR</option>
+        </select>
+      </div>
+
+      <!-- 스토어 리스트 전체 -->
+      <ul class="store-list-wrap">
+        <!-- 리스트 -->
+        <li class="list">
+          <ul>
+            <li>
+              <p>
+                <span class="country">LAK</span>
+                <span>/</span>
+                <span class="used">사용</span>
+              </p>
+              <a href="#">상세보기</a>
+            </li>
+            <li class="store-name">Mebong Group</li>
+            <li>
+              <p>
+                <span class="store-key">Standard-Retail</span>
+                <span class="email">jasonkang@hingom.com</span>
+              </p>
+              <p class="today-sales">
+                <span>₭</span>
+                <span>300,000</span>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <!-- //리스트 -->
+        <!-- 리스트 -->
+        <li class="list">
+          <ul>
+            <li>
+              <p>
+                <span class="country">THB</span>
+                <span>/</span> 
+                <span class="unused">미사용</span>
+              </p>
+              <a href="#">상세보기</a>
+            </li>
+            <li class="store-name">Banana Restaurant</li>
+            <li>
+              <p>
+                <span class="store-key">Mini-Mart</span>
+                <span class="email">alex@hingom.com</span>
+              </p>
+              <p class="today-sales">
+                <span>₭</span>
+                <span>800,000</span>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <!-- //리스트 -->
+        <!-- 리스트 -->
+        <li class="list">
+          <ul>
+            <li>
+              <p>
+                <span class="country">LAK</span>
+                <span>/</span> 
+                <span class="used">사용</span>
+              </p>
+              <a href="#">상세보기</a>
+            </li>
+            <li class="store-name">Outback restaurant</li>
+            <li>
+              <p>
+                <span class="store-key">Standard-Retail</span>
+                <span class="email">dragonfly2@hingom.com</span>
+              </p>
+              <p class="today-sales">
+                <span>₭</span>
+                <span>500,000</span>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <!-- //리스트 -->
+        <!-- 리스트 -->
+        <li class="list">
+          <ul>
+            <li>
+              <p>
+                <span class="country">THB</span>
+                <span>/</span> 
+                <span class="unused">미사용</span>
+              </p>
+              <a href="#">상세보기</a>
+            </li>
+            <li class="store-name">Kuukoo</li>
+            <li>
+              <p>
+                <span class="store-key">Restaurant</span>
+                <span class="email">tackiyo@hingom.com</span>
+              </p>
+              <p class="today-sales">
+                <span>₭</span>
+                <span>600,000</span>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <!-- //리스트 -->
+        <!-- 리스트 -->
+        <li class="list">
+          <ul>
+            <li>
+              <p>
+                <span class="country">LAK</span>
+                <span>/</span> 
+                <span class="used">사용</span>
+              </p>
+              <a href="#">상세보기</a>
+            </li>
+            <li class="store-name">Hanshin Pocha</li>
+            <li>
+              <p>
+                <span class="store-key">Standard-Retail</span>
+                <span class="email">niphyang@hingom.com</span>
+              </p>
+              <p class="today-sales">
+                <span>₭</span>
+                <span>1,300,000</span>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <!-- //리스트 -->
+      </ul>
+      <!-- //스토어 리스트 전체-->
+    </div>
+
+    
+    <footer>
+        <ul>
+            <li><a href="#"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
+            <li><a href="#"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
+            <li><a href="#"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
+            <li><a href="#"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
