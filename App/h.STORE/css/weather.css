@@ -1,22 +1,40 @@
 body.none-footer_wrap > div.weather{
   padding: 50px 0 0;
 }
-.weather_wrap.page{
-  background: linear-gradient(to bottom,#54c4fc,#77c6ee 50%,#9bd5f1 100%);
-}
-/* background: linear-gradient(to bottom,#66CAFC,#9CD7F5 50%,#bae0f3 100%);  낮*/
-/* background: linear-gradient(to bottom,#210E3D,#3D3672 50%,#3E4072 100%);  밤*/
-.weather_wrap.page.day{
+.pull-to-refresh.weather{
+  position: relative;
   background: linear-gradient(to bottom,#32b9fc,#54c6ff 50%,#89d8ff 100%);
 }
-.weather_wrap.page.night{
+.pull-to-refresh.weather:after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -150px;
+  background: #32b9fc;
+  width: 100%;
+  height: 150px;
+}
+.pull-to-refresh.weather.day{
+  background: linear-gradient(to bottom,#32b9fc,#54c6ff 50%,#89d8ff 100%);
+}
+.pull-to-refresh.weather.day:after{
+  background: #32b9fc;
+}
+.pull-to-refresh.weather.night{
   background: linear-gradient(to bottom,#210E3D,#3D3672 50%,#3E4072 100%);
+}
+.pull-to-refresh.weather.night:after{
+  background: #210E3D
 }
 .detail_page.weather > div{
   padding-bottom: 0px;
 }     
 .weather_wrap{color: white;}
 
+.weather_wrap.page{
+  background: none;
+}
 /* today-weather */
 .today-weather_wrap>dl{
   width: 88%;
