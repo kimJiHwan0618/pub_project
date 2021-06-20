@@ -1,353 +1,475 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>웹 접근성-삼성전기</title>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script>
-        $(function(){
-            $(".footer>ul>li>a").click(function(){
-                
-                $(".footer>ul>li>a").parent().removeClass("on")
-                $(this).parent().addClass("on")
+      $(function () {
+        $(".footer>ul>li>a").click(function () {
+          $(".footer>ul>li>a").parent().removeClass("on");
+          $(this).parent().addClass("on");
 
-                var li_index = $(this).parent().index();
+          var li_index = $(this).parent().index();
 
-                console.log(li_index)
+          console.log(li_index);
 
-                $(".content_all>div").removeClass("on");
-                $(".content_all>div").eq(li_index).addClass("on");
-                
-
-            });
+          $(".content_all>div").removeClass("on");
+          $(".content_all>div").eq(li_index).addClass("on");
         });
+      });
     </script>
     <style>
-        .blind{text-indent: -9999px;overflow: hidden;}
-        html{font-size: 16px;}
-        body{font-family: 'Noto Sans CJK KR';
-             background: url(img/sub1_img/body_bg.png) no-repeat 0 0;
-             background-size: 100vw 100vh;}
-        *{margin: 0;padding: 0;}
-        ul{list-style: none;}
-        a{text-decoration: none;
-          color: #222;}
+      .blind {
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: "Noto Sans CJK KR";
+        background: url(img/sub1_img/body_bg.png) no-repeat 0 0;
+        background-size: 100vw 100vh;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #222;
+      }
 
-        h1{position: absolute;
-            left: -2%;
-            background: url(img/sub1_img/logo.png) no-repeat 0 0;
-            background-size: 14.791vw 5.686vh;
-            width: 25%;height: 72.5%;
-            transform: scale(0.65);}  
+      h1 {
+        position: absolute;
+        left: -2%;
+        background: url(img/sub1_img/logo.png) no-repeat 0 0;
+        background-size: 14.791vw 5.686vh;
+        width: 25%;
+        height: 72.5%;
+        transform: scale(0.65);
+      }
 
-        .header{position: relative;
-                left: 0;top: 0;
-                padding-top: 10px;
-                width: 100%;
-                height: 70px;}
-    
-                   
+      .header {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-top: 10px;
+        width: 100%;
+        height: 70px;
+      }
 
-        .footer{position: absolute;left: 50%;transform: translateX(-50%);
-                bottom: 3%;
-                width: 88.75%;
-                height: 8.921%;
-                }
-        .footer>ul{width: 100%;
-                   display: flex;
-                   height: 90%;
-                   justify-content: space-between;}
-        .footer>ul>li{flex: 1;
-                    margin:0 3%;
-                    background: #122391;
-                    border-radius: 6px;
-                     position: relative;
-                     text-align: center;
-                    }
+      .footer {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3%;
+        width: 88.75%;
+        height: 8.921%;
+      }
+      .footer > ul {
+        width: 100%;
+        display: flex;
+        height: 90%;
+        justify-content: space-between;
+      }
+      .footer > ul > li {
+        flex: 1;
+        margin: 0 3%;
+        background: #122391;
+        border-radius: 6px;
+        position: relative;
+        text-align: center;
+      }
 
-        .footer>ul>li>a{position: absolute;
-                        left: 50%;transform: translateX(-50%) translateY(-50%);
-                        top: 50%;
-                        font-weight: bold;
-                        font-size: 1.2rem;
-                        transition: all 0.5s linear 0s;
-                        color: white;
-                        border-radius: 6px;
-                        display: block;
-                        width: 96%;
-                        height: 70%;
-                        box-sizing: border-box;
-                        padding-top: 4%;}
+      .footer > ul > li > a {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.5s linear 0s;
+        color: white;
+        border-radius: 6px;
+        display: block;
+        width: 96%;
+        height: 70%;
+        box-sizing: border-box;
+        padding-top: 4%;
+      }
 
-        .footer>ul>li.on>a{background: white;
-                            color: #222;}
-        
-        .content_all{position: fixed;
-                    left: 50%;transform: translateX(-50%) translateY(-50%);
-                    top: 50%;
-                    
-                    width: 61%;
-                    height: 68%;}
-        .content_all>div{width: 100%;height: 100%;
-                         opacity: 0;
-                         position: absolute;left: 0;top: 0;
-                         transition: all 0.5s linear 0s;}
-        .content_all>div.on{opacity: 1;}
-        
+      .footer > ul > li.on > a {
+        background: white;
+        color: #222;
+      }
 
+      .content_all {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
 
-        .content_all>.content1>div{position: absolute;
-                                    
-                                   background: url(img/sub1_img/iMack_content1.png) no-repeat 0 0;
-                                    width: 35.5%;
-                                    height: 53%;
-                                    background-size: 21.5vw 36vh;}            
+        width: 61%;
+        height: 68%;
+      }
+      .content_all > div {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s linear 0s;
+      }
+      .content_all > div.on {
+        opacity: 1;
+      }
 
-        .content_all>.content1>div>div{position: absolute;
-                             
-                                       left: 4.1%;
-                                       top: 4.6%;
-                                       width: 91.5%;
-                                       height: 62.5%;}
+      .content_all > .content1 > div {
+        position: absolute;
 
-        .content_all>.content1>div:nth-of-type(1){left: 6%;top: 20%;}
-        .content_all>.content1>div:nth-of-type(1)>div{background: url(img/sub1_img/samsung-sub1.png) no-repeat 0 0;
-                                                    background-size: 19.84vw  96.764vh;
-                                                   }
-        .content_all>.content1.on>div:nth-of-type(1)>div{animation: page 25s linear infinite;}
+        background: url(img/sub1_img/iMack_content1.png) no-repeat 0 0;
+        width: 35.5%;
+        height: 53%;
+        background-size: 21.5vw 36vh;
+      }
 
-        .content_all>.content1>div:nth-of-type(2){right: 6%;top: 20%;}            
-        .content_all>.content1>div:nth-of-type(2)>div{background: url(img/sub1_img/samsung-sub2.png) no-repeat 0 0;
-                                                    background-size: 19.84vw  35.09vh;
-                                                   }
-        .content_all>.content1.on>div:nth-of-type(2)>div{animation: page 25s linear infinite;}
+      .content_all > .content1 > div > div {
+        position: absolute;
 
-        .content_all>.content1>div:nth-of-type(3){right: 50%;
-                                                transform: translateX(50%);
-                                                bottom: 3%;}                                              
-        .content_all>.content1>div:nth-of-type(3)>div{background: url(img/sub1_img/samsung-main1.png) no-repeat 0 0;
-                                                    background-size: 19.84vw  74.7vh;
-                                                   }
-        .content_all>.content1.on>div:nth-of-type(3)>div{animation: page 25s linear infinite;}
-        
-        .content1 > p {text-align: center;
-                        margin-top: 25px;
-                        font-weight: bold;
-                        font-size: 1.5rem;}
+        left: 4.1%;
+        top: 4.6%;
+        width: 91.5%;
+        height: 62.5%;
+      }
 
+      .content_all > .content1 > div:nth-of-type(1) {
+        left: 6%;
+        top: 20%;
+      }
+      .content_all > .content1 > div:nth-of-type(1) > div {
+        background: url(img/sub1_img/samsung-sub1.png) no-repeat 0 0;
+        background-size: 19.84vw 96.764vh;
+      }
+      .content_all > .content1.on > div:nth-of-type(1) > div {
+        animation: page 25s linear infinite;
+      }
 
-        @keyframes page{
-            0%,5%{background-position: 0 0;}
-            45%{background-position: 0 100%;}
-            46%,50%{background-position: 0 100%;}
-            100%{background-position: 0 0;}
+      .content_all > .content1 > div:nth-of-type(2) {
+        right: 6%;
+        top: 20%;
+      }
+      .content_all > .content1 > div:nth-of-type(2) > div {
+        background: url(img/sub1_img/samsung-sub2.png) no-repeat 0 0;
+        background-size: 19.84vw 35.09vh;
+      }
+      .content_all > .content1.on > div:nth-of-type(2) > div {
+        animation: page 25s linear infinite;
+      }
+
+      .content_all > .content1 > div:nth-of-type(3) {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 3%;
+      }
+      .content_all > .content1 > div:nth-of-type(3) > div {
+        background: url(img/sub1_img/samsung-main1.png) no-repeat 0 0;
+        background-size: 19.84vw 74.7vh;
+      }
+      .content_all > .content1.on > div:nth-of-type(3) > div {
+        animation: page 25s linear infinite;
+      }
+
+      .content1 > p {
+        text-align: center;
+        margin-top: 25px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      @keyframes page {
+        0%,
+        5% {
+          background-position: 0 0;
         }
-        /* //content1  */
+        45% {
+          background-position: 0 100%;
+        }
+        46%,
+        50% {
+          background-position: 0 100%;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+      /* //content1  */
 
-        /* content2 */
-        .content_all>.content1,.content_all>.content2,.content_all>.content3,.content_all>.content4{top: -7.5%;}
-        h2{color: #1A4087;
-                    text-align: center;
-                    font-size: 2.3rem;
-                     }
-        .content2>p{text-align: center;
-                    margin: 12px;
-                    font-size: 1rem;}
+      /* content2 */
+      .content_all > .content1,
+      .content_all > .content2,
+      .content_all > .content3,
+      .content_all > .content4 {
+        top: -7.5%;
+      }
+      h2 {
+        color: #1a4087;
+        text-align: center;
+        font-size: 2.3rem;
+      }
+      .content2 > p {
+        text-align: center;
+        margin: 12px;
+        font-size: 1rem;
+      }
 
-        .content2>.mark{width: 100px;
-                        height: 35px;
-                        display: inline-block;
-                        }
+      .content2 > .mark {
+        width: 100px;
+        height: 35px;
+        display: inline-block;
+      }
 
-        .content2>.mark:nth-of-type(1){background: url(img/sub1_img/css_mark.png) no-repeat 0 0;
-                                       position: absolute;
-                                        left: 53%;top: 25%;}
-        .content2>.mark:nth-of-type(2){background: url(img/sub1_img/html_mark.png) no-repeat 0 0;
-                                        position: absolute;
-                                        right: 53%;top: 25%;}
+      .content2 > .mark:nth-of-type(1) {
+        background: url(img/sub1_img/css_mark.png) no-repeat 0 0;
+        position: absolute;
+        left: 53%;
+        top: 25%;
+      }
+      .content2 > .mark:nth-of-type(2) {
+        background: url(img/sub1_img/html_mark.png) no-repeat 0 0;
+        position: absolute;
+        right: 53%;
+        top: 25%;
+      }
 
+      .pass {
+        position: absolute;
+        z-index: 1;
+        right: 15%;
+        top: 50%;
+        width: 12%;
+        height: 9%;
+        transition: all 0.5s linear 0.7s;
+        background: url(img/sub1_img/PASS.png) no-repeat 0 0;
+        background-size: 7.2vw 6vh;
+        opacity: 0;
+        transform: rotate(30deg) scale(2);
+      }
 
-                        .pass{position: absolute;
-                        z-index: 1;
-                        right: 15%;
-                        top: 50%;
-                        width: 12%;
-                        height:9% ;
-                        transition: all 0.5s linear 0.7s;
-                        background: url(img/sub1_img/PASS.png) no-repeat 0 0;
-                        background-size: 7.2vw 6vh;
-                        opacity: 0;
-                        transform: rotate(30deg) scale(2);}
+      .on > .pass {
+        transform: rotate(-5deg) scale(1);
+        opacity: 1;
+      }
 
-        .on>.pass{transform: rotate(-5deg) scale(1);
-                            opacity: 1;}
+      .content2 > .imac {
+        width: 35.5%;
+        height: 53%;
+        position: absolute;
+      }
 
-        .content2>.imac{width: 35.5%;
-                        height: 53%;
-                        position: absolute;
-                }
+      .content2 > .imac1 {
+        background: url(img/sub1_img/css.png) no-repeat 0 0;
+        left: 53%;
+        background-size: 21.5vw 36vh;
+        bottom: 10%;
+      }
+      .content2 > .imac2 {
+        background: url(img/sub1_img/html.png) no-repeat 0 0;
+        right: 53%;
+        background-size: 21.5vw 36vh;
+        bottom: 10%;
+      }
 
-        .content2>.imac1{background: url(img/sub1_img/css.png) no-repeat 0 0;
-                        left: 53%; background-size: 21.5vw 36vh;
-                        bottom: 10%;}
-        .content2>.imac2{background: url(img/sub1_img/html.png) no-repeat 0 0;
-                        right: 53%; background-size: 21.5vw 36vh;
-                        bottom: 10%;}
+      /* content3 */
+      .content3 > p {
+        text-align: center;
+        margin: 12px;
+        font-size: 1rem;
+      }
 
-        /* content3 */
-        .content3>p{text-align: center;
-                    margin: 12px;
-                    font-size: 1rem;}
+      .content3 > .content3_imac {
+        position: absolute;
 
-        .content3>.content3_imac{position: absolute;
-                                
-                                height: 81%;
-                                left: 50%;transform: translateX(-50%);
-                                bottom: -3%;
-                                background: url(img/sub1_img/content3_imac.png) no-repeat 0 0;
-                                width: 55%;
-                                background-size: 33.6vw 55.1vh;
-                                }
-       
-        
-        .content3>.pass{right: 30.5%;
-                        }
+        height: 81%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3%;
+        background: url(img/sub1_img/content3_imac.png) no-repeat 0 0;
+        width: 55%;
+        background-size: 33.6vw 55.1vh;
+      }
 
-        /* content4 */
-        .content4>p{text-align: center;
-                    margin: 12px;
-                    font-size: 1rem;}
+      .content3 > .pass {
+        right: 30.5%;
+      }
 
-                    .content4>.content4_imac{position: absolute;
-                                height: 81%;
-                                left: 50%;transform: translateX(-50%);
-                                bottom: -3%;
-                                background: url(img/sub1_img/content4_imac.png) no-repeat 0 0;
-                                width: 55%;
-                                background-size: 33.6vw 55.1vh;
-                                }
-                    .content4>.content4_imac>div{position: absolute;
-                                                 left: 4.9%;
-                                                 top: 4.5%;
-                                                 width: 91.5%;
-                                                 height: 63.9%;
-                                                 background-size: 10vw 50vh;
-                                                 background: url(img/sub1_img/samsung-main.png) no-repeat 0 0;
-                                                 overflow: hidden;
-                                                }
+      /* content4 */
+      .content4 > p {
+        text-align: center;
+        margin: 12px;
+        font-size: 1rem;
+      }
 
-            .content_all>.content4.on>.content4_imac>div{animation: page 25s linear infinite;}
+      .content4 > .content4_imac {
+        position: absolute;
+        height: 81%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3%;
+        background: url(img/sub1_img/content4_imac.png) no-repeat 0 0;
+        width: 55%;
+        background-size: 33.6vw 55.1vh;
+      }
+      .content4 > .content4_imac > div {
+        position: absolute;
+        left: 4.9%;
+        top: 4.5%;
+        width: 91.5%;
+        height: 63.9%;
+        background-size: 10vw 50vh;
+        background: url(img/sub1_img/samsung-main.png) no-repeat 0 0;
+        overflow: hidden;
+      }
 
-    .icon{position: absolute;
-          right: 0%;
-          top: 10%;
-          
+      .content_all > .content4.on > .content4_imac > div {
+        animation: page 25s linear infinite;
+      }
+
+      .icon {
+        position: absolute;
+        right: 0%;
+        top: 10%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 11%;
-        height: 600px;}
-    .icon>div:nth-of-type(1){width: 100%;
-                             height: 25%;margin-bottom: 10%;
-                             
-                             background: url(img/sub1_img/ex.png) no-repeat 0 0;}
-    .icon>div:nth-of-type(2){width: 80%;margin-bottom: 10%;
-                             height: 22%;
-                             background: url(img/sub1_img/ch.png) no-repeat 0 0;}
-    .icon>div:nth-of-type(3){width: 76%;margin-bottom: 10%;
-                             height: 22%;
-                             background: url(img/sub1_img/ff.png) no-repeat 0 0;}
-    .icon>div:nth-of-type(4){width: 80%;margin-bottom: 10%;
-                             height: 21.5%;
-                             background: url(img/sub1_img/op.png) no-repeat 0 0;}
-    .icon>div:nth-of-type(5){width: 80%;margin-bottom: 10%;
-                             height: 21.5%;
-                             background: url(img/sub1_img/sf.png) no-repeat 0 0;}
+        height: 600px;
+      }
+      .icon > div:nth-of-type(1) {
+        width: 100%;
+        height: 25%;
+        margin-bottom: 10%;
 
-
-
-
+        background: url(img/sub1_img/ex.png) no-repeat 0 0;
+      }
+      .icon > div:nth-of-type(2) {
+        width: 80%;
+        margin-bottom: 10%;
+        height: 22%;
+        background: url(img/sub1_img/ch.png) no-repeat 0 0;
+      }
+      .icon > div:nth-of-type(3) {
+        width: 76%;
+        margin-bottom: 10%;
+        height: 22%;
+        background: url(img/sub1_img/ff.png) no-repeat 0 0;
+      }
+      .icon > div:nth-of-type(4) {
+        width: 80%;
+        margin-bottom: 10%;
+        height: 21.5%;
+        background: url(img/sub1_img/op.png) no-repeat 0 0;
+      }
+      .icon > div:nth-of-type(5) {
+        width: 80%;
+        margin-bottom: 10%;
+        height: 21.5%;
+        background: url(img/sub1_img/sf.png) no-repeat 0 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <h1 class="blind"> 삼성전기 </h1>
+      <h1 class="blind">삼성전기</h1>
     </div>
     <div>
-        <div class="content_all">
-            <!-- 1 -->
-            <div class="content1 on">
-                <p>해당 사이트는 웹 콘텐츠 접근성 지침에 따라 제작하였으며,<br />
-                    W3C 유효성 검사를 통과하였습니다.</p>
-                <div>
-                    <div></div>
-                </div>
-                
-                <div>
-                    <div></div>
-                </div>
-                
-                <div>
-                    <div></div>
-                </div>
-            </div>
-            <!-- // 1 -->
-            
-            <!-- 2 -->
-            <div class="content2">
-                <h2>1. W3C 유효성 검사</h2>
-                <p>W3C HTML 유효성 검사와 CSS 유효성 검사를 통과하고<br />
-                   웹 표준에 맞게 개발되었다는 사실을 증명하는 인증마크를 획득했습니다.</p>
-                <div class="mark"></div>
-                <div class="mark"></div>
-                
-                <div class="pass"></div>
+      <div class="content_all">
+        <!-- 1 -->
+        <div class="content1 on">
+          <p>
+            해당 사이트는 웹 콘텐츠 접근성 지침에 따라 제작하였으며,<br />
+            W3C 유효성 검사를 통과하였습니다.
+          </p>
+          <div>
+            <div></div>
+          </div>
 
-                <div class="imac imac1"></div>
-                <div class="imac imac2"></div>
-            </div>
-            <!-- // 2 -->
-            
-            <!-- 3 -->
-            <div class="content3">
-                <h2>2. 웹 접근성</h2>
-                <p>한국형 웹 콘텐츠 접근성 지침2.0을 평가기준으로 하여 <br />
-                    준수율 100%로 웹 접근성 검사를 통과했습니다.</p>
-                <div class="pass"></div>
-                <div class="content3_imac">
-                </div> 
-            </div>
-            <!-- // 3 -->
-            
-            <!-- 4 -->
-            <div class="content4">
-                <h2>3. Cross Browsing</h2>
-                <p>IE8 - IE11, Chorme, FireFox, Opera, Safari에서<br />
-                    동일한 웹페이지를 볼 수 있습니다.</p>
+          <div>
+            <div></div>
+          </div>
 
-                <div class="icon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>    
-
-                <div class="content4_imac">
-                    <div></div>
-                </div> 
-            </div>
-            <!-- // 4 -->
+          <div>
+            <div></div>
+          </div>
         </div>
+        <!-- // 1 -->
+
+        <!-- 2 -->
+        <div class="content2">
+          <h2>1. W3C 유효성 검사</h2>
+          <p>
+            W3C HTML 유효성 검사와 CSS 유효성 검사를 통과하고<br />
+            웹 표준에 맞게 개발되었다는 사실을 증명하는 인증마크를 획득했습니다.
+          </p>
+          <div class="mark"></div>
+          <div class="mark"></div>
+
+          <div class="pass"></div>
+
+          <div class="imac imac1"></div>
+          <div class="imac imac2"></div>
+        </div>
+        <!-- // 2 -->
+
+        <!-- 3 -->
+        <div class="content3">
+          <h2>2. 웹 접근성</h2>
+          <p>
+            한국형 웹 콘텐츠 접근성 지침2.0을 평가기준으로 하여 <br />
+            준수율 100%로 웹 접근성 검사를 통과했습니다.
+          </p>
+          <div class="pass"></div>
+          <div class="content3_imac"></div>
+        </div>
+        <!-- // 3 -->
+
+        <!-- 4 -->
+        <div class="content4">
+          <h2>3. Cross Browsing</h2>
+          <p>
+            IE8 - IE11, Chorme, FireFox, Opera, Safari에서<br />
+            동일한 웹페이지를 볼 수 있습니다.
+          </p>
+
+          <div class="icon">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="content4_imac">
+            <div></div>
+          </div>
+        </div>
+        <!-- // 4 -->
+      </div>
     </div>
     <div class="footer">
-        <ul>
-            <li class="on"><a href="#">삼성전기</a></li>
-            <li><a href="#">1. W3C 유효성 검사</a></li>
-            <li><a href="#">2.웹 접근성</a></li>
-            <li><a href="#">3. Cross Browsing</a></li>
-        </ul>
+      <ul>
+        <li class="on"><a href="#">삼성전기</a></li>
+        <li><a href="#">1. W3C 유효성 검사</a></li>
+        <li><a href="#">2.웹 접근성</a></li>
+        <li><a href="#">3. Cross Browsing</a></li>
+      </ul>
     </div>
-</body>
+  </body>
 </html>

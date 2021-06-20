@@ -1,383 +1,451 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>야마하뮤직코리아</title>
     <script src="js/jquery-1.12.4.min.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script>
-        $(function(){
-            $(".lang").mouseover(function(){
-                $(this).addClass('on')
-            })
-
-            $(".lang").mouseout(function(){
-                $(this).removeClass('on')
-            })
-
-
-
-            $(".nav>li>a").mouseover(function(){
-                $(".nav>li>ul").addClass('on')
-                $(".hd_bottom_inner").addClass('on')
-            })
-            $(".hd_bottom_inner").mouseover(function(){
-                $(this).addClass('on')
-                $(".nav>li>ul").addClass('on')
-            });
-            $(".hd_bottom_inner").mouseout(function(){
-                $(this).removeClass('on')
-                $(".nav>li>ul").removeClass('on')
-            });
-            $(".banner").mouseout(function(){
-                $(".nav>li>ul").removeClass('on')
-                $(".hd_bottom_inner").removeClass('on')
-            })
-
-            
-           
-
-           
+      $(function () {
+        $(".lang").mouseover(function () {
+          $(this).addClass("on");
         });
+
+        $(".lang").mouseout(function () {
+          $(this).removeClass("on");
+        });
+
+        $(".nav>li>a").mouseover(function () {
+          $(".nav>li>ul").addClass("on");
+          $(".hd_bottom_inner").addClass("on");
+        });
+        $(".hd_bottom_inner").mouseover(function () {
+          $(this).addClass("on");
+          $(".nav>li>ul").addClass("on");
+        });
+        $(".hd_bottom_inner").mouseout(function () {
+          $(this).removeClass("on");
+          $(".nav>li>ul").removeClass("on");
+        });
+        $(".banner").mouseout(function () {
+          $(".nav>li>ul").removeClass("on");
+          $(".hd_bottom_inner").removeClass("on");
+        });
+      });
     </script>
     <style>
-        header{width: 100%;
-               height: 90px;
-               margin: 0 auto;
-               background: rgb(44, 44, 44);
-               position: fixed;
-               z-index: 3;}
-        header:after{content: "";
-                    display: block;
-                    clear: both;}
+      header {
+        width: 100%;
+        height: 90px;
+        margin: 0 auto;
+        background: rgb(44, 44, 44);
+        position: fixed;
+        z-index: 3;
+      }
+      header:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
 
-        .hd_top{padding-top: 12px;
-                width: 100%;
-                height: 40px;
-                margin: 0 auto;
-                background:  rgb(44, 44, 44);
-                box-shadow: 0px 1px 5px rgb(36, 36, 36);
-                padding-right: 5%;
-                box-sizing: border-box;
-                }
-        .hd_top ul {float: right;
-                    box-sizing: border-box;
-                    }
-        .hd_top ul li.top_hd_li{float: left;
-                     border-right: 1px solid #3f3f3f;
-                     box-sizing: border-box;
-                    height: 30px;
-                    padding: 0 10px;
-                    text-align: center;
-                    height: 15px;
-                    line-height: 12px;}
-        .hd_top ul li a{display: inline-block;
-                        color: rgb(134, 134, 134);
-                        font-size: 12px;
-                        box-sizing: border-box;}
-        .hd_top ul li a:hover{color: white;}
-        .hd_top ul li.lang{display: flex;
-                           flex-direction: column;
-                           height: 20px;
-                           padding-right: 18px;
-                           border-right: none;
-                           padding-top: 1.5px;
-                           /* border: 1px solid rgb(228, 228, 228);
+      .hd_top {
+        padding-top: 12px;
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        background: rgb(44, 44, 44);
+        box-shadow: 0px 1px 5px rgb(36, 36, 36);
+        padding-right: 5%;
+        box-sizing: border-box;
+      }
+      .hd_top ul {
+        float: right;
+        box-sizing: border-box;
+      }
+      .hd_top ul li.top_hd_li {
+        float: left;
+        border-right: 1px solid #3f3f3f;
+        box-sizing: border-box;
+        height: 30px;
+        padding: 0 10px;
+        text-align: center;
+        height: 15px;
+        line-height: 12px;
+      }
+      .hd_top ul li a {
+        display: inline-block;
+        color: rgb(134, 134, 134);
+        font-size: 12px;
+        box-sizing: border-box;
+      }
+      .hd_top ul li a:hover {
+        color: white;
+      }
+      .hd_top ul li.lang {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        padding-right: 18px;
+        border-right: none;
+        padding-top: 1.5px;
+        /* border: 1px solid rgb(228, 228, 228);
                            border-radius: 5px; */
-                           /* height: 50px; */
-                           background: rgb(44, 44, 44);}
-        .eng{display: none !important;}
+        /* height: 50px; */
+        background: rgb(44, 44, 44);
+      }
+      .eng {
+        display: none !important;
+      }
 
-        .lang.on{border: 1px solid rgb(228, 228, 228) !important;
-                    border-right: none;
-                    border-radius: 5px;
-                    height: 40px !important;
-                    box-sizing: border-box;}
-        .lang.on .eng{display: block !important;
-                      margin-top: 7px;}
-        
-        .hd_bottom{position: relative;
-                   z-index: 2;
-                   width: 100%;
-                   box-sizing: border-box;
-                   padding: 12px 6%;
-                   height: 40px;
-                   line-height: 25px;
-                   margin: 0 auto;
-                   ;
-                   
-                   }
-        .nav{position: absolute;
-             top: 10px;
-             left: 50%;-webkit-transform: translateX(-60%);
-             display: flex;
-             justify-content: space-between;
-             width: 55%;
-             margin: 0 0 0 6%;
-             box-sizing: border-box;
-             }
-        .nav>li{float: left;}
-        .nav>li>a{color: white;
-                 }
-        .nav>li>ul{margin-top: 15px;
-                   margin-left: 3px;
-                   display: none;}
-        .nav>li>ul.on{display: block;}
-        .nav>li>ul>li{margin-top: 11px;}
-        .nav>li>ul>li>a{color: white;
-                        opacity: 0.3;
-                        transition: all 0.2s ease-in-out 0s ;}
-        .nav>li>ul>li>a:hover{opacity: 1;
-                              border-bottom: 1px solid white;}
+      .lang.on {
+        border: 1px solid rgb(228, 228, 228) !important;
+        border-right: none;
+        border-radius: 5px;
+        height: 40px !important;
+        box-sizing: border-box;
+      }
+      .lang.on .eng {
+        display: block !important;
+        margin-top: 7px;
+      }
 
-        .logo_wrap{width: 160px;
-                   height: 35px;
-                   float: left;}
-        .serch{float: right;}
-        .hd_bottom_inner{display: none;
-                         box-sizing: border-box;
-                         height: 215px;
-                         background: rgb(44, 44, 44);
-                         opacity: 0.9;
-                         z-index: 1;
-                         width: 100%;
-                         position: absolute;
-                         left: 0;
-                         top: 50px;}
-        .hd_bottom_inner.on{display: block;}
+      .hd_bottom {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 6%;
+        height: 40px;
+        line-height: 25px;
+        margin: 0 auto;
+      }
+      .nav {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        -webkit-transform: translateX(-60%);
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        margin: 0 0 0 6%;
+        box-sizing: border-box;
+      }
+      .nav > li {
+        float: left;
+      }
+      .nav > li > a {
+        color: white;
+      }
+      .nav > li > ul {
+        margin-top: 15px;
+        margin-left: 3px;
+        display: none;
+      }
+      .nav > li > ul.on {
+        display: block;
+      }
+      .nav > li > ul > li {
+        margin-top: 11px;
+      }
+      .nav > li > ul > li > a {
+        color: white;
+        opacity: 0.3;
+        transition: all 0.2s ease-in-out 0s;
+      }
+      .nav > li > ul > li > a:hover {
+        opacity: 1;
+        border-bottom: 1px solid white;
+      }
 
-        main{
-            padding-top: 88px;
-            background: rgb(58, 58, 58);
-             width: 100%;
-            height: 660px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        main section:nth-of-type(1){
-                     position: relative;
-                     width: 400%;
-                     height: 100%;
-                     box-sizing: border-box;
-                     }
-        main section:nth-of-type(1)>div.banner{width: 25%;
-                                              height: 100%;
-                                              float: left;
-                                              background: url(img/bg.png) no-repeat 0 0;
-                                              background-size: cover;
-                                              background-position:fixed;}
+      .logo_wrap {
+        width: 160px;
+        height: 35px;
+        float: left;
+      }
+      .serch {
+        float: right;
+      }
+      .hd_bottom_inner {
+        display: none;
+        box-sizing: border-box;
+        height: 215px;
+        background: rgb(44, 44, 44);
+        opacity: 0.9;
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+      .hd_bottom_inner.on {
+        display: block;
+      }
 
-        .arrow{position: absolute;
-               display: block;
-               width: 28px;
-               height: 51px;
-               top: 340px;
-               text-indent: -9999px;
-               z-index: 3;
-               overflow: hidden;
-               cursor: pointer;}
-        .arrow.left{background: url(img/left_arrow.png) no-repeat 0 0;
-                    left: 2%;}
-        .arrow.right{background: url(img/right_arrow.png) no-repeat 0 0;
-                    right: 2%;}
+      main {
+        padding-top: 88px;
+        background: rgb(58, 58, 58);
+        width: 100%;
+        height: 660px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      main section:nth-of-type(1) {
+        position: relative;
+        width: 400%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      main section:nth-of-type(1) > div.banner {
+        width: 25%;
+        height: 100%;
+        float: left;
+        background: url(img/bg.png) no-repeat 0 0;
+        background-size: cover;
+        background-position: fixed;
+      }
 
-        .banner_num_wrap{position: absolute;
-                        display: flex;
-                        z-index: 3;
-                         width: 232px;
-                         top: 660px;
-                         box-sizing: border-box;
-                        left: 50%;-webkit-transform: translateX(-50%);}
-        .banner_num_wrap li{float: left;
-                            margin: 0 18px;
-                            }
-        .banner_num_wrap li a{width: 11px;
-                              height: 11px;
-                              background: #C1C1C1;
-                              display: block;
-                              border-radius: 100%;
-                              text-indent: -9999px;
-                              overflow: hidden;}
+      .arrow {
+        position: absolute;
+        display: block;
+        width: 28px;
+        height: 51px;
+        top: 340px;
+        text-indent: -9999px;
+        z-index: 3;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .arrow.left {
+        background: url(img/left_arrow.png) no-repeat 0 0;
+        left: 2%;
+      }
+      .arrow.right {
+        background: url(img/right_arrow.png) no-repeat 0 0;
+        right: 2%;
+      }
 
-        .banner_num_wrap li a.on{width: 55px;
-                                background: whitesmoke;
-                                border-radius: 10px;}
-        .banner{position: relative;}
-        .text_wrap{position: absolute;
-                  left: 50%;-webkit-transform: translateX(-50%) ;
-                  top: 20%;
-                  box-sizing: border-box;
-                  width: 60%;
-                  text-align: center;}
-        .text_wrap p{font-size: 82px;
-                    color: white;
-                    font-family: 'Anton';}
-        .text_wrap a{display: block;
-                     width: 216px;
-                     height: 66px;
-                     background: url(img/morebtn_off.png) no-repeat 90% 48%;
-                     line-height: 55px;
-                     padding-right: 25px;
-                     box-sizing: border-box;
-                     font-size: 28px;
-                     margin: 20px auto 0;
-                     text-decoration: none;
-                     color: white;
-                     border: 2px solid white;
-                     -webkit-transform: scale(0.8);}
-        .text_wrap a:hover{color: black;
-                           background: #fff url(img/morebtn_on.png) no-repeat 90% 48%;
-                           border: 1px solid white;}
+      .banner_num_wrap {
+        position: absolute;
+        display: flex;
+        z-index: 3;
+        width: 232px;
+        top: 660px;
+        box-sizing: border-box;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+      }
+      .banner_num_wrap li {
+        float: left;
+        margin: 0 18px;
+      }
+      .banner_num_wrap li a {
+        width: 11px;
+        height: 11px;
+        background: #c1c1c1;
+        display: block;
+        border-radius: 100%;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+
+      .banner_num_wrap li a.on {
+        width: 55px;
+        background: whitesmoke;
+        border-radius: 10px;
+      }
+      .banner {
+        position: relative;
+      }
+      .text_wrap {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        top: 20%;
+        box-sizing: border-box;
+        width: 60%;
+        text-align: center;
+      }
+      .text_wrap p {
+        font-size: 82px;
+        color: white;
+        font-family: "Anton";
+      }
+      .text_wrap a {
+        display: block;
+        width: 216px;
+        height: 66px;
+        background: url(img/morebtn_off.png) no-repeat 90% 48%;
+        line-height: 55px;
+        padding-right: 25px;
+        box-sizing: border-box;
+        font-size: 28px;
+        margin: 20px auto 0;
+        text-decoration: none;
+        color: white;
+        border: 2px solid white;
+        -webkit-transform: scale(0.8);
+      }
+      .text_wrap a:hover {
+        color: black;
+        background: #fff url(img/morebtn_on.png) no-repeat 90% 48%;
+        border: 1px solid white;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <div class="hd_top">
+      <div class="hd_top">
+        <ul>
+          <li class="top_hd_li"><a href="#">로그인</a></li>
+          <li class="top_hd_li"><a href="#">회원가입</a></li>
+          <li class="top_hd_li"><a href="#">오시는길</a></li>
+          <li class="top_hd_li lang">
+            <a href="#">KOR</a>
+            <a href="#" class="eng">ENG</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hd_bottom_inner"></div>
+      <div class="hd_bottom">
+        <div class="logo_wrap">
+          <a href="#">
+            <img src="img/logo.png" width="160" height="35" alt="" />
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="#">제품정보</a>
             <ul>
-                <li class="top_hd_li"><a href="#">로그인</a></li>
-                <li class="top_hd_li"><a href="#">회원가입</a></li>
-                <li class="top_hd_li"><a href="#">오시는길</a></li>
-                <li class="top_hd_li lang">
-                    <a href="#">KOR</a>
-                    <a href="#" class="eng">ENG</a>
-                </li>
+              <li><a href="#" class="on">섭메뉴1</a></li>
+              <li><a href="#">섭메뉴2</a></li>
+              <li><a href="#">섭메뉴3</a></li>
             </ul>
+          </li>
+
+          <li>
+            <a href="#">뉴스&이벤트</a>
+            <ul>
+              <li><a href="#">섭메뉴1</a></li>
+              <li><a href="#">섭메뉴2</a></li>
+              <li><a href="#">섭메뉴3</a></li>
+              <li><a href="#">섭메뉴4</a></li>
+              <li><a href="#">섭메뉴5</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">아티스트</a>
+            <ul>
+              <li><a href="#">섭메뉴1</a></li>
+              <li><a href="#">섭메뉴2</a></li>
+              <li><a href="#">섭메뉴3</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">대리점&지원센터</a>
+            <ul>
+              <li><a href="#">섭메뉴1</a></li>
+              <li><a href="#">섭메뉴2</a></li>
+              <li><a href="#">섭메뉴3</a></li>
+              <li><a href="#">섭메뉴4</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">고객서비스</a>
+            <ul>
+              <li><a href="#">섭메뉴1</a></li>
+              <li><a href="#">섭메뉴2</a></li>
+              <li><a href="#">섭메뉴3</a></li>
+              <li><a href="#">섭메뉴4</a></li>
+              <li><a href="#">섭메뉴5</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="search_wrap">
+          <input
+            type="search"
+            class="serch"
+            placeholder="검색어를 입력하세요"
+          />
         </div>
-        <div class="hd_bottom_inner">
-        </div>
-        <div class="hd_bottom">
-                <div class="logo_wrap">
-                    <a href="#">
-                        <img src="img/logo.png" width="160" height="35" alt="">
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li>
-                        <a href="#">제품정보</a>
-                    <ul>
-                        <li><a href="#" class="on">섭메뉴1</a></li>
-                        <li><a href="#">섭메뉴2</a></li>
-                        <li><a href="#">섭메뉴3</a></li>
-                    </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">뉴스&이벤트</a>
-                    <ul>
-                        <li><a href="#">섭메뉴1</a></li>
-                        <li><a href="#">섭메뉴2</a></li>
-                        <li><a href="#">섭메뉴3</a></li>
-                        <li><a href="#">섭메뉴4</a></li>
-                        <li><a href="#">섭메뉴5</a></li>
-                    </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">아티스트</a>
-                        <ul>
-                            <li><a href="#">섭메뉴1</a></li>
-                            <li><a href="#">섭메뉴2</a></li>
-                            <li><a href="#">섭메뉴3</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">대리점&지원센터</a>
-                        <ul>
-                            <li><a href="#">섭메뉴1</a></li>
-                            <li><a href="#">섭메뉴2</a></li>
-                            <li><a href="#">섭메뉴3</a></li>
-                            <li><a href="#">섭메뉴4</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">고객서비스</a>
-                        <ul>
-                            <li><a href="#">섭메뉴1</a></li>
-                            <li><a href="#">섭메뉴2</a></li>
-                            <li><a href="#">섭메뉴3</a></li>
-                            <li><a href="#">섭메뉴4</a></li>
-                            <li><a href="#">섭메뉴5</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="search_wrap">
-                    <input type="search" class="serch" placeholder="검색어를 입력하세요">
-                    
-                </div>
-                
-            
-        </div>
+      </div>
     </header>
     <!-- //header -->
 
     <!-- main -->
     <main>
-        <a href="#" class="left arrow">left</a>
-        <a href="#" class="right arrow">right</a>
-        
+      <a href="#" class="left arrow">left</a>
+      <a href="#" class="right arrow">right</a>
 
-        <div class="banner_num_wrap">
-            <ul>
-                <li><a href="#" class="on"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+      <div class="banner_num_wrap">
+        <ul>
+          <li><a href="#" class="on"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+      <section>
+        <div class="banner1 banner">
+          <div class="text_wrap">
+            <p>
+              MAKE IT BETTER AND BETTER<br />
+              MAKE WABES
+            </p>
+            <a href="#">Lern more</a>
+          </div>
         </div>
-        <section>
-            <div class="banner1 banner">
-                <div class="text_wrap">
-                    <p>MAKE IT BETTER AND BETTER<br />
-                       MAKE WABES</p>
-                    <a href="#">Lern more</a>
-                </div>
-            </div>
 
-            <div class="banner2 banner">
-                <div class="text_wrap">
-                    <p>MAKE IT BETTER AND BETTER<br />
-                       MAKE WABES2</p>
-                    <a href="#">Lern more</a>
-                </div>
-            </div>
+        <div class="banner2 banner">
+          <div class="text_wrap">
+            <p>
+              MAKE IT BETTER AND BETTER<br />
+              MAKE WABES2
+            </p>
+            <a href="#">Lern more</a>
+          </div>
+        </div>
 
-            <div class="banner3 banner">
-                <div class="text_wrap">
-                    <p>MAKE IT BETTER AND BETTER<br />
-                       MAKE WABES3</p>
-                    <a href="#">Lern more</a>
-                </div>
-            </div>
+        <div class="banner3 banner">
+          <div class="text_wrap">
+            <p>
+              MAKE IT BETTER AND BETTER<br />
+              MAKE WABES3
+            </p>
+            <a href="#">Lern more</a>
+          </div>
+        </div>
 
-            <div class="banner4 banner">
-                <div class="text_wrap">
-                    <p>MAKE IT BETTER AND BETTER<br />
-                       MAKE WABE4</p>
-                    <a href="#">Lern more</a>
-                </div>
-            </div>
-
-        </section>
-        <!-- //1 -->
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <div class="banner4 banner">
+          <div class="text_wrap">
+            <p>
+              MAKE IT BETTER AND BETTER<br />
+              MAKE WABE4
+            </p>
+            <a href="#">Lern more</a>
+          </div>
+        </div>
+      </section>
+      <!-- //1 -->
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
     </main>
     <!-- //main -->
 
     <!-- footer -->
     <footer>
-        <div class="footinner"></div>
+      <div class="footinner"></div>
     </footer>
     <!-- //footer -->
-</body>
+  </body>
 </html>
