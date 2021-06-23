@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+@import './reset.css';
+@import './login.css';
+
+a {
+  font-size: 10px;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* :root {
+  --font-bold: 'NotoSans-Bold';
+  --font-midium: 'NotoSans-Midium';
+  --font-regular: 'NotoSans-Regular';
+  --font-light: 'NotoSans-Light';
+  --font-thin: 'NotoSans-Thin';
+  --lo-font: 'Phetsarath OT';
+  --th-font: 'Phetsarath OT';
+} */
+/* admin */
+html {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 10px;
+  color: #333;
+}
+.f-light {
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+.f-midium {
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+.f-bold {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
