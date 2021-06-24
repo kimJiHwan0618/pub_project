@@ -1,0 +1,172 @@
+.page__wrap__inner .title__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page__wrap__inner .title__wrap dl {
+  display: flex;
+  align-items: center;
+}
+.page__wrap__inner .title__wrap dl dt {
+  font-size: 1.6em;
+  color: #8a8a8a;
+  margin-right: 14px;
+}
+.page__wrap__inner .title__wrap dl dd button {
+  width: 44px;
+  height: 22px;
+  border-radius: 15px;
+  background: #b2b8c7;
+  box-sizing: border-box;
+  padding: 0 6px;
+  align-items: center;
+  display: flex;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+}
+.page__wrap__inner .title__wrap dl dd button.on {
+  background: #66b2f3;
+  justify-content: flex-end;
+}
+.page__wrap__inner .title__wrap dl dd button span {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background: white;
+}
+.page__wrap__inner .today__date {
+  color: #828282;
+  font-size: 1.6em;
+  margin-top: 6px;
+}
+.page__wrap__inner .state__bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+.page__wrap__inner .state__bar > li {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 24px 1.5%;
+  background: red;
+  width: 23.2%;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+.page__wrap__inner .state__bar > li:first-of-type .num {
+  color: #7dd442;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(2) .num {
+  color: #e5567d;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(3) .num {
+  color: #d8de27;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(4) .num {
+  color: #5776c9;
+}
+.page__wrap__inner .state__bar > li dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page__wrap__inner .state__bar > li dl dt {
+  display: flex;
+  align-items: center;
+}
+.page__wrap__inner .state__bar > li dl dt .txt {
+  font-size: 1.8em;
+  position: relative;
+}
+.page__wrap__inner .state__bar > li dl dt .icon {
+  width: 32px;
+  height: 32px;
+  background: red;
+  margin-right: 16px;
+  display: inline-block;
+}
+.page__wrap__inner .state__bar > li:first-of-type dl dt .icon {
+  background: url(../img/dashboards/ic_st1.png) no-repeat 0 0;
+  background-size: cover;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(2) dl dt .icon {
+  background: url(../img/dashboards/ic_st2.png) no-repeat 0 0;
+  background-size: cover;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(3) dl dt .icon {
+  background: url(../img/dashboards/ic_st3.png) no-repeat 0 0;
+  background-size: cover;
+}
+.page__wrap__inner .state__bar > li:nth-of-type(4) dl dt .icon {
+  background: url(../img/dashboards/ic_st4.png) no-repeat 0 0;
+  background-size: cover;
+}
+.page__wrap__inner .state__bar > li dl dd.num {
+  font-size: 2.4em;
+  position: relative;
+}
+@media screen and (max-width: 1400px) {
+  .page__wrap__inner .state__bar > li {
+    width: 24%;
+  }
+  .page__wrap__inner .state__bar > li dl dt .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  .page__wrap__inner .state__bar > li dl dt .txt {
+    font-size: 1.6em;
+  }
+  .page__wrap__inner .state__bar > li dl dd.num {
+    font-size: 2.2em;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .page__wrap__inner .state__bar > li dl dt .icon {
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    opacity: 0.3;
+    z-index: 2;
+  }
+  .page__wrap__inner .state__bar > li dl dt .txt {
+    z-index: 4;
+  }
+  .page__wrap__inner .state__bar > li dl dd.num {
+    z-index: 4;
+  }
+}
+@media screen and (max-width: 990px) {
+  .page__wrap__inner .state__bar > li dl {
+    flex-direction: column;
+  }
+  .page__wrap__inner .state__bar > li dl dt .icon {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateX(0) translateY(0);
+    width: 66px;
+    height: 66px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .page__wrap__inner .state__bar > li {
+    width: 48%;
+  }
+  .page__wrap__inner .state__bar {
+    flex-wrap: wrap;
+  }
+  .page__wrap__inner .state__bar > li:first-of-type {
+    margin-bottom: 16px;
+  }
+  .page__wrap__inner .state__bar > li:nth-of-type(2) {
+    margin-bottom: 16px;
+  }
+}

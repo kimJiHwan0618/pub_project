@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      gdgd
+      <h1>sms_h.WAVE</h1>
     </div>
   </div>
 </template>
