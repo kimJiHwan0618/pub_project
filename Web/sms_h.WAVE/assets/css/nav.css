@@ -1,0 +1,85 @@
+nav {
+  background: #2a3042;
+  width: 250px;
+  box-sizing: border-box;
+}
+nav h1 {
+  width: 250px;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 36px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+nav h1 img {
+  width: 128px;
+  height: 33px;
+}
+nav .navigation > li {
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav .navigation > li > a {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 66px;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #8ca1c7;
+  position: relative;
+}
+nav .navigation > li > a:after {
+  content: '';
+  position: absolute;
+  right: 37px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  background: url(../img/nav/arrow.png) no-repeat 0 0;
+  width: 13px;
+  height: 7px;
+  opacity: 0.6;
+  -webkit-transition: all 0.15s linear 0s;
+}
+nav .navigation > li > ul {
+  display: flex;
+  flex-direction: column;
+}
+nav .navigation > li > ul > li > a {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 66px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 1.4em;
+  color: #73798b;
+}
+nav .navigation > li:first-of-type > a {
+  background: url(../img/nav/ic_1_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(2) > a {
+  background: url(../img/nav/ic_2_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(3) > a {
+  background: url(../img/nav/ic_3_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(4) > a {
+  background: url(../img/nav/ic_4_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(5) > a {
+  background: url(../img/nav/ic_5_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(6) > a {
+  background: url(../img/nav/ic_6_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}
+nav .navigation > li:nth-of-type(7) > a {
+  background: url(../img/nav/ic_7_off.png) no-repeat 36px 50%;
+  background-size: 19px 19px;
+}

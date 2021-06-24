@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<template>
   <div class="login__wrap">
     <div class="login__wrap__inner">
       <div class="inner__left">
-        <h1><img src="/img/logo_b.png" alt="h.WAVE logo" /></h1>
+        <h1><img src="@/assets/img/logo_b.png" alt="h.WAVE logo" /></h1>
         <h2 class="f-midium">Login to Your Account</h2>
         <form action="">
           <ul>
@@ -47,11 +38,19 @@
           <dd>
             Sales collection and analysis solution base on Cloud With
             hingomWAVE, experience efficient item sales management, stock
-            management, customer management and intelliectual sales management
+            management, customer management and intelliectual sales management.
           </dd>
         </dl>
       </div>
     </div>
   </div>
-</body>
-</html>
+</template>
+
+<script>
+import { defineComponent } from '@vue/composition-api';
+export default defineComponent({
+  setup() {
+    return {};
+  },
+});
+</script>
