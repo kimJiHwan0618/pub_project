@@ -201,3 +201,17 @@ nav .navigation > li.on:nth-of-type(7) > a {
   background: url(../img/nav/ic_7_on.png) no-repeat 36px 50%;
   background-size: 19px 19px;
 }
+@media screen and (max-width: 990px) {
+  nav {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    float: none;
+    z-index: 15;
+    box-shadow: 4px 0px 8px rgb(0 0 0 / 36%);
+  }
+  nav.active {
+    left: 0;
+    width: 250px;
+  }
+}

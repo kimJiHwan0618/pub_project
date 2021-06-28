@@ -22,10 +22,7 @@
                 <li>
                   <dl>
                     <dt>
-                      <img
-                        src="@/assets/img/nav/lang_lo.jpg"
-                        alt="American flag"
-                      />
+                      <img src="@/assets/img/nav/lang_lo.jpg" alt="flag" />
                     </dt>
                     <dd>Lo</dd>
                   </dl>
@@ -33,10 +30,7 @@
                 <li>
                   <dl>
                     <dt>
-                      <img
-                        src="@/assets/img/nav/lang_th.jpg"
-                        alt="American flag"
-                      />
+                      <img src="@/assets/img/nav/lang_th.jpg" alt="flag" />
                     </dt>
                     <dd>Th</dd>
                   </dl>
@@ -44,10 +38,7 @@
                 <li>
                   <dl>
                     <dt>
-                      <img
-                        src="@/assets/img/nav/lang_kr.jpg"
-                        alt="American flag"
-                      />
+                      <img src="@/assets/img/nav/lang_kr.jpg" alt="flag" />
                     </dt>
                     <dd>Kr</dd>
                   </dl>
@@ -133,6 +124,10 @@ export default defineComponent({
       navActive.value ? (navActive.value = false) : (navActive.value = true);
       EventBus.$emit('navBarState', navActive.value);
     };
+
+    EventBus.$on('navBarOff', state => {
+      navActive.value = state;
+    });
 
     const testNoticeData = [
       {

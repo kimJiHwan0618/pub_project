@@ -37,6 +37,11 @@ export default defineComponent({
     EventBus.$on('navBarState', state => {
       navActive.value = state;
     });
+
+    EventBus.$on('navBarOff', state => {
+      navActive.value = state;
+    });
+
     const naviMenu = [
       {
         activeLink: ref(false),
