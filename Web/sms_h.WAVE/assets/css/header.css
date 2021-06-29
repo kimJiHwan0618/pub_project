@@ -326,12 +326,15 @@ header .header__inner .user__wrap .admin__info > dl > dd .arrow {
   }
 }
 @media screen and (max-width: 550px) {
+  header .header__inner {
+    padding: 0 14px;
+  }
   header .header__inner .user__wrap .langauge .lang__list {
     left: 0;
     -webkit-transform-origin: 0 0;
   }
   header .header__inner .user__wrap .notice .notice__box {
-    left: -120px;
+    left: -150px;
     -webkit-transform-origin: 50% 0;
   }
   header .header__inner > .user__wrap > li {

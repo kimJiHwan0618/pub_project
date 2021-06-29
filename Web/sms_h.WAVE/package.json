@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.12",
+    "chart.js": "^3.4.0",
     "core-js": "^3.9.1",
     "mitt": "^3.0.0",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vue-chart-3": "^0.1.7",
+    "vue-chartjs": "^3.5.1"
   }
 }

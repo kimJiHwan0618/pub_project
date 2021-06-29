@@ -11,9 +11,9 @@
             list.activeLink.value && 'active',
           ]"
         >
-          <a href="#" @click="navClick(index, list.name)" class="f-midium">{{
+          <span @click="navClick(index, list.name)" class="f-midium">{{
             list.name
-          }}</a>
+          }}</span>
           <ul :class="'length' + list.subMenu.length">
             <li v-for="subList in list.subMenu" :key="subList.name">
               <nuxt-link :to="subList.link" class="f-midium">{{
@@ -33,6 +33,7 @@ import { EventBus } from '@/utils/event-bus';
 export default defineComponent({
   setup() {
     const navActive = ref(false);
+    const pageRoute = ref('');
 
     EventBus.$on('navBarState', state => {
       navActive.value = state;
@@ -55,8 +56,8 @@ export default defineComponent({
         subMenu: [
           {
             name: 'Device Management',
-            link: '/device/device-management',
-            route: 'device-management',
+            link: '#',
+            route: '#',
           },
         ],
         toggle: ref(false),
@@ -66,7 +67,11 @@ export default defineComponent({
         name: 'Shop',
         subMenu: [
           { name: 'Group', link: '#', route: '#' },
-          { name: 'Registration', link: '#', route: '#' },
+          {
+            name: 'Registration',
+            link: '/shop/shop-registration',
+            route: 'shop-registration',
+          },
           { name: 'Errors', link: '#', route: '#' },
         ],
         toggle: ref(false),
@@ -120,13 +125,15 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      const pageRoute = location.href.split('/')[
+      EventBus.$emit('navBarState', false);
+
+      pageRoute.value = location.href.split('/')[
         location.href.split('/').length - 1
       ];
 
       for (let i = 0; i < naviMenu.length; i++) {
         for (let z = 0; z < naviMenu[i].subMenu.length; z++) {
-          naviMenu[i].subMenu[z].route === pageRoute &&
+          naviMenu[i].subMenu[z].route === pageRoute.value &&
             (naviMenu[i].activeLink.value = true);
         }
       }
@@ -136,6 +143,7 @@ export default defineComponent({
       naviMenu,
       navClick,
       navActive,
+      pageRoute,
     };
   },
 });

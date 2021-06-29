@@ -4,6 +4,7 @@
 @import './nav.css';
 @import './header.css';
 @import './dashboards.css';
+@import './shop.css';
 
 a {
   font-size: 10px;
@@ -50,26 +51,20 @@ body {
   display: block;
   clear: both;
 }
-@keyframes ani {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 nav.active + .page__wrap {
-  -webkit-animation: ani 0.8s ease-in-out 0s forwards;
   width: 100%;
+  padding-left: 0px;
 }
 .page__wrap {
   float: left;
   padding-top: 60px;
+  padding-left: 250px;
   box-sizing: border-box;
-  width: calc(100% - 250px);
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in-out 0s;
 }
 .page__wrap .page__wrap__inner {
-  padding: 30px 24px 0;
+  padding: 24px;
 }
 .page__wrap__inner h2.page__title {
   font-size: 2.2em;
@@ -84,11 +79,20 @@ nav.active + .page__wrap {
   z-index: 10;
   display: none;
 }
-.modal_bg.active {
-  display: block;
-}
 @media screen and (max-width: 990px) {
   .page__wrap {
     width: 100%;
+    padding-left: 0px;
+  }
+  .modal_bg.active {
+    display: block;
+  }
+}
+@media screen and (max-width: 550px) {
+  .page__wrap__inner h2.page__title {
+    font-size: 2em;
+  }
+  .page__wrap .page__wrap__inner {
+    padding: 14px;
   }
 }
