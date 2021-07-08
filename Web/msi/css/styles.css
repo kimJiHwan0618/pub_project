@@ -1,0 +1,75 @@
+@import "./reset.css";
+@import "./common.css";
+@import "./swiper.css";
+@import "./menu.css";
+@import "./swiper_min.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./home.css";
+@import "./aboutus.css";
+@import "./history.css";
+@import "./solution.css";
+@import "./contact.css";
+
+@font-face {
+  font-family: "NotoSansKR-Bold";
+  src: url(../font/Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+@font-face {
+  font-family: "NotoSansKR-Midium";
+  src: url(../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  src: url(../font/Noto_Sans_KR/NotoSansKR-Regular.otf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../font/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../font/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+
+.roboto {
+  font-family: "Roboto-Regular";
+}
+.roboto.f__midium {
+  font-family: "Roboto-Midium";
+}
+.roboto.f__bold {
+  font-family: "Roboto-Bold";
+}
+.notosansKr {
+  font-family: "NotoSansKR-Regular";
+}
+.notosansKr.f__midium {
+  font-family: "NotoSansKR-Midium";
+}
+.notosansKr.f__bold {
+  font-family: "NotoSansKR-Bold";
+}
+.modal__bg {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  display: none;
+}
+header.active + .modal__bg {
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  header.active + .modal__bg {
+    display: block;
+  }
+}

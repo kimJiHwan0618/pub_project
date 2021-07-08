@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(주)엠에쓰아이</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__inner">
+        <h1>
+          <a href="#">
+            <img src="img/logo.png" alt="(주)엠에쓰아이 로고" />
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li class="on">
+              <a class="f__bold roboto" href="#">Home</a>
+            </li>
+            <li>
+              <a class="f__bold roboto" href="#">About us</a>
+            </li>
+            <li>
+              <a class="f__bold roboto" href="#">History</a>
+            </li>
+            <li>
+              <a class="f__bold roboto" href="#">Solution</a>
+            </li>
+            <li>
+              <a class="f__bold roboto" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="item menu__icon">
+          <button class="menu-trigger" id="menuIcon" onclick="fnNavActive()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="modal__bg" onclick="fnNavActive()"></div>
+    <main>
+      <section class="home__section">
+        <video
+          src="img/main__video.mp4"
+          autoplay="autoplay"
+          muted="muted"
+          loop
+        ></video>
+        <h2 class="f__bold roboto">
+          FINDING YOU<br />
+          THE FINE ANSWER,<br />
+          MSI
+        </h2>
+      </section>
+      <div class="main__inner">
+        <section class="aboutus__section">
+          <h3 class="f__bold roboto">
+            <span class="icon"></span>
+            <span class="txt">About us</span>
+          </h3>
+          <h4 class="f__midium notosansKr">
+            우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+          </h4>
+          <article>
+            <ul>
+              <li>
+                <span class="img">
+                  <img src="img/abotus/img_1.png" alt="" />
+                </span>
+                <dl>
+                  <dt class="f__midium notosansKr">상품화</dt>
+                  <dd class="notosansKr">
+                    우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <span class="img">
+                  <img src="img/abotus/img_2.png" alt="" />
+                </span>
+                <dl>
+                  <dt class="f__midium notosansKr">지능화</dt>
+                  <dd class="notosansKr">
+                    우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <span class="img">
+                  <img src="img/abotus/img_3.png" alt="" />
+                </span>
+                <dl>
+                  <dt class="f__midium notosansKr">플랫폼화</dt>
+                  <dd class="notosansKr">
+                    우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="history__section">
+          <h3 class="f__bold roboto">
+            <span class="icon"></span>
+            <span class="txt">History</span>
+          </h3>
+          <h4 class="f__midium notosansKr">
+            지속적인 제품개발을 통한 Smart Factory 전문기업으로의 도약
+          </h4>
+          <article>
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/history/img_1.jpg" alt="History first image" />
+                  <h5 class="roboto f__bold">Initializing​</h5>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/history/img_2.jpg" alt="History first image" />
+                  <h5 class="roboto f__bold">Activating</h5>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/history/img_3.jpg" alt="History first image" />
+                  <h5 class="roboto f__bold">Business ​Expansion</h5>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <ul class="year__btn__wrap">
+              <li
+                class="notosansKr f__bold on"
+                onclick="swipeYearClick(this.innerText)"
+              >
+                2017
+              </li>
+              <li
+                class="notosansKr f__bold"
+                onclick="swipeYearClick(this.innerText)"
+              >
+                2018
+              </li>
+              <li
+                class="notosansKr f__bold"
+                onclick="swipeYearClick(this.innerText)"
+              >
+                2020
+              </li>
+            </ul>
+            <dl class="history__list__wrap">
+              <dt class="notosansKr f__bold yearText">2017</dt>
+              <dd>
+                <ul class="notosansKr historyList">
+                  <li>
+                    <span>01ㆍ</span>
+                    <span>“TE”社 Laser Demo. Test System</span>
+                  </li>
+                  <li>
+                    <span>02ㆍ</span>
+                    <span>“E”社 ​ Inkjet Printing System</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </article>
+        </section>
+        <section class="solution__section">
+          <h3 class="f__bold roboto">
+            <span class="icon"></span>
+            <span class="txt">Solution</span>
+          </h3>
+          <h4 class="f__midium notosansKr">
+            제조 실행 자동화​ / 통합 설비 관리 시스템​ / 설비 운영 시스템 /
+            임베디드 솔루션
+          </h4>
+          <article>
+            <ul class="tab__box">
+              <li
+                class="f__midium notosansKr tabBtn on"
+                onclick="tabClick(this.innerText)"
+              >
+                제조 실행 자동화
+              </li>
+              <li
+                class="f__midium notosansKr tabBtn"
+                onclick="tabClick(this.innerText)"
+              >
+                통합 설비 관리 시스템
+              </li>
+              <li
+                class="f__midium notosansKr tabBtn"
+                onclick="tabClick(this.innerText)"
+              >
+                설비 운영 시스템
+              </li>
+              <li
+                class="f__midium notosansKr tabBtn"
+                onclick="tabClick(this.innerText)"
+              >
+                임베디드 솔루션
+              </li>
+            </ul>
+            <h5 class="notosansKr f__midium tab__title">
+              제조실행 자동화 (MES)
+            </h5>
+            <h6 class="notosansKr tab__sub__title">
+              ERP와 연동하여 생산계획에 따른 자재, 품질, 생산실행, 자동 반송의
+              통합 관리/제어
+            </h6>
+            <dl class="solution__box__ani">
+              <dt>
+                <div class="img__box">
+                  <img
+                    src="img/solution/img_1.jpg"
+                    alt="제조 실행 자동화 image"
+                    class="tab__img"
+                  />
+                  <span class="text__box">
+                    <img
+                      src="img/solution/ic_1.svg"
+                      alt="제조 실행 자동화 icon"
+                      class="tab__icon"
+                    />
+                    <p class="f__bold roboto tab__img__text">Automation</p>
+                  </span>
+                </div>
+              </dt>
+              <dd>
+                <ul class="tab__list">
+                  <li class="notosansKr">
+                    <span>1</span>
+                    <span
+                      >장비의 상태/동작을 Digital Twin으로 Solution내에
+                      구현</span
+                    >
+                  </li>
+                  <li class="notosansKr">
+                    <span>2</span>
+                    <span>장비 Modeling만으로 기능/운영 Logic 구현</span>
+                    ​
+                  </li>
+                  <li class="notosansKr">
+                    <span>3</span>
+                    <span>WorkFlow로 장비별로 다른 운영 Logic을 최적화</span>
+                    ​
+                  </li>
+                  <li class="notosansKr">
+                    <span>4</span>
+                    <span>Service 기능으로 장비 운영 / 관리 최적화</span>
+                    ​
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </article>
+        </section>
+        <section class="contact__section">
+          <h3 class="f__bold roboto">
+            <span class="icon"></span>
+            <span class="txt">Contact</span>
+          </h3>
+          <h4 class="f__midium notosansKr">
+            저희 홈페이지를 방문 해주셔서 감사합니다.<br />
+            궁금한 사항이 있으시면 언제든지 문의 해주십시오.
+          </h4>
+          <article>
+            <div class="contact__wrap">
+              <div class="map__wrap">
+                <div id="map"></div>
+              </div>
+              <ul>
+                <li>
+                  <span class="icon"></span>
+                  <span class="notosansKr">+82-31-378-0702</span>
+                </li>
+                <li>
+                  <span class="icon"></span>
+                  <span class="notosansKr">+82-31-378-0402</span>
+                </li>
+                <li>
+                  <span class="icon"></span>
+                  <span class="notosansKr">msi@msi-emb.com</span>
+                </li>
+                <li>
+                  <span class="icon"></span>
+                  <span class="notosansKr">
+                    경기도 용인시 기흥구 흥덕1로 13 흥덕IT밸리<br />
+                    컴플렉스동 405호 (16954)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__inner">
+        <img src="img/logo.png" alt="(주)엠에쓰아이 로고" />
+        <p class="f__midium roboto">Ⓒ2021 MSI Co.,Ltd. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <!-- Google Map -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=&language=en&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="js/googleMap.js"></script>
+    <script src="js/solution.js"></script>
+  </body>
+</html>

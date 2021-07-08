@@ -1,0 +1,104 @@
+.aboutus__section article ul {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutus__section article ul li {
+  width: 28.5%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 39px 67px 3px hsl(0deg 0% 68% / 30%); */
+  box-shadow: 0 26px 46px rgba(0, 0, 0, 0.24);
+}
+.aboutus__section article ul li .img {
+  display: block;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+.aboutus__section article ul li dl {
+  width: 82%;
+  margin: 0 auto;
+}
+.aboutus__section article ul li dt {
+  font-size: 2.4rem;
+  color: #484848;
+  padding: 28px 0 21px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.aboutus__section article ul li dd {
+  font-size: 1.9rem;
+  color: #9f9f9f;
+  padding: 23px 0 52px;
+}
+@media screen and (max-width: 1480px) {
+  .aboutus__section article ul li .img {
+    position: relative;
+  }
+  .aboutus__section article ul li .img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .aboutus__section article ul li .img {
+    height: 140px;
+  }
+  .aboutus__section article ul li .img img {
+    width: 100%;
+  }
+  .aboutus__section article ul li dt {
+    font-size: 2rem;
+    padding: 20px 0 15px;
+  }
+  .aboutus__section article ul li dd {
+    font-size: 1.5rem;
+    padding: 19px 0 44px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .aboutus__section article ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutus__section article ul li {
+    min-width: 290px;
+    margin-bottom: 50px;
+  }
+  .aboutus__section article ul li:last-of-type {
+    margin-bottom: 0px;
+  }
+  .aboutus__section article ul li .img img {
+    min-height: 140px;
+  }
+  .aboutus__section article ul li dt {
+    text-align: center;
+  }
+  .aboutus__section article ul li dd {
+    text-align: center;
+  }
+  .aboutus__section article ul li dt {
+    padding: 14px 0;
+  }
+  .aboutus__section article ul li dd {
+    padding: 20px 0 24px;
+  }
+  .aboutus__section article ul li dl {
+    width: 87%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .aboutus__section article ul li {
+    min-width: 250px;
+  }
+  .aboutus__section article ul li dt {
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+  .aboutus__section article ul li dd {
+    font-size: 1.3rem;
+    padding: 16px 0 20px;
+  }
+}

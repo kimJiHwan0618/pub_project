@@ -1,0 +1,263 @@
+.solution__section > article > ul {
+  display: flex;
+}
+.solution__section > article > ul > li {
+  width: 25%;
+  text-align: center;
+  background: #ebebeb;
+  color: #ababab;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 20px 0;
+  border-right: 1px solid #dfdfdf;
+  -webkit-transition: all 0.15s linear 0s;
+}
+.solution__section > article > ul > li.on {
+  background: #0054cb;
+  color: white;
+}
+.solution__section > article > ul > li:last-of-type {
+  border-right: none;
+}
+.solution__section > article > h5 {
+  font-size: 3rem;
+  margin-top: 45px;
+  text-align: center;
+}
+.solution__section > article > h6 {
+  font-size: 2rem;
+  color: #c9c9c9;
+  margin-top: 12px;
+  text-align: center;
+}
+.solution__section > article > dl {
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@keyframes ani1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(00px);
+  }
+}
+@keyframes ani2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(00px);
+  }
+}
+.solution__section > article > dl > dt {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.solution__section > article > dl.ani dt {
+  -webkit-animation: ani1 0.6s ease-in-out 0s forwards;
+}
+.solution__section > article > dl.ani > dd {
+  -webkit-animation: ani2 0.6s ease-in-out 0s forwards;
+}
+.solution__section > article > dl > dt .img__box {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 26px 46px rgba(36, 36, 36, 0.24);
+}
+.solution__section > article > dl > dt .img__box > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.solution__section > article > dl > dt .img__box .text__box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+}
+.solution__section > article > dl > dt .img__box .text__box p {
+  font-size: 2.8rem;
+  margin-top: 20px;
+  color: white;
+}
+.solution__section > article > dl > dt .img__box .text__box img {
+  width: 120px;
+  height: 120px;
+}
+.solution__section > article > dl > dt .img__box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 2, 112, 0.7);
+}
+.solution__section > article > dl > dd {
+  width: 50%;
+}
+.solution__section > article > dl > dd li {
+  font-size: 1.8rem;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+}
+.solution__section > article > dl > dd li span:nth-of-type(1) {
+  width: 24px;
+  height: 24px;
+  font-size: 1.4rem;
+  display: inline-block;
+  background: #e2e2e2;
+  color: #949494;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50px;
+  margin-right: 12px;
+}
+.solution__section > article > dl > dd li:last-of-type {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 1280px) {
+  .solution__section > article > ul > li {
+    padding: 16px 0;
+    font-size: 1.4rem;
+  }
+  .solution__section > article > h5 {
+    margin-top: 30px;
+    font-size: 2.4rem;
+  }
+  .solution__section > article > h6 {
+    margin-top: 8px;
+    font-size: 1.6rem;
+  }
+  .solution__section > article > dl > dt .img__box {
+    width: 280px;
+    height: 280px;
+  }
+  .solution__section > article > dl > dt .img__box .text__box img {
+    width: 100px;
+    height: 100px;
+  }
+  .solution__section > article > dl > dt .img__box .text__box p {
+    font-size: 2.4rem;
+  }
+  .solution__section > article > dl > dd li {
+    font-size: 1.6rem;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 890px) {
+  .solution__section > article > h5 {
+    font-size: 2rem;
+    margin-top: 22px;
+  }
+  .solution__section > article > ul {
+    flex-wrap: wrap;
+  }
+  .solution__section > article > ul > li {
+    font-size: 1.3rem;
+    padding: 14px 0;
+    width: 50%;
+    box-sizing: border-box;
+    border-right: none;
+  }
+  .solution__section > article > h6 {
+    font-size: 1.4rem;
+    margin-top: 6px;
+  }
+  .solution__section > article > dl {
+    margin-top: 30px;
+  }
+  .solution__section > article > dl {
+    flex-direction: column;
+    align-items: center;
+  }
+  .solution__section > article > dl > dd {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .solution__section > article > dl > dd li span:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+  .solution__section > article > dl > dd li {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .solution__section > article > ul > li {
+    width: 100%;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 12px 0;
+  }
+  .solution__section > article > ul > li:last-of-type {
+    border-bottom: none;
+  }
+  .solution__section > article > dl > dt {
+    width: 100%;
+  }
+  .solution__section > article > dl > dt .img__box {
+    width: 200px;
+    height: 200px;
+  }
+  .solution__section > article > dl > dt .img__box .text__box img {
+    width: 60px;
+    height: 60px;
+  }
+  .solution__section > article > h5 {
+    font-size: 1.8rem;
+  }
+  .solution__section > article > h6 {
+    font-size: 1.3rem;
+  }
+  .solution__section > article > dl > dt .img__box .text__box p {
+    font-size: 1.8rem;
+  }
+  .solution__section > article > dl > dd li {
+    font-size: 1.3rem;
+    justify-content: flex-start;
+  }
+  .solution__section > article > dl > dd {
+    text-align: left;
+  }
+  .solution__section > article > dl > dd li span:nth-of-type(1) {
+    font-size: 1rem;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+  }
+  @keyframes ani3 {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(00px);
+    }
+  }
+  .solution__section > article > dl.ani dt {
+    -webkit-animation: ani3 0.6s ease-in-out 0s forwards;
+  }
+  .solution__section > article > dl.ani > dd {
+    -webkit-animation: ani3 0.6s ease-in-out 0.05s forwards;
+  }
+}
