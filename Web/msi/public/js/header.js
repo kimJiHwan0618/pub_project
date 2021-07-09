@@ -16,7 +16,6 @@ const headerEl = document.querySelector("header")
 const navEl = document.querySelector(".nav__list")
 
 const headerState = {
-  color : true,
   active : true
 }
 
@@ -52,9 +51,6 @@ const fnNavActive = () => {
 }
 
 const fnMoveScroll = () => {
-  window.scrollY === 0 ? 
-  headerEl.classList.remove('white') : headerEl.classList.add('white')
-
   navScrollActive()
 }
 
