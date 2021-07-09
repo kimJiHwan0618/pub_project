@@ -42,7 +42,7 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1380px) {
   .aboutus__section article ul li .img {
     height: 140px;
   }

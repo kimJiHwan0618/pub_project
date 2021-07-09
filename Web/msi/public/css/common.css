@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 180px;
 }
 .main__inner > section:last-of-type {
-  margin-bottom: 180px;
+  margin-bottom: 240px;
 }
 .main__inner > section > h3 {
   font-size: 2.6rem;
@@ -78,16 +78,16 @@ body::-webkit-scrollbar-thumb {
     min-width: 1240px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1380px) {
   .main__inner {
     min-width: 940px;
   }
   .main__inner > section {
     margin-top: 170px;
   }
-  .main__inner > section:last-of-type {
-    margin-bottom: 170px;
-  }
+  /* .main__inner > section:last-of-type {
+    margin-bottom: 200px;
+  } */
   .main__inner > section > h3 {
     font-size: 2.3rem;
   }
@@ -144,6 +144,6 @@ body::-webkit-scrollbar-thumb {
     margin-top: 34px;
   }
   .main__inner > section:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
 }

@@ -23,7 +23,7 @@ footer .footer__inner img {
     min-width: 1240px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1380px) {
   footer .footer__inner {
     min-width: 940px;
   }

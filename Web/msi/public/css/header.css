@@ -46,6 +46,7 @@ header .header__inner ul li a {
   color: white;
   opacity: 0.5;
   -webkit-transition: all 0.1s linear 0s;
+  cursor: pointer;
 }
 header.white .header__inner ul li a {
   color: #333;

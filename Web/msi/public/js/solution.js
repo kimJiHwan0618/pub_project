@@ -71,8 +71,8 @@ const tabClick = (ev) => {
     tabTitle.innerText = tabHtmlArray[clickIndex].title;
     tabSubTitle.innerText = tabHtmlArray[clickIndex].subTitle;
     tabImgText.innerText = tabHtmlArray[clickIndex].imgText;
-    tabImg.src = `img/solution/img_${clickIndex + 1}.jpg`;
-    tabIcon.src = `img/solution/ic_${clickIndex + 1}.svg`;
+    tabImg.src = `public/img/solution/img_${clickIndex + 1}.jpg`;
+    tabIcon.src = `public/img/solution/ic_${clickIndex + 1}.svg`;
     tabList.innerHTML = "";
     tabHtmlArray[clickIndex].list.map((result, index) => {
       tabList.innerHTML += `

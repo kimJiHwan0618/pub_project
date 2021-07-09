@@ -4,33 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(주)엠에쓰아이</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>(주)엠에스아이</title>
+    <link rel="stylesheet" href="public/css/styles.css" />
   </head>
   <body>
     <header>
       <div class="header__inner">
         <h1>
           <a href="#">
-            <img src="img/logo.png" alt="(주)엠에쓰아이 로고" />
+            <img src="public/img/logo.png" alt="(주)엠에쓰아이 로고" />
           </a>
         </h1>
         <nav>
-          <ul>
-            <li class="on">
-              <a class="f__bold roboto" href="#">Home</a>
+          <ul class="nav__list">
+            <li>
+              <a class="f__bold roboto" onclick="navClick(this)">Home</a>
             </li>
             <li>
-              <a class="f__bold roboto" href="#">About us</a>
+              <a class="f__bold roboto" onclick="navClick(this)">About us</a>
             </li>
             <li>
-              <a class="f__bold roboto" href="#">History</a>
+              <a class="f__bold roboto" onclick="navClick(this)">History</a>
             </li>
             <li>
-              <a class="f__bold roboto" href="#">Solution</a>
+              <a class="f__bold roboto" onclick="navClick(this)">Solution</a>
             </li>
             <li>
-              <a class="f__bold roboto" href="#">Contact</a>
+              <a class="f__bold roboto" onclick="navClick(this)">Contact</a>
             </li>
           </ul>
         </nav>
@@ -47,7 +47,7 @@
     <main>
       <section class="home__section">
         <video
-          src="img/main__video.mp4"
+          src="public/img/main__video.mp4"
           autoplay="autoplay"
           muted="muted"
           loop
@@ -71,7 +71,7 @@
             <ul>
               <li>
                 <span class="img">
-                  <img src="img/abotus/img_1.png" alt="" />
+                  <img src="public/img/abotus/img_1.png" alt="" />
                 </span>
                 <dl>
                   <dt class="f__midium notosansKr">상품화</dt>
@@ -82,7 +82,7 @@
               </li>
               <li>
                 <span class="img">
-                  <img src="img/abotus/img_2.png" alt="" />
+                  <img src="public/img/abotus/img_2.png" alt="" />
                 </span>
                 <dl>
                   <dt class="f__midium notosansKr">지능화</dt>
@@ -93,7 +93,7 @@
               </li>
               <li>
                 <span class="img">
-                  <img src="img/abotus/img_3.png" alt="" />
+                  <img src="public/img/abotus/img_3.png" alt="" />
                 </span>
                 <dl>
                   <dt class="f__midium notosansKr">플랫폼화</dt>
@@ -117,15 +117,15 @@
             <div class="swiper-container mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="img/history/img_1.jpg" alt="History first image" />
+                  <img src="public/img/history/img_1.jpg" alt="History first image" />
                   <h5 class="roboto f__bold">Initializing​</h5>
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/history/img_2.jpg" alt="History first image" />
+                  <img src="public/img/history/img_2.jpg" alt="History first image" />
                   <h5 class="roboto f__bold">Activating</h5>
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/history/img_3.jpg" alt="History first image" />
+                  <img src="public/img/history/img_3.jpg" alt="History first image" />
                   <h5 class="roboto f__bold">Business ​Expansion</h5>
                 </div>
               </div>
@@ -216,13 +216,13 @@
               <dt>
                 <div class="img__box">
                   <img
-                    src="img/solution/img_1.jpg"
+                    src="public/img/solution/img_1.jpg"
                     alt="제조 실행 자동화 image"
                     class="tab__img"
                   />
                   <span class="text__box">
                     <img
-                      src="img/solution/ic_1.svg"
+                      src="public/img/solution/ic_1.svg"
                       alt="제조 실행 자동화 icon"
                       class="tab__icon"
                     />
@@ -301,21 +301,22 @@
     </main>
     <footer>
       <div class="footer__inner">
-        <img src="img/logo.png" alt="(주)엠에쓰아이 로고" />
+        <img src="public/img/logo.png" alt="(주)엠에쓰아이 로고" />
         <p class="f__midium roboto">Ⓒ2021 MSI Co.,Ltd. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
-    <script src="js/header.js"></script>
+    <!-- <script src="public/js/localMapTest.js"></script> -->
+    <script src="public/js/header.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="public/js/swiper.js"></script>
     <!-- Google Map -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=&language=en&callback=initMap"
-      async
-      defer
-    ></script>
-    <script src="js/googleMap.js"></script>
-    <script src="js/solution.js"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq0QlIOuHsix2pUKYJkok0B6TMsooqsEc&callback=&language=en&callback=initMap"
+    async
+    defer
+  ></script>
+    <script src="public/js/googleMap.js"></script>
+    <script src="public/js/solution.js"></script>
   </body>
 </html>

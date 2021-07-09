@@ -84,7 +84,7 @@
 .history__list__wrap > dd > ul li:last-of-type {
   border-bottom: 1px solid #dedede;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1380px) {
   .history__section article .mySwiper {
     min-height: 300px;
   }

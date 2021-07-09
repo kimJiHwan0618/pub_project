@@ -135,7 +135,7 @@
 .solution__section > article > dl > dd li:last-of-type {
   margin-bottom: 0px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1380px) {
   .solution__section > article > ul > li {
     padding: 16px 0;
     font-size: 1.4rem;
