@@ -40,7 +40,7 @@ header .header__inner ul li:last-of-type {
   border-bottom: none;
 }
 header .header__inner ul li a {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #333;
   opacity: 0.5;
   -webkit-transition: all 0.1s linear 0s;
@@ -101,7 +101,7 @@ header .header__inner ul li.on a {
     width: 100%;
     color: white;
   }
-  header .header__inner ul li.on a{
+  header .header__inner ul li.on a {
     color: white;
   }
   /* #12233f */

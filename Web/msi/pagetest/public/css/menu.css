@@ -1,0 +1,117 @@
+.item.menu__icon {
+  position: absolute;
+  right: 32px;
+  text-align: center;
+  box-sizing: border-box;
+  counter-increment: item;
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  .item.menu__icon {
+    width: auto;
+    display: block;
+  }
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgb(161, 161, 161);
+  border-radius: 12px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 10.5px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+@keyframes active-menu06-bar02 {
+  100% {
+    height: 0;
+  }
+}
+
+#menuIcon span:nth-of-type(1) {
+  animation: menu07-bar01 0.4s forwards;
+}
+@keyframes menu07-bar01 {
+  0% {
+    transform: translateY(10.7px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10.7px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+#menuIcon span:nth-of-type(2) {
+  transition: all 0.1s 0.1s;
+  opacity: 1;
+}
+#menuIcon span:nth-of-type(3) {
+  animation: menu07-bar03 0.4s forwards;
+}
+@keyframes menu07-bar03 {
+  0% {
+    transform: translateY(-10.7px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10.7px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+header.active #menuIcon span:nth-of-type(1) {
+  animation: active-menu07-bar01 0.4s forwards;
+}
+@keyframes active-menu07-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(10.7px) rotate(0);
+  }
+  100% {
+    transform: translateY(10.7px) rotate(45deg);
+  }
+}
+header.active #menuIcon span:nth-of-type(2) {
+  opacity: 0;
+}
+header.active #menuIcon span:nth-of-type(3) {
+  animation: active-menu07-bar03 0.4s forwards;
+}
+@keyframes active-menu07-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10.7px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10.7px) rotate(-45deg);
+  }
+}

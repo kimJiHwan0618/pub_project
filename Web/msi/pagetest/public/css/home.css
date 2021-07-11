@@ -1,0 +1,37 @@
+main > .section {
+  width: 100vw;
+  height: 100vh;
+}
+main > .section .swiper-wrapper > .swiper-slide:nth-child(n) {
+  background: url(../img/home/maing_bg1.jpg) no-repeat 50% 0;
+}
+main > .section .swiper-wrapper > .swiper-slide:nth-child(2n) {
+  background: url(../img/home/maing_bg2.jpg) no-repeat 50% 0;
+}
+main > .mySwiper::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+main > .mySwiper button,
+main > .mySwiper .swiper-pagination {
+  z-index: 15;
+}
+main > .mySwiper button.swiper-button-next {
+  right: 50px;
+}
+main > .mySwiper button.swiper-button-prev {
+  left: 50px;
+}
+main > .mySwiper .swiper-slide .slide__inner {
+  color: white;
+  position: relative;
+  z-index: 15;
+}
+/* 메인 배너 */
