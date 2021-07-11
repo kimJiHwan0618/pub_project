@@ -224,7 +224,7 @@
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 10px;
+  bottom: 50px;
   left: 0;
   width: 100%;
 }
@@ -587,9 +587,9 @@ button.swiper-pagination-bullet {
   height: 28vw;
   transition: opacity 0.6s ease;
 }
-.swiper-container.swiper-container-coverflow {
+/* .swiper-container.swiper-container-coverflow {
   padding-top: 2%;
-}
+} */
 .swiper-container.loading {
   opacity: 0;
   visibility: hidden;

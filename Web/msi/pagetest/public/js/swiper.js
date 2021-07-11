@@ -1,3 +1,7 @@
+const swiperEl = document.querySelector(".swiper-wrapper");
+
+const bannerActive = (index) => {};
+
 const sliderSelector = ".swiper-container",
   options = {
     init: false,
@@ -37,16 +41,15 @@ const sliderSelector = ".swiper-container",
         this.el.classList.remove("loading");
       },
       activeIndexChange: function () {
-        console.log(this.realIndex);
+        bannerActive(this.realIndex);
       },
     },
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 8000,
       disableOnInteraction: false,
     },
   };
 const mySwiper = new Swiper(sliderSelector, options);
-
 // Initialize slider
 mySwiper.init();
