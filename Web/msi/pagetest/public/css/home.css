@@ -1,20 +1,27 @@
-main > .h__section {
+main > .home__section {
   width: 100vw;
   height: 100vh;
 }
-main > .h__section:first-of-type {
+main > .home__section:first-of-type {
   height: calc(100vh - 80px);
   margin-top: 80px;
 }
-main > .h__section .swiper-wrapper > .swiper-slide:nth-child(n) {
+main > .home__section .swiper-wrapper > .swiper-slide:nth-child(n) {
   background: url(../img/home/maing_bg1.jpg) no-repeat 50% 0;
 }
-main > .h__section .swiper-wrapper > .swiper-slide:nth-child(2n) {
+main > .home__section .swiper-wrapper > .swiper-slide:nth-child(2n) {
   background: url(../img/home/maing_bg2.jpg) no-repeat 50% 0;
 }
 main > .mySwiper button,
 main > .mySwiper .swiper-pagination {
   z-index: 15;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  opacity: 0.5;
+  -webkit-transition: all 0.2s ease 0s;
+}
+.swiper-button-next:hover:after, .swiper-button-prev:hover:after {
+  opacity: 1;
 }
 main > .mySwiper button.swiper-button-next {
   right: 50px;
@@ -56,3 +63,11 @@ main > .mySwiper .swiper-slide.swiper-slide-active .slide__inner {
   -webkit-animation: bannerAni 2.5s ease-in-out 0s forwards;
 }
 /* 메인 배너 */
+@media screen and (max-width: 990px) {
+  main > .mySwiper button.swiper-button-next {
+    right: 32px;
+  }
+  main > .mySwiper button.swiper-button-prev {
+    left: 32px;
+  }
+}
