@@ -10,6 +10,7 @@
   .item.menu__icon {
     width: auto;
     display: block;
+    right: 50px;
   }
 }
 

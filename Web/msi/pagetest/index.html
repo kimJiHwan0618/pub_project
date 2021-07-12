@@ -8,42 +8,11 @@
     <link rel="stylesheet" href="public/css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header__inner">
-        <h1>
-          <a href="#">
-            <img src="public/img/logo.png" alt="(주)엠에쓰아이 로고" />
-          </a>
-        </h1>
-        <nav>
-          <ul class="nav__list">
-            <li class="on">
-              <a class="f__bold roboto">Home</a>
-            </li>
-            <li>
-              <a class="f__bold roboto">About us</a>
-            </li>
-            <li>
-              <a class="f__bold roboto">Solution</a>
-            </li>
-            <li>
-              <a class="f__bold roboto">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="item menu__icon">
-          <button class="menu-trigger" id="menuIcon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- 오토배너 -->
-      <section class="mySwiper swiper-container home__section">
+    <script src="public/js/layout.js"></script>
+    <div data-include-path="public/layout/header.html"></div>
+    <div class="onepage__wrap">
+      <!-- 첫번째 섹션 -->
+      <section class="mySwiper swiper-container home__section section">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <article class="slide__inner">
@@ -70,46 +39,32 @@
         <button class="swiper-button-prev"></button>
         <div class="swiper-pagination"></div>
       </section>
-      <!-- //오토배너 -->
-      <section class="home__section"></section>
-    </main>
+      <!-- // 첫번째 섹션 -->
 
-    <footer>
-      <div class="footer__inner">
-        <div class="inner__left">
-          <img src="public/img/logo.png" alt="(주)엠에쓰아이 로고" />
-          <p class="copyright f__midium roboto">
-            Ⓒ2021 MSI Co.,Ltd. ALL RIGHTS RESERVED.
-          </p>
-        </div>
-        <div class="inner__right">
-          <div class="right__top">
-            <p class="notosansKr">
-              경기도 용인시 기흥구 흥덕1로 13 흥덕IT밸리 컴플렉스동 405호
-              (16954)
-            </p>
-            <dl class="notosansKr">
-              <dt>사업자등록번호 :&nbsp;</dt>
-              <dd>229-81-03121</dd>
-            </dl>
-          </div>
-          <div class="right__bottom">
-            <dl class="notosansKr">
-              <dt>TEL :&nbsp;</dt>
-              <dd>+82-2-3461-4976</dd>
-            </dl>
-            <dl class="notosansKr">
-              <dt>FAX :&nbsp;</dt>
-              <dd>+82-2-3461-4977</dd>
-            </dl>
-            <dl class="notosansKr">
-              <dt>E-mail :&nbsp;</dt>
-              <dd>aim@aim.co.kr</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </footer>
+      <!-- 두번째 섹션 -->
+      <section class="home__section section">
+        <article>
+          <h3>adasjkcnalscnklas</h3>
+          <h4>adasjkcnalscnklas</h4>
+          <h5>adasjkcnalscnklas</h5>
+        </article>
+      </section>
+      <!-- // 두번째 섹션 -->
+
+      <!-- 세번째 섹션 -->
+      <section class="home__section section">
+        <article>
+          <h3>adasjkcnalscnklas</h3>
+          <h4>adasjkcnalscnklas</h4>
+          <h5>adasjkcnalscnklas</h5>
+        </article>
+      </section>
+      <!-- // 세번째 섹션 -->
+
+      <div data-include-path="public/layout/footer.html"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="public/js/fullpage_scroll.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="public/js/swiper.js"></script>
   </body>
