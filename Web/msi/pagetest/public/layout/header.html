@@ -1,91 +1,83 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>layout-header</title>
-  </head>
-  <body>
-    <header>
-      <div class="header__inner">
-        <h1>
-          <a href="#">
-            <img src="public/img/logo.png" alt="(주)엠에쓰아이 로고" />
-          </a>
-        </h1>
-        <nav>
-          <ul class="nav__list">
-            <li class="on">
-              <a class="f__bold roboto">Home</a>
+<header>
+  <div class="header__inner">
+    <h1>
+      <a href="index.html">
+        <img src="/public/img/logo.png" alt="(주)엠에쓰아이 로고" />
+      </a>
+    </h1>
+    <nav>
+      <ul class="nav__list">
+        <li>
+          <a class="f__bold roboto" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="f__bold roboto">About us</a>
+          <ul>
+            <li>
+              <a class="notosansKr" href="#">MSI</a>
             </li>
             <li>
-              <a class="f__bold roboto">About us</a>
-              <ul>
-                <li>
-                  <a class="notosansKr" href="#">MSI</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">CEO 메세지</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">연혁</a>
-                </li>
-              </ul>
+              <a class="notosansKr" href="#">CEO 메세지</a>
             </li>
             <li>
-              <a class="f__bold roboto">Business</a>
-              <ul>
-                <li>
-                  <a class="notosansKr" href="#">비지니스 1</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">비지니스 2</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">비지니스 3</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">비지니스 4</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="f__bold roboto">Solution</a>
-              <ul>
-                <li>
-                  <a class="notosansKr" href="#">제조 실행</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">자동화</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">분석 진단</a>
-                </li>
-                <li>
-                  <a class="notosansKr" href="#">임베디드</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="f__bold roboto">Contact</a>
-              <ul>
-                <li>
-                  <a class="notosansKr" href="#">찾아오시는길</a>
-                </li>
-              </ul>
+              <a class="notosansKr" href="#">연혁</a>
             </li>
           </ul>
-        </nav>
-        <div class="item menu__icon">
-          <button class="menu-trigger" id="menuIcon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <div class="modal__bg"></div>
-  </body>
-</html>
+        </li>
+        <li>
+          <a class="f__bold roboto">Business</a>
+          <ul>
+            <li>
+              <a class="notosansKr" href="#">비지니스 1</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">비지니스 2</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">비지니스 3</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">비지니스 4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="f__bold roboto">Solution</a>
+          <ul>
+            <li>
+              <a class="notosansKr" href="#">제조 실행</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">자동화</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">분석 진단</a>
+            </li>
+            <li>
+              <a class="notosansKr" href="#">임베디드</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="f__bold roboto">Contact</a>
+          <ul>
+            <li>
+              <a class="notosansKr" href="#">찾아오시는길</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="item menu__icon">
+      <button class="menu-trigger" id="menuIcon" onclick="menuClick()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="modal__bg"></div>
+<script>
+  console.log("gdgd");
+</script>

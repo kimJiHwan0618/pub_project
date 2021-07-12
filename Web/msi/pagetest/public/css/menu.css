@@ -11,6 +11,7 @@
     width: auto;
     display: block;
     right: 50px;
+    position: unset;
   }
 }
 

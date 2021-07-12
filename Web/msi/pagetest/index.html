@@ -4,32 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>원페이지 스크롤 테스트</title>
+    <title>엠에쓰아이</title>
     <link rel="stylesheet" href="public/css/styles.css" />
   </head>
   <body>
-    <script src="public/js/layout.js"></script>
-    <div data-include-path="public/layout/header.html"></div>
+    <header include-html="public/layout/header.html"></header>
     <div class="onepage__wrap">
       <!-- 첫번째 섹션 -->
       <section class="mySwiper swiper-container home__section section">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
+            <img
+              src="public/img/home/main_bg1.jpg"
+              alt="첫번째 배너 이미지입니다."
+            />
             <article class="slide__inner">
               <h2 class="f__bold notosansKr">오토배너 첫번째 페이지입니다.</h2>
             </article>
           </div>
           <div class="swiper-slide">
+            <img
+              src="public/img/home/main_bg2.jpg"
+              alt="두번째 배너 이미지입니다."
+            />
             <article class="slide__inner">
               <h2 class="f__bold notosansKr">오토배너 두번째 페이지입니다.</h2>
             </article>
           </div>
           <div class="swiper-slide">
+            <img
+              src="public/img/home/main_bg1.jpg"
+              alt="세번째 배너 이미지입니다."
+            />
             <article class="slide__inner">
               <h2 class="f__bold notosansKr">오토배너 세번째 페이지입니다.</h2>
             </article>
           </div>
           <div class="swiper-slide">
+            <img
+              src="public/img/home/main_bg2.jpg"
+              alt="네번째 배너 이미지입니다."
+            />
             <article class="slide__inner">
               <h2 class="f__bold notosansKr">오토배너 네번째 페이지입니다.</h2>
             </article>
@@ -61,11 +76,22 @@
       </section>
       <!-- // 세번째 섹션 -->
 
-      <div data-include-path="public/layout/footer.html"></div>
+      <footer class="section" include-html="public/layout/footer.html"></footer>
     </div>
+
+    <script src="public/js/layout.js"></script>
+    <script src="public/js/includeRouter.js"></script>
+    <script src="public/js/header.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="public/js/fullpage_scroll.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="public/js/swiper.js"></script>
+    <script>
+      includeHTML(function () {
+        includeRouter(function () {
+          // do something in the future
+        });
+      });
+    </script>
   </body>
 </html>

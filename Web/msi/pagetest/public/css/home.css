@@ -5,12 +5,6 @@
 .onepage__wrap > .home__section:nth-of-type(2) {
   background: gray;
 }
-.onepage__wrap > .home__section .swiper-wrapper > .swiper-slide:nth-child(n) {
-  background: url(../img/home/main_bg1.jpg) no-repeat 50% 0;
-}
-.onepage__wrap > .home__section .swiper-wrapper > .swiper-slide:nth-child(2n) {
-  background: url(../img/home/main_bg2.jpg) no-repeat 50% 0;
-}
 .onepage__wrap > .mySwiper button,
 .onepage__wrap > .mySwiper .swiper-pagination {
   z-index: 15;
@@ -29,6 +23,11 @@
 }
 .onepage__wrap > .mySwiper button.swiper-button-prev {
   left: 50px;
+}
+.onepage__wrap > .mySwiper .swiper-slide > img {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .onepage__wrap > .mySwiper .swiper-slide:after {
   position: absolute;
