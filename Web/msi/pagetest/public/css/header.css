@@ -5,9 +5,14 @@ header {
   z-index: 20;
   left: 0;
   top: 0;
-  -webkit-transition: all 0.1s linear 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition-duration: 0.5;
   background: white;
+  overflow: hidden;
   box-shadow: 0 4px 6px 0 rgb(12 0 46 / 6%);
+}
+header:hover {
+  height: 300px;
 }
 header .header__inner {
   height: 100%;
@@ -15,22 +20,31 @@ header .header__inner {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
 }
-/* header .header__inner h1 {
+header .header__inner h1 {
   position: absolute;
   left: 100px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-} */
+  height: 80px;
+  top: 0;
+  line-height: 80px;
+  z-index: 10;
+}
 header .header__inner h1 img {
   width: 130px;
   height: 38px;
 }
 header .header__inner > nav {
-  height: 100%;
-  margin-left: 96px;
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header:hover .header__inner > nav {
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
 header .header__inner > nav > ul {
   display: flex;
@@ -46,17 +60,32 @@ header .header__inner > nav > ul > li > a {
   font-size: 1.8rem;
   color: #333;
   opacity: 0.5;
-  -webkit-transition: all 0.1s linear 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   display: block;
   height: 100%;
   line-height: 70px;
+  box-sizing: border-box;
+  position: relative;
+}
+header .header__inner > nav > ul > li > a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #000270;
+  -webkit-transition: all 0.3s ease-in-out 0s;
 }
 header .header__inner > nav > ul > li:hover > a {
   opacity: 1;
   color: #000270;
 }
-header .header__inner > nav > ul > li.on > a {
+header .header__inner > nav > ul > li:hover > a:after {
+  width: 100%;
+}
+header .header__inner > nav > ul > li#active > a {
   opacity: 1;
   color: #000270;
 }
@@ -64,58 +93,85 @@ header .header__inner > nav > ul > li.on > a {
 header .header__inner > nav > ul > li > ul {
   position: absolute;
   left: 50%;
-  top: calc(100% - 3.5px);
+  top: 100%;
   -webkit-transform: translateX(-50%);
-  -webkit-transition: all 0.15s ease-in 0s;
-  overflow: hidden;
-  border-radius: 0 0 4px 4px;
-  height: 0;
+  text-align: center;
 }
 header .header__inner > nav > ul > li > ul li a {
-  padding: 0px 16px;
-  font-size: 1.6rem;
-  line-height: 0;
-  height: 0px;
-  background: white;
+  padding: 16px;
+  font-size: 1.5rem;
   display: block;
   min-width: 170px;
   color: rgb(99, 99, 99);
   -webkit-transition: all 0.25s ease-in 0s;
+  position: relative;
+}
+header .header__inner > nav > ul > li > ul li a:hover {
+  color: white;
+}
+header .header__inner > nav > ul > li > ul li a:after {
+  position: absolute;
+  height: 70%;
+  background: #000270;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+  content: "";
+  display: block;
+  width: 0;
+  z-index: -1;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+header .header__inner > nav > ul > li > ul li a:hover:after {
+  width: 90%;
 }
 header .header__inner > nav > ul > li > ul li {
   overflow: hidden;
   -webkit-transition: all 0.25s ease-in 0s;
 }
-header .header__inner > nav > ul > li:hover > ul li a {
-  height: 50px;
-  line-height: 50px;
-}
-header .header__inner > nav > ul > li:hover ul {
-  border-top: 4px solid #000270;
-  height: auto;
-  box-shadow: 0px 13px 42px 11px rgb(0 0 0 / 8%);
-}
-header .header__inner > nav > ul > li > ul li a:hover {
-  background: #ebebeb;
-  color: #000270;
-  padding-left: 20px;
-}
+
 /* nav submenu */
 @media screen and (max-width: 990px) {
+  header:hover {
+    height: 80px;
+  }
+  header .header__inner h1 {
+    position: unset;
+  }
   header .header__inner {
     padding: 0 20px;
     justify-content: space-between;
   }
   header .header__inner > nav {
     position: fixed;
-    right: 0;
+    right: -260px;
     top: 80px;
     margin-left: 0px;
+    display: block;
     width: 260px;
     height: calc(100vh - 80px);
-    background: rgb(23, 23, 23);
+    background: #050a69;
     z-index: -1;
     box-shadow: -4px 0px 6px 0 rgb(12 0 46 / 6%);
+    -webkit-transition: 0.3s ease-in-out 0s;
+    overflow-y: auto;
+  }
+  header.active .header__inner > nav {
+    right: 0;
+  }
+  header .header__inner > nav::-webkit-scrollbar {
+    width: 10px;
+    background-color: #dee2e5;
+  }
+  header .header__inner > nav::-webkit-scrollbar-thumb {
+    width: 90px;
+    border: 1px solid #9e9e9e;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    background-color: #9ea5b8;
+    border-radius: 10px;
   }
   header .header__inner > nav > ul {
     height: auto;
@@ -123,20 +179,20 @@ header .header__inner > nav > ul > li > ul li a:hover {
   }
   header .header__inner > nav > ul > li {
     width: 100%;
-    border-top: 1px solid #292828;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
   }
 
   header .header__inner > nav > ul > li:last-of-type {
-    border-bottom: 1px solid #292828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   header .header__inner > nav > ul > li > a {
     padding: 0 25px;
     color: white;
-    opacity: 0.3;
+    opacity: 0.5;
     position: relative;
   }
-  header .header__inner > nav > ul > li > a:after {
+  header .header__inner > nav > ul > li > a::before {
     content: "▼";
     display: block;
     position: absolute;
@@ -144,23 +200,16 @@ header .header__inner > nav > ul > li > ul li a:hover {
     top: 50%;
     -webkit-transform: translateY(-50%);
     font-size: 1.3rem;
-    -webkit-transition: 0.1s linear 0s;
+    -webkit-transition: 0.3s ease-in-out 0s;
   }
-  header .header__inner > nav > ul > li.on > a:after {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-  }
-  header .header__inner > nav > ul > li:first-of-type a:after {
+
+  header .header__inner > nav > ul > li:first-of-type a::before {
     display: none;
   }
-  header .header__inner > nav > ul > li:hover > a {
-    opacity: 1;
-    color: white;
-    background: rgb(34, 34, 34);
+  header .header__inner > nav > ul > li:first-of-type a::after {
+    display: none;
   }
-  header .header__inner > nav > ul > li.on > a {
-    background: rgb(34, 34, 34);
-    color: white;
-  }
+
   header .header__inner > nav > ul > li > ul {
     position: unset;
     -webkit-transform: translate(0px);
@@ -170,45 +219,74 @@ header .header__inner > nav > ul > li > ul li a:hover {
   }
   header .header__inner > nav > ul > li > ul {
     position: unset;
-    /* left: 50%;
-    top: calc(100% - 3.5px); */
     -webkit-transform: translateX(0%);
-    /* -webkit-transition: all 0.15s ease-in 0s; */
     overflow: hidden;
     border-radius: 0px;
     height: 0;
+    text-align: left;
   }
   header .header__inner > nav > ul > li > ul li a {
     padding: 0 35px;
-    background: rgb(20, 20, 20);
+    background: none;
     display: block;
     min-width: 170px;
-    color: rgb(99, 99, 99);
-    -webkit-transition: all 0.25s ease-in 0s;
+    color: white;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in 0s;
   }
-  header .header__inner > nav > ul > li.on ul {
-    height: auto;
-  }
+
   header .header__inner > nav > ul > li:hover ul {
     border-top: none;
     box-shadow: none;
   }
+  header .header__inner > nav > ul > li#active > a {
+    opacity: 0.5;
+    color: white;
+  }
   header .header__inner > nav > ul > li:hover > ul li a {
-    height: 50px;
-    line-height: 50px;
+    height: 0px;
+    line-height: 0px;
+  }
+  header .header__inner > nav > ul > li:hover > a {
+    opacity: 0.5;
+    color: white;
+    background: none;
+  }
+  header .header__inner > nav > ul > li > ul li a:after {
+    display: none;
+  }
+  header .header__inner > nav > ul > li.on > a::before {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+  }
+  header .header__inner > nav > ul > li.on ul {
+    height: auto;
+  }
+  header .header__inner > nav > ul > li.on > a {
+    background: #2e327a;
+    color: white;
+    opacity: 1 !important;
+  }
+  header .header__inner > nav > ul > li.on:hover > a {
+    opacity: 1;
+    color: white;
+    background: #2e327a;
   }
   header .header__inner > nav > ul > li.on > ul li a {
     height: 50px;
     line-height: 50px;
+    opacity: 0.5;
   }
+
   header .header__inner > nav > ul > li > ul li a:hover {
     padding-left: 35px;
     color: white;
-    background: rgb(25, 25, 25);
+    background: #2e327a;
+    opacity: 0.8;
   }
   header .header__inner > nav > ul > li > ul li.on a {
     padding-left: 35px;
     color: white;
-    background: rgb(25, 25, 25);
+    background: #2e327a;
+    opacity: 0.8;
   }
 }

@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>엠에쓰아이</title>
-    <link rel="stylesheet" href="public/css/styles.css" />
+    <link rel="stylesheet" href="/public/css/styles.css" />
   </head>
-  <body>
-    <header include-html="public/layout/header.html"></header>
-    <div class="onepage__wrap">
+  <body id="Home">
+    <div class="header__wrap" include-html="/public/layout/header.html"></div>
+
+    <main class="onepage__wrap">
       <!-- 첫번째 섹션 -->
       <section class="mySwiper swiper-container home__section section">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
-              src="public/img/home/main_bg1.jpg"
+              src="/public/img/home/main_bg1.jpg"
               alt="첫번째 배너 이미지입니다."
             />
             <article class="slide__inner">
@@ -24,7 +25,7 @@
           </div>
           <div class="swiper-slide">
             <img
-              src="public/img/home/main_bg2.jpg"
+              src="/public/img/home/main_bg2.jpg"
               alt="두번째 배너 이미지입니다."
             />
             <article class="slide__inner">
@@ -33,7 +34,7 @@
           </div>
           <div class="swiper-slide">
             <img
-              src="public/img/home/main_bg1.jpg"
+              src="/public/img/home/main_bg1.jpg"
               alt="세번째 배너 이미지입니다."
             />
             <article class="slide__inner">
@@ -42,7 +43,7 @@
           </div>
           <div class="swiper-slide">
             <img
-              src="public/img/home/main_bg2.jpg"
+              src="/public/img/home/main_bg2.jpg"
               alt="네번째 배너 이미지입니다."
             />
             <article class="slide__inner">
@@ -76,22 +77,17 @@
       </section>
       <!-- // 세번째 섹션 -->
 
-      <footer class="section" include-html="public/layout/footer.html"></footer>
-    </div>
+      <footer
+        class="section"
+        include-html="/public/layout/footer.html"
+      ></footer>
+    </main>
 
-    <script src="public/js/layout.js"></script>
-    <script src="public/js/includeRouter.js"></script>
-    <script src="public/js/header.js"></script>
+    <script src="/public/js/layout.js"></script>
+    <script src="/public/js/header.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="public/js/fullpage_scroll.js"></script>
+    <script src="/public/js/fullpage_scroll.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="public/js/swiper.js"></script>
-    <script>
-      includeHTML(function () {
-        includeRouter(function () {
-          // do something in the future
-        });
-      });
-    </script>
+    <script src="/public/js/swiper.js"></script>
   </body>
 </html>
