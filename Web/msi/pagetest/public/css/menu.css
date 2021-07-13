@@ -1,15 +1,17 @@
 .item.menu__icon {
   position: absolute;
-  right: 32px;
+  right: 100px;
+  height: 80px;
+  top: 0;
   text-align: center;
   box-sizing: border-box;
   counter-increment: item;
-  display: none;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 990px) {
   .item.menu__icon {
     width: auto;
-    display: block;
     right: 50px;
     position: unset;
   }
