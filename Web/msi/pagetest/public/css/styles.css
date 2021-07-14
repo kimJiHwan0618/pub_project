@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./map.css";
 @import "./common.css";
 @import "./swiper.css";
 @import "./menu.css";
@@ -7,10 +8,6 @@
 @import "./footer.css";
 @import "./home.css";
 @import "./subpage_swiper.css";
-/* @import "./aboutus.css";
-@import "./history.css";
-@import "./solution.css";
-@import "./contact.css"; */
 
 @font-face {
   font-family: "NotoSansKR-Bold";
