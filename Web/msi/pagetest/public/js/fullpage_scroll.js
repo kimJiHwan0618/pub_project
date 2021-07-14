@@ -59,7 +59,7 @@ const moving = function (index) {
       {
         scrollTop: moveCntTop,
       },
-      1200,
+      1000,
       function () {
         time = false; // 휠 이벤트가 끝나면 false로 변경
       }

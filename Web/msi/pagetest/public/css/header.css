@@ -2,7 +2,7 @@ header {
   height: 80px;
   width: 100%;
   position: fixed;
-  z-index: 20;
+  z-index: 21;
   left: 0;
   top: 0;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -60,7 +60,7 @@ header .header__inner > nav > ul > li > a {
   padding: 0 35px;
   font-size: 1.8rem;
   color: #333;
-  opacity: 0.5;
+  opacity: 0.65;
   -webkit-transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   display: block;
@@ -85,10 +85,6 @@ header .header__inner > nav > ul > li:hover > a {
 }
 header .header__inner > nav > ul > li:hover > a:after {
   width: 100%;
-}
-header .header__inner > nav > ul > li#active > a {
-  opacity: 1;
-  color: #000270;
 }
 /* nav submenu */
 header .header__inner > nav > ul > li > ul {
@@ -132,7 +128,19 @@ header .header__inner > nav > ul > li > ul li {
   overflow: hidden;
   -webkit-transition: all 0.25s ease-in 0s;
 }
-
+header.active nav {
+  visibility: hidden;
+}
+header.active {
+  box-shadow: none;
+  background: none;
+}
+header.active:hover {
+  height: 80px;
+}
+header.active .header__inner h1 {
+  visibility: hidden;
+}
 /* nav submenu */
 @media screen and (max-width: 990px) {
   header {
@@ -150,6 +158,13 @@ header .header__inner > nav > ul > li > ul li {
   }
   header .header__inner > nav {
     display: none;
+  }
+  header.active .header__inner h1 {
+    visibility: unset;
+  }
+  header.active {
+    box-shadow: 0 4px 6px 0 rgb(12 0 46 / 6%);
+    background: white;
   }
   /* header.active .header__inner > nav {
     right: 0;

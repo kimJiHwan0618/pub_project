@@ -61,6 +61,7 @@ body.pcscroll__none {
 .subpage__main > .subpage__inner {
   width: 80%;
   margin: 0 auto;
+  min-width: 990px;
 }
 .subpage__main > .subpage__inner nav {
   position: relative;
@@ -76,9 +77,20 @@ body.pcscroll__none {
   -webkit-transition: all 0.3s ease-in-out 0s;
   background: white;
   border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  border-top: 1px solid #ececec;
   box-sizing: border-box;
+  cursor: pointer;
 }
-.subpage__main > .subpage__inner nav ul.sub__page__nav li a {
+.subpage__main > .subpage__inner nav ul.sub__page__nav li:last-of-type {
+  border-right: 1px solid #ececec;
+}
+.subpage__main > .subpage__inner nav ul.sub__page__nav li.on span {
+  color: white;
+  background: linear-gradient(to right, #4d4fa2 0%, #161890 100%);
+  box-shadow: 0 8px 16px rgb(13 15 116 / 30%);
+}
+.subpage__main > .subpage__inner nav ul.sub__page__nav li span {
   font-size: 1.6rem;
   height: 76px;
   line-height: 76px;
@@ -86,88 +98,8 @@ body.pcscroll__none {
   text-align: center;
   display: inline-block;
   color: #323232;
-  position: relative;
   z-index: 3;
   -webkit-transition: all 0.3s ease-in-out 0s;
-  position: relative;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li a:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  display: block;
-  background: #ececec;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-}
-.subpage__main
-  > .subpage__inner
-  nav
-  ul.sub__page__nav
-  li:last-of-type
-  a::before {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  display: block;
-  background: #ececec;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-}
-
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, #4d4fa2, #161890);
-  box-shadow: 0 8px 16px rgb(6 8 141 / 40%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on {
-  border-image: linear-gradient(to right, #4d4fa2 0%, #161890 100%);
-  border-image-width: 0 0 0 20px;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:hover {
-  border-image: linear-gradient(to right, #4d4fa2 0%, #161890 100%);
-  border-image-width: 0 0 0 20px;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on {
-  border-bottom: none;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on a {
-  color: white;
-  background: none;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:hover a:after {
-  opacity: 0;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:hover a::before {
-  opacity: 0;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on a:after {
-  display: none;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on:after {
-  width: 100%;
-  height: calc(100% - 1px);
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li.on a:before {
-  display: none;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:hover:after {
-  width: 100%;
-}
-.subpage__main > .subpage__inner nav ul.sub__page__nav li:hover a {
-  color: white;
-  background: none;
 }
 .subpage__main > .subpage__title__section::before {
   content: "";
@@ -207,14 +139,15 @@ body.pcscroll__none {
   font-size: 4.8rem;
   position: relative;
   opacity: 0;
-  -webkit-animation: textMoving 0.8s ease-in-out 1s forwards;
+  -webkit-animation: textMoving 0.8s ease-in-out 0.8s forwards;
 }
 .subpage__main > .subpage__title__section > .inner > p {
   font-size: 3.6rem;
+  text-align: left;
   margin-top: 20px;
   position: relative;
   opacity: 0;
-  -webkit-animation: textMoving 0.8s ease-in-out 1.4s forwards;
+  -webkit-animation: textMoving 0.8s ease-in-out 1.2s forwards;
 }
 @keyframes imgScale {
   0% {
@@ -236,26 +169,139 @@ body.pcscroll__none {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: imgScale 1s ease-in-out 0.6s forwards;
 }
-.subpage__main > .subpage__inner > .sub__tilte__txt {
+.subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt {
   font-size: 4rem;
   text-align: center;
   margin-top: 100px;
 }
-.subpage__main > .subpage__inner > .sub__tilte__txt h3 {
+.subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt h3 {
   display: inline-block;
   padding-bottom: 20px;
   border-bottom: 3px solid #0054cb;
 }
-.subpage__main > .subpage__inner > h4 {
+.subpage__main > .subpage__inner .swipe_info_wrap > h4 {
   font-size: 1.8rem;
   text-align: center;
   margin-top: 15px;
   opacity: 0.6;
   line-height: 1.62;
 }
+.subpage__main > .subpage__inner .swipe_info_wrap > .subpage__content {
+  margin: 80px 0;
+}
 @media screen and (max-width: 990px) {
   body.pcscroll__none {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+  .subpage__main > .subpage__title__section > .inner {
+    width: calc(100% - 40px);
+  }
+  .subpage__main > .subpage__title__section > .inner > h2 {
+    font-size: 4rem;
+  }
+  .subpage__main > .subpage__title__section > .inner > p {
+    font-size: 2.4rem;
+  }
+  .subpage__main > .subpage__title__section {
+    height: 550px;
+  }
+  .subpage__main > .subpage__title__section > img {
+    min-height: 550px;
+  }
+  .subpage__main > .subpage__inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    min-width: auto;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav {
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 0 auto 0;
+    border-radius: 6px;
+    box-shadow: 0 39px 67px 3px hsl(0deg 0% 68% / 30%);
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li {
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-top: 1px solid rgb(250, 250, 250);
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:first-of-type {
+    border-top: none;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:last-of-type {
+    border-right: none;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li span {
+    height: 68px;
+    line-height: 68px;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li span {
+    width: 100%;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:first-of-type {
+    border-radius: 6px 6px 0 0;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:last-of-type {
+    border-radius: 0px 0px 6px 6px;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li.list__one {
+    border-radius: 6px;
+    border-top: none;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:last-of-type span {
+    border-radius: 0px 0px 6px 6px;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li:first-of-type span {
+    border-radius: 6px 6px 0 0;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li.list__one span {
+    border-radius: 6px;
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt {
+    margin-top: 60px;
+  }
+  .subpage__main > .subpage__inner nav {
+    -webkit-transform: translateY(-50%);
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt {
+    margin-top: 0px;
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt {
+    font-size: 3.4rem;
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0054cb;
+  }
+}
+@media screen and (max-width: 550px) {
+  .subpage__main > .subpage__inner nav ul.sub__page__nav {
+    width: 300px;
+  }
+  .subpage__main > .subpage__title__section > .inner > h2 {
+    font-size: 3.6rem;
+  }
+  .subpage__main > .subpage__title__section > .inner > p {
+    font-size: 2rem;
+  }
+  .subpage__main > .subpage__inner nav ul.sub__page__nav li span {
+    height: 56px;
+    line-height: 56px;
+    font-size: 1.4rem;
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > .sub__tilte__txt {
+    font-size: 3rem;
+  }
+  .subpage__main > .subpage__inner .swipe_info_wrap > h4 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .subpage__main > .subpage__inner nav ul.sub__page__nav {
+    width: 100%;
   }
 }
