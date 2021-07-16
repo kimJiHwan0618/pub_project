@@ -9,7 +9,7 @@ body > .navi__menu {
   overflow: hidden;
 }
 body > header.active + .navi__menu {
-  z-index: 20;
+  z-index: 200;
 }
 body > .navi__menu > nav {
   width: 100%;

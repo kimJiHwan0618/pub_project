@@ -2,7 +2,7 @@ header {
   height: 80px;
   width: 100%;
   position: fixed;
-  z-index: 21;
+  z-index: 201;
   left: 0;
   top: 0;
   -webkit-transition: all 0.3s ease-in-out 0s;
