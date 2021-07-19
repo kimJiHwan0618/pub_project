@@ -28,5 +28,9 @@ includeHTML(function () {
       infowindow.open(map, marker);
     }
   });
-  infowindow.open(map, marker);
+
+  setTimeout(function () {
+    infowindow.open(map, marker);
+    window.dispatchEvent(new Event("resize"));
+  }, 600);
 });
