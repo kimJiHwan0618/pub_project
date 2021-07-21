@@ -11,6 +11,8 @@
 .contact__section article .contact__wrap .map__wrap #map {
   width: 460px;
   height: 460px;
+  outline: none;
+  border: none;
 }
 .contact__section article .contact__wrap > ul {
   width: 42%;
@@ -47,6 +49,17 @@
 .contact__section article .contact__wrap > ul li:nth-of-type(4) .icon {
   background: url(../img/contact/ic_4.svg) no-repeat 0 0;
   background-size: cover;
+}
+#map .inner {
+  padding: 10px !important;
+}
+#map .inner h3 {
+  font-size: 1.6rem !important;
+  margin-bottom: 4px !important;
+}
+#map .inner p {
+  font-size: 1.3rem !important;
+  margin-bottom: 4px !important;
 }
 @media screen and (max-width: 1380px) {
   .contact__section article .contact__wrap .map__wrap #map {
