@@ -1,21 +1,33 @@
-function initMap() {
-  const pinLocation = {lat: 37.27074, lng: 127.06826} 
-
-  const map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 37.27074, lng: 127.06826},
-    zoom: 16
-  });
-
-  const marker = new google.maps.Marker({
-    position: pinLocation,
+var msi = new naver.maps.LatLng(37.270630948619335, 127.06825601999059),
+  map = new naver.maps.Map("map", {
+    center: msi,
+    zoom: 15,
+  }),
+  marker = new naver.maps.Marker({
     map: map,
-    title: "(주)엠에쓰아이",
+    position: msi,
   });
-}
-// var container = document.getElementById('map');
-// var options = {
-//   center: new kakao.maps.LatLng(33.450701, 126.570667),
-//   level: 3
-// };
 
-// var map = new kakao.maps.Map(container, options);
+const contentString = [
+  '<div class="inner">',
+  "   <h3 class='notosansKr f__bold'>(주)엠에쓰아이</h3>",
+  "   <p class='notosansKr'>(16954) 경기 용인시 기흥구 흥덕1로 13 흥덕IT밸리(영덕동)</p>",
+  "</div>",
+].join("");
+
+var infowindow = new naver.maps.InfoWindow({
+  content: contentString,
+});
+
+naver.maps.Event.addListener(marker, "click", function (e) {
+  if (infowindow.getMap()) {
+    infowindow.close();
+  } else {
+    infowindow.open(map, marker);
+  }
+});
+
+setTimeout(function () {
+  infowindow.open(map, marker);
+  window.dispatchEvent(new Event("resize"));
+}, 600);
