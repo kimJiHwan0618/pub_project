@@ -3,10 +3,10 @@ let x1, x1_e, x2, x2_e, x3, x3_e, x4, x4_e, y, y_e;
 //
 // 페이지 불러올 시, 쓰레기 순서 셔플
 let dragInfoArr = [
-  { index: 0, src: "./assets/img/separateCollection/can.svg" },
-  { index: 1, src: "./assets/img/separateCollection/plastic.svg" },
-  { index: 2, src: "./assets/img/separateCollection/glass.svg" },
-  { index: 3, src: "./assets/img/separateCollection/paper.svg" },
+  { index: 0, src: "./img/separateCollection/can.svg" },
+  { index: 1, src: "./img/separateCollection/plastic.svg" },
+  { index: 2, src: "./img/separateCollection/glass.svg" },
+  { index: 3, src: "./img/separateCollection/paper.svg" },
 ];
 
 const shuffle = (array) => {
