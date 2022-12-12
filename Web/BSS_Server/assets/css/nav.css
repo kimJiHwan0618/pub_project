@@ -1,0 +1,84 @@
+nav.main__nav {
+  min-width: 280px;
+  width: 280px;
+  max-width: 280px;
+  transition: margin 195ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background: rgb(17, 24, 39);
+  height: 100vh;
+}
+nav.main__nav > .nav__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+nav.main__nav > .nav__inner > .top {
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  display: flex;
+  height: 72px;
+}
+nav.main__nav > .nav__inner > .top > div {
+  flex: 1 1;
+  display: flex;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  flex-direction: column;
+  color: white;
+}
+
+nav.main__nav > .nav__inner > .top > div h1 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+nav.main__nav > .nav__inner > .top > div p {
+  font-size: 0.8rem;
+  color: var(--main-color);
+}
+
+nav.main__nav > .nav__inner > .top > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-align: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: visible;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  font-size: 1.8rem;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+nav.main__nav > .nav__inner > .top > button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+nav.main__nav > .nav__inner > .top > button svg {
+  fill: currentColor;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  font-size: 20px;
+  line-height: 20;
+  color: rgb(255, 255, 255);
+}

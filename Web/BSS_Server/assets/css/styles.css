@@ -1,0 +1,39 @@
+@import url(./reset.css);
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: rgb(241, 245, 249);
+  color: rgb(17, 24, 39);
+  font-family: "Inter var", Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: "salt";
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.layout {
+  flex: 1 1 auto;
+  display: flex;
+  min-width: 0;
+}
+
+.f__bold {
+  font-weight: 700;
+}
+
+.f__medium {
+  font-weight: 500;
+}

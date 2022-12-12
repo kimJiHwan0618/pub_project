@@ -1,540 +1,652 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>graph</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+      integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <style type="text/css">
-        #page{
-            position: absolute;
-            left: -9999px;
-            top: -9999px;
-            visibility: hidden;
-        }        
+      #page {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        visibility: hidden;
+      }
     </style>
-</head>
-<body class="header_color header_body">
-    <input type="number" value="2" id="page">
+  </head>
+  <body class="header_color header_body">
+    <input type="number" value="2" id="page" />
 
     <div>
-        <header class="nav">
-            <div class="head_inner">
+      <header class="nav">
+        <div class="head_inner">
+          <a href="#">
+            <img src="img/logo1.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="img/ic_notice.png" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- <? include "header.html"; ?> -->
+
+      <div class="graph_wap home_item">
+        <div class="bottom last-24-hours">
+          <div class="bottom_inner">
+            <div class="weekly_graph">
+              <div class="tit_wrap">
+                <h4 class="tit">Times sales</h4>
                 <a href="#">
-                    <img src="img/logo1.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="img/ic_notice.png" alt="">
-                </a>
-            </div>
-        </header>
-        <!-- <? include "header.html"; ?> -->
+                  <img src="/static/img/graph/ic_more.svg" alt=""
+                /></a>
+              </div>
+              <div class="tit_wrap">
+                <h5>₭560,000</h5>
+                <ul>
+                  <li>
+                    <span>Sales</span>
+                    <span>20</span>
+                  </li>
+                  <li>
+                    <span>Cancel</span>
+                    <span th:text="${weeklySales.cancelCountTxt}"></span>
+                  </li>
+                </ul>
+              </div>
+              <!-- 그래프 넣는곳 -->
+              <div>
+                <canvas id="times-sales" width="100vw"></canvas>
+                <script th:inline="javascript">
+                  var ctx = document
+                    .getElementById("times-sales")
+                    .getContext("2d");
 
-        <div class="graph_wap home_item">
-            <div class="bottom last-24-hours">
-                <div class="bottom_inner">
-                    <div class="weekly_graph">
-                        <div class="tit_wrap">
-                            <h4 class="tit">Times sales</h4>
-                            <a href="#">
-                                <img src="/static/img/graph/ic_more.svg" alt=""></a>
-                            </div>
-                            <div class="tit_wrap">
-                                <h5>₭560,000</h5>
-                                <ul>
-                                    <li>
-                                        <span>Sales</span>
-                                        <span>20</span>
-                                    </li>
-                                    <li>
-                                        <span>Cancel</span>
-                                        <span th:text="${weeklySales.cancelCountTxt}"></span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- 그래프 넣는곳 -->
-                            <div>
-                                <canvas id="times-sales" width="100vw"></canvas>
-                                <script th:inline="javascript">
-                                    var ctx = document.getElementById('times-sales').getContext('2d');
+                  var stepSize = 50;
 
-                                    var stepSize = 50
-
-                                    var myChart = new Chart(ctx, {
-                                        type: 'bar',
-                                        data: {
-                                            labels: [
-                                                '00','01','02','03','04','05','06','07','08','09','10',
-                                                '11','12','13','14','15','16','17','18','19','20','21',
-                                                '22','23'
-                                            ],
-                                            datasets: [
-                                                {
-                                                    data: [
-                                                        50,60,30,40,100,60,10,20,60,20,
-                                                        50,60,30,40,100,60,10,20,60,20,
-                                                        20,70,80,30
-                                                    ],
-                                                    backgroundColor: [
-                                                        '#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066',
-                                                        '#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066','#77D066',
-                                                        '#77D066','#77D066','#77D066','#B753B6'
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        options: {
-                                            legend: {
-                                                display: false
-                                            },
-                                            scales: {
-                                                yAxes: [
-                                                    {
-                                                        ticks: {
-                                                            fontSize: 10,
-                                                            beginAtZero: true,
-                                                            stepSize: stepSize,
-                                                            userCallback: function (stepSize) {
-                                                                stepSize = stepSize.toString();
-                                                                stepSize = stepSize.split(/(?=(?:...)*$)/);
-                                                                stepSize = stepSize.join(',');
-                                                                return stepSize;
-                                                            }
-                                                        },
-                                                        gridLines: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                ],
-                                                xAxes: [
-                                                    {   ticks: {
-                                                        fontSize : 10
-                                                    },
-                                                        gridLines: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    });
-                                </script>
-                            </div>
-                            <!-- //그래프 넣는곳 -->
-                        </div>
-                        <!-- //weekly_graph -->
-                    </div>
-                    <!-- //bottom_inner -->
-            </div>
-            <!-- //bottom -->
-            <div class="bottom last-7-days">
-                <div class="bottom_inner">
-                <div class="weekly_graph">
-                    <div class="tit_wrap">
-                        <h4 class="tit">Last 7 days</h4>
-                        <a href="#"><img src="img/graph/ic_more.svg" alt=""></a>
-                    </div>
-                        <div class="tit_wrap">
-                            <h5><span>₭</span><span>3,540,000</span></h5>
-                                <ul>
-                                    <li><span>Sales</span><span>50</span></li>
-                                    <li><span>Cancel</span><span>15</span></li>
-                                </ul>
-                        </div>
-                    <!-- 그래프 넣는곳 -->
-                        <div>
-                            <canvas id="myChart" width="100vw" style="padding: 30px 0 0;"></canvas>
-                            <script>
-                            
-                            var ctx = document.getElementById('myChart').getContext('2d');
-                            var myChart = new Chart(ctx, {
-                                type: 'bar',
-                                data: {
-                                    labels: ['Mon', 'Tue', 'Wen', 'Thr', 'Fri', 'Sat', 'Sun'],
-                                    datasets: [{
-                                        data: [12, 15, 10, 5, 13, 3, 16],
-                                        backgroundColor: 
-                                            [     '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#B753B6']
-                                    }]
-                                },
-                                options: {
-                                    legend: {
-                                        display: false
-                                    },
-                                    scales: {
-                                        yAxes: [{
-                                        ticks: {
-                                            stepSize:5,
-                                        },
-                                            gridLines: {
-                                                 display:false
-                                            }  
-                                        }],
-                                        xAxes: [{
-                                            gridLines: {
-                                                display:false
-                                            }      
-                                        }]
-                                    }
-                                }
-                            });
-                            </script>
-                    </div>
-                    <!-- //그래프 넣는곳 -->
-                </div>
-                <!-- //weekly_graph -->
-                </div>
-                <!-- //bottom_inner -->
-            </div>
-            <!-- //bottom -->
-            <div class="bottom last-6-months">
-                <div class="bottom_inner">
-                <div class="weekly_graph">
-                    <div class="tit_wrap">
-                        <h4 class="tit">Last 6 months</h4>
-                        <a href="#"><img src="img/graph/ic_more.svg" alt=""></a>
-                    </div>
-                        <div class="tit_wrap">
-                            <h5><span>₭</span><span>32,040,000</span></h5>
-                                <ul>
-                                    <li><span>Sales</span><span>800</span></li>
-                                    <li><span>Cancel</span><span>15</span></li>
-                                </ul>
-                        </div>
-                    <!-- 그래프 넣는곳 -->
-                    <div>
-                        <canvas id="myChart2" width="100vw" style="padding: 30px 0 0;"></canvas>
-                        <script>
-                        var ctx2 = document.getElementById('myChart2').getContext('2d');
-                        var myChart = new Chart(ctx2, {
-                            type: 'bar',
-                            data: {
-                                labels: ['1 ago', '2 ago', '3 ago', '4 ago', '5 ago'],
-                                datasets: [{
-                                    data: [9, 14, 2, 5, 10],
-                                    backgroundColor: 
-                                        [ '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#77D066',
-                                                   '#B753B6']
-                                }]
+                  var myChart = new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                      labels: [
+                        "00",
+                        "01",
+                        "02",
+                        "03",
+                        "04",
+                        "05",
+                        "06",
+                        "07",
+                        "08",
+                        "09",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17",
+                        "18",
+                        "19",
+                        "20",
+                        "21",
+                        "22",
+                        "23",
+                      ],
+                      datasets: [
+                        {
+                          data: [
+                            50, 60, 30, 40, 100, 60, 10, 20, 60, 20, 50, 60, 30,
+                            40, 100, 60, 10, 20, 60, 20, 20, 70, 80, 30,
+                          ],
+                          backgroundColor: [
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#B753B6",
+                          ],
+                        },
+                      ],
+                    },
+                    options: {
+                      legend: {
+                        display: false,
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              fontSize: 10,
+                              beginAtZero: true,
+                              stepSize: stepSize,
+                              userCallback: function (stepSize) {
+                                stepSize = stepSize.toString();
+                                stepSize = stepSize.split(/(?=(?:...)*$)/);
+                                stepSize = stepSize.join(",");
+                                return stepSize;
+                              },
                             },
-                            options: {
-                                legend: {
-                                    display: false
-                                },
-                                scales: {
-                                    yAxes: [{
-                                    ticks: {
-                                       beginAtZero:true,
-                                       stepSize:5,
-                                    },
-                                        gridLines: {
-                                             display:false
-                                        }  
-                                    }],
-                                    xAxes: [{
-                                        gridLines: {
-                                            display:false
-                                        }      
-                                    }]
-                                }
-                            }
-                        });
-                        </script>
-                    </div>
-                    <!-- //그래프 넣는곳 -->
-                </div>
-                <!-- //weekly_graph -->
-                </div>
-                <!-- //bottom_inner -->
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                        xAxes: [
+                          {
+                            ticks: {
+                              fontSize: 10,
+                            },
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+                </script>
+              </div>
+              <!-- //그래프 넣는곳 -->
             </div>
-            <!-- //bottom -->
-            <div class="bottom payment-sales">
-                <div class="bottom_inner">
-                <div class="weekly_graph">
-                    <div class="tit_wrap">
-                        <h4 class="tit">Pie Chart</h4>
-                        <div class="payment-btn-wrap">
-                            <button class="payment-btn on">Weekly sales</button>
-                            <button class="payment-btn">Montly sales</button>
-                        </div>
-                    </div>
-                        <div class="tit_wrap">
-                            <h5 class="paymentTotal"></h5>
-                        </div>
-                    <!-- 그래프 넣는곳 -->
-                    <div>
-                        <canvas id="doughnut-chart" width="100vw" style="margin: 5px 0px 20px;"></canvas>
-                        <script type="text/javascript">
-                        $('.paymentTotal').html('3,540,000')
-                        
-                        new Chart(document.getElementById("doughnut-chart"), {
-                           type: 'doughnut',
-                           data: {
-                           labels: ["Cash", "Card", "Mpay", "Bank"],
-                           datasets: [{
-                             label: "Population (millions)",
-                             backgroundColor: ['#BC9CFF', '#6FCF97', '#FFE39C', '#B7DFF1'],
-                             data: [200,100,50,50]
-                           }]
-                          }
-                        });
-                        
-                        $('.payment-btn').click(function(){
-                          $('.payment-btn-wrap .payment-btn').removeClass('on')
-                          $(this).addClass('on')
-                          $('.payment-btn').removeClass('button')
-                                        $(this).addClass('button')
-
-                          if($(this).index() == 0){
-                            $('.paymentTotal').html('3,540,000')
-
-                            new Chart(document.getElementById("doughnut-chart"), {
-                           type: 'doughnut',
-                           data: {
-                           labels: ["Cash", "Card", "Mpay", "Bank"],
-                           datasets: [{
-                             label: "Population (millions)",
-                             backgroundColor: ['#BC9CFF', '#6FCF97', '#FFE39C', '#B7DFF1'],
-                             data: [200,100,50,50]
-                           }]
-                          }
-                        });
-                        }else if($(this).index() == 1){
-                            $('.paymentTotal').html('32,040,000')
-                            
-                            new Chart(document.getElementById("doughnut-chart"), {
-                           type: 'doughnut',
-                           data: {
-                           labels: ["Cash", "Card", "Mpay", "Bank"],
-                           datasets: [{
-                             label: "Population (millions)",
-                             backgroundColor: ['#BC9CFF', '#6FCF97', '#FFE39C', '#B7DFF1'],
-                             data: [50,40,90,20]
-                           }]
-                          }
-                        });
-                          }
-                        })
-
-                        </script>
-                    </div>
-                    <!-- //그래프 넣는곳 -->
-                </div>
-                <!-- //weekly_graph -->
-                </div>
-                <!-- //bottom_inner -->
-            </div>
-            <!-- //bottom -->
-            <div class="bottom sales-ranking">
-                <div class="bottom_inner">
-                    <div class="weekly_graph">
-                        <div class="tit_wrap">
-                            <h4 class="tit">Sales ranking</h4>
-                    </div>
-                    <div class="sales-ranking-wrap">
-                        <button class="sales-ranking on">Last 7 days Top 10</button>
-                        <button class="sales-ranking">Last 6 month Top 10</button>
-                    </div>
-                    <!-- //weekly_graph -->
-                    <table class="last-seven-days-table on">
-                        <thead>
-                            <tr>
-                                <th>RANK</th>
-                                <th>PRODUCT</th>
-                                <th>UNITS</th>
-                                <th>TOTAL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Last 7 days Top1</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>2</td>
-                                <td>Last 7 days Top2</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>3</td>
-                                <td>Last 7 days Top3</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>4</td>
-                                <td>Last 7 days Top4</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>5</td>
-                                <td>Last 7 days Top5</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>6</td>
-                                <td>Last 7 days Top6</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>7</td>
-                                <td>Last 7 days Top7</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>8</td>
-                                <td>Last 7 days Top8</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>9</td>
-                                <td>Last 7 days Top9</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                            <tr>
-                                <td>10</td>
-                                <td>Last 7 days Top10</td>
-                                <td>516</td>
-                                <td>25,000</td>
-                            </tr>          
-                        </tbody>
-                    </table>
-                    <table class="last-six-month-table">
-                        <thead>
-                            <tr>
-                                <th>RANK</th>
-                                <th>PRODUCT</th>
-                                <th>UNITS</th>
-                                <th>TOTAL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Last 6 month Top1</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Last 6 month Top2</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Last 6 month Top3</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Last 6 month Top4</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Last 6 month Top5</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Last 6 month Top6</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Last 6 month Top7</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Last 6 month Top8</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Last 6 month Top9</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Last 6 month Top10</td>
-                                <td>420</td>
-                                <td>54,000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <script th:inline="javascript">
-                        $('.sales-ranking-wrap button').click(function(){
-                            $('.sales-ranking-wrap button').removeClass('button')
-                            $(this).addClass('button')
-                            if($(this).index() == 0){
-                                $('.sales-ranking-wrap button').removeClass('button')
-                                $(this).addClass('button')
-                                $('.sales-ranking-wrap button').removeClass('on')
-                                $(this).addClass('on')
-
-                                $('.last-six-month-table').removeClass('on')
-                                $('.last-seven-days-table').addClass('on')
-                            }else if($(this).index() == 1){
-                                $('.sales-ranking-wrap button').removeClass('on')
-                                $(this).addClass('on')
-
-                                $('.last-seven-days-table').removeClass('on')
-                                $('.last-six-month-table').addClass('on')
-                            }
-                        })
-                    </script>
-                </div>
-                <!-- //bottom_inner -->
+            <!-- //weekly_graph -->
+          </div>
+          <!-- //bottom_inner -->
         </div>
         <!-- //bottom -->
+        <div class="bottom last-7-days">
+          <div class="bottom_inner">
+            <div class="weekly_graph">
+              <div class="tit_wrap">
+                <h4 class="tit">Last 7 days</h4>
+                <a href="#"><img src="img/graph/ic_more.svg" alt="" /></a>
+              </div>
+              <div class="tit_wrap">
+                <h5><span>₭</span><span>3,540,000</span></h5>
+                <ul>
+                  <li><span>Sales</span><span>50</span></li>
+                  <li><span>Cancel</span><span>15</span></li>
+                </ul>
+              </div>
+              <!-- 그래프 넣는곳 -->
+              <div>
+                <canvas
+                  id="myChart"
+                  width="100vw"
+                  style="padding: 30px 0 0"
+                ></canvas>
+                <script>
+                  var ctx = document.getElementById("myChart").getContext("2d");
+                  var myChart = new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                      labels: ["Mon", "Tue", "Wen", "Thr", "Fri", "Sat", "Sun"],
+                      datasets: [
+                        {
+                          data: [12, 15, 10, 5, 13, 3, 16],
+                          backgroundColor: [
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#B753B6",
+                          ],
+                        },
+                      ],
+                    },
+                    options: {
+                      legend: {
+                        display: false,
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              stepSize: 5,
+                            },
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                        xAxes: [
+                          {
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+                </script>
+              </div>
+              <!-- //그래프 넣는곳 -->
             </div>
+            <!-- //weekly_graph -->
+          </div>
+          <!-- //bottom_inner -->
         </div>
-        <!-- //graph_wrap -->
-   
+        <!-- //bottom -->
+        <div class="bottom last-6-months">
+          <div class="bottom_inner">
+            <div class="weekly_graph">
+              <div class="tit_wrap">
+                <h4 class="tit">Last 6 months</h4>
+                <a href="#"><img src="img/graph/ic_more.svg" alt="" /></a>
+              </div>
+              <div class="tit_wrap">
+                <h5><span>₭</span><span>32,040,000</span></h5>
+                <ul>
+                  <li><span>Sales</span><span>800</span></li>
+                  <li><span>Cancel</span><span>15</span></li>
+                </ul>
+              </div>
+              <!-- 그래프 넣는곳 -->
+              <div>
+                <canvas
+                  id="myChart2"
+                  width="100vw"
+                  style="padding: 30px 0 0"
+                ></canvas>
+                <script>
+                  var ctx2 = document
+                    .getElementById("myChart2")
+                    .getContext("2d");
+                  var myChart = new Chart(ctx2, {
+                    type: "bar",
+                    data: {
+                      labels: ["1 ago", "2 ago", "3 ago", "4 ago", "5 ago"],
+                      datasets: [
+                        {
+                          data: [9, 14, 2, 5, 10],
+                          backgroundColor: [
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#77D066",
+                            "#B753B6",
+                          ],
+                        },
+                      ],
+                    },
+                    options: {
+                      legend: {
+                        display: false,
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: true,
+                              stepSize: 5,
+                            },
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                        xAxes: [
+                          {
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+                </script>
+              </div>
+              <!-- //그래프 넣는곳 -->
+            </div>
+            <!-- //weekly_graph -->
+          </div>
+          <!-- //bottom_inner -->
+        </div>
+        <!-- //bottom -->
+        <div class="bottom payment-sales">
+          <div class="bottom_inner">
+            <div class="weekly_graph">
+              <div class="tit_wrap">
+                <h4 class="tit">Pie Chart</h4>
+                <div class="payment-btn-wrap">
+                  <button class="payment-btn on">Weekly sales</button>
+                  <button class="payment-btn">Montly sales</button>
+                </div>
+              </div>
+              <div class="tit_wrap">
+                <h5 class="paymentTotal"></h5>
+              </div>
+              <!-- 그래프 넣는곳 -->
+              <div>
+                <canvas
+                  id="doughnut-chart"
+                  width="100vw"
+                  style="margin: 5px 0px 20px"
+                ></canvas>
+                <script type="text/javascript">
+                  $(".paymentTotal").html("3,540,000");
+
+                  new Chart(document.getElementById("doughnut-chart"), {
+                    type: "doughnut",
+                    data: {
+                      labels: ["Cash", "Card", "Mpay", "Bank"],
+                      datasets: [
+                        {
+                          label: "Population (millions)",
+                          backgroundColor: [
+                            "#BC9CFF",
+                            "#6FCF97",
+                            "#FFE39C",
+                            "#B7DFF1",
+                          ],
+                          data: [200, 100, 50, 50],
+                        },
+                      ],
+                    },
+                  });
+
+                  $(".payment-btn").click(function () {
+                    $(".payment-btn-wrap .payment-btn").removeClass("on");
+                    $(this).addClass("on");
+                    $(".payment-btn").removeClass("button");
+                    $(this).addClass("button");
+
+                    if ($(this).index() == 0) {
+                      $(".paymentTotal").html("3,540,000");
+
+                      new Chart(document.getElementById("doughnut-chart"), {
+                        type: "doughnut",
+                        data: {
+                          labels: ["Cash", "Card", "Mpay", "Bank"],
+                          datasets: [
+                            {
+                              label: "Population (millions)",
+                              backgroundColor: [
+                                "#BC9CFF",
+                                "#6FCF97",
+                                "#FFE39C",
+                                "#B7DFF1",
+                              ],
+                              data: [200, 100, 50, 50],
+                            },
+                          ],
+                        },
+                      });
+                    } else if ($(this).index() == 1) {
+                      $(".paymentTotal").html("32,040,000");
+
+                      new Chart(document.getElementById("doughnut-chart"), {
+                        type: "doughnut",
+                        data: {
+                          labels: ["Cash", "Card", "Mpay", "Bank"],
+                          datasets: [
+                            {
+                              label: "Population (millions)",
+                              backgroundColor: [
+                                "#BC9CFF",
+                                "#6FCF97",
+                                "#FFE39C",
+                                "#B7DFF1",
+                              ],
+                              data: [50, 40, 90, 20],
+                            },
+                          ],
+                        },
+                      });
+                    }
+                  });
+                </script>
+              </div>
+              <!-- //그래프 넣는곳 -->
+            </div>
+            <!-- //weekly_graph -->
+          </div>
+          <!-- //bottom_inner -->
+        </div>
+        <!-- //bottom -->
+        <div class="bottom sales-ranking">
+          <div class="bottom_inner">
+            <div class="weekly_graph">
+              <div class="tit_wrap">
+                <h4 class="tit">Sales ranking</h4>
+              </div>
+              <div class="sales-ranking-wrap">
+                <button class="sales-ranking on">Last 7 days Top 10</button>
+                <button class="sales-ranking">Last 6 month Top 10</button>
+              </div>
+              <!-- //weekly_graph -->
+              <table class="last-seven-days-table on">
+                <thead>
+                  <tr>
+                    <th>RANK</th>
+                    <th>PRODUCT</th>
+                    <th>UNITS</th>
+                    <th>TOTAL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Last 7 days Top1</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Last 7 days Top2</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Last 7 days Top3</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Last 7 days Top4</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Last 7 days Top5</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Last 7 days Top6</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Last 7 days Top7</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Last 7 days Top8</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Last 7 days Top9</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Last 7 days Top10</td>
+                    <td>516</td>
+                    <td>25,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="last-six-month-table">
+                <thead>
+                  <tr>
+                    <th>RANK</th>
+                    <th>PRODUCT</th>
+                    <th>UNITS</th>
+                    <th>TOTAL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Last 6 month Top1</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Last 6 month Top2</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Last 6 month Top3</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Last 6 month Top4</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Last 6 month Top5</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Last 6 month Top6</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Last 6 month Top7</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Last 6 month Top8</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Last 6 month Top9</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Last 6 month Top10</td>
+                    <td>420</td>
+                    <td>54,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <script th:inline="javascript">
+                $(".sales-ranking-wrap button").click(function () {
+                  $(".sales-ranking-wrap button").removeClass("button");
+                  $(this).addClass("button");
+                  if ($(this).index() == 0) {
+                    $(".sales-ranking-wrap button").removeClass("button");
+                    $(this).addClass("button");
+                    $(".sales-ranking-wrap button").removeClass("on");
+                    $(this).addClass("on");
+
+                    $(".last-six-month-table").removeClass("on");
+                    $(".last-seven-days-table").addClass("on");
+                  } else if ($(this).index() == 1) {
+                    $(".sales-ranking-wrap button").removeClass("on");
+                    $(this).addClass("on");
+
+                    $(".last-seven-days-table").removeClass("on");
+                    $(".last-six-month-table").addClass("on");
+                  }
+                });
+              </script>
+            </div>
+            <!-- //bottom_inner -->
+          </div>
+          <!-- //bottom -->
+        </div>
+      </div>
+      <!-- //graph_wrap -->
     </div>
-    
-    
+
     <!-- <? include "footer.html"; ?> -->
     <footer>
-        <ul>
-            <li><a href="home.html"><img  class="one" src="img/tab_menu/tab1_off.svg" alt=""></a></li>
-            <li><a href="graph.html"><img class="two" src="img/tab_menu/tab2_off.svg" alt=""></a></li>
-            <li><a href="search.html"><img class="three" src="img/tab_menu/tab3_off.svg" alt=""></a></li>
-            <li><a href="setting.html"><img class="four" src="img/tab_menu/tab4_off.svg" alt=""></a></li>
-        </ul>
+      <ul>
+        <li>
+          <a href="home.html"
+            ><img class="one" src="img/tab_menu/tab1_off.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="graph.html"
+            ><img class="two" src="img/tab_menu/tab2_off.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="search.html"
+            ><img class="three" src="img/tab_menu/tab3_off.svg" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="setting.html"
+            ><img class="four" src="img/tab_menu/tab4_off.svg" alt=""
+          /></a>
+        </li>
+      </ul>
     </footer>
-
-</body>
+  </body>
 </html>
