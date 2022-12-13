@@ -1,7 +1,8 @@
 /* common */
 @import url(./reset.css);
-@import url(./nav.css);
 @import url(./common.css);
+@import url(./nav.css);
+@import url(./header.css);
 /* // common */
 /* pages */
 @import url(./dashboard.css);
@@ -38,7 +39,17 @@ body {
   font-feature-settings: "salt";
   font-size: 14px;
   line-height: 1.4;
-  -webkit-font-smoothing: auto
+  -webkit-font-smoothing: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 100%;
+  z-index: 10;
+  position: relative;
+  min-width: 0;
 }
 
 .layout {
