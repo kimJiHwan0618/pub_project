@@ -95,3 +95,16 @@
     0px 5px 8px 0px var(--tw-shadow-color),
     0px 1px 14px 0px var(--tw-shadow-color);
 }
+
+.vertical__scroll::-webkit-scrollbar {
+  width: 7px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.vertical__scroll::-webkit-scrollbar-thumb {
+  background-color: #B9B9B9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
