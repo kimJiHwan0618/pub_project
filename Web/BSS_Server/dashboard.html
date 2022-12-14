@@ -4,22 +4,170 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Bss | Dashboard</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <div class="layout">
-      <!-- navi -->
-      <nav include-html="./components/common/nav.html"></nav>
-      <!-- // navi -->
+    <div id="layout" class="vertical__scroll">
+      <!-- 메뉴바 -->
+      <nav
+        class="main__nav shadow-5"
+        include-html="./components/common/nav.html"
+      ></nav>
+      <div class="modal__bg"></div>
+      <!-- // 메뉴바 -->
       <main>
-        <!-- header -->
+        <!-- 헤더 -->
         <header include-html="./components/common/header.html"></header>
-        <!-- // header -->
+        <!-- // 헤더 -->
+        <div class="container dashboard">
+          <div class="section__grid__wrap">
+            <!-- 전체 스테이션 -->
+            <section class="station__status__box">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="f__medium">전체</p>
+                  <button>
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <dl>
+                  <dt class="f__medium">25</dt>
+                  <dd class="f__medium">전체 스테이션</dd>
+                </dl>
+              </div>
+            </section>
+            <!-- // 전체 스테이션 -->
+            <!-- 대여가능 스테이션-->
+            <section class="station__status__box">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="f__medium">대여가능</p>
+                  <button>
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <dl>
+                  <dt class="f__medium">4</dt>
+                  <dd class="f__medium">대여가능 스테이션</dd>
+                </dl>
+              </div>
+            </section>
+            <!-- // 대여가능 스테이션-->
+            <!-- 대여불가 스테이션-->
+            <section class="station__status__box">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="f__medium">대여불가</p>
+                  <button>
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <dl>
+                  <dt class="f__medium">32</dt>
+                  <dd class="f__medium">충전중인 상태</dd>
+                </dl>
+              </div>
+            </section>
+            <!-- // 대여불가 스테이션-->
+            <!-- 장애 스테이션-->
+            <section class="station__status__box">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="f__medium">장애</p>
+                  <button>
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <dl>
+                  <dt class="f__medium">42</dt>
+                  <dd class="f__medium">운영불가 상태</dd>
+                </dl>
+              </div>
+            </section>
+            <!-- // 장애 스테이션-->
+            <!-- 충전소 현황 -->
+            <section class="charging__station__status">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="normal__title f__medium">충전소 현황</p>
+                  <div class="selector__wrap">
+                    <label for="groupname" class="selector__label">
+                      <input type="text" id="groupname" />
+                      <p>그룹명</p>
+                      <span class="arrow">
+                        <svg viewBox="0 0 24 24" stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <ul>
+                        <li>그룹1</li>
+                        <li>그룹2</li>
+                      </ul>
+                    </label>
+                    <label for="stationname" class="selector__label">
+                      <input type="text" id="stationname" />
+                      <p>스테이션명명</p>
+                      <span class="arrow">
+                        <svg viewBox="0 0 24 24" stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          ></path>
+                        </svg>
+                      </span>
+                      <ul>
+                        <li>강남역 3번출구</li>
+                        <li>스테이션명 2</li>
+                      </ul>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- // 충전소 현황 -->
+          </div>
+        </div>
       </main>
     </div>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/customSelector.js"></script>
     <script>
       includeHTML(function () {
         const pageActive = document.querySelectorAll(".list__item")[0];

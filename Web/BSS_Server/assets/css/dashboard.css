@@ -1,0 +1,128 @@
+.container.dashboard section.station__status__box .top {
+  padding: 12px 8px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+.container.dashboard section.station__status__box:nth-of-type(1) .section__inner>dl {
+  --tw-text-opacity: 1;
+  color: rgb(33 150 243/var(--tw-text-opacity));
+}
+
+.container.dashboard section.station__status__box:nth-of-type(2) .section__inner>dl {
+  --tw-text-opacity: 1;
+  color: rgb(244 67 54/var(--tw-text-opacity));
+}
+
+.container.dashboard section.station__status__box:nth-of-type(3) .section__inner>dl {
+  --tw-text-opacity: 1;
+  color: rgb(255 193 7/var(--tw-text-opacity));
+}
+
+.container.dashboard section.station__status__box:nth-of-type(4) .section__inner>dl {
+  --tw-text-opacity: 1;
+  color: rgb(76 175 80/var(--tw-text-opacity));
+}
+
+.container.dashboard section.station__status__box>.section__inner>dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 8px 12px;
+  box-sizing: border-box;
+  margin: 14px 0 24px;
+  line-height: 1.5;
+}
+
+.container.dashboard section.station__status__box>.section__inner>.top>p {
+  letter-spacing: -.025em;
+  font-size: 1.1rem;
+  padding: 0 16px;
+  white-space: nowrap;
+  color: rgb(107, 114, 128);
+}
+
+.container.dashboard section.station__status__box>.section__inner>.top>button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-align: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  padding: 12px;
+  font-size: 2.8rem;
+}
+
+.container.dashboard section.station__status__box>.section__inner>.top>button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.container.dashboard section.station__status__box>.section__inner>.top>button>svg {
+  fill: currentColor;
+  color: inherit;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  font-size: 24px;
+  line-height: 24;
+}
+
+.container.dashboard section.station__status__box>.section__inner>dl dt {
+  letter-spacing: -.025em;
+  line-height: 1;
+  font-size: 4.4rem;
+}
+
+.container.dashboard section.station__status__box>.section__inner>dl dd {
+  margin-top: 6px;
+}
+
+/* //////////////////////  */
+
+.container.dashboard section.charging__station__status {
+  grid-column: span 4/span 4;
+
+}
+
+.container.dashboard section.charging__station__status>.section__inner {
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.container.dashboard section.charging__station__status>.section__inner>.top label {
+  padding: 0 14px;
+  margin-left: 16px;
+  font-weight: 400;
+  color: rgb(17, 24, 39);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  line-height: 1;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+
+.container.dashboard section.charging__station__status>.section__inner>.top label:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}

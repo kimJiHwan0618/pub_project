@@ -7,11 +7,169 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="header__inner">
-        <div class="left"></div>
-        <div class="right"></div>
+    <div class="header__inner">
+      <!-- left -->
+      <div class="left">
+        <div class="wrap">
+          <div>
+            <!-- 메뉴 토글 -->
+            <a href="#" class="icon__link hide" id="menuOn">
+              <div>
+                <svg viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                  />
+                </svg>
+              </div>
+            </a>
+            <!-- // 메뉴 토글 -->
+            <!-- 캘린더 -->
+            <a href="#" class="icon__link hide">
+              <div>
+                <svg viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <!-- // 캘린더 -->
+            <!-- 이메일 -->
+            <a href="#" class="icon__link hide">
+              <div>
+                <svg viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <!-- // 이메일 -->
+            <!-- 이메일 -->
+            <a href="#" class="icon__link hide">
+              <div>
+                <svg viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <!-- // 이메일 -->
+          </div>
+        </div>
       </div>
-    </header>
+      <!-- // left -->
+      <!-- right -->
+      <div class="right">
+        <!-- 언어 -->
+        <div class="icon lang">
+          <label class="selector__label" for="language" class="icon__lang">
+            <input type="text" id="language" />
+            <img src="../../assets/img/icon/language/kr.svg" alt="국기" />
+            <p class="f__medium">KR</p>
+            <ul>
+              <li>
+                <a href="#">
+                  <span class="icon">
+                    <img
+                      src="../../assets/img/icon/language/us.svg"
+                      alt="국기"
+                    />
+                  </span>
+                  <p>EN</p>
+                </a>
+              </li>
+            </ul>
+          </label>
+        </div>
+        <!-- // 언어 -->
+        <!-- 풀스크린 -->
+        <div class="icon">
+          <svg viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+            />
+          </svg>
+        </div>
+        <!-- // 풀스크린 -->
+        <!-- 알림 -->
+        <div class="icon on" id="bell">
+          <svg viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            />
+          </svg>
+        </div>
+        <!-- // 알림 -->
+        <!-- 프로필 -->
+        <div class="icon profile">
+          <label class="selector__label" for="profile" class="icon__profile">
+            <input type="text" id="profile" />
+            <div class="pofile__wrap">
+              <dl>
+                <dt class="name f__medium">Abbott Keitch</dt>
+                <dd class="role f__medium">Admin</dd>
+              </dl>
+              <div class="user__img">
+                <img src="../../assets/img/profile.jpg" alt="프로필 이미지" />
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#">
+                  <span class="icon">
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </span>
+                  <p class="f__medium">프로필</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon">
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                      />
+                    </svg>
+                  </span>
+                  <p class="f__medium">로그아웃</p>
+                </a>
+              </li>
+            </ul>
+          </label>
+        </div>
+        <!-- // 프로필 -->
+      </div>
+      <!-- // right -->
+    </div>
   </body>
 </html>
