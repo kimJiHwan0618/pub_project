@@ -7,8 +7,8 @@
     <title>Bss | Dashboard</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body>
-    <div id="layout" class="vertical__scroll">
+  <body class="vertical__scroll">
+    <div id="layout">
       <!-- 메뉴바 -->
       <nav
         class="main__nav shadow-5"
@@ -122,6 +122,14 @@
                   <div class="selector__wrap">
                     <label for="groupname" class="selector__label">
                       <input type="text" id="groupname" />
+                      <ul>
+                        <li class="list">
+                          <a>그룹1</a>
+                        </li>
+                        <li class="list">
+                          <a>그룹2</a>
+                        </li>
+                      </ul>
                       <p>그룹명</p>
                       <span class="arrow">
                         <svg viewBox="0 0 24 24" stroke="currentColor">
@@ -133,14 +141,18 @@
                           ></path>
                         </svg>
                       </span>
-                      <ul>
-                        <li>그룹1</li>
-                        <li>그룹2</li>
-                      </ul>
                     </label>
                     <label for="stationname" class="selector__label">
                       <input type="text" id="stationname" />
-                      <p>스테이션명명</p>
+                      <ul>
+                        <li class="list">
+                          <a>강남역 3번출구</a>
+                        </li>
+                        <li class="list">
+                          <a>스테이션명 2</a>
+                        </li>
+                      </ul>
+                      <p>스테이션명</p>
                       <span class="arrow">
                         <svg viewBox="0 0 24 24" stroke="currentColor">
                           <path
@@ -151,12 +163,11 @@
                           ></path>
                         </svg>
                       </span>
-                      <ul>
-                        <li>강남역 3번출구</li>
-                        <li>스테이션명 2</li>
-                      </ul>
                     </label>
                   </div>
+                </div>
+                <div id="map" class="map">
+                  <div class="map__inner"></div>
                 </div>
               </div>
             </section>
@@ -168,6 +179,11 @@
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/customSelector.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvnhifd92m&callback=initMap"
+    ></script>
     <script>
       includeHTML(function () {
         const pageActive = document.querySelectorAll(".list__item")[0];

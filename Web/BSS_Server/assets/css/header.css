@@ -19,7 +19,7 @@ header {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-header>.header__inner {
+header > .header__inner {
   height: 64px;
   position: relative;
   display: flex;
@@ -27,20 +27,20 @@ header>.header__inner {
   justify-content: space-between;
 }
 
-header>.header__inner>.left {
+header > .header__inner > .left {
   padding: 0 16px;
 }
 
-header>.header__inner>.left>div {
+header > .header__inner > .left > div {
   display: flex;
   flex: 1 1;
 }
 
-header>.header__inner>.left>div>div>a:hover>div {
-  background: #F5F5F5;
+header > .header__inner > .left > div > div > a:hover > div {
+  background: #f5f5f5;
 }
 
-header>.header__inner>.left>div>div>a>div {
+header > .header__inner > .left > div > div > a > div {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -68,11 +68,11 @@ header>.header__inner>.left>div>div>a>div {
   height: 40px;
 }
 
-header>.header__inner>.left>div>div>#menuOn.hide {
+header > .header__inner > .left > div > div > #menuOn.hide {
   display: none;
 }
 
-header>.header__inner>.left>div>div>a>div>svg {
+header > .header__inner > .left > div > div > a > div > svg {
   fill: none;
   width: 24px;
   height: 24px;
@@ -83,32 +83,32 @@ header>.header__inner>.left>div>div>a>div>svg {
   flex-shrink: 0;
 }
 
-header>.header__inner>.left>div>div {
+header > .header__inner > .left > div > div {
   display: flex;
   flex: 1 1;
 }
 
-header>.header__inner>.right {
+header > .header__inner > .right {
   padding: 0 8px;
   display: flex;
   align-items: center;
 }
 
-header>.header__inner>.right>.icon:hover {
+header > .header__inner > .right > .icon:hover {
   background-color: rgba(17, 24, 39, 0.04);
 }
 
-header>.header__inner>.right>.icon.lang,
-header>.header__inner>.right>.icon.profile {
+header > .header__inner > .right > .icon.lang,
+header > .header__inner > .right > .icon.profile {
   /*overflow: hidden;  ????*/
   width: auto;
 }
 
-header>.header__inner>.right>.icon.profile {
+header > .header__inner > .right > .icon.profile {
   padding: 6px 16px;
 }
 
-header>.header__inner>.right>.icon {
+header > .header__inner > .right > .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -129,16 +129,19 @@ header>.header__inner>.right>.icon {
   font-size: 1.4rem;
   line-height: 1.75;
   padding: 6px 8px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: inherit;
   text-transform: none;
   border-radius: 20px;
   width: 40px;
   height: 40px;
-  color: #6B7280;
+  color: #6b7280;
 }
 
-header>.header__inner>.right>.icon svg {
+header > .header__inner > .right > .icon svg {
   fill: none;
   color: inherit;
   width: 24px;
@@ -149,19 +152,19 @@ header>.header__inner>.right>.icon svg {
   line-height: 24;
 }
 
-header>.header__inner>.right>.icon.lang>label>img {
+header > .header__inner > .right > .icon.lang > label > img {
   width: 30px;
   height: 21px;
   margin: 0 4px;
 }
 
-header>.header__inner>.right>.icon.lang>label>p {
-  font-size: .9rem;
+header > .header__inner > .right > .icon.lang > label > p {
+  font-size: 0.9rem;
   margin: 0 4px;
   line-height: 1.5;
 }
 
-header>.header__inner>.right>#bell.on:after {
+header > .header__inner > .right > #bell.on:after {
   position: absolute;
   right: 4px;
   top: 4px;
@@ -173,28 +176,27 @@ header>.header__inner>.right>#bell.on:after {
   border-radius: 100px;
 }
 
-header>.header__inner>.right>.icon>label>.pofile__wrap {
+header > .header__inner > .right > .icon > label > .pofile__wrap {
   display: flex;
   align-items: center;
 }
 
-header>.header__inner>.right>.icon>label>.pofile__wrap dl {
+header > .header__inner > .right > .icon > label > .pofile__wrap dl {
   margin: 0 4px;
   text-align: right;
 }
 
-header>.header__inner>.right>.icon>label>.pofile__wrap dl dt {
-  font-size: .9rem;
-  color: #000000DE;
+header > .header__inner > .right > .icon > label > .pofile__wrap dl dt {
+  font-size: 0.9rem;
+  color: #000000de;
 }
 
-header>.header__inner>.right>.icon>label>.pofile__wrap dl dd {
-  font-size: .8rem;
+header > .header__inner > .right > .icon > label > .pofile__wrap dl dd {
+  font-size: 0.8rem;
   margin-top: -4px;
 }
 
-
-header>.header__inner>.right>.icon>label>.pofile__wrap .user__img {
+header > .header__inner > .right > .icon > label > .pofile__wrap .user__img {
   width: 40px;
   height: 40px;
   margin: 0 4px;
@@ -202,12 +204,19 @@ header>.header__inner>.right>.icon>label>.pofile__wrap .user__img {
   overflow: hidden;
 }
 
-header>.header__inner>.right>.icon>label>.pofile__wrap .user__img img {
+header
+  > .header__inner
+  > .right
+  > .icon
+  > label
+  > .pofile__wrap
+  .user__img
+  img {
   width: 100%;
   height: 100%;
 }
 
-header>.header__inner>.right>.icon>label>ul>li>a {
+header > .header__inner > .right > .icon > label > ul > li > a {
   -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   outline: 0px;
@@ -231,30 +240,30 @@ header>.header__inner>.right>.icon>label>ul>li>a {
   padding: 6px 12px;
   box-sizing: border-box;
   white-space: nowrap;
-  color: #6B7280;
+  color: #6b7280;
 }
 
-header>.header__inner>.right>.icon>label>ul>li>a:hover {
+header > .header__inner > .right > .icon > label > ul > li > a:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-header>.header__inner>.right>.icon>label>ul>li>a>.icon {
+header > .header__inner > .right > .icon > label > ul > li > a > .icon {
   display: block;
   width: 30px;
   margin-right: 8px;
 }
 
-header>.header__inner>.right>.icon>label>ul>li>a>.icon>img {
+header > .header__inner > .right > .icon > label > ul > li > a > .icon > img {
   width: 100%;
 }
 
 @media (max-width: 1200px) {
-  .header__inner>.left>.wrap>div>.icon__link.hide {
+  .header__inner > .left > .wrap > div > .icon__link.hide {
     display: none;
   }
 
-  .header__inner>.left>.wrap>div>.menuOn.hide {
+  .header__inner > .left > .wrap > div > .menuOn.hide {
     display: block;
   }
 }
