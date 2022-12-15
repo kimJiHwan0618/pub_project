@@ -124,10 +124,10 @@
                       <input type="text" id="groupname" />
                       <ul>
                         <li class="list">
-                          <a>그룹1</a>
+                          <a href="#">그룹1</a>
                         </li>
                         <li class="list">
-                          <a>그룹2</a>
+                          <a href="#">그룹2</a>
                         </li>
                       </ul>
                       <p>그룹명</p>
@@ -172,12 +172,278 @@
               </div>
             </section>
             <!-- // 충전소 현황 -->
+            <!-- 사용자 인증 건수 -->
+            <section class="user__auth__count">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="normal__title f__medium">사용자 인증 건수</p>
+                </div>
+                <div class="wrap">
+                  <div id="chart"></div>
+                  <div class="flex__box">
+                    <div class="item today">
+                      <p class="f__medium">214</p>
+                      <p>오늘 사용자 인증 건수</p>
+                    </div>
+                    <div class="item suc">
+                      <p class="f__medium">3</p>
+                      <p>대여 성공</p>
+                    </div>
+                    <div class="item fail">
+                      <p class="f__medium">4</p>
+                      <p>대여 실패</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- // 사용자 인증 건수 -->
+            <!-- 이용률 높은 스테이션 Top 10 -->
+            <section class="top10__list station">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="normal__title f__medium">
+                    이용률 높은 스테이션 Top 10
+                  </p>
+                  <label for="top10station" class="selector__label">
+                    <input type="text" id="top10station" />
+                    <ul>
+                      <li class="list">
+                        <a>주간</a>
+                      </li>
+                      <li class="list">
+                        <a>월간</a>
+                      </li>
+                      <li class="list">
+                        <a>년간</a>
+                      </li>
+                    </ul>
+                    <p>주간</p>
+                    <span class="arrow">
+                      <svg viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+                <div class="common__grid">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <p class="f__medium">순위</p>
+                        </th>
+                        <th>
+                          <p class="f__medium">스테이션명</p>
+                        </th>
+                        <th>
+                          <p class="f__medium">디바이스 ID</p>
+                        </th>
+                        <th>
+                          <p class="f__medium">대여건수</p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th><p class="f__medium">1</p></th>
+                        <th><p class="f__medium">강남역 3번출구</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">405</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">2</p></th>
+                        <th><p class="f__medium">마포종점</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">300</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">3</p></th>
+                        <th><p class="f__medium">독산사거리</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">200</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">4</p></th>
+                        <th><p class="f__medium">뱅뱅사거리</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">100</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">5</p></th>
+                        <th><p class="f__medium">구로CGV</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">80</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">6</p></th>
+                        <th><p class="f__medium">여의도공원</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">50</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">7</p></th>
+                        <th><p class="f__medium">샤로수길</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">45</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">8</p></th>
+                        <th><p class="f__medium">경리단길</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">30</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">9</p></th>
+                        <th><p class="f__medium">북촌마을</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">11</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">10</p></th>
+                        <th><p class="f__medium">롯데월드입구</p></th>
+                        <th><p class="f__medium">TB00001</p></th>
+                        <th><p class="f__medium">5</p></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- // 이용률 높은 스테이션 Top 10 -->
+            <!-- 이용률 높은 사용자 Top 10 -->
+            <section class="top10__list user">
+              <div class="section__inner">
+                <div class="top">
+                  <p class="normal__title f__medium">
+                    이용률 높은 사용자 Top 10
+                  </p>
+                  <label for="top10user" class="selector__label">
+                    <input type="text" id="top10user" />
+                    <ul>
+                      <li class="list">
+                        <a>주간</a>
+                      </li>
+                      <li class="list">
+                        <a>월간</a>
+                      </li>
+                      <li class="list">
+                        <a>년간</a>
+                      </li>
+                    </ul>
+                    <p>주간</p>
+                    <span class="arrow">
+                      <svg viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+                <div class="common__grid">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <p class="f__medium">순위</p>
+                        </th>
+                        <th>
+                          <p class="f__medium">이름</p>
+                        </th>
+
+                        <th>
+                          <p class="f__medium">대여건수</p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th><p class="f__medium">1</p></th>
+                        <th><p class="f__medium">홍길동</p></th>
+                        <th><p class="f__medium">65</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">2</p></th>
+                        <th><p class="f__medium">김길동</p></th>
+                        <th><p class="f__medium">50</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">3</p></th>
+                        <th><p class="f__medium">브래드 피트</p></th>
+                        <th><p class="f__medium">20</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">4</p></th>
+                        <th><p class="f__medium">원빈</p></th>
+                        <th><p class="f__medium">5</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">5</p></th>
+                        <th>
+                          <p class="f__medium">알레한드로 간잘레스 야니리투</p>
+                        </th>
+                        <th><p class="f__medium">1</p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">6</p></th>
+                        <th><p class="f__medium"></p></th>
+                        <th><p class="f__medium"></p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">7</p></th>
+                        <th><p class="f__medium"></p></th>
+                        <th><p class="f__medium"></p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">8</p></th>
+                        <th><p class="f__medium"></p></th>
+                        <th><p class="f__medium"></p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">9</p></th>
+                        <th><p class="f__medium"></p></th>
+                        <th><p class="f__medium"></p></th>
+                      </tr>
+                      <tr>
+                        <th><p class="f__medium">10</p></th>
+                        <th><p class="f__medium"></p></th>
+                        <th><p class="f__medium"></p></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- // 이용률 높은 사용자 Top 10 -->
           </div>
         </div>
       </main>
     </div>
+    <script>
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+        );
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+        );
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+        );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/customSelector.js"></script>
     <script src="/assets/js/dashboard.js"></script>
     <script
@@ -186,8 +452,39 @@
     ></script>
     <script>
       includeHTML(function () {
+        // 페이지 액티브
         const pageActive = document.querySelectorAll(".list__item")[0];
         pageActive.classList.add("on");
+
+        // Common nav
+        const navChildrenEl = document.querySelectorAll(".sub.list__item");
+
+        const subMenuClick = (idx) => {
+          navChildrenEl[idx].childNodes[1].onclick = () => {
+            navChildrenEl[idx].classList.toggle("on");
+          };
+        };
+
+        for (var i = 0; i < navChildrenEl.length; i++) {
+          subMenuClick(i);
+        }
+        const onBtn = document.querySelector("#menuOn");
+        const offBtn = document.querySelector("#menuOff");
+        const nav = document.querySelector(".main__nav");
+        const modelBg = document.querySelector(".modal__bg");
+
+        onBtn.onclick = () => {
+          nav.classList.remove("hide");
+          onBtn.classList.add("hide");
+        };
+        modelBg.onclick = () => {
+          nav.classList.add("hide");
+          onBtn.classList.remove("hide");
+        };
+        offBtn.onclick = () => {
+          nav.classList.add("hide");
+          onBtn.classList.remove("hide");
+        };
       });
     </script>
   </body>

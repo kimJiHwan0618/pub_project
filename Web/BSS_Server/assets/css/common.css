@@ -118,8 +118,8 @@
 
 .selector__label > input {
   position: absolute;
-  left: -50%;
-  top: -50%;
+  left: -9999px;
+  top: 50%;
   z-index: -99999;
   border: none;
   cursor: none;
@@ -187,4 +187,38 @@
 .selector__label > ul > li:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.04);
+}
+
+.common__grid > table {
+  border: none;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+  min-width: 100%;
+  text-indent: 0;
+}
+.common__grid > table tr {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0px;
+}
+.common__grid > table tr > th:first-of-type {
+  padding-left: 24px;
+}
+.common__grid > table tr > th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-weight: 500;
+  padding: 16px 8px;
+  white-space: nowrap;
+  border-color: rgb(226, 232, 240);
+  line-height: 2.4rem;
+  display: table-cell;
+  vertical-align: inherit;
+  font-size: 0.9rem;
+}
+.common__grid > table tr > th > p {
+  white-space: nowrap;
+  line-height: 1.5;
+  color: rgb(107, 114, 128);
 }

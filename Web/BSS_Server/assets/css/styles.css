@@ -40,6 +40,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   -webkit-font-smoothing: auto;
+  overflow-x: hidden;
 }
 
 /* main layout */
@@ -114,7 +115,7 @@ main > .container {
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 200;
+  z-index: 99998;
   display: none;
 }
 
@@ -134,7 +135,8 @@ main > .container {
   }
 }
 
-@media (max-width: 600px) {
+/* max-width : 600 ?? */
+@media (max-width: 660px) {
   .section__grid__wrap {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

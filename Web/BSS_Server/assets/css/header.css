@@ -2,7 +2,7 @@ header {
   position: sticky;
   top: 0px;
   display: flex;
-  z-index: 20;
+  z-index: 99997;
   -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: rgba(0, 0, 0, 0.87);
   background-image: none;
