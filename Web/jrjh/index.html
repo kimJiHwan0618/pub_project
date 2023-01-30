@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JR ♥ JH</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>재련이는 &nbsp;&nbsp;<span id="text"></span>&nbsp;&nbsp;다!</h1>
+    <button id="shu__btn">셔플~</button>
+    <div class="card__wrap">
+      <div class="item" data-text="노래도 잘한">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">노래도 잘한</div>
+        </div>
+      </div>
+      <div class="item" data-text="얼굴도 이쁘">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">얼굴도 이쁘</div>
+        </div>
+      </div>
+      <div class="item" data-text="그림도 잘그린">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">그림도 잘그린</div>
+        </div>
+      </div>
+      <div class="item" data-text="요리도 잘한">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">요리도 잘한</div>
+        </div>
+      </div>
+      <div class="item" data-text="마음도 이쁘">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">마음도 이쁘</div>
+        </div>
+      </div>
+      <div class="item" data-text="취향도 잘맞는">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">취향도 잘맞는</div>
+        </div>
+      </div>
+      <div class="item" data-text="같이 있으면 즐겁">
+        <div class="card">
+          <div class="front">
+            <img src="./jr.png" class="jr" />
+          </div>
+          <div class="back">같이 있으면 즐겁</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
+      }
+
+      function clickInit() {
+        $(".card__wrap .item").click(function () {
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $("#text").text("");
+          } else {
+            $(".card__wrap .item").removeClass("active");
+            $(this).addClass("active");
+            $("#text").text($(this).attr("data-text"));
+          }
+        });
+      }
+
+      const ar = [0, 1, 2, 3, 4, 5, 6];
+      $("#shu__btn").click(function () {
+        shuffle(ar);
+        for (let i = 0; i < ar.length; i++) {
+          $($(".card__wrap .item").eq(0)).after(
+            $(".card__wrap .item").eq(ar[i])
+          );
+          $($(".card__wrap .item").eq(ar[i])).after(
+            $(".card__wrap .item").eq(0)
+          );
+        }
+      });
+
+      clickInit();
+    });
+  </script>
+</html>
