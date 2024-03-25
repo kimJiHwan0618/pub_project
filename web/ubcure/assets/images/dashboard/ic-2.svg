@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
+  <g id="그룹_202" data-name="그룹 202" transform="translate(-565 -197)">
+    <circle id="타원_7" data-name="타원 7" cx="43.5" cy="43.5" r="43.5" transform="translate(565 197)" fill="#6d6df0"/>
+    <path id="circle-notch-solid" d="M20.64,46.139C8.3,40.866,5.216,32.854,5.216,24.148c0-7.231,5.086-16.838,11.722-18.692a2.055,2.055,0,0,0,1.514-1.975V2.055A2.056,2.056,0,0,0,15.878.066C6.689,2.434-.052,14.652,0,24.593c0,5.191,1.426,18.562,17.578,25.6C19.349,49.44,20.64,46.139,20.64,46.139Z" transform="translate(571.732 242.609) rotate(-45)" fill="#fff"/>
+    <path id="circle-notch-solid-2" data-name="circle-notch-solid" d="M0,4.058C12.34,9.332,15.425,17.344,15.425,26.05c0,7.231-5.086,16.838-11.722,18.692a2.055,2.055,0,0,0-1.514,1.974v1.425A2.056,2.056,0,0,0,4.761,50.13C13.95,47.764,20.693,35.545,20.641,25.6c0-5.191-1.426-18.562-17.578-25.6C1.291.758,0,4.058,0,4.058Z" transform="translate(595.178 218.492) rotate(-45)" fill="#fff"/>
+    <g id="그룹_4" data-name="그룹 4" transform="translate(581.897 227.527) rotate(16.024)">
+      <line id="선_1" data-name="선 1" x1="4.734" y2="4.734" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="7"/>
+      <line id="선_3" data-name="선 3" x2="4.734" y2="4.734" transform="translate(4.734 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="7"/>
+    </g>
+    <g id="그룹_5" data-name="그룹 5" transform="matrix(-0.961, -0.276, 0.276, -0.961, 635.103, 254.474)">
+      <line id="선_1-2" data-name="선 1" x1="4.734" y2="4.734" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="7"/>
+      <line id="선_3-2" data-name="선 3" x2="4.734" y2="4.734" transform="translate(4.734 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="7"/>
+    </g>
+    <g id="그룹_121" data-name="그룹 121" transform="translate(596.489 228.989)">
+      <rect id="사각형_133" data-name="사각형 133" width="8.319" height="24.936" rx="4" transform="translate(24.936 8.312) rotate(90)" fill="#fff"/>
+      <rect id="사각형_134" data-name="사각형 134" width="8.319" height="24.936" rx="4" transform="translate(16.63 24.936) rotate(180)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

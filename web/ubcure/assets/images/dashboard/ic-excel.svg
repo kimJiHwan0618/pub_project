@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_208" data-name="사각형 208" width="20" height="20" transform="translate(-2649 1177)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_46" data-name="마스크 그룹 46" transform="translate(2649 -1177)" clip-path="url(#clip-path)">
+    <path id="icons8-microsoft-excel" d="M11.527.019.325,2.144a.407.407,0,0,0-.325.4V17.472a.407.407,0,0,0,.325.4L11.527,20a.418.418,0,0,0,.075.012.385.385,0,0,0,.25-.087A.414.414,0,0,0,12,19.61V.406a.414.414,0,0,0-.15-.313A.384.384,0,0,0,11.527.019ZM12.8,2.407v2.8h.8v.8h-.8v2h.8v.8h-.8v2h.8v.8h-.8v2.4h.8v.8h-.8v2.8h6a.8.8,0,0,0,.8-.8V3.207a.8.8,0,0,0-.8-.8Zm1.6,2.8h3.2v.8H14.4ZM2.676,6.283h2.05L5.8,8.521a3.8,3.8,0,0,1,.225.638h.013c.042-.145.123-.374.238-.663L7.464,6.283H9.339L7.1,9.983l2.3,3.776H7.414l-1.3-2.438a2.15,2.15,0,0,1-.15-.5H5.951a4,4,0,0,1-.175.525l-1.3,2.413h-2l2.388-3.738ZM14.4,8.008h3.2v.8H14.4Zm0,2.8h3.2v.8H14.4Zm0,3.2h3.2v.8H14.4Z" transform="translate(-2649 1176.99)" fill="#fff"/>
+  </g>
+</svg>

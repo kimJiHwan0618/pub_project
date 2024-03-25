@@ -1,0 +1,57 @@
+.sub__nav {
+  width: 90%;
+  padding: 125px 0 24px;
+  margin: 0 auto;
+}
+.sub__nav ul {
+  display: flex;
+  align-items: center;
+}
+.sub__nav li {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+}
+.sub__nav li a {
+  font-size: 1.8em;
+  color: #b2b4b7;
+}
+.sub__nav li .home__icon {
+  display: block;
+  width: 29.92px;
+  height: 23.27px;
+}
+.sub__nav li .arrow__icon {
+  display: inline-block;
+  background: url(../images/icon/ic-nav_arrow.svg) no-repeat 0 0;
+  width: 9.78px;
+  height: 16.39px;
+  background-size: 100% 100%;
+  margin-left: 14px;
+}
+.sub__nav li:last-of-type .arrow__icon {
+  display: none;
+}
+.sub__nav li:last-of-type a {
+  color: #27c4ba;
+  pointer-events: none;
+  cursor: none;
+}
+.sub__nav li span img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1536px) {
+  .sub__nav li .arrow__icon {
+    width: 7.33px;
+    height: 12.28px;
+    background-size: 7.33px 12.28px;
+  }
+  .sub__nav li .home__icon {
+    width: 26px;
+    height: 20.22px;
+  }
+  .sub__nav li a {
+    font-size: 1.6em;
+  }
+}

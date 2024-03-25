@@ -1,0 +1,459 @@
+main.treatment__status__main {
+  overflow: hidden;
+  height: 69%;
+}
+
+main.treatment__status__main > .contents__train {
+  width: 200%;
+  position: relative;
+  height: 100%;
+  -webkit-transition: all 0.75s ease-in-out 0s;
+  left: 0%;
+}
+main.treatment__status__main > .contents__train:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+main.treatment__status__main > .contents__train > section {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  float: left;
+  height: 100%;
+  border-radius: 10px;
+  overflow: auto;
+}
+/* .page__section__state__wrap */
+.page__section__state__wrap {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.page__section__state__wrap > .inner {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.page__section__state__wrap > .inner dl {
+  display: flex;
+  align-items: center;
+}
+.page__section__state__wrap > .inner .button__wrap {
+  display: flex;
+}
+.page__section__state__wrap > .inner > h4 {
+  font-size: 1.8em;
+  margin-right: 19px;
+}
+.page__section__state__wrap > .inner > dl {
+  font-size: 1.6em;
+  margin-right: 30px;
+}
+.page__section__state__wrap > .inner .button__wrap > button:first-of-type {
+  margin-right: 12px;
+}
+/* // .page__section__state__wrap */
+/* treatment__status__wrap */
+main section.treatment__status__wrap > .week__progress__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+}
+main section.treatment__status__wrap > .week__progress__wrap > div {
+  width: 48.5%;
+}
+main section.treatment__status__wrap > div > div > h5 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+main section.treatment__status__wrap > div > div > div.progress__list {
+  background: #fefefe;
+  border: 1px solid rgba(175, 175, 175, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+main section.treatment__status__wrap > div > div > div.progress__list > dl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl:last-of-type {
+  margin-bottom: 0px;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl
+  > dt {
+  font-size: 2.2em;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl
+  > dd {
+  width: 93.5%;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl
+  > dd
+  > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl
+  > dd
+  > ul
+  > li {
+  background: #c5c5c5;
+  width: 12.5%;
+  margin-right: 1.5%;
+  height: 35px;
+  border-radius: 4px;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div.progress__list
+  > dl
+  > dd
+  > ul
+  > li.on {
+  background: #27c4ba;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > div
+  > dl
+  > dd
+  > ul
+  > li:last-of-type {
+  margin-right: 0%;
+}
+main section.treatment__status__wrap > div > div > .state__txt {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+main
+  section.treatment__status__wrap
+  > div
+  > div
+  > .state__txt
+  > li:first-of-type {
+  margin-left: 0px;
+}
+main section.treatment__status__wrap > div > div > .state__txt > li {
+  margin-left: 20px;
+}
+main section.treatment__status__wrap > div > div > .state__txt > li > dl {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+}
+main section.treatment__status__wrap > .chart__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main section.treatment__status__wrap > .chart__wrap > .chart__item {
+  width: 49%;
+}
+main
+  section.treatment__status__wrap
+  > .chart__wrap
+  > .chart__item:first-of-type,
+main
+  section.treatment__status__wrap
+  > .chart__wrap
+  > .chart__item:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+main
+  section.treatment__status__wrap
+  > .chart__wrap
+  > .chart__item
+  > .chart__el {
+  height: 400px;
+}
+/* // treatment__status__wrap */
+/* education__status__wrap */
+.education__status__wrap > .education__status__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+.education__status__wrap > .education__status__title > h5 {
+  font-size: 1.8em;
+}
+.education__status__wrap > .education__status__title > ul {
+  display: flex;
+  align-items: center;
+}
+.education__status__wrap > .education__status__title > ul > li {
+  margin-right: 18px;
+}
+.education__status__wrap > .education__status__title > ul > li:last-of-type {
+  margin-right: 0px;
+}
+.education__status__wrap > .education__status__title > ul > li > dl {
+  display: flex;
+  align-items: center;
+}
+.education__status__wrap > .education__status__title > ul > li > dl dt {
+  width: 48px;
+  height: 23px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.education__status__wrap
+  > .education__status__title
+  > ul
+  > li:first-of-type
+  > dl
+  dt {
+  background: white;
+}
+.education__status__wrap
+  > .education__status__title
+  > ul
+  > li:nth-of-type(2)
+  > dl
+  dt {
+  background: #b5c6ee;
+}
+.education__status__wrap
+  > .education__status__title
+  > ul
+  > li:nth-of-type(3)
+  > dl
+  dt {
+  background: #404f71;
+}
+.education__status__wrap > .education__status__title > ul > li > dl dd {
+  font-size: 1.4em;
+}
+.education__status__wrap > .week__status__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.education__status__wrap > .week__status__wrap > dl {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+.education__status__wrap > .week__status__wrap > dl:first-of-type,
+.education__status__wrap > .week__status__wrap > dl:nth-of-type(2) {
+  margin-top: 0;
+}
+.education__status__wrap > .week__status__wrap > dl > dd {
+  width: 90%;
+  background: red;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border: 1px solid rgba(175, 175, 175, 0.3);
+  background: #fefefe;
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li {
+  box-sizing: border-box;
+  border: 1px solid #afafaf;
+  height: 36px;
+  width: 13%;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 0px 4px rgb(159 159 159 / 32%);
+  position: relative;
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+  width: 101%;
+  height: 101%;
+  z-index: 2;
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li:active {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li:active:after {
+  box-shadow: inset 0px -2px 5px white, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li.complete {
+  background: #404f71;
+}
+.education__status__wrap > .week__status__wrap > dl > dd > ul li.ing {
+  background: #b5c6ee;
+}
+.education__status__wrap > .week__status__wrap > dl > dt {
+  font-size: 1.6em;
+}
+.education__status__wrap > .quiz__state__wrap > .quiz__state__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.education__status__wrap > .quiz__state__wrap > .quiz__state__title > h5 {
+  font-size: 1.8em;
+  margin-right: 16px;
+}
+.education__status__wrap > .quiz__state__wrap > .graph__wrap {
+  height: 600px;
+}
+.education__status__wrap > .quiz__state__wrap > .graph__wrap > #quizChart {
+  height: 100%;
+}
+/* // education__status__wrap */
+@media screen and (max-width: 1536px) {
+  .page__section__state__wrap > .inner {
+    padding: 13px 18px;
+  }
+  .page__section__state__wrap > .inner > h4 {
+    font-size: 1.6em;
+    margin-right: 13px;
+  }
+  .page__section__state__wrap > .inner > dl {
+    font-size: 1.4em;
+    margin-right: 18px;
+  }
+  main section.treatment__status__wrap > div > div > h5 {
+    font-size: 1.6em;
+    margin-bottom: 18px;
+  }
+  main
+    section.treatment__status__wrap
+    > div
+    > div
+    > div.progress__list
+    > dl
+    > dt {
+    font-size: 2em;
+  }
+  main section.treatment__status__wrap > div > div > div.progress__list > dl {
+    margin-bottom: 10px;
+  }
+  main
+    section.treatment__status__wrap
+    > div
+    > div
+    > div.progress__list
+    > dl
+    > dd
+    > ul
+    > li {
+    width: 13.3%;
+  }
+  main section.treatment__status__wrap > div > div > .state__txt {
+    margin-top: 13px;
+  }
+  main section.treatment__status__wrap > div > div > .state__txt > li > dl {
+    font-size: 1.4em;
+  }
+  main section.treatment__status__wrap > .week__progress__wrap {
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+  }
+  main section.treatment__status__wrap > .chart__wrap > .chart__item {
+    width: 50%;
+  }
+  main
+    section.treatment__status__wrap
+    > .chart__wrap
+    > .chart__item:first-of-type,
+  main
+    section.treatment__status__wrap
+    > .chart__wrap
+    > .chart__item:nth-of-type(2) {
+    margin-bottom: 16px;
+  }
+  .education__status__wrap > .education__status__title > h5 {
+    font-size: 1.6em;
+  }
+  .education__status__wrap > .education__status__title > ul > li > dl dd {
+    font-size: 1.2em;
+  }
+  .education__status__wrap > .education__status__title > ul > li > dl dt {
+    width: 44px;
+    height: 20px;
+  }
+  .education__status__wrap > .education__status__title {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .education__status__wrap > .week__status__wrap > dl > dt {
+    font-size: 1.4em;
+  }
+  .education__status__wrap > .week__status__wrap {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .education__status__wrap > .quiz__state__wrap > .quiz__state__title > h5 {
+    font-size: 1.6em;
+  }
+  .education__status__wrap > .quiz__state__wrap > .graph__wrap {
+    height: 440px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .education__status__wrap > .week__status__wrap > dl {
+    width: 49%;
+  }
+  .education__status__wrap > .quiz__state__wrap > .graph__wrap {
+    height: 380px;
+  }
+}

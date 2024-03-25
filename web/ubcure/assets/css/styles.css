@@ -1,0 +1,91 @@
+@import "./reset.css";
+@import "./header.css";
+@import "./subnav.css";
+
+@font-face {
+  font-family: "SF-Pro-Text-Light";
+  src: url(../fonts/SF-Pro-Text-Light.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Regular";
+  src: url(../fonts/SF-Pro-Text-Regular.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Medium";
+  src: url(../fonts/SF-Pro-Text-Medium.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Semibold";
+  src: url(../fonts/SF-Pro-Text-Semibold.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Bold";
+  src: url(../fonts/SF-Pro-Text-Bold.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Black.otf";
+  src: url(../fonts/SF-Pro-Text-Black.otf);
+}
+
+body {
+  font-family: "SF-Pro-Text-Semibold";
+  font-weight: 600 !important;
+  font-size: 10px;
+  background: #f6fafd;
+  color: #333;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+  height: 100%;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+.f__light {
+  font-family: "SF-Pro-Text-Medium";
+  font-weight: 300 !important;
+}
+.f__regular {
+  font-family: "SF-Pro-Text-Regular";
+  font-weight: 400 !important;
+}
+.f__medium {
+  font-family: "SF-Pro-Text-Medium";
+  font-weight: 500 !important;
+}
+.f__bold {
+  font-family: "SF-Pro-Text-Bold";
+  font-weight: bold !important;
+}
+.f__black {
+  font-family: "SF-Pro-Text-Black";
+  font-weight: 800 !important;
+}
+
+/* .modal__bg {
+  background: rgba(255, 255, 255, 0.65);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  display: none;
+}
+header.active + .modal__bg {
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  header.active + .modal__bg {
+    display: block;
+  }
+} */

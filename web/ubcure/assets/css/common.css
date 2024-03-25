@@ -1,0 +1,281 @@
+.vertical__scroll {
+  overflow-y: auto;
+}
+.vertical__scroll::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+  height: 100%;
+}
+.vertical__scroll::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+.box__shadow__01 {
+  box-shadow: 0 0 7px rgba(147, 173, 192, 0.2);
+}
+.box__shadow__02 {
+  box-shadow: 0 0 8px rgba(122, 122, 122, 0.4);
+}
+.box__shadow__03 {
+  box-shadow: 0 0 9px rgba(159, 159, 159, 0.32);
+}
+.custom__checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
+  outline: 0;
+  background: white;
+  border: 1px solid #b2b2b2;
+}
+.custom__checkbox:checked {
+  background: #27c4ba;
+}
+.custom__checkbox:checked:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 70%;
+  height: 70%;
+  background: url(../images/icon/ic-check.svg) no-repeat 50% 50%;
+  background-size: contain;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+.custom__btn.modify {
+  background: #3ac174;
+}
+.custom__btn.delete {
+  background: #e25252;
+}
+.custom__btn.off {
+  background: #788390;
+}
+.custom__btn {
+  background: #27c4ba;
+  border-radius: 5px;
+  padding: 7px 12px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+  cursor: pointer;
+}
+.custom__btn.small {
+  padding: 5px 10px;
+}
+.custom__btn.small p {
+  font-size: 1.4em;
+}
+.custom__btn.small span {
+  width: 20px;
+  height: 20px;
+}
+.custom__btn > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.custom__btn > span > img {
+  width: 100%;
+  height: 100%;
+}
+.custom__btn > p {
+  font-size: 1.4em;
+  color: white;
+  white-space: nowrap;
+  font-family: "SF-Pro-Text-Semibold";
+  font-weight: 600 !important;
+}
+
+.custom__btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+  width: 101%;
+  height: 101%;
+  z-index: 2;
+}
+
+.custom__btn:active {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
+}
+
+.custom__btn:active:after {
+  box-shadow: inset 0px -2px 5px white, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.popup__wrap.on .popup__bg {
+  display: block;
+}
+.popup__wrap.on .common__popup {
+  display: block;
+}
+.popup__bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  display: none;
+}
+.common__popup {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  z-index: 102;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  display: none;
+  overflow: hidden;
+}
+.common__popup > .popup__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  background: #27c4ba;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.common__popup > .popup__top button {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.common__popup > .popup__top button:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  background: white;
+  height: 70%;
+  width: 4px;
+  border-radius: 100px;
+  display: block;
+  content: "";
+}
+.common__popup > .popup__top button::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  background: white;
+  height: 70%;
+  width: 4px;
+  border-radius: 100px;
+  display: block;
+  content: "";
+}
+.common__popup > .popup__top > h4 {
+  font-size: 1.8em;
+  color: white;
+}
+.common__popup > ul {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.common__popup > ul li {
+  margin-bottom: 12px;
+  height: 30px;
+}
+.common__popup > ul li:last-of-type {
+  margin-bottom: 0px;
+}
+.common__popup > ul li dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.common__popup > ul li dl dt {
+  font-size: 1.4em;
+}
+.common__popup > ul li dl dd {
+  width: 70%;
+  height: 100%;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  height: 100%;
+  position: relative;
+}
+.common__popup > .custom__btn__wrap {
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.common__popup > .custom__btn__wrap > .custom__btn {
+  width: 100%;
+  justify-content: center;
+}
+.common__popup > ul li dl dd input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.calendar__icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  display: block;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+.calendar__icon img {
+  width: 100%;
+  height: 100%;
+}
+.date__input {
+  color: rgb(141, 141, 141);
+}
+@media screen and (max-width: 1536px) {
+  .custom__btn {
+    padding: 5px 10px;
+  }
+  .custom__btn > p {
+    font-size: 1.2em;
+  }
+  .custom__btn > span {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .custom__btn.small p {
+    font-size: 1.2em;
+  }
+  .custom__btn.small span {
+    width: 18px;
+    height: 18px;
+  }
+  .custom__checkbox {
+    width: 16px;
+    height: 16px;
+  }
+}

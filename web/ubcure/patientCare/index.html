@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환자관리</title>
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/patientCare.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- excel 출력 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <!-- // excel 출력 라이브러리 -->
+    <!-- grid css -->
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+    <!-- // grid css -->
+    <link rel="stylesheet" href="../assets/css/calendar.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="box__shadow__01">
+      <div class="header__inner">
+        <nav>
+          <h1>
+            <a href="#">
+              <img src="../assets/images/logo.jpg" alt="한림대학교 로고" />
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../dashboard.html">대시보드</a>
+            </li>
+            <li class="on">
+              <a href="../patientCare">환자관리</a>
+            </li>
+            <li>
+              <a href="#">치료제 관리</a>
+            </li>
+            <li>
+              <a href="#">시스템 관리</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user__profile">
+          <img
+            src="../assets/images/icon/ic-user.svg"
+            alt="로그인 유저 프로필 사진"
+          />
+          <dl>
+            <dt class="f__bold">김길동</dt>
+            <dd class="f__medium">신경정신과</dd>
+          </dl>
+        </div>
+      </div>
+    </header>
+    <!-- // header -->
+    <!-- sub navigation -->
+    <div class="sub__nav">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <span class="home__icon">
+                <img src="../assets/images/icon/ic-home.svg" alt="홈 아이콘" />
+              </span>
+            </a>
+            <span class="arrow__icon"> </span>
+          </li>
+          <li class="on">
+            <a href="../patientCare/">환자관리</a>
+            <span class="arrow__icon"></span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- // sub navigation -->
+    <!-- page popup -->
+    <div class="popup__wrap">
+      <div class="popup__bg"></div>
+      <div class="common__popup box__shadow__02">
+        <div class="popup__top">
+          <h4>환자정보 수정</h4>
+          <button class="pop__close__btn"></button>
+        </div>
+        <ul>
+          <li>
+            <dl>
+              <dt class="f__medium">날짜</dt>
+              <dd>
+                <input
+                  type="text"
+                  id="calendar01Input"
+                  class="date__input"
+                  readonly
+                />
+                <span class="calendar__icon" id="calendar01">
+                  <img
+                    src="../assets/images/icon/ic-calendar.svg"
+                    alt="달력 아이콘"
+                  />
+                </span>
+                <span class="calendar01"></span>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">병록번호</dt>
+              <dd><input type="text" class="regnum__input" /></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">이름</dt>
+              <dd><input type="text" class="name__input" /></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">성별</dt>
+              <dd><input type="text" class="male__input" /></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">나이</dt>
+              <dd><input type="text" class="age__input" /></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">초재진</dt>
+              <dd><input type="text" class="fristdoctor__input" /></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt class="f__medium">담당의</dt>
+              <dd><input type="text" class="designated__input" /></dd>
+            </dl>
+          </li>
+        </ul>
+        <div class="custom__btn__wrap">
+          <button class="custom__btn">
+            <span>
+              <img src="../assets/images/icon/ic-save.svg" alt="저장 아이콘" />
+            </span>
+            <p>저장</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- // page popup -->
+    <!-- page main contents -->
+    <main>
+      <section class="patient__search__wrap box__shadow__01">
+        <div class="patient__search__top">
+          <ul class="checkbox__list">
+            <li>
+              <input type="checkbox" id="checkbox01" class="custom__checkbox" />
+              <label class="f__medium" for="checkbox01"
+                >처방전 미발행 포함</label
+              >
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox02" class="custom__checkbox" />
+              <label class="f__medium" for="checkbox02">완치환자포함</label>
+            </li>
+          </ul>
+          <button class="custom__btn">
+            <span>
+              <img
+                src="../assets/images/icon/ic-plus.svg"
+                alt="플러스 아이콘"
+              />
+            </span>
+            <p>신규</p>
+          </button>
+        </div>
+        <div class="patient__search__condition__middle">
+          <ul class="select__list">
+            <li>
+              <dl>
+                <dt><label for="">센터</label></dt>
+                <dd>
+                  <select name="" id="">
+                    <option value="전체">전체</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><label for="">진료과</label></dt>
+                <dd>
+                  <select name="" id="">
+                    <option value="전체">전체</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><label for="">담당의</label></dt>
+                <dd>
+                  <select name="" id="">
+                    <option value="전체">전체</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><label for="">환자명</label></dt>
+                <dd>
+                  <input type="text" placeholder="환자명을 입력해주세요." />
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <button class="custom__btn search__btn">
+            <span>
+              <img
+                src="../assets/images/icon/ic-search.svg"
+                alt="검색 아이콘"
+              />
+            </span>
+            <p>검색</p>
+          </button>
+        </div>
+        <div class="patient__grid__bottom">
+          <div id="gridEl"></div>
+          <ul class="grid__button__list">
+            <li>
+              <button class="custom__btn delete">
+                <span>
+                  <img
+                    src="../assets/images/icon/ic-remove.svg"
+                    alt="삭제 아이콘"
+                  />
+                </span>
+                <p>삭제</p>
+              </button>
+            </li>
+            <li>
+              <button class="custom__btn modify">
+                <span>
+                  <img
+                    src="../assets/images/icon/ic-modify.svg"
+                    alt="수정 아이콘"
+                  />
+                </span>
+                <p>수정</p>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="patient__detail__wrap box__shadow__01">
+        <h4 class="f__bold patient__detail__notice__txt">
+          환자를 선택해주세요.
+        </h4>
+        <div class="patient__info__top">
+          <ul>
+            <li>
+              <dl>
+                <dt class="f__medium">이름&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                <dd class="patient__profile__name">박무명</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt class="f__medium">나이&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                <dd class="patient__profile__age">58</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt class="f__medium">담당의&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                <dd class="patient__profile__doctor">김길동</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt class="f__medium">성별&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                <dd class="patient__profile__male">남</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <div class="patient__info__bottom">
+          <ul>
+            <li class="readonly">
+              <dl>
+                <dt>
+                  <label for="">병록번호</label>
+                </dt>
+                <dd>
+                  <input
+                    class="patient__registratio__number"
+                    type="number"
+                    readonly
+                  />
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">Access Code</label>
+                </dt>
+                <dd>
+                  <input class="patient__profile__code" type="text" />
+                </dd>
+              </dl>
+            </li>
+            <li class="readonly">
+              <dl>
+                <dt>
+                  <label for="">E-mail</label>
+                </dt>
+                <dd>
+                  <input
+                    class="patient__profile__email"
+                    type="email"
+                    readonly
+                  />
+                </dd>
+              </dl>
+            </li>
+            <li class="readonly">
+              <dl>
+                <dt>
+                  <label for="">연락처</label>
+                </dt>
+                <dd>
+                  <input class="patient__profile__phone" type="tel" readonly />
+                </dd>
+              </dl>
+            </li>
+            <li class="readonly">
+              <dl>
+                <dt>
+                  <label for="">주소</label>
+                </dt>
+                <dd>
+                  <input
+                    class="patient__profile__address"
+                    type="text"
+                    readonly
+                  />
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">진료과목</label>
+                </dt>
+                <dd>
+                  <select name="" id="">
+                    <option value="전체">전체</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">초진일</label>
+                </dt>
+                <dd>
+                  <input
+                    type="text"
+                    id="calendar02Input"
+                    class="date__input"
+                    readonly
+                  />
+                  <span class="calendar__icon" id="calendar02">
+                    <img
+                      src="../assets/images/icon/ic-calendar.svg"
+                      alt="달력 아이콘"
+                    />
+                  </span>
+                  <span class="calendar02"></span>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">내복약</label>
+                </dt>
+                <dd>
+                  <ul class="drug__list">
+                    <li>
+                      <p>Benzodiazepine</p>
+                    </li>
+                    <li>
+                      <p>Vitamine</p>
+                    </li>
+                    <li>
+                      <p>Chlordiazepoxide</p>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">교육 시작일</label>
+                </dt>
+                <dd>
+                  <input
+                    type="text"
+                    id="calendar03Input"
+                    class="date__input"
+                    readonly
+                  />
+                  <span class="calendar__icon" id="calendar03">
+                    <img
+                      src="../assets/images/icon/ic-calendar.svg"
+                      alt="달력 아이콘"
+                    />
+                  </span>
+                  <span class="calendar03"></span>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">몸무게</label>
+                </dt>
+                <dd>
+                  <input type="text" />
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <label for="">메모</label>
+                </dt>
+                <dd>
+                  <input type="text" />
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <button class="custom__btn treatmentStatus__btn">
+                <span>
+                  <img
+                    src="../assets/images/patientCare/ic-01.svg"
+                    alt="치료현황 아이콘"
+                  />
+                </span>
+                <p>치료현황</p>
+              </button>
+
+              <button class="custom__btn prescription__btn">
+                <span>
+                  <img
+                    src="../assets/images/patientCare/ic-02.svg"
+                    alt="처방전 아이콘"
+                  />
+                </span>
+                <p>처방전</p>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- // page main contents -->
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script src="../assets/js/data/userTestData2.js"></script>
+    <script src="../assets/js/patientCare.js"></script>
+    <script src="../assets/js/calendar.js"></script>
+  </body>
+</html>

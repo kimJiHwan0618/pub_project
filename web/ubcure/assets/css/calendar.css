@@ -1,0 +1,54 @@
+.custom_calendar_table {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  z-index: 10;
+  min-width: 260px;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(122, 122, 122, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.custom_calendar_table td {
+  text-align: center;
+}
+.custom_calendar_table thead.cal_date th p {
+  text-align: center;
+}
+.custom_calendar_table thead.cal_date th {
+  font-size: 1.4em;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.custom_calendar_table thead.cal_date th button {
+  font-size: 1.4em;
+  background: none;
+  border: none;
+}
+
+.custom_calendar_table thead.cal_week th {
+  background-color: #788390;
+  color: #fff;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.custom_calendar_table tbody td {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.custom_calendar_table tbody td:nth-child(1) {
+  color: red;
+}
+
+.custom_calendar_table tbody td:nth-child(7) {
+  color: #288cff;
+}
+
+.custom_calendar_table tbody td.select_day {
+  background-color: #27c4ba;
+  color: #fff;
+}
