@@ -1,86 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>엠에쓰아이 | Solution</title>
-    <link rel="stylesheet" href="/public/css/styles.css" />
-  </head>
-  <body>
-    <header include-html="/public/layout/header.html"></header>
-    <div class="navi__menu" include-html="/public/layout/navi_menu.html"></div>
 
-    <main class="subpage__main">
-      <div class="subpage__title__section">
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <img src="/public/img/solution/main.jpg" alt="about_msi 메인 이미지" />
-        <div class="inner">
-          <h2 class="f__bold roboto">Solution</h2>
-          <p class="notosansKr">
-            우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
-          </p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠에쓰아이 | Solution</title>
+  <link rel="stylesheet" href="../public/css/styles.css" />
+</head>
+
+<body>
+  <header include-html="../public/layout/header.html"></header>
+  <div class="navi__menu" include-html="../public/layout/navi_menu.html"></div>
+
+  <main class="subpage__main">
+    <div class="subpage__title__section">
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <img src="../public/img/solution/main.jpg" alt="about_msi 메인 이미지" />
+      <div class="inner">
+        <h2 class="f__bold roboto">Solution</h2>
+        <p class="notosansKr">
+          우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+        </p>
       </div>
-      <div class="subpage__inner">
-        <nav>
-          <ul class="sub__page__nav">
-            <li>
-              <span class="notosansKr f__midium">제조실행</span>
-            </li>
-            <li>
-              <span class="notosansKr f__midium">자동화</span>
-            </li>
-            <li>
-              <span class="notosansKr f__midium">분석진단</span>
-            </li>
-            <li>
-              <span class="notosansKr f__midium">임베디드</span>
-            </li>
-          </ul>
-        </nav>
-        <!-- train-wrap -->
-        <div class="train-wrap">
-          <div class="swipe_train">
-            <div class="train-wrap-inner">
-              <!-- 제조실행 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/solution/components/produce.html"
-              ></div>
-              <!-- 제조실행 -->
-              <!-- 자동화 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/solution/components/automation.html"
-              ></div>
-              <!-- 자동화 -->
-              <!-- 분석진단 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/solution/components/analysis.html"
-              ></div>
-              <!-- 분석진단 -->
-              <!-- 임베디드 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/solution/components/embedded.html"
-              ></div>
-              <!-- 임베디드 -->
-            </div>
+    </div>
+    <div class="subpage__inner">
+      <nav>
+        <ul class="sub__page__nav">
+          <li>
+            <span class="notosansKr f__midium">제조실행</span>
+          </li>
+          <li>
+            <span class="notosansKr f__midium">자동화</span>
+          </li>
+          <li>
+            <span class="notosansKr f__midium">분석진단</span>
+          </li>
+          <li>
+            <span class="notosansKr f__midium">임베디드</span>
+          </li>
+        </ul>
+      </nav>
+      <!-- train-wrap -->
+      <div class="train-wrap">
+        <div class="swipe_train">
+          <div class="train-wrap-inner">
+            <!-- 제조실행 -->
+            <div class="swipe_info_wrap" include-html="/solution/components/produce.html"></div>
+            <!-- 제조실행 -->
+            <!-- 자동화 -->
+            <div class="swipe_info_wrap" include-html="/solution/components/automation.html"></div>
+            <!-- 자동화 -->
+            <!-- 분석진단 -->
+            <div class="swipe_info_wrap" include-html="/solution/components/analysis.html"></div>
+            <!-- 분석진단 -->
+            <!-- 임베디드 -->
+            <div class="swipe_info_wrap" include-html="/solution/components/embedded.html"></div>
+            <!-- 임베디드 -->
           </div>
         </div>
-        <!-- // train-wrap -->
       </div>
-    </main>
+      <!-- // train-wrap -->
+    </div>
+  </main>
 
-    <footer include-html="/public/layout/footer.html"></footer>
+  <footer include-html="../public/layout/footer.html"></footer>
 
-    <script src="/public/js/layout.js"></script>
-    <script src="/public/js/header.js"></script>
-    <script src="/public/js/subapge_swiper.js"></script>
-  </body>
+  <script src="../public/js/layout.js"></script>
+  <script src="../public/js/header.js"></script>
+  <script src="../public/js/subapge_swiper.js"></script>
+</body>
+
 </html>

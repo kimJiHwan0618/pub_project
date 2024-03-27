@@ -1,77 +1,71 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>엠에쓰아이 | About us</title>
-    <link rel="stylesheet" href="/public/css/styles.css" />
-  </head>
-  <body>
-    <header include-html="/public/layout/header.html"></header>
-    <div class="navi__menu" include-html="/public/layout/navi_menu.html"></div>
 
-    <main class="subpage__main">
-      <div class="subpage__title__section">
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <span class="filter"></span>
-        <img src="/public/img/aboutus/main.jpg" alt="about_msi 메인 이미지" />
-        <div class="inner">
-          <h2 class="f__bold roboto">About us</h2>
-          <p class="notosansKr">
-            우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
-          </p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>엠에쓰아이 | About us</title>
+  <link rel="stylesheet" href="../public/css/styles.css" />
+</head>
+
+<body>
+  <header include-html="../public/layout/header.html"></header>
+  <div class="navi__menu" include-html="../public/layout/navi_menu.html"></div>
+
+  <main class="subpage__main">
+    <div class="subpage__title__section">
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <span class="filter"></span>
+      <img src="../public/img/aboutus/main.jpg" alt="about_msi 메인 이미지" />
+      <div class="inner">
+        <h2 class="f__bold roboto">About us</h2>
+        <p class="notosansKr">
+          우리는 고객에 몰입할 수 있는 최적의 업무환경을 지원합니다.
+        </p>
       </div>
-      <div class="subpage__inner">
-        <nav>
-          <ul class="sub__page__nav">
-            <li>
-              <span class="notosansKr f__midium">MSI</span>
-            </li>
-            <li>
-              <span class="notosansKr f__midium">CEO 인사말</span>
-            </li>
-            <li>
-              <span class="notosansKr f__midium">주요연혁</span>
-            </li>
-          </ul>
-        </nav>
-        <!-- train-wrap -->
-        <div class="train-wrap">
-          <div class="swipe_train">
-            <div class="train-wrap-inner">
-              <!-- MSI -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/aboutus/components/msi.html"
-              ></div>
-              <!-- MSI -->
-              <!-- CEO 인삿말 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/aboutus/components/greetings.html"
-              ></div>
-              <!-- CEO 인삿말 -->
-              <!-- 주요연혁 -->
-              <div
-                class="swipe_info_wrap"
-                include-html="/aboutus/components/history.html"
-              ></div>
-              <!-- 주요연혁 -->
-            </div>
+    </div>
+    <div class="subpage__inner">
+      <nav>
+        <ul class="sub__page__nav">
+          <li>
+            <span class="notosansKr f__midium">MSI</span>
+          </li>
+          <li>
+            <span class="notosansKr f__midium">CEO 인사말</span>
+          </li>
+          <li>
+            <span class="notosansKr f__midium">주요연혁</span>
+          </li>
+        </ul>
+      </nav>
+      <!-- train-wrap -->
+      <div class="train-wrap">
+        <div class="swipe_train">
+          <div class="train-wrap-inner">
+            <!-- MSI -->
+            <div class="swipe_info_wrap" include-html="/aboutus/components/msi.html"></div>
+            <!-- MSI -->
+            <!-- CEO 인삿말 -->
+            <div class="swipe_info_wrap" include-html="/aboutus/components/greetings.html"></div>
+            <!-- CEO 인삿말 -->
+            <!-- 주요연혁 -->
+            <div class="swipe_info_wrap" include-html="/aboutus/components/history.html"></div>
+            <!-- 주요연혁 -->
           </div>
         </div>
-        <!-- // train-wrap -->
       </div>
-    </main>
+      <!-- // train-wrap -->
+    </div>
+  </main>
 
-    <footer include-html="/public/layout/footer.html"></footer>
+  <footer include-html="../public/layout/footer.html"></footer>
 
-    <script src="/public/js/layout.js"></script>
-    <script src="/public/js/header.js"></script>
-    <script src="/public/js/subapge_swiper.js"></script>
-  </body>
+  <script src="../public/js/layout.js"></script>
+  <script src="../public/js/header.js"></script>
+  <script src="../public/js/subapge_swiper.js"></script>
+</body>
+
 </html>
