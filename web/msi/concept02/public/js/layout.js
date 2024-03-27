@@ -23,6 +23,7 @@ function includeHTML(callback) {
           includeHTML(callback);
         }
       };
+      console.log(file)
       xhr.open("GET", file, true);
       xhr.send();
       /*exit the function:*/
