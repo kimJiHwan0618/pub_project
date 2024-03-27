@@ -1,3 +1,5 @@
+alert("모바일 환경에서만 동작합니다!")
+
 const sucArr = [];
 let x1, x1_e, x2, x2_e, x3, x3_e, x4, x4_e, y, y_e;
 //
