@@ -1,113 +1,110 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>환자관리 | 치료현황</title>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <!-- 필수 기본 highchart js -->
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <!-- 데이터에 라벨을 붙이기 위한 모듈 -->
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <!-- jpg,png 등의 확장자로 다운로등 가능한 모듈 -->
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <!-- csv 등의 확장자로 다운로드 가능한 모듈 -->
-    <link rel="stylesheet" href="../assets/css/common.css" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/treatmentStatus.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  </head>
-  <body>
-    <!-- header -->
-    <header class="box__shadow__01">
-      <div class="header__inner">
-        <nav>
-          <h1>
-            <a href="#">
-              <img src="../assets/images/logo.jpg" alt="한림대학교 로고" />
-            </a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../dashboard.html">대시보드</a>
-            </li>
-            <li class="on">
-              <a href="../patientCare/">환자관리</a>
-            </li>
-            <li>
-              <a href="#">치료제 관리</a>
-            </li>
-            <li>
-              <a href="#">시스템 관리</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user__profile">
-          <img
-            src="../assets/images/icon/ic-user.svg"
-            alt="로그인 유저 프로필 사진"
-          />
-          <dl>
-            <dt class="f__bold">김길동</dt>
-            <dd class="f__medium">신경정신과</dd>
-          </dl>
-        </div>
-      </div>
-    </header>
-    <!-- // header -->
-    <!-- sub navigation -->
-    <div class="sub__nav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>환자관리 | 치료현황</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- 필수 기본 highchart js -->
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <!-- 데이터에 라벨을 붙이기 위한 모듈 -->
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <!-- jpg,png 등의 확장자로 다운로등 가능한 모듈 -->
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <!-- csv 등의 확장자로 다운로드 가능한 모듈 -->
+  <link rel="stylesheet" href="../assets/css/common.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/treatmentStatus.css" />
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="box__shadow__01">
+    <div class="header__inner">
       <nav>
+        <h1>
+          <a href="#">
+            <img src="../assets/images/logo.jpg" alt="한림대학교 로고" />
+          </a>
+        </h1>
         <ul>
           <li>
-            <a href="#">
-              <span class="home__icon">
-                <img src="../assets/images/icon/ic-home.svg" alt="홈 아이콘" />
-              </span>
-            </a>
-            <span class="arrow__icon"> </span>
-          </li>
-          <li>
-            <a href="../patientCare/">환자관리</a>
-            <span class="arrow__icon"></span>
+            <a href="../dashboard.html">대시보드</a>
           </li>
           <li class="on">
-            <a href="../patientCare/">치료현황</a>
-            <span class="arrow__icon"></span>
+            <a href="../patientCare/">환자관리</a>
+          </li>
+          <li>
+            <a href="../patientCare/prescription.html">치료제 관리</a>
+          </li>
+          <li>
+            <a href="#">시스템 관리</a>
           </li>
         </ul>
       </nav>
-    </div>
-    <!-- // sub navigation -->
-    <div class="page__section__state__wrap">
-      <div class="inner box__shadow__01">
-        <h4>박무명 (남, 60세)</h4>
-        <dl class="f__medium">
-          <dt>교육시작일&nbsp;:&nbsp;</dt>
-          <dd>2022-01-22</dd>
+      <div class="user__profile">
+        <img src="../assets/images/icon/ic-user.svg" alt="로그인 유저 프로필 사진" />
+        <dl>
+          <dt class="f__bold">김길동</dt>
+          <dd class="f__medium">신경정신과</dd>
         </dl>
-        <div class="button__wrap">
-          <button class="custom__btn">
-            <p>치료현황</p>
-          </button>
-          <button class="custom__btn off">
-            <p>교육현황</p>
-          </button>
-        </div>
       </div>
     </div>
-    <!-- page main contents -->
-    <main class="treatment__status__main">
-      <div class="contents__train">
-        <section
-          class="treatment__status__wrap box__shadow__01 vertical__scroll"
-        >
-          <div class="week__progress__wrap">
-            <div class="abstinence__progress">
-              <h5>금주율</h5>
-              <div class="progress__list">
-                <!-- <dl class="raw__week">
+  </header>
+  <!-- // header -->
+  <!-- sub navigation -->
+  <div class="sub__nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="home__icon">
+              <img src="../assets/images/icon/ic-home.svg" alt="홈 아이콘" />
+            </span>
+          </a>
+          <span class="arrow__icon"> </span>
+        </li>
+        <li>
+          <a href="../patientCare/">환자관리</a>
+          <span class="arrow__icon"></span>
+        </li>
+        <li class="on">
+          <a href="../patientCare/">치료현황</a>
+          <span class="arrow__icon"></span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- // sub navigation -->
+  <div class="page__section__state__wrap">
+    <div class="inner box__shadow__01">
+      <h4>박무명 (남, 60세)</h4>
+      <dl class="f__medium">
+        <dt>교육시작일&nbsp;:&nbsp;</dt>
+        <dd>2022-01-22</dd>
+      </dl>
+      <div class="button__wrap">
+        <button class="custom__btn">
+          <p>치료현황</p>
+        </button>
+        <button class="custom__btn off">
+          <p>교육현황</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- page main contents -->
+  <main class="treatment__status__main">
+    <div class="contents__train">
+      <section class="treatment__status__wrap box__shadow__01 vertical__scroll">
+        <div class="week__progress__wrap">
+          <div class="abstinence__progress">
+            <h5>금주율</h5>
+            <div class="progress__list">
+              <!-- <dl class="raw__week">
                   <dt>1</dt>
                   <dd>
                     <ul>
@@ -121,95 +118,93 @@
                     </ul>
                   </dd>
                 </dl> -->
-              </div>
-              <ul class="state__txt">
-                <li>
-                  <dl>
-                    <dt>총 단주율&nbsp;:&nbsp;</dt>
-                    <dd>30%</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>연속 단주율&nbsp;:&nbsp;</dt>
-                    <dd>30%</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>최장 단주율&nbsp;:&nbsp;</dt>
-                    <dd>30%</dd>
-                  </dl>
-                </li>
-              </ul>
             </div>
-            <div class="medicine__progress">
-              <h5>복용현황</h5>
-              <div class="progress__list">
-                <!-- <dl class="raw__week">
-                  <dt>1</dt>
-                  <dd>
-                    <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </dd>
-                </dl> -->
-              </div>
-            </div>
-          </div>
-          <div class="chart__wrap">
-            <div class="chart__item">
-              <h5>금주율</h5>
-              <div class="chart__el" id="chart01"></div>
-            </div>
-            <div class="chart__item">
-              <h5>음주대기</h5>
-              <div class="chart__el" id="chart02"></div>
-            </div>
-            <div class="chart__item">
-              <h5>기분</h5>
-              <div class="chart__el" id="chart03"></div>
-            </div>
-            <div class="chart__item">
-              <h5>단주의지</h5>
-              <div class="chart__el" id="chart04"></div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="education__status__wrap box__shadow__01 vertical__scroll"
-        >
-          <div class="education__status__title">
-            <h5>교육현황</h5>
-            <ul>
+            <ul class="state__txt">
               <li>
                 <dl>
-                  <dt></dt>
-                  <dd>미진행</dd>
+                  <dt>총 단주율&nbsp;:&nbsp;</dt>
+                  <dd>30%</dd>
                 </dl>
               </li>
               <li>
                 <dl>
-                  <dt></dt>
-                  <dd>진행중</dd>
+                  <dt>연속 단주율&nbsp;:&nbsp;</dt>
+                  <dd>30%</dd>
                 </dl>
               </li>
               <li>
                 <dl>
-                  <dt></dt>
-                  <dd>완료</dd>
+                  <dt>최장 단주율&nbsp;:&nbsp;</dt>
+                  <dd>30%</dd>
                 </dl>
               </li>
             </ul>
           </div>
-          <div class="week__status__wrap">
-            <!-- <dl>
+          <div class="medicine__progress">
+            <h5>복용현황</h5>
+            <div class="progress__list">
+              <!-- <dl class="raw__week">
+                  <dt>1</dt>
+                  <dd>
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </dd>
+                </dl> -->
+            </div>
+          </div>
+        </div>
+        <div class="chart__wrap">
+          <div class="chart__item">
+            <h5>금주율</h5>
+            <div class="chart__el" id="chart01"></div>
+          </div>
+          <div class="chart__item">
+            <h5>음주대기</h5>
+            <div class="chart__el" id="chart02"></div>
+          </div>
+          <div class="chart__item">
+            <h5>기분</h5>
+            <div class="chart__el" id="chart03"></div>
+          </div>
+          <div class="chart__item">
+            <h5>단주의지</h5>
+            <div class="chart__el" id="chart04"></div>
+          </div>
+        </div>
+      </section>
+      <section class="education__status__wrap box__shadow__01 vertical__scroll">
+        <div class="education__status__title">
+          <h5>교육현황</h5>
+          <ul>
+            <li>
+              <dl>
+                <dt></dt>
+                <dd>미진행</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt></dt>
+                <dd>진행중</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt></dt>
+                <dd>완료</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <div class="week__status__wrap">
+          <!-- <dl>
               <dt>1주차</dt>
               <dd>
                 <ul>
@@ -223,30 +218,28 @@
                 </ul>
               </dd>
             </dl> -->
+        </div>
+        <div class="quiz__state__wrap">
+          <div class="quiz__state__title">
+            <h5>퀴즈현황</h5>
+            <button class="custom__btn">
+              <span>
+                <img src="../assets/images/dashboard/ic-excel.svg" alt="엑셀 아이콘" />
+              </span>
+              <p>엑셀저장</p>
+            </button>
           </div>
-          <div class="quiz__state__wrap">
-            <div class="quiz__state__title">
-              <h5>퀴즈현황</h5>
-              <button class="custom__btn">
-                <span>
-                  <img
-                    src="../assets/images/dashboard/ic-excel.svg"
-                    alt="엑셀 아이콘"
-                  />
-                </span>
-                <p>엑셀저장</p>
-              </button>
-            </div>
-            <div class="graph__wrap">
-              <div id="quizChart"></div>
-            </div>
+          <div class="graph__wrap">
+            <div id="quizChart"></div>
           </div>
-        </section>
-      </div>
-    </main>
-    <!-- // page main contents -->
-    <script src="../assets/js/utill/highchart.js"></script>
-    <script src="../assets/js/data/userTestData3.js"></script>
-    <script src="../assets/js/treatmentStatus.js"></script>
-  </body>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- // page main contents -->
+  <script src="../assets/js/utill/highchart.js"></script>
+  <script src="../assets/js/data/userTestData3.js"></script>
+  <script src="../assets/js/treatmentStatus.js"></script>
+</body>
+
 </html>
