@@ -328,15 +328,14 @@
     function drop(ev, eventName) {
       ev.preventDefault();
       var data = ev.dataTransfer;
-
+      const id = $(ev.target).parent()[0].getAttribute("id");
       if (eventName == "add") {
         let title = $(dragItem).children("dt").text();
         let content = $(dragItem).children("dd").text();
-
-        $(`#${$(ev.path[1]).attr("id")}`)
+        $(`#${id}`)
           .children()
           .remove();
-        $(`#${$(ev.path[1]).attr("id")}`).append(`
+        $(`#${id}`).append(`
             <dl>
               <dt>${title}</dt>
               <dd>${content}</dd>  
