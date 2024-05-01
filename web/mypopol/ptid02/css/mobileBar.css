@@ -1,0 +1,97 @@
+.modal-bg.on {
+  opacity: 1;
+  z-index: 14;
+}
+
+.modal-bg.on.project {
+  z-index: 24;
+}
+
+.mobileMenutBar.on .mobile-nav {
+  height: 254px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.16);
+}
+
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.mobile-nav {
+  border-top: 1px solid #f1f1f1;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 53px;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  height: 0px;
+  display: none;
+}
+
+.mobile-nav ul {
+  text-align: center;
+  width: 100%;
+}
+
+.mobile-nav ul li a {
+  font-size: 1.3rem;
+  display: block;
+  padding: 10px 0;
+}
+
+.mobile-nav ul li a.nuxt-link-exact-active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.mobile-nav ul li:hover {
+  background-color: #999;
+}
+
+.mobile-nav ul li:hover a {
+  color: white;
+}
+
+.m-sns-box {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid rgba(171, 171, 171, 0.34);
+}
+
+.m-sns-box a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin: 0 14px;
+}
+
+.m-sns-box path {
+  -webkit-transition: all 0.1s linear 0s;
+}
+
+.m-sns-box a:hover .kakaocolor {
+  fill: #f7e600;
+}
+
+.m-sns-box a:hover .githubcolor {
+  fill: black;
+}
+
+@media screen and (max-width: 990px) {
+  .mobile-nav {
+    display: block;
+  }
+}

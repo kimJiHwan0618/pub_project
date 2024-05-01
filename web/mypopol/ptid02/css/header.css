@@ -1,0 +1,148 @@
+header {
+  width: 100%;
+  height: 62px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 15;
+  background-color: white;
+  border-bottom: 1px solid rgba(171, 171, 171, 0.34);
+  box-shadow: 0 2px 10px 0 rgba(36, 50, 66, 0.075);
+}
+
+header #nav-icon1 {
+  display: none;
+}
+
+header .header-inner {
+  width: 52%;
+  min-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-inner h1.logo {
+  cursor: pointer;
+}
+
+header .header-inner ul.gnb {
+  display: flex;
+}
+
+header .header-inner ul.gnb li:first-of-type {
+  margin: 0 32px 0 0;
+}
+
+header .header-inner ul.gnb li {
+  margin: 0 32px;
+}
+
+header .header-inner ul.gnb li a {
+  font-size: 1.3rem;
+  color: #828282;
+  -webkit-transition: all 0.1s ease-in 0s;
+}
+
+header .header-inner ul.gnb li a.nuxt-link-exact-active {
+  color: var(--main--second-color);
+  border-bottom: 1px solid var(--main--second-color);
+}
+
+header .header-inner ul.gnb li a:hover {
+  color: var(--main--second-color);
+}
+
+header .header-inner ul.sns-wrap {
+  display: flex;
+}
+
+header .header-inner ul.sns-wrap a {
+  display: inline-block;
+}
+
+header .header-inner ul.sns-wrap a svg {
+  width: 25px;
+  height: 25px;
+}
+
+header .header-inner ul.sns-wrap path {
+  -webkit-transition: all 0.1s linear 0s;
+}
+
+header .header-inner ul.sns-wrap li:nth-of-type(2) {
+  margin-left: 32px;
+}
+
+header .header-inner ul.sns-wrap li:nth-of-type(1):hover .kakaocolor {
+  fill: #f7e600;
+}
+
+header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
+  fill: black;
+}
+
+@media screen and (max-width: 1100px) {
+  header .header-inner {
+    min-width: auto;
+  }
+  header .header-inner ul.gnb {
+    display: flex;
+  }
+
+  header .header-inner ul.sns-wrap {
+    display: flex;
+  }
+
+  header .header-inner ul.sns-wrap a svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  header .header-inner ul.sns-wrap li:nth-of-type(2) {
+    margin-left: 26px;
+  }
+
+  header .header-inner ul.sns-wrap li:nth-of-type(1):hover .kakaocolor {
+    fill: #f7e600;
+  }
+
+  header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
+    fill: black;
+  }
+  header {
+    height: 52px;
+  }
+
+  header #nav-icon1 {
+    display: flex;
+  }
+
+  header .header-inner {
+    width: 90%;
+    justify-content: flex-end;
+  }
+
+  header .header-inner h1.logo {
+    font-size: 1.8rem;
+  }
+
+  header .header-inner ul.gnb {
+    display: none;
+  }
+
+  header .header-inner ul.gnb li {
+    margin: 0 22px;
+  }
+
+  header .header-inner ul.gnb li a {
+    font-size: 1.6rem;
+    color: #828282;
+  }
+
+  header .header-inner ul.sns-wrap {
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+footer {
+  background-color: #474b50;
+}
+
+footer ul {
+  padding: 30px 0;
+  text-align: center;
+  line-height: 1.62;
+}
+
+footer ul li {
+  color: white;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 990px) {
+  footer ul {
+    padding: 26px 0;
+  }
+
+  footer ul li {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer ul {
+    padding: 23px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  footer ul li {
+    font-size: 1rem;
+  }
+}
