@@ -13,6 +13,7 @@ $(function () {
   for (let skill of skills[key]) {
     $('.about-skill-box .left .bottom').append(`
       <span>
+      ${skill}
         <img src="https://site.mypopol.com/ptid02/src/img/skills/${skill.toLowerCase()}.svg" alt="${skill} 이미지"/>
       </span>
     `);
@@ -25,4 +26,15 @@ $(function () {
     `);
     $('.about-skill-box .right div').eq(0).addClass('on');
   }
+
+  $('.about-skill-box .left .bottom span').click(function () {
+    const skill = $(this).text().trim();
+    $('.about-skill-box .big-img img').attr(
+      'src',
+      `https://site.mypopol.com/ptid02/src/img/skills/${skill.toLowerCase()}.svg`
+    );
+    $('.about-skill-box .left .top .text dt').text(skill);
+    $('.about-skill-box .left .bottom span').removeClass('on');
+    $(this).addClass('on');
+  });
 });

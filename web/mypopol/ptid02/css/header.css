@@ -40,18 +40,19 @@ header .header-inner ul.gnb li {
   margin: 0 32px;
 }
 
-header .header-inner ul.gnb li a {
+header .header-inner ul.gnb li p {
   font-size: 1.3rem;
   color: #828282;
   -webkit-transition: all 0.1s ease-in 0s;
+  cursor: pointer;
 }
 
-header .header-inner ul.gnb li a.nuxt-link-exact-active {
+header .header-inner ul.gnb li.active p {
   color: var(--main--second-color);
   border-bottom: 1px solid var(--main--second-color);
 }
 
-header .header-inner ul.gnb li a:hover {
+header .header-inner ul.gnb li p:hover {
   color: var(--main--second-color);
 }
 
@@ -61,15 +62,21 @@ header .header-inner ul.sns-wrap {
 
 header .header-inner ul.sns-wrap a {
   display: inline-block;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-transition: all 0.15s ease-in 0s;
+  opacity: 0.8;
 }
 
-header .header-inner ul.sns-wrap a svg {
+header .header-inner ul.sns-wrap a:hover {
+  opacity: 1;
+  background: #f0f0f0;
+}
+
+header .header-inner ul.sns-wrap a img {
   width: 25px;
   height: 25px;
-}
-
-header .header-inner ul.sns-wrap path {
-  -webkit-transition: all 0.1s linear 0s;
 }
 
 header .header-inner ul.sns-wrap li:nth-of-type(2) {

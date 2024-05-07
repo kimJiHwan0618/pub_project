@@ -50,9 +50,8 @@ $(function () {
     },
   ];
   for (let project of projects) {
-    console.log(project);
     $('.project .project-wrap').append(`
-      <div class="project-item on">
+      <div class="project-item">
         <div class="left">
           <span class="img">
             <img src="./img/${project.img}"/>
