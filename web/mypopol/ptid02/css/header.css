@@ -7,7 +7,7 @@ header {
   z-index: 15;
   background-color: white;
   border-bottom: 1px solid rgba(171, 171, 171, 0.34);
-  box-shadow: 0 2px 10px 0 rgba(36, 50, 66, 0.075);
+  box-shadow: 0 2px 10px var(--main-color_01);
 }
 
 header #nav-icon1 {
@@ -42,18 +42,18 @@ header .header-inner ul.gnb li {
 
 header .header-inner ul.gnb li p {
   font-size: 1.3rem;
-  color: #828282;
+  color: var(--main-color_06);
   -webkit-transition: all 0.1s ease-in 0s;
   cursor: pointer;
 }
 
 header .header-inner ul.gnb li.active p {
-  color: var(--main--second-color);
-  border-bottom: 1px solid var(--main--second-color);
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 
 header .header-inner ul.gnb li p:hover {
-  color: var(--main--second-color);
+  color: var(--main-color_08);
 }
 
 header .header-inner ul.sns-wrap {
@@ -71,7 +71,7 @@ header .header-inner ul.sns-wrap a {
 
 header .header-inner ul.sns-wrap a:hover {
   opacity: 1;
-  background: #f0f0f0;
+  background: var(--main-color_005);
 }
 
 header .header-inner ul.sns-wrap a img {
@@ -83,15 +83,7 @@ header .header-inner ul.sns-wrap li:nth-of-type(2) {
   margin-left: 32px;
 }
 
-header .header-inner ul.sns-wrap li:nth-of-type(1):hover .kakaocolor {
-  fill: #f7e600;
-}
-
-header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
-  fill: black;
-}
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   header .header-inner {
     min-width: auto;
   }
@@ -112,13 +104,6 @@ header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
     margin-left: 26px;
   }
 
-  header .header-inner ul.sns-wrap li:nth-of-type(1):hover .kakaocolor {
-    fill: #f7e600;
-  }
-
-  header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
-    fill: black;
-  }
   header {
     height: 52px;
   }
@@ -146,7 +131,6 @@ header .header-inner ul.sns-wrap li:nth-of-type(2):hover .githubcolor {
 
   header .header-inner ul.gnb li a {
     font-size: 1.6rem;
-    color: #828282;
   }
 
   header .header-inner ul.sns-wrap {

@@ -44,22 +44,23 @@
   width: 100%;
 }
 
-.mobile-nav ul li a {
+.mobile-nav ul li p {
   font-size: 1.3rem;
   display: block;
   padding: 10px 0;
+  cursor: pointer;
 }
 
-.mobile-nav ul li a.nuxt-link-exact-active {
+.mobile-nav ul li.active p {
   background-color: var(--main-color);
   color: white;
 }
 
 .mobile-nav ul li:hover {
-  background-color: #999;
+  background-color: var(--main-color_02);
 }
 
-.mobile-nav ul li:hover a {
+.mobile-nav ul li:hover p {
   color: white;
 }
 
@@ -73,21 +74,25 @@
 
 .m-sns-box a {
   display: inline-block;
-  width: 34px;
-  height: 34px;
   margin: 0 14px;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-transition: all 0.15s ease-in 0s;
+  opacity: 0.8;
+}
+.m-sns-box a:hover {
+  display: inline-block;
+  margin: 0 14px;
+  padding: 6px;
+  box-sizing: border-box;
+  opacity: 1;
+  background: var(--main-color_005);
 }
 
-.m-sns-box path {
-  -webkit-transition: all 0.1s linear 0s;
-}
-
-.m-sns-box a:hover .kakaocolor {
-  fill: #f7e600;
-}
-
-.m-sns-box a:hover .githubcolor {
-  fill: black;
+.m-sns-box a img {
+  width: 27px;
+  height: 27px;
 }
 
 @media screen and (max-width: 990px) {

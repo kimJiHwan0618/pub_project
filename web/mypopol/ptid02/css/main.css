@@ -1,9 +1,5 @@
 @charset "UTF-8";
 :root {
-  /* #e1e3f8,  #959ad5*/
-  --main-color: rgb(55 65 81);
-  --main--second-color: rgb(55 65 81);
-  --main-color3: rgb(55 65 81);
   --box-shdow: 6px 6px 12px rgba(36, 50, 66, 0.2);
   --text-color: #3d3d3d;
 }
@@ -40,7 +36,7 @@ body::-webkit-scrollbar-thumb {
 
 .container main .main-section .txt-box {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: var(--main-color_005);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +57,7 @@ body::-webkit-scrollbar-thumb {
 .container main .main-section .txt-box .txt-box-inner > div h3 {
   font-size: 2.6rem;
   letter-spacing: 3.2px;
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid var(--main-color_08);
   padding-bottom: 12px;
   margin-bottom: 12px;
 }
@@ -261,7 +257,7 @@ body::-webkit-scrollbar-thumb {
   display: inline-block;
   color: var(--text-color);
   font-family: 'NotoSansKR-Midium';
-  border-bottom: 2px solid rgba(171, 171, 171, 0.34);
+  border-bottom: 2px solid var(--main-color_04);
   padding-bottom: 5px;
   display: inline-block;
   font-weight: 500;
@@ -504,7 +500,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container main .sub-section .about-skill-box .left .bottom span.on {
-  border: 2px solid black;
+  border: 2px solid var(--main-color_08);
   -webkit-transform: translateY(-5px);
 }
 
@@ -544,7 +540,7 @@ body::-webkit-scrollbar-thumb {
 
 .container main .sub-section .about-skill-box .right div {
   align-items: center;
-  background: #d8d8d8;
+  background: var(--main-color_04);
   border-radius: 8px;
   color: #fff;
   display: flex;
@@ -556,11 +552,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container main .sub-section .about-skill-box .right div:hover {
-  background: rgb(138, 138, 138);
+  background: var(--main-color_06);
 }
 
 .container main .sub-section .about-skill-box .right div.on {
-  background: black;
+  background: var(--main-color);
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -578,7 +574,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container .sub-section.project .project-wrap {
-  background-color: #f8f8f8;
+  background-color: var(--main-color_005);
   padding: 40px 0;
 }
 
@@ -658,10 +654,9 @@ body::-webkit-scrollbar-thumb {
 
 .container .sub-section.project .project-wrap .project-item .right p {
   font-size: 1.6rem;
-  color: var(--text-color);
-  opacity: 0.5;
+  color: var(--main-color);
   margin: 0px 0 20px;
-  border-bottom: 1px solid #c7c7c7;
+  border-bottom: 1px solid var(--main-color_06);
   padding-bottom: 20px;
 }
 
@@ -809,7 +804,7 @@ body::-webkit-scrollbar-thumb {
   height: 50px;
   box-sizing: border-box;
   padding: 0 4%;
-  border-top: 1px solid var(--main--second-color);
+  border-top: 1px solid var(--main-color_08);
   background-color: #f8f8f8;
 }
 
@@ -839,7 +834,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   outline: none;
   resize: none;
-  border-top: 1px solid var(--main--second-color);
+  border-top: 1px solid var(--main-color_08);
   background-color: #f8f8f8;
   box-sizing: border-box;
   padding: 2% 1.9%;
@@ -878,18 +873,19 @@ body::-webkit-scrollbar-thumb {
   margin-top: 56px;
   background-color: white;
   outline: none;
-  border: 1px solid #707070;
+  border: 1px solid var(--main-color_06);
   font-size: 1.6rem;
   padding: 10px 30px;
   display: inline-block;
   -webkit-transition: all 0.1s ease-in 0s;
   cursor: pointer;
+  color: var(--main-color);
 }
 
 .container .sub-section.contact .submit-btn:hover {
-  background-color: var(--main--second-color);
+  background-color: var(--main-color);
   color: white;
-  border: 1px solid var(--main--second-color);
+  border: 1px solid var(--main-color);
 }
 
 @media screen and (max-width: 1500px) {
@@ -920,7 +916,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   .container main .main-section .txt-box .txt-box-inner {
     background-size: auto 321px;
     min-width: auto;
@@ -1124,6 +1120,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     width: 100%;
     margin: 20px auto 0;
+    justify-content: center;
   }
 
   .container main .sub-section .about-skill-box .left .bottom span {
