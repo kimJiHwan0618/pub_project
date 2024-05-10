@@ -1,4 +1,24 @@
+const get_site = () => {
+  fetch('https://kimjihodo.synology.me:3001/site/popol', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      userId,
+      ptId,
+      countFlag: false,
+    }),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res)
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+};
+
 $(function () {
+  get_site()
   let scrollY = 0;
   let projectIdx = 0;
   const sectionArray = $('section');
