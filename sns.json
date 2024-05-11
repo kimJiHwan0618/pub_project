@@ -1,0 +1,19 @@
+{
+  "job": "Frontend Developer",
+  "aboutMe": "안녕하세요?\n웹툰작가 ΟΟΟ입니다.",
+  "skills": {
+    "Front-End": ["HTML", "Css", "Javascript"],
+    "Back-End": ["SpringBoot", "MySQL"],
+    "Etc": ["Git", "Svn", "Docker"]
+  },
+  "sns": {
+    "kakaotalk": {
+      "id": "",
+      "link": ""
+    },
+    "github": {
+      "id": "",
+      "link": ""
+    }
+  }
+}

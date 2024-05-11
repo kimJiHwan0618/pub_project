@@ -112,8 +112,9 @@ const pageSetting = (res, siteNameArr) => {
           const newEl = `
         <section>
           <div class="inner">
-            <img onload="loadingImg(${worksInfo.length})" src="./img/${worksInfo[i].src}/${worksInfo[i].poster
-            }" alt="${worksInfo[i].title} 포스터" />
+            <img onload="loadingImg(${worksInfo.length})" src="./img/${worksInfo[i].src}/${
+            worksInfo[i].poster
+          }" alt="${worksInfo[i].title} 포스터" />
             <dl>
               <dt>
                 ${titleEl}
@@ -187,7 +188,7 @@ const pageSetting = (res, siteNameArr) => {
 
 let countFlag = true;
 const get_site = () => {
-  fetch('https://kimjihodo.synology.me:3001/site/post/popol-info', {
+  fetch('https://kimjihodo.synology.me:3001/site/popol', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
