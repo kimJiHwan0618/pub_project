@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개발자 포트폴리오</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="https://site.mypopol.com/ptid02/src/css/styles.css" />
   </head>
-
   <body>
+    <div class="loadingWrap pencil open">
+      <div class="bg"></div>
+      <lottie-player
+        src="https://site.mypopol.com/src/img/ptid01/pitd01_lottie.json"
+        background="transparent"
+        speed="1"
+        style="width: 400px; height: 400px"
+        loop=""
+        autoplay=""
+      ></lottie-player>
+    </div>
+    <div class="loadingWrap email open">
+      <div class="bg"></div>
+      <lottie-player
+        src="https://site.mypopol.com/src/img/ptid01/pitd01_lottie.json"
+        background="transparent"
+        speed="1"
+        style="width: 400px; height: 400px"
+        loop=""
+        autoplay=""
+      ></lottie-player>
+    </div>
     <!-- header -->
     <!-- header -->
     <!-- header -->
@@ -64,14 +86,7 @@
           <li>
             <p>CONTACT</p>
           </li>
-          <span class="m-sns-box">
-            <a href="#">
-              <img src="https://site.mypopol.com/src/img/icon/default/kakaotalk.png" />
-            </a>
-            <a href="#">
-              <img src="https://site.mypopol.com/src/img/icon/default/github.png" />
-            </a>
-          </span>
+          <span class="m-sns-box"> </span>
         </ul>
       </nav>
     </div>
@@ -111,7 +126,7 @@
           </div>
           <div class="about-me-box about-box">
             <div class="left">
-              <img src="./img/aboutme.png" class="on" />
+              <img src="https://site.mypopol.com/ptid02/src/img/aboutme.png" class="on" />
             </div>
             <div class="right">
               <div class="slide-list">
@@ -179,11 +194,12 @@
               <div class="left">
                 <ul>
                   <li>
-                    <label for="name">이름</label>
+                    <label for="title">제목</label>
                     <input
-                      placeholder="연락하시는분의 성함을 입력해주세요"
+                      placeholder="메일의의 제목을 입력해주세요"
                       type="text"
                       class="name"
+                      id="mail__title"
                       name="user_name"
                     />
                   </li>
@@ -193,6 +209,7 @@
                       placeholder="연락 받으실 이메일을 입력해주세요"
                       type="email"
                       calss="email"
+                      id="mail__email"
                       name="user_email"
                     />
                   </li>
@@ -202,27 +219,24 @@
                       placeholder="- 없이 숫자를 붙혀서 입력해주세요"
                       type="phone"
                       calss="phone"
+                      id="mail__phone"
                       name="user_phone"
                     />
                   </li>
                   <li>
                     <label for="text">메세지</label>
-                    <textarea name="message"></textarea>
+                    <textarea id="mail__message" name="message"></textarea>
                   </li>
                 </ul>
               </div>
-              <div class="right">
+              <div class="right contact__info">
                 <dl>
                   <dt>휴대폰 번호 :&nbsp;</dt>
-                  <dd>&nbsp;010-5838-5146</dd>
+                  <dd></dd>
                 </dl>
                 <dl>
                   <dt>이메일 :&nbsp;</dt>
-                  <dd>&nbsp;wlghks0618@kakao.com</dd>
-                </dl>
-                <dl>
-                  <dt>주소 :&nbsp;</dt>
-                  <dd>&nbsp;경기도 용인시 기흥구</dd>
+                  <dd></dd>
                 </dl>
               </div>
             </div>
@@ -239,9 +253,12 @@
         </footer>
       </main>
     </div>
-    <script src="../assets/jquery.min.js"></script>
+    <script src="https://site.mypopol.com/src/js/jquery.min.js"></script>
+    <script src="https://site.mypopol.com/ptid01/src/js/lottie.js"></script>
     <script src="./userInfo.js"></script>
-    <script src="./js/init.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/init.js"></script>
+    <script src="./js/main.js"></script> -->
+    <script src="https://site.mypopol.com/ptid02/src/js/init.js"></script>
+    <script src="https://site.mypopol.com/ptid02/src/js/main.js"></script>
   </body>
 </html>

@@ -13,10 +13,20 @@ const profileInit = (profile) => {
   const etc = JSON.parse(profile.sns);
   $('.main-section h3').text(profile.fakeName);
   $('.main-section h4').text(etc.job);
-  $('.img__box img').attr('src', `./img/${profile.profileImg}`);
+  const img = profile.profileImg
+    ? `./img/${profile.profileImg}`
+    : 'https://site.mypopol.com/src/img/profile.jpg';
+  $('.img__box img').attr('src', img);
 };
 // profileInit
 const projectInit = (projects, userId) => {
+  if (projects.length === 0) {
+    $('.project-wrap').append(`
+    <span class='f__medium noinfo__notice'>
+      <p>프로젝트 정보를 입력해주세요.</p><br />
+      <a href="https://admin.mypopol.com" target="_blank">https://admin.mypopol.com</a>
+    </span>`);
+  }
   for (let project of projects) {
     const etc = JSON.parse(project.etc);
     $('.project .project-wrap').append(`
@@ -171,7 +181,7 @@ const skillInit = (popolInfo) => {
   const categorySkillsInit = (key) => {
     $('.about-skill-box .big-img img').attr(
       'src',
-      `https://site.mypopol.com/ptid02/src/img/skills/${skills[key][0].toLowerCase()}.svg`
+      `https://site.mypopol.com/ptid02/src/img/skills/${skills[key][0]?.toLowerCase()}.svg`
     );
     $('.about-skill-box .left .top .text dt').text(skills[key][0]);
     for (let skill of skills[key]) {
@@ -209,8 +219,16 @@ const skillInit = (popolInfo) => {
     $(this).addClass('on');
     categorySkillsInit($(this).text());
   });
-
-  categorySkillsInit(Object.entries(skills)[0][0]);
+  if (Object.entries(skills)?.[0]) {
+    categorySkillsInit(Object.entries(skills)[0][0]);
+  } else {
+    $('.about-skill-box').children().remove();
+    $('.about-skill-box').append(`
+    <span class='noinfo__notice f__medium'>
+      <p>스킬 정보를 입력해주세요.</p><br />
+      <a href="https://admin.mypopol.com" target="_blank">https://admin.mypopol.com</a>
+    </span>`);
+  }
 };
 // skillInit
 const aboutmeInit = (popolInfo) => {
@@ -230,7 +248,108 @@ const snsInit = (popolInfo) => {
         </a>
       </li>
     `);
-    console.log(key);
+    $('.m-sns-box').append(`
+      <a target="_blank" href="${sns[key].link}">
+        <img src="https://site.mypopol.com/src/img/icon/${popolInfo.icon}/${key}.png"/>
+      </a>
+    `);
   }
+};
+// snsInit
+const contactInit = (popolInfo) => {
+  $('.contact__info dl:nth-of-type(1) dd').html(`&nbsp;${popolInfo.phone}`);
+  $('.contact__info dl:nth-of-type(2) dd').html(`&nbsp;${popolInfo.email}`);
+  $('.submit-btn').click(function (e) {
+    const v1 = $('#mail__title').val();
+    const v2 = $('#mail__email').val();
+    const v3 = $('#mail__phone').val();
+    const v4 = $('#mail__message').val();
+    if (v1 === '') {
+      alert('제목을 입력해주세요.');
+      msgCardActive();
+      return;
+    }
+    if (v2 === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v2)) {
+      alert('이메일을 확인해주세요.');
+      msgCardActive();
+      return;
+    }
+    if (v3 === '' || !/^[0-9]{9,11}$/i.test(v3)) {
+      alert('휴대폰 번호를 입력해주세요.');
+      msgCardActive();
+      return;
+    }
+    if (v4 === '') {
+      alert('메세지를 입력해주세요');
+      msgCardActive();
+      return;
+    }
+    $('.loadingWrap.email').removeClass('open');
+    const param = {
+      phone: v3,
+      userId,
+      ptId,
+      pw: 'WlGhks010!@#',
+      from: v2,
+      to: popolInfo.email,
+      subject: `${'문의'}`,
+      title: v1,
+      content: v4,
+      html: `
+        <div style="margin: 16px 0 0 0; padding: 12px 12px 60px 12px;box-sizing: border-box;">
+          <div style="padding: 34px; box-sizing: border-box;background: #fff;border-radius: 12px;box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);">
+            <h1 style="margin: 0;padding: 0; color: #414141;">'${userId}'님의 사이트로부터 문의 메일이 도착했습니다.</h1>
+            <p style="color: #999; margin: 8px 0 34px 0; padding: 0;">메일 내용은 아래와 같습니다.</p>
+            <ul style="list-style: none;margin: 0 0 38px 0;padding: 0 0 18px 0; border-bottom: 1px solid rgb(231, 231, 231);">
+              <li style="margin-bottom: 12px;">
+                <dl style="display: flex;align-items: flex-start;">
+                  <dt style="min-width: 60px;opacity: .6; white-space: nowrap;">제목&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                  <dd style="margin: 0;padding: 0; font-weight: 600; opacity: .7">[${'문의'}] ${v1}</dd>
+                </dl>  
+              </li>
+              <li style="margin-bottom: 12px;">
+                <dl style="display: flex;align-items: flex-start;">
+                  <dt style="min-width: 60px;opacity: .6; white-space: nowrap;">이메일&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                  <dd style="margin: 0;padding: 0; font-weight: 600; opacity: .7;">${v2}</dd>
+                </dl>  
+              </li>
+              <li>
+                <dl style="display: flex;align-items: flex-start;">
+                  <dt style="min-width: 60px;opacity: .6; white-space: nowrap;">연락처&nbsp;&nbsp;:&nbsp;&nbsp;</dt>
+                  <dd style="margin: 0;padding: 0; font-weight: 600; opacity: .7;">${v3}</dd>
+                </dl>  
+              </li>
+            </ul>
+            <p style="margin-top:30px;">${v4}</p>
+          </div>
+        </div>
+        `,
+    };
+    try {
+      fetch('https://kimjihodo.synology.me:3001/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(param),
+      })
+        .then((response) => response.text())
+        .then((text) => {
+          $('#mail__title').val();
+          $('#mail__email').val();
+          $('#mail__phone').val();
+          $('#mail__message').val();
+          alert('메일 전송되었습니다!');
+          $('.loadingWrap.email').addClass('open');
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('메일 전송이 실패했습니다.');
+          $('.loadingWrap.email').addClass('open');
+        });
+    } catch (error) {
+      console.log(error);
+      alert('메일 전송이 실패했습니다.');
+      $('.loadingWrap.email').addClass('open');
+    }
+  });
 };
 // snsInit

@@ -80,3 +80,41 @@ div {
   z-index: 1001;
   z-index: 1001;
 }
+
+.noinfo__notice {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+}
+.noinfo__notice a {
+  color: #057feb;
+}
+.noinfo__notice a:hover {
+  text-decoration: underline;
+}
+
+.loadingWrap.open {
+  display: none;
+}
+
+.loadingWrap {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingWrap > .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
