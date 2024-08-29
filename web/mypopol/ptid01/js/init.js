@@ -18,27 +18,6 @@ const pageSetting = (res, siteNameArr) => {
   userEmail = res.response.popolInfo.email;
 
   // head set
-  let meta1 = document.createElement('meta');
-  let meta2 = document.createElement('meta');
-  let meta3 = document.createElement('meta');
-  let meta4 = document.createElement('meta');
-  meta1.setAttribute('name', 'author');
-  meta1.setAttribute('content', `${popolInfo.fakeName}`);
-  meta2.setAttribute('property', 'og:title');
-  meta2.setAttribute('content', `${popolInfo.title}`);
-  meta3.setAttribute('property', 'og:image');
-  const thumbnailImg =
-    popolInfo.thumbnail === '' || popolInfo.thumbnail === null
-      ? 'https://site.mypopol.com/src/img/favicon/ms-icon-310x310.png'
-      : `./img/${popolInfo.thumbnail}`;
-  meta3.setAttribute('content', `${thumbnailImg}`);
-  meta4.setAttribute('property', 'site_name');
-  meta4.setAttribute('content', `${popolInfo.popolName}`);
-  document.head.appendChild(meta1);
-  document.head.appendChild(meta2);
-  document.head.appendChild(meta3);
-  document.head.appendChild(meta4);
-  document.title = popolInfo.popolName;
   // // head set
 
   const initWorks = (callback) => {
@@ -199,7 +178,8 @@ const get_site = () => {
   })
     .then((res) => res.json())
     .then((res) => {
-      fetch('./siteList.json')
+      fetch('https://site.mypopol.com/ptid01/src/data/siteList.json')
+        // fetch('./siteList.json')
         .then((res2) => res2.json())
         .then((siteList) => {
           const siteNameArr = siteList.map((item) => item.name);
