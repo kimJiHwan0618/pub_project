@@ -15,8 +15,8 @@
 
 - **개인 페이지**
   - 🔗 <a href="https://kimjihwan0618.github.io/publisher/web/portfolio/" target="_blank">Portfolio</a>
-  - 🔗 <a href="https://kimjihwan0618.github.io/publisher/web/mypopol/ptid01" target="_blank">웹툰/웹소설 작가 랜딩페이지</a>
-  - 🔗 <a href="https://kimjihwan0618.github.io/publisher/web/mypopol/ptid02" target="_blank">개발자 포트폴리오</a>
+  - 🔗 <a href="https://site.mypopol.com/ptid01/example" target="_blank">웹툰/웹소설 작가 랜딩페이지</a>
+  - 🔗 <a href="https://site.mypopol.com/ptid02/example" target="_blank">개발자 포트폴리오</a>
 
 ## App
 
