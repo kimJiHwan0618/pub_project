@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 rem 커밋 ID 리스트
 set commitIds[0]=b2dbcdcf9194d6bff7f34eb760056add24b42c55
 set commitIds[1]=175c49949ff585de71650b7f68da9ef62b7323f5
-set commitIds[2]=dce98af25f895266be0c19d7eb9dee60e499d7ea
+set commitIds[2]=dce98af25f895266be0c1d9d7eb9dee60e499d7ea
 
 rem 인덱스 값 초기화 (파일에서 불러오기 또는 기본값 설정)
 if exist index.txt (
